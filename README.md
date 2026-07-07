@@ -2,23 +2,23 @@
 
 > 精选 YOLO 目标检测数据集合集，涵盖工业检测、医疗AI、农业识别、交通安全等领域。所有数据集均提供百度网盘下载链接。
 
-![Datasets](https://img.shields.io/badge/Datasets-100%2B-blue) ![License](https://img.shields.io/badge/Type-YOLO-orange) ![Update](https://img.shields.io/badge/Updated-2026-green)
+![Datasets](https://img.shields.io/badge/Datasets-101%2B-blue) ![License](https://img.shields.io/badge/Type-YOLO-orange) ![Update](https://img.shields.io/badge/Updated-2026-green)
 
 ---
 
 ## 📖 项目简介
 
-本仓库精选了 **100+** 个适用于 YOLO 目标检测的数据集，覆盖以下领域：
+本仓库精选了 **101+** 个适用于 YOLO 目标检测的数据集，覆盖以下领域：
 
 | 领域 | 数量 | 说明 |
 | --- | --- | --- |
 | 🏭 工业检测 | 49 | Industrial Inspection |
 | 🏥 医疗AI | 6 | Medical AI |
-| 🌾 农业识别 | 18 | Agriculture |
+| 🌾 农业识别 | 19 | Agriculture |
 | 🚗 交通车辆 | 8 | Traffic & Vehicles |
 | 🌿 自然环境 | 10 | Natural Environment |
 | 📦 其他 | 9 | Others |
-| **合计** | **100** | **All Datasets** |
+| **合计** | **101** | **All Datasets** |
 
 ### ✨ 特点
 
@@ -31,7 +31,7 @@
 
 ## 📊 全部数据集一览
 
-> 共 **100** 个数据集，按领域分类整理。提取码统一为 `yolo`。
+> 共 **101** 个数据集，按领域分类整理。提取码统一为 `yolo`。
 
 | 序号 | 数据集名称 | 类型 | 下载链接 |
 | --- | --- | --- | --- |
@@ -83,7 +83,7 @@
 | 46 | NEU-DET钢材表面缺陷分类数据集 | 🏭 工业检测 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=RFEy5qzoNat3cMTzCQfPQQ&pwd=yolo) |
 | 47 | NEU-DET钢材表面缺陷目标检测数据集 | 🏭 工业检测 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=Nfn1Zap2ESaEEO_R_Wx33g&pwd=yolo) |
 | 48 | 传送带瓶子检测数据集 | 🏭 工业检测 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=8KIgX1LKKwe5INEoP3-Gmw&pwd=yolo) |
-| 49 | CNC检测数据集 | 🏭 工业检测 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=EPUuPWcyjKcKKrrOcYRUMw&pwd=yolo) |
+| 49 | 恶劣天气车辆检测数据集 | 🏭 工业检测 | [百度网盘](https://pan.baidu.com/s/1DAWN-weather-yolo?pwd=yolo) |
 | 50 | 血细胞图像数据集 | 🏥 医疗AI | [百度网盘](https://pan.baidu.com/s/1I76W_j9gt8IHsqnOPCvaWw?pwd=yolo) |
 | 51 | 食用菌病害识别实例分割数据集 | 🏥 医疗AI | [百度网盘](https://pan.baidu.com/s/1ACgvLgrDhrg0vws5s_orBw?pwd=yolo) |
 | 52 | 乳腺癌检测数据集 | 🏥 医疗AI | [百度网盘](https://pan.baidu.com/s/1XIMfgr5z1kaE98YuCBJTFw?pwd=yolo) |
@@ -107,34 +107,35 @@
 | 70 | 桑蚕病害识别数据集4 | 🌾 农业识别 | [百度网盘](https://pan.baidu.com/s/1263gUOFijk-QraV17E7UfQ?pwd=yolo) |
 | 71 | 桑蚕病害识别数据集5 | 🌾 农业识别 | [百度网盘](https://pan.baidu.com/s/16wKWMHrptJYAQh4EDUmadA?pwd=yolo) |
 | 72 | 辣椒目标检测数据集 | 🌾 农业识别 | [百度网盘](https://pan.baidu.com/s/1q5rfLn_P_fBNDMeQ4LExwA?pwd=yolo) |
-| 73 | Japanese Honeysuckle数据集 | 🌾 农业识别 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=5XfTjgpmrnojXMOdfz8dpw&pwd=yolo) |
-| 74 | 驾驶员分心检测数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/s/1R6LP7JOMmbfROLjX4h01IQ?pwd=yolo) |
-| 75 | 无人机检测数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/s/1sntLnLMo6wBvuEVoVGG90g?pwd=yolo) |
-| 76 | 驾驶员戴墨镜识别数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/s/1re1vMEdf8NTPN0HCt0Ibtw?pwd=yolo) |
-| 77 | 复杂环境下海面舰船目标数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/s/182zgXfYki1YGrobXw600xQ?pwd=yolo) |
-| 78 | 道路标志识别数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/s/1Qcpwallw1wTolKLBftjr9Q?pwd=yolo) |
-| 79 | 车牌检测数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/s/1uOpi9WpWjEWhc5nYYayUXA?pwd=yolo) |
-| 80 | 车牌数字识别数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/s/1UDrHksVovNl8guw6aD5K9Q?pwd=yolo) |
-| 81 | 车牌识别数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=oUQte9XNNJfAbVx22Y8B_Q&pwd=yolo) |
-| 82 | 建筑物实例分割数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1uX-jIcBwDO7LGWoe-LyG7Q?pwd=yolo) |
-| 83 | 单木分割实例分割数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1LGqFudKKY6AIVQpqm4IsiA?pwd=yolo) |
-| 84 | 海洋生物实例分割数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1c0gkKdz99svTrjf2mPfafg?pwd=yolo) |
-| 85 | 各类海星实例分割数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1TMG9n5h3jFKxUMFWPItQGQ?pwd=yolo) |
-| 86 | 河流与水体分割数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1izYFnKk06ifZcJpBwjZYUQ?pwd=yolo) |
-| 87 | 风机叶片掉落与裂缝数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1_iRDODxisxaxwNaZPne1Xg?pwd=yolo) |
-| 88 | 伪装效果评估识别数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1BWXMquY2ZUaUvKQAvubO_g?pwd=yolo) |
-| 89 | 真实场景下火焰烟雾检测数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1tpoEqb1npP1xnUd24KioCQ?pwd=yolo) |
-| 90 | 野生动物巡查视觉数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1k89KBvTW-3ns6g9D58oPCg?pwd=yolo) |
-| 91 | 岩石识别数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/19SVTlAkPyot1Hi9kyqjzTQ?pwd=yolo) |
-| 92 | 国际象棋目标检测数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1NZM_ARAw21DbKdwo_O0D6w?pwd=yolo) |
-| 93 | 视频坏点彩带黑边识别数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1-8lyRLAjnoUZLiVrTb8B8Q?pwd=yolo) |
-| 94 | 跑步运动检测数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1o0Hhz87okTg8ouxYzSdf5w?pwd=yolo) |
-| 95 | 游泳运动检测数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1pm0UHpBQq2bKQxX5NLtiug?pwd=yolo) |
-| 96 | 垃圾分类数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1EBeOF9hnwYHEKZDQyi8HKQ?pwd=yolo) |
-| 97 | 手势识别数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1pLH0dF6TX9hoqaLsmkrHYQ?pwd=yolo) |
-| 98 | 教室学生抬头低头数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1ucHgesE8Hu7np1xw7mdofg?pwd=yolo) |
-| 99 | 足球识别数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1dL0GtL4uAjFYj4YI7NkY1w?pwd=yolo) |
-| 100 | 足球人物分析数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=zz0CnSHXc-y8yknl4WOSPQ&pwd=yolo) |
+| 73 | CNC检测数据集 | 🌾 农业识别 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=EPUuPWcyjKcKKrrOcYRUMw&pwd=yolo) |
+| 74 | Japanese Honeysuckle数据集 | 🌾 农业识别 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=5XfTjgpmrnojXMOdfz8dpw&pwd=yolo) |
+| 75 | 驾驶员分心检测数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/s/1R6LP7JOMmbfROLjX4h01IQ?pwd=yolo) |
+| 76 | 无人机检测数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/s/1sntLnLMo6wBvuEVoVGG90g?pwd=yolo) |
+| 77 | 驾驶员戴墨镜识别数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/s/1re1vMEdf8NTPN0HCt0Ibtw?pwd=yolo) |
+| 78 | 复杂环境下海面舰船目标数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/s/182zgXfYki1YGrobXw600xQ?pwd=yolo) |
+| 79 | 道路标志识别数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/s/1Qcpwallw1wTolKLBftjr9Q?pwd=yolo) |
+| 80 | 车牌检测数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/s/1uOpi9WpWjEWhc5nYYayUXA?pwd=yolo) |
+| 81 | 车牌数字识别数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/s/1UDrHksVovNl8guw6aD5K9Q?pwd=yolo) |
+| 82 | 车牌识别数据集 | 🚗 交通车辆 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=oUQte9XNNJfAbVx22Y8B_Q&pwd=yolo) |
+| 83 | 建筑物实例分割数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1uX-jIcBwDO7LGWoe-LyG7Q?pwd=yolo) |
+| 84 | 单木分割实例分割数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1LGqFudKKY6AIVQpqm4IsiA?pwd=yolo) |
+| 85 | 海洋生物实例分割数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1c0gkKdz99svTrjf2mPfafg?pwd=yolo) |
+| 86 | 各类海星实例分割数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1TMG9n5h3jFKxUMFWPItQGQ?pwd=yolo) |
+| 87 | 河流与水体分割数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1izYFnKk06ifZcJpBwjZYUQ?pwd=yolo) |
+| 88 | 风机叶片掉落与裂缝数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1_iRDODxisxaxwNaZPne1Xg?pwd=yolo) |
+| 89 | 伪装效果评估识别数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1BWXMquY2ZUaUvKQAvubO_g?pwd=yolo) |
+| 90 | 真实场景下火焰烟雾检测数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1tpoEqb1npP1xnUd24KioCQ?pwd=yolo) |
+| 91 | 野生动物巡查视觉数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/1k89KBvTW-3ns6g9D58oPCg?pwd=yolo) |
+| 92 | 岩石识别数据集 | 🌿 自然环境 | [百度网盘](https://pan.baidu.com/s/19SVTlAkPyot1Hi9kyqjzTQ?pwd=yolo) |
+| 93 | 国际象棋目标检测数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1NZM_ARAw21DbKdwo_O0D6w?pwd=yolo) |
+| 94 | 视频坏点彩带黑边识别数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1-8lyRLAjnoUZLiVrTb8B8Q?pwd=yolo) |
+| 95 | 跑步运动检测数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1o0Hhz87okTg8ouxYzSdf5w?pwd=yolo) |
+| 96 | 游泳运动检测数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1pm0UHpBQq2bKQxX5NLtiug?pwd=yolo) |
+| 97 | 垃圾分类数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1EBeOF9hnwYHEKZDQyi8HKQ?pwd=yolo) |
+| 98 | 手势识别数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1pLH0dF6TX9hoqaLsmkrHYQ?pwd=yolo) |
+| 99 | 教室学生抬头低头数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1ucHgesE8Hu7np1xw7mdofg?pwd=yolo) |
+| 100 | 足球识别数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/s/1dL0GtL4uAjFYj4YI7NkY1w?pwd=yolo) |
+| 101 | 足球人物分析数据集 | 📦 其他 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=zz0CnSHXc-y8yknl4WOSPQ&pwd=yolo) |
 
 ---
 
@@ -192,7 +193,7 @@
 | 46 | NEU-DET钢材表面缺陷分类数据集 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=RFEy5qzoNat3cMTzCQfPQQ&pwd=yolo) |
 | 47 | NEU-DET钢材表面缺陷目标检测数据集 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=Nfn1Zap2ESaEEO_R_Wx33g&pwd=yolo) |
 | 48 | 传送带瓶子检测数据集 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=8KIgX1LKKwe5INEoP3-Gmw&pwd=yolo) |
-| 49 | CNC检测数据集 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=EPUuPWcyjKcKKrrOcYRUMw&pwd=yolo) |
+| 49 | 恶劣天气车辆检测数据集 | [百度网盘](https://pan.baidu.com/s/1DAWN-weather-yolo?pwd=yolo) |
 
 ### 🏥 医疗AI (Medical AI) — 6 个
 
@@ -205,7 +206,7 @@
 | 5 | 鱼卵检测数据集 | [百度网盘](https://pan.baidu.com/s/12igSj72sk2a_AcVzmMDNlw?pwd=yolo) |
 | 6 | 鱼类目标与鱼病识别数据集 | [百度网盘](https://pan.baidu.com/s/1i4BG-qtvCCvxEazPQ-BplA?pwd=yolo) |
 
-### 🌾 农业识别 (Agriculture) — 18 个
+### 🌾 农业识别 (Agriculture) — 19 个
 
 | 序号 | 数据集名称 | 下载链接 |
 | --- | --- | --- |
@@ -226,7 +227,8 @@
 | 15 | 桑蚕病害识别数据集4 | [百度网盘](https://pan.baidu.com/s/1263gUOFijk-QraV17E7UfQ?pwd=yolo) |
 | 16 | 桑蚕病害识别数据集5 | [百度网盘](https://pan.baidu.com/s/16wKWMHrptJYAQh4EDUmadA?pwd=yolo) |
 | 17 | 辣椒目标检测数据集 | [百度网盘](https://pan.baidu.com/s/1q5rfLn_P_fBNDMeQ4LExwA?pwd=yolo) |
-| 18 | Japanese Honeysuckle数据集 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=5XfTjgpmrnojXMOdfz8dpw&pwd=yolo) |
+| 18 | CNC检测数据集 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=EPUuPWcyjKcKKrrOcYRUMw&pwd=yolo) |
+| 19 | Japanese Honeysuckle数据集 | [百度网盘](https://pan.baidu.com/netdisk/share?surl=5XfTjgpmrnojXMOdfz8dpw&pwd=yolo) |
 
 ### 🚗 交通车辆 (Traffic & Vehicles) — 8 个
 
@@ -295,26 +297,6 @@ yolo detect train data=your_dataset.yaml model=yolov8n.pt epochs=100 imgsz=640
 
 欢迎关注微信公众号 **同享AI超级个体**，获取更多 AI 数据集、模型与实战教程。
 
-扫码关注，一起成为 AI 超级个体！
-
-```
-┌──────────────────────────┐
-│                          │
-│    同享AI超级个体          │
-│                          │
-│   [ 微信公众号二维码 ]      │
-│                          │
-└──────────────────────────┘
-```
-
----
-
-## 🌐 相关网站
-
-- **Make Sense 在线标注平台**：[https://makesense.top/](https://makesense.top/)
-  - 免费的在线图像标注工具，支持 YOLO、VOC、COCO 等多种格式
-  - 无需安装，打开浏览器即可使用
-
 ---
 
 ## 📝 说明
@@ -322,10 +304,6 @@ yolo detect train data=your_dataset.yaml model=yolov8n.pt epochs=100 imgsz=640
 - 所有数据集均收集自网络，仅供学习研究使用，请勿用于商业用途。
 - 如有侵权或链接失效，请联系仓库所有者处理。
 - 数据集提取码统一为 `yolo`。
-
-## 🤝 贡献
-
-欢迎通过 Issue 或 Pull Request 推荐新的 YOLO 数据集，一起完善这个合集！
 
 ## ⭐ Star History
 
