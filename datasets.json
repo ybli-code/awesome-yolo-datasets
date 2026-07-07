@@ -1,0 +1,709 @@
+[
+  {
+    "file": "血细胞图像数据集.md",
+    "name": "血细胞图像数据集",
+    "link": "https://pan.baidu.com/s/1I76W_j9gt8IHsqnOPCvaWw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "医疗AI"
+  },
+  {
+    "file": "电路缺陷检测.md",
+    "name": "电路缺陷检测",
+    "link": "https://pan.baidu.com/s/1ywMbQHvWhjQ33IU-0ycqfg?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "国际象棋目标检测数据集.md",
+    "name": "国际象棋目标检测数据集",
+    "link": "https://pan.baidu.com/s/1NZM_ARAw21DbKdwo_O0D6w?pwd=yolo",
+    "pwd": "yolo",
+    "category": "其他"
+  },
+  {
+    "file": "铁路轨道缺陷目标检测数据集.md",
+    "name": "铁路轨道缺陷目标检测数据集",
+    "link": "https://pan.baidu.com/s/1PzM4m2DufHVPlhhDRBr9pA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "食用菌病害识别实例分割数据集.md",
+    "name": "食用菌病害识别实例分割数据集",
+    "link": "https://pan.baidu.com/s/1ACgvLgrDhrg0vws5s_orBw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "医疗AI"
+  },
+  {
+    "file": "建筑物实例分割数据集.md",
+    "name": "建筑物实例分割数据集",
+    "link": "https://pan.baidu.com/s/1uX-jIcBwDO7LGWoe-LyG7Q?pwd=yolo",
+    "pwd": "yolo",
+    "category": "自然环境"
+  },
+  {
+    "file": "单木分割实例分割数据集.md",
+    "name": "单木分割实例分割数据集",
+    "link": "https://pan.baidu.com/s/1LGqFudKKY6AIVQpqm4IsiA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "自然环境"
+  },
+  {
+    "file": "沥青与水泥路面病害检测.md",
+    "name": "沥青与水泥路面病害检测",
+    "link": "https://pan.baidu.com/s/11DOZnEXME-2VVAFKvfYFBQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "传送皮带异物检测.md",
+    "name": "传送皮带异物检测",
+    "link": "https://pan.baidu.com/s/1lRm-HSaK0yuqAupnfJ5LwQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "珠宝首饰分拣数据集.md",
+    "name": "珠宝首饰分拣数据集",
+    "link": "https://pan.baidu.com/s/1AugryH8Bbfuc3hmX3nB8rQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "家用电器识别数据集.md",
+    "name": "家用电器识别数据集",
+    "link": "https://pan.baidu.com/s/1o49pGPoyDql3IcLmZw_-QQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "驾驶员分心检测数据集.md",
+    "name": "驾驶员分心检测数据集",
+    "link": "https://pan.baidu.com/s/1R6LP7JOMmbfROLjX4h01IQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "交通车辆"
+  },
+  {
+    "file": "海洋生物实例分割数据集.md",
+    "name": "海洋生物实例分割数据集",
+    "link": "https://pan.baidu.com/s/1c0gkKdz99svTrjf2mPfafg?pwd=yolo",
+    "pwd": "yolo",
+    "category": "自然环境"
+  },
+  {
+    "file": "各类海星实例分割数据集.md",
+    "name": "各类海星实例分割数据集",
+    "link": "https://pan.baidu.com/s/1TMG9n5h3jFKxUMFWPItQGQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "自然环境"
+  },
+  {
+    "file": "河流与水体分割数据集.md",
+    "name": "河流与水体分割数据集",
+    "link": "https://pan.baidu.com/s/1izYFnKk06ifZcJpBwjZYUQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "自然环境"
+  },
+  {
+    "file": "乳腺癌检测数据集.md",
+    "name": "乳腺癌检测数据集",
+    "link": "https://pan.baidu.com/s/1XIMfgr5z1kaE98YuCBJTFw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "医疗AI"
+  },
+  {
+    "file": "草莓成熟度检测数据集.md",
+    "name": "草莓成熟度检测数据集",
+    "link": "https://pan.baidu.com/s/15FExbiG-KRWC3UqdAL368g?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "风机叶片掉落与裂缝数据集.md",
+    "name": "风机叶片掉落与裂缝数据集",
+    "link": "https://pan.baidu.com/s/1_iRDODxisxaxwNaZPne1Xg?pwd=yolo",
+    "pwd": "yolo",
+    "category": "自然环境"
+  },
+  {
+    "file": "地面裂缝深度识别数据集.md",
+    "name": "地面裂缝深度识别数据集",
+    "link": "https://pan.baidu.com/s/1QgNWo1YWRy9pmMcCVafgNA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "直插元器件引脚焊接检测数据集.md",
+    "name": "直插元器件引脚焊接检测数据集",
+    "link": "https://pan.baidu.com/s/1EIdasFfn9FIs6lLnYO21Ew?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "滴水检测数据集.md",
+    "name": "滴水检测数据集",
+    "link": "https://pan.baidu.com/s/1IZvwUaRgHLuqoWUZ6fhZ0Q?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "汽车整车零部件瑕疵检测.md",
+    "name": "汽车整车零部件瑕疵检测",
+    "link": "https://pan.baidu.com/s/19SMC1Q6IqNPU4zvsWKf_qw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "番茄识别数据集.md",
+    "name": "番茄识别数据集",
+    "link": "https://pan.baidu.com/s/1zRLu2mu8LLrS7731fewOxw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "布料痕迹检测数据集.md",
+    "name": "布料痕迹检测数据集",
+    "link": "https://pan.baidu.com/s/1kUJBhqUYmUdhf-4D0hfkEQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "肌肉纤维识别数据集.md",
+    "name": "肌肉纤维识别数据集",
+    "link": "https://pan.baidu.com/s/1sXhCQD9UoFs8oeIpVn9_rg?pwd=yolo",
+    "pwd": "yolo",
+    "category": "医疗AI"
+  },
+  {
+    "file": "木材表面缺陷检测数据集.md",
+    "name": "木材表面缺陷检测数据集",
+    "link": "https://pan.baidu.com/s/1bh7erznU0S-qx0JAvRkimQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "集装箱内部货物检测数据集.md",
+    "name": "集装箱内部货物检测数据集",
+    "link": "https://pan.baidu.com/s/1AVCh6dvUFQd9le8qjnG5iw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "茶叶病虫害检测数据集.md",
+    "name": "茶叶病虫害检测数据集",
+    "link": "https://pan.baidu.com/s/1zk3W-jyb6k5c3PI5bISCdw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "荔枝成熟度检测数据集.md",
+    "name": "荔枝成熟度检测数据集",
+    "link": "https://pan.baidu.com/s/1eL96qLLcAF0C-zse3s4iDQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "汽车刹车片瑕疵检测数据集.md",
+    "name": "汽车刹车片瑕疵检测数据集",
+    "link": "https://pan.baidu.com/s/1982TU_Zr7fxKgjBYYCYl-Q?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "工厂指示牌识别数据集.md",
+    "name": "工厂指示牌识别数据集",
+    "link": "https://pan.baidu.com/s/1YBdxDPj0COfTmJVMzBhVBw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "无人机检测数据集.md",
+    "name": "无人机检测数据集",
+    "link": "https://pan.baidu.com/s/1sntLnLMo6wBvuEVoVGG90g?pwd=yolo",
+    "pwd": "yolo",
+    "category": "交通车辆"
+  },
+  {
+    "file": "挂点金具螺栓检测数据集.md",
+    "name": "挂点金具螺栓检测数据集",
+    "link": "https://pan.baidu.com/s/1SDkA6-0BbZS2QL-tR4enhg?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "火车车轮表面缺陷检测数据集.md",
+    "name": "火车车轮表面缺陷检测数据集",
+    "link": "https://pan.baidu.com/s/1NA3N6534wOleQfmxkyV84w?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "伪装效果评估识别数据集.md",
+    "name": "伪装效果评估识别数据集",
+    "link": "https://pan.baidu.com/s/1BWXMquY2ZUaUvKQAvubO_g?pwd=yolo",
+    "pwd": "yolo",
+    "category": "自然环境"
+  },
+  {
+    "file": "指针式仪表识别数据集.md",
+    "name": "指针式仪表识别数据集",
+    "link": "https://pan.baidu.com/s/1nLAKvOw53DYEgoSeRRuBbQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "苹果成熟度检测数据集.md",
+    "name": "苹果成熟度检测数据集",
+    "link": "https://pan.baidu.com/s/1by3mz0Fu90z52tIs4eaBZA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "施工现场检测数据集.md",
+    "name": "施工现场检测数据集",
+    "link": "https://pan.baidu.com/s/1U4G5rlfRlNN7Nw0qTq1gzA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "透明塑料瓶检测数据集.md",
+    "name": "透明塑料瓶检测数据集",
+    "link": "https://pan.baidu.com/s/1HDgbpFFVlBEz_4e4JQ3Rlg?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "钢筋网分割数据集.md",
+    "name": "钢筋网分割数据集",
+    "link": "https://pan.baidu.com/s/1-swl2AsJGIsyfM1j8EeuhQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "硬币面值识别数据集.md",
+    "name": "硬币面值识别数据集",
+    "link": "https://pan.baidu.com/s/1d0k9LHbtnkkDc1mTOmb8_w?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "视频坏点彩带黑边识别数据集.md",
+    "name": "视频坏点彩带黑边识别数据集",
+    "link": "https://pan.baidu.com/s/1-8lyRLAjnoUZLiVrTb8B8Q?pwd=yolo",
+    "pwd": "yolo",
+    "category": "其他"
+  },
+  {
+    "file": "驾驶员戴墨镜识别数据集.md",
+    "name": "驾驶员戴墨镜识别数据集",
+    "link": "https://pan.baidu.com/s/1re1vMEdf8NTPN0HCt0Ibtw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "交通车辆"
+  },
+  {
+    "file": "机床加工车间数据集.md",
+    "name": "机床加工车间数据集",
+    "link": "https://pan.baidu.com/s/1DS4HKuaq46TfsVKPgGGo6w?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "隧道管片识别数据集.md",
+    "name": "隧道管片识别数据集",
+    "link": "https://pan.baidu.com/s/1KtgTd_yHjwhpWTkJXo-mjg?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "屋顶病害检测数据集.md",
+    "name": "屋顶病害检测数据集",
+    "link": "https://pan.baidu.com/s/159eOzjv9IFtYZDEYgE9gGg?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "工地模板缝隙检测数据集.md",
+    "name": "工地模板缝隙检测数据集",
+    "link": "https://pan.baidu.com/s/105mvfz2VfZgGiqB-JQDmYA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "配电柜与开关柜检测数据集.md",
+    "name": "配电柜与开关柜检测数据集",
+    "link": "https://pan.baidu.com/s/1FlhiJuOrWzrOZ8yvaOxVRg?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "真实场景下火焰烟雾检测数据集.md",
+    "name": "真实场景下火焰烟雾检测数据集",
+    "link": "https://pan.baidu.com/s/1tpoEqb1npP1xnUd24KioCQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "自然环境"
+  },
+  {
+    "file": "野生动物巡查视觉数据集.md",
+    "name": "野生动物巡查视觉数据集",
+    "link": "https://pan.baidu.com/s/1k89KBvTW-3ns6g9D58oPCg?pwd=yolo",
+    "pwd": "yolo",
+    "category": "自然环境"
+  },
+  {
+    "file": "鱼卵检测数据集.md",
+    "name": "鱼卵检测数据集",
+    "link": "https://pan.baidu.com/s/12igSj72sk2a_AcVzmMDNlw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "医疗AI"
+  },
+  {
+    "file": "传送带托辗识别数据集.md",
+    "name": "传送带托辗识别数据集",
+    "link": "https://pan.baidu.com/s/1-eyjndUvu7Zb6nMr9CnAsQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "金属表面凹坑数据集.md",
+    "name": "金属表面凹坑数据集",
+    "link": "https://pan.baidu.com/s/14VP50Ig1LEuKi_zJ9-M_qA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "复杂环境下海面舰船目标数据集.md",
+    "name": "复杂环境下海面舰船目标数据集",
+    "link": "https://pan.baidu.com/s/182zgXfYki1YGrobXw600xQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "交通车辆"
+  },
+  {
+    "file": "管道振动测试数据集.md",
+    "name": "管道振动测试数据集",
+    "link": "https://pan.baidu.com/netdisk/share?surl=YaZdkKrSyGjN5rZtPhERTA&pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "露天矿区检测数据集.md",
+    "name": "露天矿区检测数据集",
+    "link": "https://pan.baidu.com/netdisk/share?surl=F19CnQlq-bcEY_xk1VCKhQ&pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "焊接机器人故障识别数据集.md",
+    "name": "焊接机器人故障识别数据集",
+    "link": "https://pan.baidu.com/s/1Y0WxwRrcRN9STrj1AmErPw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "跑步运动检测数据集.md",
+    "name": "跑步运动检测数据集",
+    "link": "https://pan.baidu.com/s/1o0Hhz87okTg8ouxYzSdf5w?pwd=yolo",
+    "pwd": "yolo",
+    "category": "其他"
+  },
+  {
+    "file": "游泳运动检测数据集.md",
+    "name": "游泳运动检测数据集",
+    "link": "https://pan.baidu.com/s/1pm0UHpBQq2bKQxX5NLtiug?pwd=yolo",
+    "pwd": "yolo",
+    "category": "其他"
+  },
+  {
+    "file": "蓝靛果识别数据集.md",
+    "name": "蓝靛果识别数据集",
+    "link": "https://pan.baidu.com/s/1jElx-hWPQpUZNJF0j98OOA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "选矿摇床的矿带边缘检测数据集.md",
+    "name": "选矿摇床的矿带边缘检测数据集",
+    "link": "https://pan.baidu.com/s/1iEtoETxXnOlyCSSaWjcjTg?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "露天矿区检测数据集.md",
+    "name": "露天矿区检测数据集",
+    "link": "https://pan.baidu.com/s/1AsDRctYWKP3dHnzALrixrA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "厨房卫生安全检测数据集.md",
+    "name": "厨房卫生安全检测数据集",
+    "link": "https://pan.baidu.com/s/1ORwJ7-jpTdCweTpxt2eCuw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "垃圾分类数据集.md",
+    "name": "垃圾分类数据集",
+    "link": "https://pan.baidu.com/s/1EBeOF9hnwYHEKZDQyi8HKQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "其他"
+  },
+  {
+    "file": "手势识别数据集.md",
+    "name": "手势识别数据集",
+    "link": "https://pan.baidu.com/s/1pLH0dF6TX9hoqaLsmkrHYQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "其他"
+  },
+  {
+    "file": "建筑工地安全帽与反光衣.md",
+    "name": "建筑工地安全帽与反光衣",
+    "link": "https://pan.baidu.com/s/1IdihbHbsq59ASnRUglnvqg?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "数码管数字识别数据集.md",
+    "name": "数码管数字识别数据集",
+    "link": "https://pan.baidu.com/s/1PkOQyZUNLn7Z8aD_6hfJKw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "图书馆书架书籍检测数据集.md",
+    "name": "图书馆书架书籍检测数据集",
+    "link": "https://pan.baidu.com/s/18AUIHo9S3ZqF1AiPSHs4Cw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "山竹果实目标检测数据集.md",
+    "name": "山竹果实目标检测数据集",
+    "link": "https://pan.baidu.com/s/1VCkt-4yDxtnMdLgB72xurw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "芒果成熟度识别数据集.md",
+    "name": "芒果成熟度识别数据集",
+    "link": "https://pan.baidu.com/s/1aEjaurHqPQ9FQ3-K84z70w?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "工业包装缺陷检测数据集.md",
+    "name": "工业包装缺陷检测数据集",
+    "link": "https://pan.baidu.com/s/1lXtvZ8dk6R47BXjvB5bWmQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "道路标志识别数据集.md",
+    "name": "道路标志识别数据集",
+    "link": "https://pan.baidu.com/s/1Qcpwallw1wTolKLBftjr9Q?pwd=yolo",
+    "pwd": "yolo",
+    "category": "交通车辆"
+  },
+  {
+    "file": "鱼类目标与鱼病识别数据集.md",
+    "name": "鱼类目标与鱼病识别数据集",
+    "link": "https://pan.baidu.com/s/1i4BG-qtvCCvxEazPQ-BplA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "医疗AI"
+  },
+  {
+    "file": "水果识别数据集.md",
+    "name": "水果识别数据集",
+    "link": "https://pan.baidu.com/s/10HJU3hOBMy0IGQA-zt1sHA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "各类塑料瓶检测数据集.md",
+    "name": "各类塑料瓶检测数据集",
+    "link": "https://pan.baidu.com/s/1ElkIXTkTa4U8AfbnMiJP3A?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "岩石识别数据集.md",
+    "name": "岩石识别数据集",
+    "link": "https://pan.baidu.com/s/19SVTlAkPyot1Hi9kyqjzTQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "自然环境"
+  },
+  {
+    "file": "印章划分检测数据集.md",
+    "name": "印章划分检测数据集",
+    "link": "https://pan.baidu.com/s/1w-t1OyoXn7QfgX_PALsXag?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "教室学生抬头低头数据集.md",
+    "name": "教室学生抬头低头数据集",
+    "link": "https://pan.baidu.com/s/1ucHgesE8Hu7np1xw7mdofg?pwd=yolo",
+    "pwd": "yolo",
+    "category": "其他"
+  },
+  {
+    "file": "足球识别数据集.md",
+    "name": "足球识别数据集",
+    "link": "https://pan.baidu.com/s/1dL0GtL4uAjFYj4YI7NkY1w?pwd=yolo",
+    "pwd": "yolo",
+    "category": "其他"
+  },
+  {
+    "file": "足球人物分析数据集.md",
+    "name": "足球人物分析数据集",
+    "link": "https://pan.baidu.com/netdisk/share?surl=zz0CnSHXc-y8yknl4WOSPQ&pwd=yolo",
+    "pwd": "yolo",
+    "category": "其他"
+  },
+  {
+    "file": "植物叶片病害识别.md",
+    "name": "植物叶片病害识别",
+    "link": "https://pan.baidu.com/netdisk/share?surl=_wnxwyU3rDU3Fjts5mojHQ&pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "手机-书-水杯目标检测数据集.md",
+    "name": "手机-书-水杯目标检测数据集",
+    "link": "https://pan.baidu.com/s/1d4GsFoen9nqZLdSr0m5alA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "安全帽检测数据集.md",
+    "name": "安全帽检测数据集",
+    "link": "https://pan.baidu.com/s/1YTbdOeQ3B50e1W9rJuTTjQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "小丑鱼-金鱼识别数据集.md",
+    "name": "小丑鱼-金鱼识别数据集",
+    "link": "https://pan.baidu.com/s/1lJmq43bG0B4K3DZloUl7ng?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "桑蚕病害识别数据集.md",
+    "name": "桑蚕病害识别数据集",
+    "link": "https://pan.baidu.com/s/1IpViEvWf4_IsvSOhYp6nSg?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "Sericulture桑蚕病害识别数据集.md",
+    "name": "Sericulture桑蚕病害识别数据集",
+    "link": "https://pan.baidu.com/s/1jUg2UMe6n8QlJuziGmjfRA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "桑蚕病害识别数据集2.md",
+    "name": "桑蚕病害识别数据集2",
+    "link": "https://pan.baidu.com/s/1A93t5ySv3w4ut2waoaqejw?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "桑蚕病害识别数据集3.md",
+    "name": "桑蚕病害识别数据集3",
+    "link": "https://pan.baidu.com/s/1seJN5gAH_-tLWgCd4RzaEA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "桑蚕病害识别数据集4.md",
+    "name": "桑蚕病害识别数据集4",
+    "link": "https://pan.baidu.com/s/1263gUOFijk-QraV17E7UfQ?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "桑蚕病害识别数据集5.md",
+    "name": "桑蚕病害识别数据集5",
+    "link": "https://pan.baidu.com/s/16wKWMHrptJYAQh4EDUmadA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "辣椒目标检测数据集.md",
+    "name": "辣椒目标检测数据集",
+    "link": "https://pan.baidu.com/s/1q5rfLn_P_fBNDMeQ4LExwA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "车牌检测数据集.md",
+    "name": "车牌检测数据集",
+    "link": "https://pan.baidu.com/s/1uOpi9WpWjEWhc5nYYayUXA?pwd=yolo",
+    "pwd": "yolo",
+    "category": "交通车辆"
+  },
+  {
+    "file": "车牌数字识别数据集.md",
+    "name": "车牌数字识别数据集",
+    "link": "https://pan.baidu.com/s/1UDrHksVovNl8guw6aD5K9Q?pwd=yolo",
+    "pwd": "yolo",
+    "category": "交通车辆"
+  },
+  {
+    "file": "水位监测水尺识别数据集.md",
+    "name": "水位监测水尺识别数据集",
+    "link": "https://pan.baidu.com/netdisk/share?surl=d7N7Rcvw0T3DRGsJiErYxA&pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "NEU-DET钢材表面缺陷分类数据集.md",
+    "name": "NEU-DET钢材表面缺陷分类数据集",
+    "link": "https://pan.baidu.com/netdisk/share?surl=RFEy5qzoNat3cMTzCQfPQQ&pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "NEU-DET钢材表面缺陷目标检测数据集.md",
+    "name": "NEU-DET钢材表面缺陷目标检测数据集",
+    "link": "https://pan.baidu.com/netdisk/share?surl=Nfn1Zap2ESaEEO_R_Wx33g&pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "车牌识别数据集.md",
+    "name": "车牌识别数据集",
+    "link": "https://pan.baidu.com/netdisk/share?surl=oUQte9XNNJfAbVx22Y8B_Q&pwd=yolo",
+    "pwd": "yolo",
+    "category": "交通车辆"
+  },
+  {
+    "file": "传送带瓶子检测数据集.md",
+    "name": "传送带瓶子检测数据集",
+    "link": "https://pan.baidu.com/netdisk/share?surl=8KIgX1LKKwe5INEoP3-Gmw&pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  },
+  {
+    "file": "CNC检测数据集.md",
+    "name": "CNC检测数据集",
+    "link": "https://pan.baidu.com/netdisk/share?surl=EPUuPWcyjKcKKrrOcYRUMw&pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "Japanese Honeysuckle数据集.md",
+    "name": "Japanese Honeysuckle数据集",
+    "link": "https://pan.baidu.com/netdisk/share?surl=5XfTjgpmrnojXMOdfz8dpw&pwd=yolo",
+    "pwd": "yolo",
+    "category": "农业识别"
+  },
+  {
+    "file": "恶劣天气车辆检测数据集.md",
+    "name": "恶劣天气车辆检测数据集",
+    "link": "https://pan.baidu.com/s/1DAWN-weather-yolo?pwd=yolo",
+    "pwd": "yolo",
+    "category": "工业检测"
+  }
+]
