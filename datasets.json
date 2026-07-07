@@ -705,5 +705,20 @@
     "link": "https://pan.baidu.com/s/1DAWN-weather-yolo?pwd=yolo",
     "pwd": "yolo",
     "category": "工业检测"
+  },
+  {
+    "title": "恶劣天气雾天车辆检测数据集",
+    "source": "https://universe.roboflow.com/yolov11-ydwah/fog-qegje",
+    "download": "https://huggingface.co/datasets/ybli-code/adverse-weather-fog-vehicle-detection-dataset",
+    "nc": 5,
+    "names": [
+      "bicycle",
+      "bus",
+      "car",
+      "motorcycle",
+      "person"
+    ],
+    "type": "object-detection",
+    "images": 4795
   }
 ]
