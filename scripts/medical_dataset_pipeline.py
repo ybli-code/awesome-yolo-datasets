@@ -94,22 +94,38 @@ logger = logging.getLogger('medical_dataset')
 # ============================================================
 
 def get_release_assets(tag):
-    """从 GitHub expanded_assets 页面获取所有下载链接"""
+    """从 GitHub expanded_assets 页面获取所有下载链接（带重试和备用方案）"""
     url = f'https://github.com/data-nih/tcia/releases/expanded_assets/{tag}'
     logger.info(f'获取文件清单: {url}')
     
-    for attempt in range(3):
+    # 方案1: expanded_assets HTML 页面（重试5次，递增等待）
+    for attempt in range(5):
         try:
             req = urllib.request.Request(url, headers=HEADERS)
             with urllib.request.urlopen(req, timeout=60) as resp:
                 html = resp.read().decode('utf-8')
             break
         except Exception as e:
-            logger.warning(f'请求失败 (尝试 {attempt+1}/3): {e}')
-            time.sleep(2)
+            wait = 2 ** (attempt + 1)  # 2, 4, 8, 16, 32 秒
+            logger.warning(f'请求失败 (尝试 {attempt+1}/5): {e}, {wait}秒后重试...')
+            time.sleep(wait)
     else:
-        logger.error('无法获取文件清单')
-        return []
+        # 方案2: 备用 - 使用 GitHub API 获取 release assets
+        logger.warning('expanded_assets 页面失败，尝试 GitHub API...')
+        api_url = f'https://api.github.com/repos/data-nih/tcia/releases/tags/{tag}'
+        try:
+            req = urllib.request.Request(api_url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                release_data = json.loads(resp.read().decode('utf-8'))
+            assets = []
+            for a in release_data.get('assets', []):
+                assets.append({'name': a['name'], 'url': a['browser_download_url']})
+            logger.info(f'通过 GitHub API 获取到 {len(assets)} 个文件')
+            return assets
+        except Exception as e:
+            logger.error(f'GitHub API 也失败: {e}')
+            logger.error('无法获取文件清单，请检查网络连接')
+            return []
     
     pattern = r'href="(/data-nih/tcia/releases/download/[^"]+)"'
     matches = re.findall(pattern, html)
@@ -620,9 +636,22 @@ def main():
         
         # 1. 下载
         if not args.skip_download:
-            download_dataset(config, skip_dwi=args.skip_dwi)
+            dl_result = download_dataset(config, skip_dwi=args.skip_dwi)
+            if dl_result is None:
+                logger.error(f'{name}: 下载失败，跳过打包和上传')
+                share_results[name] = {'error': 'download failed (cannot get file list)'}
+                # 清理可能存在的空目录
+                if os.path.exists(output_dir):
+                    shutil.rmtree(output_dir, ignore_errors=True)
+                continue
         else:
             logger.info(f'跳过下载: {name}')
+        
+        # 检查目录是否存在
+        if not os.path.exists(output_dir):
+            logger.error(f'{name}: 输出目录不存在，跳过')
+            share_results[name] = {'error': 'output directory not found'}
+            continue
         
         # 2. 打包
         package_path = os.path.join(PACKAGE_DIR, f'{name}.tar.gz')
