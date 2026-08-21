@@ -1,0 +1,156 @@
+name: Download Medical Datasets (UCSF-PDGM & UPENN-GBM)
+
+# 触发方式：手动触发（Actions 页面点击 Run workflow）
+on:
+  workflow_dispatch:
+    inputs:
+      dataset:
+        description: '选择要下载的数据集'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - ucsf-pdgm
+          - upenn-gbm
+      skip_dwi:
+        description: '跳过DWI大文件(.sz/.gqi.fz/.qsdr.fz)，仅下载结构像+分割标签（更快更省空间）'
+        required: false
+        default: false
+        type: boolean
+      upload_baidu:
+        description: '下载完成后上传到百度网盘并创建分享链接'
+        required: false
+        default: true
+        type: boolean
+
+# 环境变量
+env:
+  PYTHONUNBUFFERED: '1'
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360  # 最大6小时
+
+    steps:
+      - name: 检出仓库代码
+        uses: actions/checkout@v4
+
+      - name: 释放磁盘空间（删除不必要的预装软件）
+        run: |
+          echo "=== 释放前磁盘空间 ==="
+          df -h /
+          echo ""
+          echo "删除 Android SDK..."
+          sudo rm -rf /usr/local/lib/android || true
+          echo "删除 .NET 运行时..."
+          sudo rm -rf /usr/share/dotnet || true
+          echo "删除 Docker 镜像..."
+          docker image prune -a -f || true
+          sudo rm -rf /var/lib/docker || true
+          echo "删除 Swift 运行时..."
+          sudo rm -rf /usr/share/swift || true
+          echo "删除 Google Cloud SDK..."
+          sudo rm -rf /usr/local/lib/google-cloud-sdk || true
+          echo "删除 Firefox..."
+          sudo rm -rf /usr/lib/firefox || true
+          echo ""
+          echo "=== 释放后磁盘空间 ==="
+          df -h /
+
+      - name: 设置 Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+          python --version
+
+      - name: 构建下载参数
+        id: params
+        run: |
+          DATASET="${{ github.event.inputs.dataset }}"
+          SKIP_DWI="${{ github.event.inputs.skip_dwi }}"
+          UPLOAD_BAIDU="${{ github.event.inputs.upload_baidu }}"
+
+          CMD="python scripts/medical_dataset_pipeline.py --dataset $DATASET"
+
+          if [ "$UPLOAD_BAIDU" = "false" ]; then
+            CMD="$CMD --skip-upload"
+          fi
+
+          echo "cmd=$CMD" >> $GITHUB_OUTPUT
+          echo "执行命令: $CMD"
+
+      - name: 下载并整理医学影像数据集
+        env:
+          BAIDU_ACCESS_TOKEN: ${{ secrets.BAIDU_ACCESS_TOKEN }}
+        run: |
+          echo "=== 开始下载 ==="
+          echo "数据集: ${{ github.event.inputs.dataset }}"
+          echo "跳过DWI: ${{ github.event.inputs.skip_dwi }}"
+          echo "上传百度网盘: ${{ github.event.inputs.upload_baidu }}"
+          echo ""
+
+          ${{ steps.params.outputs.cmd }}
+
+          echo ""
+          echo "=== 下载完成 ==="
+          echo "输出目录内容:"
+          ls -la medical_datasets/ 2>/dev/null || echo "目录不存在"
+          echo ""
+          echo "打包文件:"
+          ls -lh medical_datasets/packages/ 2>/dev/null || echo "无打包文件"
+          echo ""
+          echo "结果文件:"
+          cat medical_datasets/download_results.json 2>/dev/null || echo "无结果文件"
+
+      - name: 上传下载结果为 Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: download-results
+          path: |
+            medical_datasets/download_results.json
+            medical_datasets/packages/*.tar.gz
+          retention-days: 7
+          if-no-files-found: ignore
+
+      - name: 输出百度网盘分享链接
+        if: always()
+        run: |
+          echo "## 下载结果汇总" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ -f medical_datasets/download_results.json ]; then
+            echo "### 百度网盘分享链接" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            python3 -c "
+          import json
+          with open('medical_datasets/download_results.json') as f:
+              data = json.load(f)
+          for name, info in data.items():
+              print(f'**{name}**')
+              print(f'- 本地包: {info.get(\"package\", \"N/A\")}')
+              if 'share_link' in info:
+                  print(f'- 百度网盘: {info[\"share_link\"]}')
+                  print(f'- 提取码: {info.get(\"password\", \"yolo\")}')
+              elif 'error' in info:
+                  print(f'- 状态: {info[\"error\"]}')
+              else:
+                  print(f'- 状态: 跳过上传')
+              print()
+          " >> $GITHUB_STEP_SUMMARY
+          else
+            echo "未生成结果文件，请查看上方日志。" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 磁盘使用情况" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          df -h / >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
