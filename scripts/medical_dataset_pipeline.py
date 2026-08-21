@@ -36,9 +36,14 @@ from pathlib import Path
 BAIDU_ACCESS_TOKEN = os.environ.get("BAIDU_ACCESS_TOKEN",
     "123.485e6f4d655137d4e223b7a53aeaf38e.YHXJvDs6OVmxeNAVp_-hixv6GuYQc4740J4C-sL.6LhX4A")
 
-# 工作目录（Colab 用 /content，本地用项目目录）
-if os.path.exists('/content'):
-    BASE_DIR = '/content/medical_datasets'
+# 工作目录（优先级：命令行参数 > 环境变量 > /mnt(GitHub Actions) > /content(Colab) > 本地）
+WORK_DIR = os.environ.get("WORK_DIR", "")
+if WORK_DIR:
+    BASE_DIR = os.path.join(WORK_DIR, 'medical_datasets')
+elif os.path.exists('/mnt'):
+    BASE_DIR = '/mnt/medical_datasets'  # GitHub Actions: 使用 /mnt 资源盘（额外14GB）
+elif os.path.exists('/content'):
+    BASE_DIR = '/content/medical_datasets'  # Colab
 else:
     BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'medical_datasets')
 
@@ -599,6 +604,19 @@ def main():
     for key in datasets:
         config = GITHUB_RELEASES[key]
         name = config['name']
+        output_dir = config['output_dir']
+        
+        logger.info(f'\n{"="*60}')
+        logger.info(f'处理数据集: {name}')
+        logger.info(f'输出目录: {output_dir}')
+        logger.info(f'{"="*60}')
+        
+        # 打印当前磁盘使用情况
+        try:
+            disk = shutil.disk_usage(os.path.dirname(output_dir))
+            logger.info(f'磁盘空间: 总计 {disk.total/1024**3:.1f}GB, 已用 {disk.used/1024**3:.1f}GB, 可用 {disk.free/1024**3:.1f}GB')
+        except:
+            pass
         
         # 1. 下载
         if not args.skip_download:
@@ -609,7 +627,7 @@ def main():
         # 2. 打包
         package_path = os.path.join(PACKAGE_DIR, f'{name}.tar.gz')
         if not os.path.exists(package_path):
-            package_dataset(config['output_dir'], package_path)
+            package_dataset(output_dir, package_path)
         else:
             logger.info(f'包已存在: {package_path}')
         
@@ -633,6 +651,19 @@ def main():
                 share_results[name] = {'package': package_path, 'error': 'upload failed'}
         else:
             share_results[name] = {'package': package_path, 'skipped_upload': True}
+        
+        # 5. 流式清理：删除原始下载目录（释放空间），打包文件保留到最后
+        if os.path.exists(output_dir):
+            logger.info(f'清理原始下载目录: {output_dir}')
+            shutil.rmtree(output_dir, ignore_errors=True)
+            logger.info('已清理，释放磁盘空间')
+        
+        # 打印清理后的磁盘使用情况
+        try:
+            disk = shutil.disk_usage(os.path.dirname(package_path))
+            logger.info(f'清理后磁盘: 可用 {disk.free/1024**3:.1f}GB')
+        except:
+            pass
     
     # 最终汇总
     logger.info(f'\n{"#"*60}')
