@@ -16,7 +16,7 @@ on:
       skip_dwi:
         description: '跳过DWI大文件(.sz/.gqi.fz/.qsdr.fz)，仅下载结构像+分割标签（更快更省空间）'
         required: false
-        default: false
+        default: true
         type: boolean
       upload_baidu:
         description: '下载完成后上传到百度网盘并创建分享链接'
@@ -27,6 +27,7 @@ on:
 # 环境变量
 env:
   PYTHONUNBUFFERED: '1'
+  WORK_DIR: '/mnt'  # 使用 /mnt 资源盘（额外14GB空间）
 
 jobs:
   download:
@@ -37,27 +38,57 @@ jobs:
       - name: 检出仓库代码
         uses: actions/checkout@v4
 
-      - name: 释放磁盘空间（删除不必要的预装软件）
+      - name: 彻底释放磁盘空间（删除所有不必要的预装软件）
         run: |
           echo "=== 释放前磁盘空间 ==="
           df -h /
+          df -h /mnt
           echo ""
-          echo "删除 Android SDK..."
+          
+          echo "删除 Android SDK (~12GB)..."
           sudo rm -rf /usr/local/lib/android || true
-          echo "删除 .NET 运行时..."
+          
+          echo "删除 .NET 运行时 (~2GB)..."
           sudo rm -rf /usr/share/dotnet || true
-          echo "删除 Docker 镜像..."
+          
+          echo "删除 Docker 镜像和数据 (~5GB)..."
           docker image prune -a -f || true
+          sudo systemctl stop docker || true
           sudo rm -rf /var/lib/docker || true
-          echo "删除 Swift 运行时..."
+          sudo rm -rf /opt/hostedtoolcache || true
+          
+          echo "删除 Swift 运行时 (~2GB)..."
           sudo rm -rf /usr/share/swift || true
-          echo "删除 Google Cloud SDK..."
+          
+          echo "删除 Google Cloud SDK (~1GB)..."
           sudo rm -rf /usr/local/lib/google-cloud-sdk || true
-          echo "删除 Firefox..."
+          
+          echo "删除 Firefox / Chrome..."
           sudo rm -rf /usr/lib/firefox || true
+          sudo rm -rf /opt/google/chrome || true
+          
+          echo "删除 Azure CLI / Powershell / 其他工具..."
+          sudo rm -rf /opt/az || true
+          sudo rm -rf /opt/microsoft || true
+          sudo rm -rf /usr/local/share/chromium || true
+          sudo rm -rf /usr/local/share/boost || true
+          sudo rm -rf /usr/local/share/edge_driver || true
+          
+          echo "删除 apt 缓存..."
+          sudo apt-get clean || true
+          sudo rm -rf /var/lib/apt/lists/* || true
+          
+          echo "删除 npm 缓存..."
+          sudo rm -rf /usr/local/share/.cache || true
+          
           echo ""
           echo "=== 释放后磁盘空间 ==="
           df -h /
+          df -h /mnt
+          echo ""
+          echo "=== /mnt 目录权限 ==="
+          sudo chmod 777 /mnt || true
+          ls -la /mnt
 
       - name: 设置 Python 3.10
         uses: actions/setup-python@v5
@@ -78,6 +109,10 @@ jobs:
           UPLOAD_BAIDU="${{ github.event.inputs.upload_baidu }}"
 
           CMD="python scripts/medical_dataset_pipeline.py --dataset $DATASET"
+          
+          if [ "$SKIP_DWI" = "true" ]; then
+            CMD="$CMD --skip-dwi"
+          fi
 
           if [ "$UPLOAD_BAIDU" = "false" ]; then
             CMD="$CMD --skip-upload"
@@ -86,28 +121,36 @@ jobs:
           echo "cmd=$CMD" >> $GITHUB_OUTPUT
           echo "执行命令: $CMD"
 
-      - name: 下载并整理医学影像数据集
+      - name: 下载并整理医学影像数据集（流式处理：下载一个→上传→删除→下一个）
         env:
           BAIDU_ACCESS_TOKEN: ${{ secrets.BAIDU_ACCESS_TOKEN }}
+          WORK_DIR: '/mnt'
         run: |
           echo "=== 开始下载 ==="
           echo "数据集: ${{ github.event.inputs.dataset }}"
           echo "跳过DWI: ${{ github.event.inputs.skip_dwi }}"
           echo "上传百度网盘: ${{ github.event.inputs.upload_baidu }}"
+          echo "工作目录: /mnt/medical_datasets"
           echo ""
-
+          
+          # 确保 /mnt 可写
+          sudo chmod 777 /mnt || true
+          
           ${{ steps.params.outputs.cmd }}
-
+          
           echo ""
           echo "=== 下载完成 ==="
           echo "输出目录内容:"
-          ls -la medical_datasets/ 2>/dev/null || echo "目录不存在"
+          ls -la /mnt/medical_datasets/ 2>/dev/null || echo "目录不存在"
           echo ""
           echo "打包文件:"
-          ls -lh medical_datasets/packages/ 2>/dev/null || echo "无打包文件"
+          ls -lh /mnt/medical_datasets/packages/ 2>/dev/null || echo "无打包文件"
           echo ""
           echo "结果文件:"
-          cat medical_datasets/download_results.json 2>/dev/null || echo "无结果文件"
+          cat /mnt/medical_datasets/download_results.json 2>/dev/null || echo "无结果文件"
+          
+          # 将结果文件复制到工作目录（用于 Artifact 上传）
+          cp /mnt/medical_datasets/download_results.json medical_datasets_results.json 2>/dev/null || true
 
       - name: 上传下载结果为 Artifact
         if: always()
@@ -115,8 +158,7 @@ jobs:
         with:
           name: download-results
           path: |
-            medical_datasets/download_results.json
-            medical_datasets/packages/*.tar.gz
+            medical_datasets_results.json
           retention-days: 7
           if-no-files-found: ignore
 
@@ -126,12 +168,12 @@ jobs:
           echo "## 下载结果汇总" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 
-          if [ -f medical_datasets/download_results.json ]; then
+          if [ -f medical_datasets_results.json ]; then
             echo "### 百度网盘分享链接" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             python3 -c "
           import json
-          with open('medical_datasets/download_results.json') as f:
+          with open('medical_datasets_results.json') as f:
               data = json.load(f)
           for name, info in data.items():
               print(f'**{name}**')
@@ -153,4 +195,5 @@ jobs:
           echo "### 磁盘使用情况" >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
           df -h / >> $GITHUB_STEP_SUMMARY
+          df -h /mnt >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
