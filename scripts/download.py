@@ -230,30 +230,13 @@ def download_roboflow(workspace, project, version_num=None, output_dir=WORK_DIR)
 
     os.makedirs(output_dir, exist_ok=True)
     zip_path = os.path.join(output_dir, f"{workspace}_{project}_v{version_num}.zip")
-    extract_dir = os.path.join(output_dir, f"{workspace}_{project}_v{version_num}")
 
     log(f"  开始下载...")
     if not concurrent_download(download_link, zip_path):
         return None
 
-    # 解压
-    os.makedirs(extract_dir, exist_ok=True)
-    with zipfile.ZipFile(zip_path, 'r') as zf:
-        zf.extractall(extract_dir)
-    os.remove(zip_path)
-    log(f"  解压完成: {extract_dir}")
-    return extract_dir
-
-
-def compress_dataset(source_dir, zip_path):
-    if os.path.exists(zip_path):
-        os.remove(zip_path)
-    with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zf:
-        for root, dirs, files in os.walk(source_dir):
-            for file in files:
-                filepath = os.path.join(root, file)
-                arcname = os.path.relpath(filepath, source_dir)
-                zf.write(filepath, arcname)
+    # 不解压，直接返回 ZIP 路径（用户要求：数据集不用解压缩）
+    log(f"  下载完成: {zip_path} ({os.path.getsize(zip_path) / 1024 / 1024:.1f} MB)")
     return zip_path
 
 
@@ -457,28 +440,26 @@ def process_dataset(ds):
     if not dataset_dir:
         return False
 
-    # 2. 压缩
-    safe_title = title.replace(" ", "_").replace("/", "_").replace(":", "_")[:80]
-    zip_path = os.path.join(WORK_DIR, f"{safe_title}.zip")
-    log("  正在压缩...")
-    compress_dataset(dataset_dir, zip_path)
-    log(f"  ZIP 大小: {os.path.getsize(zip_path) / 1024 / 1024:.1f} MB")
+    # 2. 重命名 ZIP 为 数据集标题_data2.cn.zip（不解压，直接上传原始ZIP）
+    safe_title = title.replace(" ", "_").replace("/", "_").replace(":", "_").replace("（", "(").replace("）", ")")[:80]
+    final_zip_name = f"{safe_title}_data2.cn.zip"
+    final_zip_path = os.path.join(WORK_DIR, final_zip_name)
+    os.rename(dataset_dir, final_zip_path)  # dataset_dir 实际是下载的 ZIP 路径
+    log(f"  重命名为: {final_zip_name}")
+    log(f"  ZIP 大小: {os.path.getsize(final_zip_path) / 1024 / 1024:.1f} MB")
 
-    # 清理解压目录
-    shutil.rmtree(dataset_dir, ignore_errors=True)
-
-    # 3. 上传到百度网盘
-    remote_path = f"/apps/同享AI数据集/{title}.zip"
+    # 3. 上传到百度网盘（文件名: 数据集标题_data2.cn.zip）
+    remote_path = f"/apps/同享AI数据集/{final_zip_name}"
     folder = os.path.dirname(remote_path)
     ensure_baidu_folder(folder, BAIDU_ACCESS_TOKEN)
-    uploaded_path = baidu_upload_xpan(zip_path, remote_path, BAIDU_ACCESS_TOKEN)
+    uploaded_path = baidu_upload_xpan(final_zip_path, remote_path, BAIDU_ACCESS_TOKEN)
     if not uploaded_path:
         return False
 
     # 4. 创建分享
     share_link = baidu_create_share(uploaded_path, BAIDU_ACCESS_TOKEN)
     if share_link:
-        share_text = f"通过网盘分享的文件：{title}\n链接: {share_link} 提取码: yolo"
+        share_text = f"通过网盘分享的文件：{final_zip_name}\n链接: {share_link} 提取码: yolo"
     else:
         share_text = f"百度网盘路径: {uploaded_path}（分享功能暂不可用）"
 
@@ -491,8 +472,8 @@ def process_dataset(ds):
 
     # 清理 ZIP（用户要求不清理空间则保留）
     if os.environ.get("KEEP_FILES") != "1":
-        if os.path.exists(zip_path):
-            os.remove(zip_path)
+        if os.path.exists(final_zip_path):
+            os.remove(final_zip_path)
 
     return True
 
