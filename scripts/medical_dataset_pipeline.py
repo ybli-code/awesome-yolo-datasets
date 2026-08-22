@@ -533,7 +533,7 @@ def baidu_upload_pcs(file_path, remote_path, access_token=None, bduss=None, app_
         params = f'method=upload&access_token={access_token}&path={urllib.parse.quote(remote_path)}&ondup=overwrite'
         cookie_header = None
     
-    # 使用 curl 上传（比 Python urllib 更稳定）
+    # 使用 curl 上传（-T 流式上传，不会将整个文件加载到内存）
     cmd = [
         'curl', '-s', '-X', 'POST',
         '--connect-timeout', '30',
@@ -542,7 +542,7 @@ def baidu_upload_pcs(file_path, remote_path, access_token=None, bduss=None, app_
         '--retry-delay', '10',  # 重试间隔10秒
         '--retry-connrefused',
         '-H', 'Content-Type: application/octet-stream',
-        '--data-binary', f'@{file_path}',
+        '-T', file_path,  # 流式上传，避免内存不足
         f'{upload_url}?{params}',
     ]
     if cookie_header:
