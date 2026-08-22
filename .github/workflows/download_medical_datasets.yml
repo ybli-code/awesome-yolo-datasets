@@ -124,6 +124,8 @@ jobs:
       - name: 下载并整理医学影像数据集（流式处理：下载一个→上传→删除→下一个）
         env:
           BAIDU_ACCESS_TOKEN: ${{ secrets.BAIDU_ACCESS_TOKEN }}
+          BAIDU_BDUSS: ${{ secrets.BAIDU_BDUSS }}
+          BAIDU_APP_ID: '266719'
           WORK_DIR: '/mnt'
         run: |
           echo "=== 开始下载 ==="
