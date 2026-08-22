@@ -42,10 +42,8 @@ jobs:
           sudo rm -rf /usr/local/lib/android || true
           echo "删除 .NET 运行时..."
           sudo rm -rf /usr/share/dotnet || true
-          echo "删除 Docker..."
+          echo "清理 Docker 镜像（不停止服务）..."
           docker image prune -a -f || true
-          sudo systemctl stop docker || true
-          sudo rm -rf /var/lib/docker || true
           sudo rm -rf /opt/hostedtoolcache || true
           
           echo "=== 释放后磁盘空间 ==="
