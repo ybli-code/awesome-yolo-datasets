@@ -516,8 +516,8 @@ def baidu_upload_xpan(file_path, remote_path, access_token):
         return None
 
 def baidu_upload_pcs(file_path, remote_path, access_token=None, bduss=None, app_id=None):
-    """百度网盘 PCS 简单上传（支持 Access Token 或 BDUSS 认证）"""
-    logger.info('使用 PCS 简单上传...')
+    """百度网盘 PCS 简单上传（使用 curl，更稳定，支持重试）"""
+    logger.info('使用 PCS 简单上传 (curl)...')
     
     if bduss and app_id:
         # 使用 BDUSS + app_id 认证
@@ -533,21 +533,41 @@ def baidu_upload_pcs(file_path, remote_path, access_token=None, bduss=None, app_
         params = f'method=upload&access_token={access_token}&path={urllib.parse.quote(remote_path)}&ondup=overwrite'
         cookie_header = None
     
-    with open(file_path, 'rb') as f:
-        req = urllib.request.Request(f'{upload_url}?{params}', data=f, method='POST')
-        req.add_header('Content-Type', 'application/octet-stream')
-        if cookie_header:
-            req.add_header('Cookie', cookie_header)
-        try:
-            with urllib.request.urlopen(req, timeout=3600) as resp:  # 大文件超时设为1小时
-                result = json.loads(resp.read().decode())
-                if 'path' in result:
-                    logger.info(f'上传成功: {result["path"]}')
-                    return result['path']
-                else:
-                    logger.error(f'上传返回异常: {result}')
-        except Exception as e:
-            logger.error(f'PCS 上传失败: {e}')
+    # 使用 curl 上传（比 Python urllib 更稳定）
+    cmd = [
+        'curl', '-s', '-X', 'POST',
+        '--connect-timeout', '30',
+        '--max-time', '7200',  # 最大2小时
+        '--retry', '5',  # 重试5次
+        '--retry-delay', '10',  # 重试间隔10秒
+        '--retry-connrefused',
+        '-H', 'Content-Type: application/octet-stream',
+        '--data-binary', f'@{file_path}',
+        f'{upload_url}?{params}',
+    ]
+    if cookie_header:
+        cmd.extend(['-H', f'Cookie: {cookie_header}'])
+    
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=7200)
+        if result.returncode == 0 and result.stdout:
+            data = json.loads(result.stdout)
+            if 'path' in data:
+                logger.info(f'上传成功: {data["path"]}')
+                return data['path']
+            else:
+                logger.error(f'上传返回异常: {data}')
+        else:
+            logger.error(f'curl 上传失败: returncode={result.returncode}')
+            if result.stderr:
+                logger.error(f'stderr: {result.stderr[:300]}')
+            if result.stdout:
+                logger.error(f'stdout: {result.stdout[:300]}')
+    except subprocess.TimeoutExpired:
+        logger.error('上传超时（超过2小时）')
+    except Exception as e:
+        logger.error(f'PCS 上传失败: {e}')
+    
     return None
 
 def baidu_upload(file_path, remote_path, access_token=None, bduss=None, app_id=None):
