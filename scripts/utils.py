@@ -31,6 +31,9 @@ BAIDU_REFRESH_TOKEN = os.environ.get("BAIDU_REFRESH_TOKEN", "")
 BAIDU_BDUSS = os.environ.get("BAIDU_BDUSS", "")
 BAIDU_APP_ID = os.environ.get("BAIDU_APP_ID", "266719")
 
+# Roboflow API Key
+ROBOFLOW_API_KEY = os.environ.get("ROBOFLOW_API_KEY", "")
+
 # ============================================================
 # 日志系统
 # ============================================================
