@@ -310,10 +310,14 @@ def baidu_create_share(file_path, access_token, pwd="yolo"):
             result = json.loads(resp.read().decode())
             if result.get("errno") == 0 and result.get("link"):
                 link = result["link"]
+                # 在链接中添加提取码参数
+                if "pwd=" not in link:
+                    separator = "&" if "?" in link else "?"
+                    link = f"{link}{separator}pwd={pwd}"
                 logger.info(f"  分享链接: {link} (提取码: {pwd})")
                 return link
             else:
-                logger.error(f"  分享失败: errno={result.get('errno')}")
+                logger.error(f"  分享失败: errno={result.get('errno')}, msg={result.get('show_msg', result.get('errmsg', ''))}")
                 return None
     except Exception as e:
         logger.error(f"  创建分享失败: {e}")
