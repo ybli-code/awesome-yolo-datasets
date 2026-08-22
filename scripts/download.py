@@ -429,7 +429,9 @@ def process_dataset(ds):
     workspace = ds["workspace"]
     project = ds["project"]
     version_num = ds.get("version")
-    title = ds.get("name", f"{workspace}/{project}")
+    # 重要：title 必须来自腾讯表格【列0】（简短标题，如"桥梁结构缺陷检测数据集"），
+    #       不能用列5的长文案，也不能用 workspace/project。生成 datasets.json 时务必从列0读取。
+    title = ds.get("title", "") or ds.get("name", "")
 
     log(f"{'='*50}")
     log(f"处理: {title} (行{row})")
@@ -441,6 +443,7 @@ def process_dataset(ds):
         return False
 
     # 2. 重命名 ZIP 为 数据集标题_data2.cn.zip（不解压，直接上传原始ZIP）
+    # title 已在函数开头从 ds["title"] 读取（来自腾讯表格列0）
     safe_title = title.replace(" ", "_").replace("/", "_").replace(":", "_").replace("（", "(").replace("）", ")")[:80]
     final_zip_name = f"{safe_title}_data2.cn.zip"
     final_zip_path = os.path.join(WORK_DIR, final_zip_name)
