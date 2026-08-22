@@ -1,0 +1,114 @@
+name: Batch Upload Datasets (腾讯文档无网盘地址数据集批量上传)
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: '限制处理数量（0=全部）'
+        required: false
+        default: '0'
+        type: string
+      row:
+        description: '只处理指定行（0=全部）'
+        required: false
+        default: '0'
+        type: string
+      dry_run:
+        description: '只预览不执行'
+        required: false
+        default: false
+        type: boolean
+
+env:
+  PYTHONUNBUFFERED: '1'
+  WORK_DIR: '/mnt'
+
+jobs:
+  batch-upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: 检出仓库代码
+        uses: actions/checkout@v4
+
+      - name: 释放磁盘空间
+        run: |
+          echo "=== 释放前磁盘空间 ==="
+          df -h /
+          df -h /mnt
+          
+          echo "删除 Android SDK..."
+          sudo rm -rf /usr/local/lib/android || true
+          echo "删除 .NET 运行时..."
+          sudo rm -rf /usr/share/dotnet || true
+          echo "删除 Docker..."
+          docker image prune -a -f || true
+          sudo systemctl stop docker || true
+          sudo rm -rf /var/lib/docker || true
+          sudo rm -rf /opt/hostedtoolcache || true
+          
+          echo "=== 释放后磁盘空间 ==="
+          df -h /
+          df -h /mnt
+          sudo chmod 777 /mnt || true
+
+      - name: 设置 Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install pynacl
+
+      - name: 批量处理数据集
+        env:
+          BAIDU_ACCESS_TOKEN: ${{ secrets.BAIDU_ACCESS_TOKEN }}
+          BAIDU_REFRESH_TOKEN: ${{ secrets.BAIDU_REFRESH_TOKEN }}
+          BAIDU_APP_KEY: ${{ secrets.BAIDU_APP_KEY }}
+          BAIDU_SECRET_KEY: ${{ secrets.BAIDU_SECRET_KEY }}
+          BAIDU_BDUSS: ${{ secrets.BAIDU_BDUSS }}
+          BAIDU_APP_ID: '266719'
+          ROBOFLOW_API_KEY: ${{ secrets.ROBOFLOW_API_KEY }}
+          TENCENT_TOKEN: ${{ secrets.TENCENT_TOKEN }}
+          FILE_ID: ${{ secrets.FILE_ID }}
+          SHEET_ID: ${{ secrets.SHEET_ID }}
+          WORK_DIR: '/mnt'
+        run: |
+          echo "=== 开始批量处理 ==="
+          echo "限制数量: ${{ github.event.inputs.limit }}"
+          echo "指定行: ${{ github.event.inputs.row }}"
+          echo "预览模式: ${{ github.event.inputs.dry_run }}"
+          echo ""
+          
+          CMD="python scripts/batch_upload_datasets.py"
+          
+          if [ "${{ github.event.inputs.limit }}" != "0" ]; then
+            CMD="$CMD --limit ${{ github.event.inputs.limit }}"
+          fi
+          
+          if [ "${{ github.event.inputs.row }}" != "0" ]; then
+            CMD="$CMD --row ${{ github.event.inputs.row }}"
+          fi
+          
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            CMD="$CMD --dry-run"
+          fi
+          
+          echo "执行命令: $CMD"
+          echo ""
+          
+          $CMD
+          
+          echo ""
+          echo "=== 批量处理完成 ==="
+
+      - name: 上传处理日志
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: batch-upload-log
+          path: /mnt/batch_datasets/
+          if-no-files-found: ignore
