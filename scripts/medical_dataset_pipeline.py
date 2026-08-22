@@ -32,11 +32,15 @@ from pathlib import Path
 # 配置
 # ============================================================
 
-# 百度网盘 Access Token（来自 dataset-drive-organizer 技能）
+# 百度网盘 OAuth 认证（推荐，支持 xpan 分片上传和自动刷新）
+BAIDU_APP_KEY = os.environ.get("BAIDU_APP_KEY", "LxJ09SOuKQqFfpGXjyWFpXtUIMwSMOYV")
+BAIDU_SECRET_KEY = os.environ.get("BAIDU_SECRET_KEY", "lzpEtO0BTuAEuX5N5QqTrrflp4XpaOI9")
 BAIDU_ACCESS_TOKEN = os.environ.get("BAIDU_ACCESS_TOKEN",
-    "123.485e6f4d655137d4e223b7a53aeaf38e.YHXJvDs6OVmxeNAVp_-hixv6GuYQc4740J4C-sL.6LhX4A")
+    "121.09cf76c2d5a9ba9d9694341130864a97.Ya_fGmRgjFeOdd4FpL1gYkgSwQTkQMRafVEUP_Y.kLn5iQ")
+BAIDU_REFRESH_TOKEN = os.environ.get("BAIDU_REFRESH_TOKEN",
+    "122.27af60ae3976cb91498c99a8ef25344a.YHvPFHzq1pTMBzF5om4jqzKW-eVHC4NCoZnrlRD.Y0SOAA")
 
-# 百度网盘 BDUSS 认证（备选方案，无需 Access Token）
+# 百度网盘 BDUSS 认证（备选方案，无需 OAuth）
 BAIDU_BDUSS = os.environ.get("BAIDU_BDUSS", "")
 BAIDU_APP_ID = os.environ.get("BAIDU_APP_ID", "266719")  # 百度网盘官方 app_id
 
@@ -571,10 +575,30 @@ def baidu_upload_pcs(file_path, remote_path, access_token=None, bduss=None, app_
     return None
 
 def baidu_upload(file_path, remote_path, access_token=None, bduss=None, app_id=None):
-    """上传文件到百度网盘（自动选择最佳方式）"""
-    # 优先使用 BDUSS 认证（无需 Access Token，不会过期）
+    """上传文件到百度网盘（优先使用 Access Token xpan 分片上传，更稳定）"""
+    
+    # 优先使用 Access Token 认证（支持 xpan 分片上传，大文件更稳定）
+    if access_token:
+        logger.info('使用 Access Token 认证方式上传（xpan 分片上传）')
+        folder = os.path.dirname(remote_path)
+        if folder:
+            ensure_baidu_folder(folder, access_token)
+        
+        file_size = os.path.getsize(file_path)
+        logger.info(f'文件大小: {file_size/1024/1024:.1f} MB')
+        
+        # 尝试 xpan 分片上传
+        result = baidu_upload_xpan(file_path, remote_path, access_token)
+        if result:
+            return result
+        
+        # 回退到 PCS 简单上传（curl 流式上传）
+        logger.info('xpan 分片上传失败，尝试 PCS 简单上传...')
+        return baidu_upload_pcs(file_path, remote_path, access_token=access_token)
+    
+    # 备选：使用 BDUSS 认证（PCS 简单上传）
     if bduss and app_id:
-        logger.info('使用 BDUSS 认证方式上传')
+        logger.info('使用 BDUSS 认证方式上传（PCS 简单上传）')
         folder = os.path.dirname(remote_path)
         if folder:
             ensure_baidu_folder_bduss(folder, bduss, app_id)
@@ -584,24 +608,8 @@ def baidu_upload(file_path, remote_path, access_token=None, bduss=None, app_id=N
         
         return baidu_upload_pcs(file_path, remote_path, bduss=bduss, app_id=app_id)
     
-    # 使用 Access Token 认证
-    if not access_token:
-        logger.error('未设置 BAIDU_ACCESS_TOKEN 或 BAIDU_BDUSS')
-        return None
-    
-    folder = os.path.dirname(remote_path)
-    if folder:
-        ensure_baidu_folder(folder, access_token)
-    
-    file_size = os.path.getsize(file_path)
-    logger.info(f'文件大小: {file_size/1024/1024:.1f} MB')
-    
-    result = baidu_upload_xpan(file_path, remote_path, access_token)
-    if result:
-        return result
-    
-    logger.info('尝试 PCS 简单上传...')
-    return baidu_upload_pcs(file_path, remote_path, access_token=access_token)
+    logger.error('未设置 BAIDU_ACCESS_TOKEN 或 BAIDU_BDUSS')
+    return None
 
 def baidu_create_share(file_path, access_token=None, pwd='yolo', bduss=None, app_id=None):
     """创建百度网盘分享链接（支持 Access Token 或 BDUSS 认证）"""
