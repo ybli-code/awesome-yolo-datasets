@@ -23,10 +23,9 @@ import uuid
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# 添加 skill 路径
-SKILL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-    "..", ".trae", "skills", "dataset-drive-organizer", "scripts", "core")
-sys.path.insert(0, SKILL_PATH)
+# 添加当前脚本目录到路径
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, SCRIPT_DIR)
 
 from utils import (
     read_sheet_all, write_cell, call_mcp,
