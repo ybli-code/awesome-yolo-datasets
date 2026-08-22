@@ -366,13 +366,15 @@ def process_one_dataset(row_data, access_token):
     share_link = baidu_create_share(uploaded_path, access_token)
     
     if share_link:
-        share_text = f"链接: {share_link} 提取码: yolo"
+        # 保留原标题，在后面添加网盘分享链接
+        original_title = title
+        share_text = f"{original_title}\n通过网盘分享的文件：{safe_title}.zip\n链接: {share_link} 提取码: yolo"
     else:
-        share_text = f"百度网盘路径: {uploaded_path}（分享功能暂不可用）"
+        share_text = f"{title}\n百度网盘路径: {uploaded_path}（分享功能暂不可用）"
     
-    # 5. 更新腾讯文档（下载地址列 = 第3列）
-    logger.info(f"  更新腾讯文档行{row}...")
-    result = write_cell(row, 3, share_text)
+    # 5. 更新腾讯文档（标题列 = 第1列，与其他数据集保持一致）
+    logger.info(f"  更新腾讯文档行{row} (标题列)...")
+    result = write_cell(row, 1, share_text)
     logger.info(f"  表格已更新")
     
     # 6. 清理
