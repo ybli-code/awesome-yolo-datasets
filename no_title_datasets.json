@@ -1,0 +1,422 @@
+[
+  {
+    "row": 1244,
+    "roboflow": "https://universe.roboflow.com/yolo-on3ci/vegetable-etsqt",
+    "img_info": "",
+    "desc": "",
+    "name": "vegetable-etsqt"
+  },
+  {
+    "row": 1245,
+    "roboflow": "",
+    "img_info": "",
+    "desc": "",
+    "name": ""
+  },
+  {
+    "row": 1249,
+    "roboflow": "https://universe.roboflow.com/beijing-university-9d61y/wind-turbine-ebl65",
+    "img_info": "",
+    "desc": "",
+    "name": "wind-turbine-ebl65"
+  },
+  {
+    "row": 1262,
+    "roboflow": "https://universe.roboflow.com/bridge-rxc9a/defect-n34n1",
+    "img_info": "图片数量: 6,456\\n类别数: 5\\n任务类型: 实例分割",
+    "desc": "",
+    "name": "defect-n34n1"
+  },
+  {
+    "row": 1279,
+    "roboflow": "https://universe.roboflow.com/athis/drone-t6udf",
+    "img_info": "图片数量: 4,939\\n类别数: 3\\n任务类型: 目标检测",
+    "desc": "",
+    "name": "drone-t6udf"
+  },
+  {
+    "row": 1281,
+    "roboflow": "https://universe.roboflow.com/5307/fruit-class-g4ruj",
+    "img_info": "图片数量: 2,942\\n类别数: 20\\n任务类型: 图像分类",
+    "desc": "",
+    "name": "fruit-class-g4ruj"
+  },
+  {
+    "row": 1282,
+    "roboflow": "https://universe.roboflow.com/aries-rbrbw/fire-smoke-ripxv",
+    "img_info": "",
+    "desc": "",
+    "name": "fire-smoke-ripxv"
+  },
+  {
+    "row": 1291,
+    "roboflow": "https://universe.roboflow.com/solar-panel-q3vlt/solar-panel-gydkp",
+    "img_info": "",
+    "desc": "",
+    "name": "solar-panel-gydkp"
+  },
+  {
+    "row": 1294,
+    "roboflow": "https://universe.roboflow.com/anh-nmqoh/traffic-sign-mcvjt",
+    "img_info": "图片数量: 5,818\\n任务类型: 目标检测",
+    "desc": "",
+    "name": "traffic-sign-mcvjt"
+  },
+  {
+    "row": 1295,
+    "roboflow": "https://universe.roboflow.com/new-workspace-o8zdi/wind-turbine-hwflc",
+    "img_info": "",
+    "desc": "",
+    "name": "wind-turbine-hwflc"
+  },
+  {
+    "row": 1300,
+    "roboflow": "https://universe.roboflow.com/dtu-4hha9/wind-turbine-5itah",
+    "img_info": "",
+    "desc": "",
+    "name": "wind-turbine-5itah"
+  },
+  {
+    "row": 1317,
+    "roboflow": "https://universe.roboflow.com/alexander-jaworowski-rshsa/safety-vest-wiu40",
+    "img_info": "",
+    "desc": "",
+    "name": "safety-vest-wiu40"
+  },
+  {
+    "row": 1318,
+    "roboflow": "https://universe.roboflow.com/crack-h4u92/crack-mxxxi",
+    "img_info": "图片数量: 1,149\\n类别数: 3\\n任务类型: 实例分割",
+    "desc": "",
+    "name": "crack-mxxxi"
+  },
+  {
+    "row": 1321,
+    "roboflow": "https://universe.roboflow.com/myworkspace-3md2k/traffic-sign-1cssp",
+    "img_info": "",
+    "desc": "",
+    "name": "traffic-sign-1cssp"
+  },
+  {
+    "row": 1329,
+    "roboflow": "https://universe.roboflow.com/yolov8-bz9rc/solar-panel-vt0ve",
+    "img_info": "",
+    "desc": "",
+    "name": "solar-panel-vt0ve"
+  },
+  {
+    "row": 1330,
+    "roboflow": "https://universe.roboflow.com/nckh-nidwq/helmet-vs.-no-helmet",
+    "img_info": "",
+    "desc": "",
+    "name": "helmet-vs.-no-helmet"
+  },
+  {
+    "row": 1346,
+    "roboflow": "https://universe.roboflow.com/piesat/-fire-smoke",
+    "img_info": "图片数量: 925\\n类别数: 12\\n任务类型: 目标检测",
+    "desc": "",
+    "name": "-fire-smoke"
+  },
+  {
+    "row": 1368,
+    "roboflow": "https://universe.roboflow.com/abc-ixtit/wind-turbine-xpj6p",
+    "img_info": "图片数量: 2,067\\n任务类型: 目标检测",
+    "desc": "",
+    "name": "wind-turbine-xpj6p"
+  },
+  {
+    "row": 1373,
+    "roboflow": "https://universe.roboflow.com/muharraqi/helmet-uu1my",
+    "img_info": "图片数量: 1,691\\n类别数: 2\\n任务类型: 目标检测",
+    "desc": "",
+    "name": "helmet-uu1my"
+  },
+  {
+    "row": 1374,
+    "roboflow": "https://universe.roboflow.com/leela-kantheti/gas-station",
+    "img_info": "图片数量: 1,749\\n类别数: 1\\n任务类型: 目标检测",
+    "desc": "",
+    "name": "gas-station"
+  },
+  {
+    "row": 1380,
+    "roboflow": "https://universe.roboflow.com/mohamed-ahmed-cgrlk/car-models-yrkry",
+    "img_info": "",
+    "desc": "",
+    "name": "car-models-yrkry"
+  },
+  {
+    "row": 1381,
+    "roboflow": "https://universe.roboflow.com/healthy-ioj2n/fish-disease-fqkyc",
+    "img_info": "",
+    "desc": "",
+    "name": "fish-disease-fqkyc"
+  },
+  {
+    "row": 1385,
+    "roboflow": "https://universe.roboflow.com/mohamed-f-abdelshafie/poultry-taypa",
+    "img_info": "",
+    "desc": "",
+    "name": "poultry-taypa"
+  },
+  {
+    "row": 1389,
+    "roboflow": "https://universe.roboflow.com/tahar/document-classification-hsybz",
+    "img_info": "",
+    "desc": "",
+    "name": "document-classification-hsybz"
+  },
+  {
+    "row": 1390,
+    "roboflow": "https://universe.roboflow.com/ttt-dddjb/food-yfbsa",
+    "img_info": "图片数量: 3,805\\n类别数: 20\\n任务类型: 实例分割",
+    "desc": "",
+    "name": "food-yfbsa"
+  },
+  {
+    "row": 1391,
+    "roboflow": "https://universe.roboflow.com/pukyung-university/person-pfjle",
+    "img_info": "",
+    "desc": "",
+    "name": "person-pfjle"
+  },
+  {
+    "row": 1393,
+    "roboflow": "https://universe.roboflow.com/road-safety-sexzp/road-safety-oayis",
+    "img_info": "",
+    "desc": "",
+    "name": "road-safety-oayis"
+  },
+  {
+    "row": 1394,
+    "roboflow": "https://universe.roboflow.com/ju-uveje/waste-gqtlh",
+    "img_info": "图片数量: 4,475\\n类别数: 20\\n任务类型: 实例分割",
+    "desc": "",
+    "name": "waste-gqtlh"
+  },
+  {
+    "row": 1395,
+    "roboflow": "https://universe.roboflow.com/myname-duqpp/product-2xow4",
+    "img_info": "",
+    "desc": "",
+    "name": "product-2xow4"
+  },
+  {
+    "row": 1396,
+    "roboflow": "https://universe.roboflow.com/university-project-insects/insect-pu9la",
+    "img_info": "",
+    "desc": "",
+    "name": "insect-pu9la"
+  },
+  {
+    "row": 1401,
+    "roboflow": "https://universe.roboflow.com/viaminiproyecto1/leaf-disease-pursr",
+    "img_info": "",
+    "desc": "",
+    "name": "leaf-disease-pursr"
+  },
+  {
+    "row": 1402,
+    "roboflow": "https://universe.roboflow.com/thesis-b8oma/food-oszcf",
+    "img_info": "图片数量: 8,385\\n类别数: 20\\n任务类型: 目标检测",
+    "desc": "",
+    "name": "food-oszcf"
+  },
+  {
+    "row": 1403,
+    "roboflow": "https://universe.roboflow.com/coralreef/fish-classification-ebzq8",
+    "img_info": "",
+    "desc": "",
+    "name": "fish-classification-ebzq8"
+  },
+  {
+    "row": 1406,
+    "roboflow": "https://universe.roboflow.com/new-workspace-b6xaj/shelf-nr7xn",
+    "img_info": "",
+    "desc": "",
+    "name": "shelf-nr7xn"
+  },
+  {
+    "row": 1407,
+    "roboflow": "https://universe.roboflow.com/teswork/animal-ie37r",
+    "img_info": "图片数量: 8,275\\n类别数: 13\\n任务类型: 目标检测",
+    "desc": "",
+    "name": "animal-ie37r"
+  },
+  {
+    "row": 1409,
+    "roboflow": "https://universe.roboflow.com/nam-ikybx/satellite-mgv1r",
+    "img_info": "图片数量: 10,000\\n类别数: 2\\n任务类型: 图像分类",
+    "desc": "",
+    "name": "satellite-mgv1r"
+  },
+  {
+    "row": 1410,
+    "roboflow": "https://universe.roboflow.com/01-um21c/road-road-road-fowdd",
+    "img_info": "",
+    "desc": "",
+    "name": "road-road-road-fowdd"
+  },
+  {
+    "row": 1411,
+    "roboflow": "https://universe.roboflow.com/geomaticxaiml-00hbx/transformer-9avf6",
+    "img_info": "",
+    "desc": "",
+    "name": "transformer-9avf6"
+  },
+  {
+    "row": 1416,
+    "roboflow": "https://universe.roboflow.com/yangbaba/vehicle-6bsd7",
+    "img_info": "图片数量: 3,864\\n类别数: 5\\n任务类型: 目标检测",
+    "desc": "",
+    "name": "vehicle-6bsd7"
+  },
+  {
+    "row": 1417,
+    "roboflow": "https://universe.roboflow.com/nutapol-soingern-nf79c/flood-ncx2p",
+    "img_info": "",
+    "desc": "",
+    "name": "flood-ncx2p"
+  },
+  {
+    "row": 1420,
+    "roboflow": "https://universe.roboflow.com/roket/aircraft-h85hx",
+    "img_info": "图片数量: 7,903\\n类别数: 20\\n任务类型: 目标检测",
+    "desc": "",
+    "name": "aircraft-h85hx"
+  },
+  {
+    "row": 1421,
+    "roboflow": "https://universe.roboflow.com/kevin-anjalo-rathnasiri/leaf-disease-melbh",
+    "img_info": "",
+    "desc": "",
+    "name": "leaf-disease-melbh"
+  },
+  {
+    "row": 1422,
+    "roboflow": "https://universe.roboflow.com/muhammad-mudassir-wcyko/uav-y6eli",
+    "img_info": "",
+    "desc": "",
+    "name": "uav-y6eli"
+  },
+  {
+    "row": 1423,
+    "roboflow": "https://universe.roboflow.com/deep-learning-dohjx/flood-cka5z",
+    "img_info": "",
+    "desc": "",
+    "name": "flood-cka5z"
+  },
+  {
+    "row": 1424,
+    "roboflow": "https://universe.roboflow.com/abhishek-shukla-gfjnx/text-k4ku6",
+    "img_info": "",
+    "desc": "",
+    "name": "text-k4ku6"
+  },
+  {
+    "row": 1425,
+    "roboflow": "https://universe.roboflow.com/gesture-qp6r2/gesture-an2mz",
+    "img_info": "",
+    "desc": "",
+    "name": "gesture-an2mz"
+  },
+  {
+    "row": 1426,
+    "roboflow": "https://universe.roboflow.com/cornelius-ottoleonard-aabf0/food-p2vom",
+    "img_info": "",
+    "desc": "",
+    "name": "food-p2vom"
+  },
+  {
+    "row": 1427,
+    "roboflow": "https://universe.roboflow.com/new-workspace-7dikm/vehicle-b7rud",
+    "img_info": "",
+    "desc": "",
+    "name": "vehicle-b7rud"
+  },
+  {
+    "row": 1428,
+    "roboflow": "https://universe.roboflow.com/intrusiondetection/intrusion-detection-wwpmr",
+    "img_info": "",
+    "desc": "",
+    "name": "intrusion-detection-wwpmr"
+  },
+  {
+    "row": 1429,
+    "roboflow": "https://universe.roboflow.com/pim-iw1qi/poultry-rmypb",
+    "img_info": "图片数量: 5,219\\n类别数: 5\\n任务类型: 目标检测",
+    "desc": "",
+    "name": "poultry-rmypb"
+  },
+  {
+    "row": 1430,
+    "roboflow": "https://universe.roboflow.com/kdigital-training/mask-mask-mask-face",
+    "img_info": "",
+    "desc": "",
+    "name": "mask-mask-mask-face"
+  },
+  {
+    "row": 1431,
+    "roboflow": "https://universe.roboflow.com/pitikorn/electrical-appliance-o2r7l",
+    "img_info": "",
+    "desc": "",
+    "name": "electrical-appliance-o2r7l"
+  },
+  {
+    "row": 1432,
+    "roboflow": "https://universe.roboflow.com/test-pyatx/aircraft-rj44i",
+    "img_info": "图片数量: 4,247\\n类别数: 5\\n任务类型: 目标检测",
+    "desc": "",
+    "name": "aircraft-rj44i"
+  },
+  {
+    "row": 1433,
+    "roboflow": "https://universe.roboflow.com/workspace-u9klk/litter-0tdjc",
+    "img_info": "",
+    "desc": "",
+    "name": "litter-0tdjc"
+  },
+  {
+    "row": 1434,
+    "roboflow": "https://universe.roboflow.com/person1130824/person-ngdxg",
+    "img_info": "图片数量: 7,554\\n类别数: 1\\n任务类型: 目标检测",
+    "desc": "",
+    "name": "person-ngdxg"
+  },
+  {
+    "row": 1435,
+    "roboflow": "https://universe.roboflow.com/mukeshs-workspace-mytt6/aerial-lahmj",
+    "img_info": "",
+    "desc": "",
+    "name": "aerial-lahmj"
+  },
+  {
+    "row": 1436,
+    "roboflow": "https://universe.roboflow.com/uav-qnoms/uav-wqshy",
+    "img_info": "图片数量: 8,326\\n类别数: 1\\n任务类型: 目标检测",
+    "desc": "",
+    "name": "uav-wqshy"
+  },
+  {
+    "row": 1437,
+    "roboflow": "https://universe.roboflow.com/handdetect-p7kf9/hand-detection-1d18n",
+    "img_info": "",
+    "desc": "",
+    "name": "hand-detection-1d18n"
+  },
+  {
+    "row": 1438,
+    "roboflow": "https://universe.roboflow.com/vehicle-joffa/vehicle-oscy8",
+    "img_info": "",
+    "desc": "",
+    "name": "vehicle-oscy8"
+  },
+  {
+    "row": 1440,
+    "roboflow": "https://www.kaggle.com/datasets/coder98/emotionpain",
+    "img_info": "",
+    "desc": "",
+    "name": "emotionpain"
+  }
+]
