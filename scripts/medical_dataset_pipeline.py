@@ -36,6 +36,10 @@ from pathlib import Path
 BAIDU_ACCESS_TOKEN = os.environ.get("BAIDU_ACCESS_TOKEN",
     "123.485e6f4d655137d4e223b7a53aeaf38e.YHXJvDs6OVmxeNAVp_-hixv6GuYQc4740J4C-sL.6LhX4A")
 
+# 百度网盘 BDUSS 认证（备选方案，无需 Access Token）
+BAIDU_BDUSS = os.environ.get("BAIDU_BDUSS", "")
+BAIDU_APP_ID = os.environ.get("BAIDU_APP_ID", "266719")  # 百度网盘官方 app_id
+
 # 工作目录（优先级：命令行参数 > 环境变量 > /mnt(GitHub Actions) > /content(Colab) > 本地）
 WORK_DIR = os.environ.get("WORK_DIR", "")
 if WORK_DIR:
@@ -370,7 +374,26 @@ def ensure_baidu_folder(folder_path, access_token):
         try:
             req = urllib.request.Request(url, method='POST')
             with urllib.request.urlopen(req, timeout=15) as resp:
-                result = json.loads(resp.read().decode())
+                json.loads(resp.read().decode())
+        except:
+            pass
+
+def ensure_baidu_folder_bduss(folder_path, bduss, app_id):
+    """确保百度网盘文件夹存在（BDUSS 认证）"""
+    parts = [p for p in folder_path.strip('/').split('/') if p]
+    current = ''
+    for part in parts:
+        current += '/' + part
+        query = urllib.parse.urlencode({
+            'method': 'create', 'path': current,
+            'isdir': '1', 'app_id': app_id,
+        })
+        url = f'https://pan.baidu.com/rest/2.0/xpan/file?{query}'
+        try:
+            req = urllib.request.Request(url, method='POST')
+            req.add_header('Cookie', f'BDUSS={bduss}')
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                json.loads(resp.read().decode())
         except:
             pass
 
@@ -492,29 +515,58 @@ def baidu_upload_xpan(file_path, remote_path, access_token):
         logger.error(f'create 错误: errno={result.get("errno")}')
         return None
 
-def baidu_upload_pcs(file_path, remote_path, access_token):
-    """百度网盘 PCS 简单上传（回退方案）"""
+def baidu_upload_pcs(file_path, remote_path, access_token=None, bduss=None, app_id=None):
+    """百度网盘 PCS 简单上传（支持 Access Token 或 BDUSS 认证）"""
     logger.info('使用 PCS 简单上传...')
-    upload_url = 'https://d.pcs.baidu.com/rest/2.0/pcs/file'
-    params = f'method=upload&access_token={access_token}&path={urllib.parse.quote(remote_path)}&ondup=overwrite'
+    
+    if bduss and app_id:
+        # 使用 BDUSS + app_id 认证
+        upload_url = 'https://c.pcs.baidu.com/rest/2.0/pcs/file'
+        params = f'method=upload&path={urllib.parse.quote(remote_path)}&ondup=overwrite&app_id={app_id}'
+        cookie_header = f'BDUSS={bduss}'
+    else:
+        # 使用 Access Token 认证
+        if not access_token:
+            logger.error('未设置 BAIDU_ACCESS_TOKEN 或 BAIDU_BDUSS')
+            return None
+        upload_url = 'https://d.pcs.baidu.com/rest/2.0/pcs/file'
+        params = f'method=upload&access_token={access_token}&path={urllib.parse.quote(remote_path)}&ondup=overwrite'
+        cookie_header = None
     
     with open(file_path, 'rb') as f:
         req = urllib.request.Request(f'{upload_url}?{params}', data=f, method='POST')
         req.add_header('Content-Type', 'application/octet-stream')
+        if cookie_header:
+            req.add_header('Cookie', cookie_header)
         try:
-            with urllib.request.urlopen(req, timeout=300) as resp:
+            with urllib.request.urlopen(req, timeout=3600) as resp:  # 大文件超时设为1小时
                 result = json.loads(resp.read().decode())
                 if 'path' in result:
                     logger.info(f'上传成功: {result["path"]}')
                     return result['path']
+                else:
+                    logger.error(f'上传返回异常: {result}')
         except Exception as e:
             logger.error(f'PCS 上传失败: {e}')
     return None
 
-def baidu_upload(file_path, remote_path, access_token):
+def baidu_upload(file_path, remote_path, access_token=None, bduss=None, app_id=None):
     """上传文件到百度网盘（自动选择最佳方式）"""
+    # 优先使用 BDUSS 认证（无需 Access Token，不会过期）
+    if bduss and app_id:
+        logger.info('使用 BDUSS 认证方式上传')
+        folder = os.path.dirname(remote_path)
+        if folder:
+            ensure_baidu_folder_bduss(folder, bduss, app_id)
+        
+        file_size = os.path.getsize(file_path)
+        logger.info(f'文件大小: {file_size/1024/1024:.1f} MB')
+        
+        return baidu_upload_pcs(file_path, remote_path, bduss=bduss, app_id=app_id)
+    
+    # 使用 Access Token 认证
     if not access_token:
-        logger.error('未设置 BAIDU_ACCESS_TOKEN')
+        logger.error('未设置 BAIDU_ACCESS_TOKEN 或 BAIDU_BDUSS')
         return None
     
     folder = os.path.dirname(remote_path)
@@ -529,34 +581,59 @@ def baidu_upload(file_path, remote_path, access_token):
         return result
     
     logger.info('尝试 PCS 简单上传...')
-    return baidu_upload_pcs(file_path, remote_path, access_token)
+    return baidu_upload_pcs(file_path, remote_path, access_token=access_token)
 
-def baidu_create_share(file_path, access_token, pwd='yolo'):
-    """创建百度网盘分享链接"""
-    # 获取 fs_id
-    list_query = urllib.parse.urlencode({
-        'method': 'list', 'access_token': access_token,
-        'dir': os.path.dirname(file_path),
-    })
-    list_url = f'https://pan.baidu.com/rest/2.0/xpan/file?{list_query}'
+def baidu_create_share(file_path, access_token=None, pwd='yolo', bduss=None, app_id=None):
+    """创建百度网盘分享链接（支持 Access Token 或 BDUSS 认证）"""
     fs_id = None
-    try:
-        req = urllib.request.Request(list_url)
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            data = json.loads(resp.read().decode())
-        for f in data.get('list', []):
-            if f.get('path') == file_path:
-                fs_id = f.get('fs_id')
-                break
-    except Exception as e:
-        logger.warning(f'获取 fs_id 失败: {e}')
+    
+    if bduss and app_id:
+        # 使用 BDUSS + PCS API 获取 fs_id
+        list_query = urllib.parse.urlencode({
+            'method': 'list', 'path': os.path.dirname(file_path),
+            'app_id': app_id,
+        })
+        list_url = f'https://pcs.baidu.com/rest/2.0/pcs/file?{list_query}'
+        try:
+            req = urllib.request.Request(list_url)
+            req.add_header('Cookie', f'BDUSS={bduss}')
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                data = json.loads(resp.read().decode())
+            for f in data.get('list', []):
+                if f.get('path') == file_path:
+                    fs_id = f.get('fs_id')
+                    break
+        except Exception as e:
+            logger.warning(f'获取 fs_id 失败: {e}')
+    else:
+        # 使用 Access Token + xpan API 获取 fs_id
+        list_query = urllib.parse.urlencode({
+            'method': 'list', 'access_token': access_token,
+            'dir': os.path.dirname(file_path),
+        })
+        list_url = f'https://pan.baidu.com/rest/2.0/xpan/file?{list_query}'
+        try:
+            req = urllib.request.Request(list_url)
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                data = json.loads(resp.read().decode())
+            for f in data.get('list', []):
+                if f.get('path') == file_path:
+                    fs_id = f.get('fs_id')
+                    break
+        except Exception as e:
+            logger.warning(f'获取 fs_id 失败: {e}')
     
     if not fs_id:
         logger.error('无法获取文件 fs_id')
         return None
     
-    # 创建分享
-    share_query = urllib.parse.urlencode({'method': 'set', 'access_token': access_token})
+    # 创建分享（xpan API，需要 access_token）
+    if access_token:
+        share_query = urllib.parse.urlencode({'method': 'set', 'access_token': access_token})
+    else:
+        # BDUSS 方式尝试创建分享（可能不支持，返回 None）
+        share_query = urllib.parse.urlencode({'method': 'set', 'app_id': app_id})
+    
     share_url = f'https://pan.baidu.com/rest/2.0/xpan/share?{share_query}'
     share_body = urllib.parse.urlencode({
         'fid_list': json.dumps([int(fs_id)]),
@@ -566,6 +643,9 @@ def baidu_create_share(file_path, access_token, pwd='yolo'):
     
     req = urllib.request.Request(share_url, data=share_body, method='POST')
     req.add_header('Content-Type', 'application/x-www-form-urlencoded')
+    if bduss and not access_token:
+        req.add_header('Cookie', f'BDUSS={bduss}')
+    
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
             result = json.loads(resp.read().decode())
@@ -574,7 +654,7 @@ def baidu_create_share(file_path, access_token, pwd='yolo'):
                 logger.info(f'分享链接: {link} (提取码: {pwd})')
                 return link
             else:
-                logger.error(f'分享失败: errno={result.get("errno")}')
+                logger.error(f'分享失败: errno={result.get("errno")}, msg={result.get("errmsg", "")}')
                 return None
     except Exception as e:
         logger.error(f'创建分享失败: {e}')
@@ -664,11 +744,15 @@ def main():
         if not args.skip_upload:
             remote_path = f'{BAIDU_REMOTE_DIR}/{name}.tar.gz'
             logger.info(f'上传到百度网盘: {remote_path}')
-            uploaded_path = baidu_upload(package_path, remote_path, BAIDU_ACCESS_TOKEN)
+            uploaded_path = baidu_upload(package_path, remote_path, 
+                                        access_token=BAIDU_ACCESS_TOKEN,
+                                        bduss=BAIDU_BDUSS, app_id=BAIDU_APP_ID)
             
             if uploaded_path:
                 # 4. 创建分享链接
-                share_link = baidu_create_share(uploaded_path, BAIDU_ACCESS_TOKEN)
+                share_link = baidu_create_share(uploaded_path, 
+                                               access_token=BAIDU_ACCESS_TOKEN,
+                                               bduss=BAIDU_BDUSS, app_id=BAIDU_APP_ID)
                 share_results[name] = {
                     'package': package_path,
                     'remote_path': uploaded_path,
