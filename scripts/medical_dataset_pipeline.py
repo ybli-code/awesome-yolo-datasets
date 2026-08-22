@@ -401,9 +401,9 @@ def ensure_baidu_folder_bduss(folder_path, bduss, app_id):
         except:
             pass
 
-def baidu_upload_xpan(file_path, remote_path, access_token):
-    """百度网盘 xpan 分片上传（precreate → superfile2 → create）"""
-    logger.info('使用 xpan 分片上传...')
+def baidu_upload_xpan(file_path, remote_path, access_token, max_workers=8):
+    """百度网盘 xpan 分片上传（precreate → superfile2 并发上传 → create）"""
+    logger.info(f'使用 xpan 分片上传（并发 {max_workers} 线程）...')
     
     file_size = os.path.getsize(file_path)
     slice_size = 4 * 1024 * 1024  # 4MB per slice
@@ -438,58 +438,88 @@ def baidu_upload_xpan(file_path, remote_path, access_token):
         return None
     
     if result.get('errno') != 0:
-        logger.warning(f'precreate 错误: errno={result.get("errno")}')
+        logger.warning(f'precreate 错误: errno={result.get("errno")}, msg={result.get("errmsg", "")}')
         return None
     
     uploadid = result.get('uploadid', '')
     if not uploadid:
         return None
-    logger.info(f'precreate 成功, uploadid={uploadid[:20]}...')
+    logger.info(f'precreate 成功, uploadid={uploadid[:20]}..., 共 {len(block_list)} 个分片')
     
-    # Step 2: superfile2 分片上传
+    # Step 2: superfile2 并发分片上传
     import uuid
+    import threading
     t0 = time.time()
     total_parts = len(block_list)
+    uploaded_parts = 0
+    progress_lock = threading.Lock()
+    failed = False
     
-    with open(file_path, 'rb') as f:
-        for i in range(total_parts):
+    def upload_single_part(part_seq):
+        """上传单个分片（带重试）"""
+        nonlocal uploaded_parts, failed
+        
+        if failed:
+            return False
+        
+        # 读取对应分片
+        with open(file_path, 'rb') as f:
+            f.seek(part_seq * slice_size)
             chunk = f.read(slice_size)
-            part_seq = i
+        
+        for attempt in range(3):
+            query = urllib.parse.urlencode({
+                'method': 'upload', 'access_token': access_token,
+                'type': 'tmpfile', 'uploadid': uploadid,
+                'partseq': str(part_seq), 'path': remote_path,
+            })
+            superfile_url = f'https://d.pcs.baidu.com/rest/2.0/pcs/superfile2?{query}'
             
-            for attempt in range(3):
-                query = urllib.parse.urlencode({
-                    'method': 'upload', 'access_token': access_token,
-                    'type': 'tmpfile', 'uploadid': uploadid,
-                    'partseq': str(part_seq), 'path': remote_path,
-                })
-                superfile_url = f'https://d.pcs.baidu.com/rest/2.0/pcs/superfile2?{query}'
-                
-                boundary = uuid.uuid4().hex
-                multipart_body = (
-                    f'--{boundary}\r\n'.encode() +
-                    b'Content-Disposition: form-data; name="file"; filename="file"\r\n' +
-                    b'Content-Type: application/octet-stream\r\n\r\n' +
-                    chunk +
-                    f'\r\n--{boundary}--\r\n'.encode()
-                )
-                
-                try:
-                    req = urllib.request.Request(superfile_url, data=multipart_body, method='POST')
-                    req.add_header('Content-Type', f'multipart/form-data; boundary={boundary}')
-                    with urllib.request.urlopen(req, timeout=120) as resp:
-                        json.loads(resp.read().decode())
-                    break
-                except Exception as e:
-                    if attempt < 2:
-                        time.sleep(2)
-                    else:
-                        logger.error(f'分片 {part_seq} 上传失败: {e}')
-                        return None
+            boundary = uuid.uuid4().hex
+            multipart_body = (
+                f'--{boundary}\r\n'.encode() +
+                b'Content-Disposition: form-data; name="file"; filename="file"\r\n' +
+                b'Content-Type: application/octet-stream\r\n\r\n' +
+                chunk +
+                f'\r\n--{boundary}--\r\n'.encode()
+            )
             
-            if (i + 1) % 10 == 0 or (i + 1) == total_parts:
-                elapsed = time.time() - t0
-                speed = (i + 1) * slice_size / 1024 / 1024 / elapsed if elapsed > 0 else 0
-                logger.info(f'  分片进度: {i+1}/{total_parts} ({speed:.1f} MB/s)')
+            try:
+                req = urllib.request.Request(superfile_url, data=multipart_body, method='POST')
+                req.add_header('Content-Type', f'multipart/form-data; boundary={boundary}')
+                with urllib.request.urlopen(req, timeout=120) as resp:
+                    json.loads(resp.read().decode())
+                
+                with progress_lock:
+                    uploaded_parts += 1
+                    if uploaded_parts % 20 == 0 or uploaded_parts == total_parts:
+                        elapsed = time.time() - t0
+                        speed = uploaded_parts * slice_size / 1024 / 1024 / elapsed if elapsed > 0 else 0
+                        logger.info(f'  分片进度: {uploaded_parts}/{total_parts} ({speed:.1f} MB/s)')
+                return True
+            except Exception as e:
+                if attempt < 2:
+                    time.sleep(2)
+                else:
+                    logger.error(f'分片 {part_seq} 上传失败: {e}')
+                    failed = True
+                    return False
+    
+    # 并发上传
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = [executor.submit(upload_single_part, i) for i in range(total_parts)]
+        for future in as_completed(futures):
+            if not future.result():
+                failed = True
+                break
+    
+    if failed:
+        logger.error('分片上传失败')
+        return None
+    
+    t1 = time.time()
+    speed = file_size / 1024 / 1024 / (t1 - t0) if t1 > t0 else 0
+    logger.info(f'分片上传完成: {uploaded_parts}/{total_parts}, 平均速度: {speed:.1f} MB/s')
     
     # Step 3: create 合并
     create_query = urllib.parse.urlencode({'method': 'create', 'access_token': access_token})
@@ -516,7 +546,7 @@ def baidu_upload_xpan(file_path, remote_path, access_token):
         logger.info(f'上传成功: {path}')
         return path
     else:
-        logger.error(f'create 错误: errno={result.get("errno")}')
+        logger.error(f'create 错误: errno={result.get("errno")}, msg={result.get("errmsg", "")}')
         return None
 
 def baidu_upload_pcs(file_path, remote_path, access_token=None, bduss=None, app_id=None):
