@@ -242,15 +242,19 @@ def download_roboflow(workspace, project, version_num=None, output_dir=WORK_DIR)
 
 # ===== 百度网盘 xpan 并发分片上传 =====
 def ensure_baidu_folder(folder_path, access_token):
-    query = urllib.parse.urlencode({"method": "create", "access_token": access_token})
-    body = urllib.parse.urlencode({"path": folder_path, "isdir": "1", "size": "0", "block_list": "[]"}).encode()
+    """确保百度网盘文件夹存在（使用 mkdir API，不是 create）"""
+    query = urllib.parse.urlencode({"method": "mkdir", "access_token": access_token})
+    body = urllib.parse.urlencode({"path": folder_path}).encode()
     req = urllib.request.Request(f"https://pan.baidu.com/rest/2.0/xpan/file?{query}", data=body, method="POST")
     req.add_header("Content-Type", "application/x-www-form-urlencoded")
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
             result = json.loads(resp.read().decode())
+        # errno=0 成功, -8 文件夹已存在
         if result.get("errno") in [0, -8]:
             log(f"  文件夹就绪: {folder_path}")
+        else:
+            log(f"  创建文件夹返回: errno={result.get('errno')}")
     except Exception as e:
         log(f"  创建文件夹失败: {e}")
 
