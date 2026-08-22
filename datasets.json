@@ -4,375 +4,422 @@
     "workspace": "hwkwak-fngrb",
     "project": "bridge-crack-ee7ns",
     "version": 1,
+    "name": "面向桥梁结构健康监测的缺陷检测数据集，涵盖钢筋外露、裂缝、锈蚀、混凝土剥落与泛碱",
     "url": "https://universe.roboflow.com/hwkwak-fngrb/bridge-crack-ee7ns",
-    "title": "面向桥梁结构健康监测的缺陷检测数据集，涵盖钢筋外露、裂缝、锈蚀、混凝土剥落与泛碱"
+    "title": "桥梁结构缺陷检测数据集"
   },
   {
     "row": 1279,
     "workspace": "planeuav",
     "project": "uav-drone",
     "version": 2,
+    "name": "面向低空空域安全监管的无人机检测数据集，用于识别空中飞行的无人机目标，可应用于反",
     "url": "https://universe.roboflow.com/planeuav/uav-drone",
-    "title": "面向低空空域安全监管的无人机检测数据集，用于识别空中飞行的无人机目标，可应用于反"
+    "title": "无人机检测数据集"
   },
   {
     "row": 1282,
     "workspace": "detection-projet",
     "project": "fire-smoke-detection-lk8z9",
     "version": 1,
+    "name": "用于火灾预警的火焰与烟雾目标检测数据集，包含 fire（火焰）与 smoke（烟",
     "url": "https://universe.roboflow.com/detection-projet/fire-smoke-detection-lk8z9",
-    "title": "用于火灾预警的火焰与烟雾目标检测数据集，包含 fire（火焰）与 smoke（烟"
+    "title": "火焰烟雾检测数据集"
   },
   {
     "row": 1291,
     "workspace": "solar-panel-q3vlt",
     "project": "solar-panel-gydkp",
     "version": 4,
+    "name": "面向光伏电站运维的光伏板缺陷目标检测数据集，包含 Defective（缺陷）、B",
     "url": "https://universe.roboflow.com/solar-panel-q3vlt/solar-panel-gydkp",
-    "title": "面向光伏电站运维的光伏板缺陷目标检测数据集，包含 Defective（缺陷）、B"
+    "title": "光伏板缺陷检测数据集"
   },
   {
     "row": 1294,
     "workspace": "prashant-qp3sw",
     "project": "traffic-sign-yh4bz",
     "version": 3,
+    "name": "面向智能驾驶与交通管理的交通标志目标检测数据集，用于识别道路上的各类交通标志。可",
     "url": "https://universe.roboflow.com/prashant-qp3sw/traffic-sign-yh4bz",
-    "title": "面向智能驾驶与交通管理的交通标志目标检测数据集，用于识别道路上的各类交通标志。可"
+    "title": "交通标志检测数据集"
   },
   {
     "row": 1295,
     "workspace": "new-workspace-o8zdi",
     "project": "wind-turbine-hwflc",
     "version": 1,
+    "name": "面向风电设备运维的风机叶片缺陷目标检测数据集，包含 Crack（裂纹）、Eros",
     "url": "https://universe.roboflow.com/new-workspace-o8zdi/wind-turbine-hwflc",
-    "title": "面向风电设备运维的风机叶片缺陷目标检测数据集，包含 Crack（裂纹）、Eros"
+    "title": "风机叶片缺陷检测数据集"
   },
   {
     "row": 1300,
     "workspace": "dtu-4hha9",
     "project": "wind-turbine-mpcbv",
     "version": 11,
+    "name": "面向风力发电机组叶片缺陷的目标检测数据集，包含2979张图像，覆盖污垢、污染、侵",
     "url": "https://universe.roboflow.com/dtu-4hha9/wind-turbine-mpcbv",
-    "title": "面向风力发电机组叶片缺陷的目标检测数据集，包含2979张图像，覆盖污垢、污染、侵"
+    "title": "风力发电机组叶片缺陷检测数据集"
   },
   {
     "row": 1317,
     "workspace": "alexander-jaworowski-rshsa",
     "project": "safety-vest-wiu40",
     "version": 4,
+    "name": "面向作业人员安全防护的目标检测数据集，包含2053张图像，类别涵盖安全帽、安全背",
     "url": "https://universe.roboflow.com/alexander-jaworowski-rshsa/safety-vest-wiu40",
-    "title": "面向作业人员安全防护的目标检测数据集，包含2053张图像，类别涵盖安全帽、安全背"
+    "title": "安全防护装备佩戴检测数据集"
   },
   {
     "row": 1318,
     "workspace": "capstone-project-szino",
     "project": "concrete-crack-segmentation-mjznr",
     "version": 2,
+    "name": "面向混凝土结构缺陷的实例分割数据集，包含1149张图像，类别涵盖裂缝、钢筋与剥落",
     "url": "https://universe.roboflow.com/capstone-project-szino/concrete-crack-segmentation-mjznr",
-    "title": "面向混凝土结构缺陷的实例分割数据集，包含1149张图像，类别涵盖裂缝、钢筋与剥落"
+    "title": "混凝土裂缝与剥落实例分割数据集"
   },
   {
     "row": 1321,
     "workspace": "prashant-qp3sw",
     "project": "traffic-sign-yh4bz",
     "version": 3,
+    "name": "面向道路场景的交通标志目标检测数据集，包含1060张图像，类别涵盖不同数值的限速",
     "url": "https://universe.roboflow.com/prashant-qp3sw/traffic-sign-yh4bz",
-    "title": "面向道路场景的交通标志目标检测数据集，包含1060张图像，类别涵盖不同数值的限速"
+    "title": "交通限速与禁令标志检测数据集"
   },
   {
     "row": 1330,
     "workspace": "safety-detection-ftkxk",
     "project": "safety-helmet-detection-hnouo",
     "version": 2,
+    "name": "本数据集面向工地与作业场所的安全帽佩戴检测，通过图像分类区分佩戴安全帽（helm",
     "url": "https://universe.roboflow.com/safety-detection-ftkxk/safety-helmet-detection-hnouo",
-    "title": "本数据集面向工地与作业场所的安全帽佩戴检测，通过图像分类区分佩戴安全帽（helm"
+    "title": "安全帽佩戴与否图像分类数据集"
   },
   {
     "row": 1346,
     "workspace": "detection-projet",
     "project": "fire-smoke-detection-lk8z9",
     "version": 1,
+    "name": "本数据集面向火灾与烟雾目标的检测，类别囊括火焰（Fire/fire）与烟雾（Sm",
     "url": "https://universe.roboflow.com/detection-projet/fire-smoke-detection-lk8z9",
-    "title": "本数据集面向火灾与烟雾目标的检测，类别囊括火焰（Fire/fire）与烟雾（Sm"
+    "title": "火灾与烟雾目标检测数据集"
   },
   {
     "row": 1368,
     "workspace": "beijing-university-mgsyf",
     "project": "wind-turbine-iw8gk",
     "version": 2,
+    "name": "面向风力发电设备的目标检测数据集，共2067张图像，主要用于风力发电机（Wind",
     "url": "https://universe.roboflow.com/beijing-university-mgsyf/wind-turbine-iw8gk",
-    "title": "面向风力发电设备的目标检测数据集，共2067张图像，主要用于风力发电机（Wind"
+    "title": "风力发电机目标检测数据集"
   },
   {
     "row": 1373,
     "workspace": "helmet-detection-sutvo",
     "project": "helmet-detection-j7vt9",
     "version": 6,
+    "name": "面向安全帽识别定位的目标检测数据集，共1691张图像，标注对象为安全帽（safe",
     "url": "https://universe.roboflow.com/helmet-detection-sutvo/helmet-detection-j7vt9",
-    "title": "面向安全帽识别定位的目标检测数据集，共1691张图像，标注对象为安全帽（safe"
+    "title": "安全帽检测数据集"
   },
   {
     "row": 1374,
     "workspace": "university-pmzmm",
     "project": "gas-station-99bl0",
     "version": 2,
+    "name": "面向加油站场景的目标检测数据集，共1749张图像，标注对象为车辆（vehicle",
     "url": "https://universe.roboflow.com/university-pmzmm/gas-station-99bl0",
-    "title": "面向加油站场景的目标检测数据集，共1749张图像，标注对象为车辆（vehicle"
+    "title": "加油站车辆检测数据集"
   },
   {
     "row": 1380,
     "workspace": "jacky-igcgz",
     "project": "car-brand-cw3kx",
     "version": 10,
+    "name": "本数据集针对道路及停车场景下的汽车品牌识别，覆盖奔驰、宝马、奥迪、丰田、大众、现",
     "url": "https://universe.roboflow.com/jacky-igcgz/car-brand-cw3kx",
-    "title": "本数据集针对道路及停车场景下的汽车品牌识别，覆盖奔驰、宝马、奥迪、丰田、大众、现"
+    "title": "汽车品牌识别检测数据集"
   },
   {
     "row": 1381,
     "workspace": "entomologi",
     "project": "fish-disease-vwajm",
     "version": 4,
+    "name": "本数据集面向水产养殖中的鱼类健康监测，涵盖角膜炎、淋巴囊肿病、水霉病、鳃炎、白点",
     "url": "https://universe.roboflow.com/entomologi/fish-disease-vwajm",
-    "title": "本数据集面向水产养殖中的鱼类健康监测，涵盖角膜炎、淋巴囊肿病、水霉病、鳃炎、白点"
+    "title": "鱼类疾病检测数据集"
   },
   {
     "row": 1385,
     "workspace": "loum",
     "project": "poultry-chicken-ssauy",
     "version": 1,
+    "name": "本数据集面向家禽养殖场景的健康监测，涵盖正常鸡只及患病、垂囊、腿伤、出血、眼部异",
     "url": "https://universe.roboflow.com/loum/poultry-chicken-ssauy",
-    "title": "本数据集面向家禽养殖场景的健康监测，涵盖正常鸡只及患病、垂囊、腿伤、出血、眼部异"
+    "title": "家禽健康与异常状态检测数据集"
   },
   {
     "row": 1390,
     "workspace": "ttt-dddjb",
     "project": "food-yfbsa",
     "version": 1,
+    "name": "本数据集面向西式餐厅菜品与配料的像素级实例分割，覆盖披萨、牛排、沙拉、意面、海鲜",
     "url": "https://universe.roboflow.com/ttt-dddjb/food-yfbsa",
-    "title": "本数据集面向西式餐厅菜品与配料的像素级实例分割，覆盖披萨、牛排、沙拉、意面、海鲜"
+    "title": "餐厅美食实例分割数据集"
   },
   {
     "row": 1391,
     "workspace": "pukyung-university",
     "project": "person-pfjle",
     "version": 3,
+    "name": "本数据集面向城市道路场景中的多类别目标检测，涵盖行人、汽车与自行车三类常见交通参",
     "url": "https://universe.roboflow.com/pukyung-university/person-pfjle",
-    "title": "本数据集面向城市道路场景中的多类别目标检测，涵盖行人、汽车与自行车三类常见交通参"
+    "title": "行人车辆检测数据集"
   },
   {
     "row": 1393,
     "workspace": "road-safety-sexzp",
     "project": "road-safety-oayis",
     "version": 2,
+    "name": "本数据集面向道路安全场景中的交通标志识别，涵盖限速、禁令、警告、指示、让行、交叉",
     "url": "https://universe.roboflow.com/road-safety-sexzp/road-safety-oayis",
-    "title": "本数据集面向道路安全场景中的交通标志识别，涵盖限速、禁令、警告、指示、让行、交叉"
+    "title": "道路交通标志检测数据集"
   },
   {
     "row": 1394,
     "workspace": "ju-uveje",
     "project": "waste-gqtlh",
     "version": 2,
+    "name": "本数据集面向生活垃圾的像素级实例分割，涵盖报纸、塑料瓶、玻璃瓶、玻璃、纸杯、尼龙",
     "url": "https://universe.roboflow.com/ju-uveje/waste-gqtlh",
-    "title": "本数据集面向生活垃圾的像素级实例分割，涵盖报纸、塑料瓶、玻璃瓶、玻璃、纸杯、尼龙"
+    "title": "垃圾分类实例分割数据集"
   },
   {
     "row": 1395,
     "workspace": "myname-duqpp",
     "project": "product-2xow4",
     "version": 2,
+    "name": "本数据集面向零售场景中的货架商品识别，涵盖上百种食品、饮料、日用洗护、零食、调味",
     "url": "https://universe.roboflow.com/myname-duqpp/product-2xow4",
-    "title": "本数据集面向零售场景中的货架商品识别，涵盖上百种食品、饮料、日用洗护、零食、调味"
+    "title": "零售商品识别检测数据集"
   },
   {
     "row": 1402,
     "workspace": "thesis-b8oma",
     "project": "food-oszcf",
     "version": 2,
+    "name": "面向越南传统美食自动识别的目标检测数据集，覆盖河粉、春卷、糯米、烤肉、海鲜煲、炸",
     "url": "https://universe.roboflow.com/thesis-b8oma/food-oszcf",
-    "title": "面向越南传统美食自动识别的目标检测数据集，覆盖河粉、春卷、糯米、烤肉、海鲜煲、炸"
+    "title": "越南美食识别检测数据集"
   },
   {
     "row": 1407,
     "workspace": "soc-classification",
     "project": "wild-animal-taqwc",
     "version": 9,
+    "name": "面向园区及野外动物识别的目标检测数据集，涵盖野猪、蛇、鹿、猫、鸡、水牛、大象、猴",
     "url": "https://universe.roboflow.com/soc-classification/wild-animal-taqwc",
-    "title": "面向园区及野外动物识别的目标检测数据集，涵盖野猪、蛇、鹿、猫、鸡、水牛、大象、猴"
+    "title": "野生动物识别检测数据集"
   },
   {
     "row": 1409,
     "workspace": "remote-sensing-i2pek",
     "project": "remote-sensing-lguhh",
     "version": 3,
+    "name": "面向卫星遥感影像自动判读的图像分类数据集，包含两类简化类别标签，数据规模达100",
     "url": "https://universe.roboflow.com/remote-sensing-i2pek/remote-sensing-lguhh",
-    "title": "面向卫星遥感影像自动判读的图像分类数据集，包含两类简化类别标签，数据规模达100"
+    "title": "卫星遥感图像二分类数据集"
   },
   {
     "row": 1410,
     "workspace": "pavement-distress-zesrc",
     "project": "pavement-distress-36ott",
     "version": 1,
+    "name": "面向道路路面病害自动评估的图像分类数据集，涵盖坑洞、裂缝、龟裂、纵向开裂、横向开",
     "url": "https://universe.roboflow.com/pavement-distress-zesrc/pavement-distress-36ott",
-    "title": "面向道路路面病害自动评估的图像分类数据集，涵盖坑洞、裂缝、龟裂、纵向开裂、横向开"
+    "title": "道路病害多标签分类数据集"
   },
   {
     "row": 1411,
     "workspace": "geomaticxaiml-00hbx",
     "project": "transformer-9avf6",
     "version": 2,
+    "name": "面向变电站与配电设施设备识别的实例分割数据集，涵盖变压器、变电站、低压箱、路灯、",
     "url": "https://universe.roboflow.com/geomaticxaiml-00hbx/transformer-9avf6",
-    "title": "面向变电站与配电设施设备识别的实例分割数据集，涵盖变压器、变电站、低压箱、路灯、"
+    "title": "电力变压器场站实例分割数据集"
   },
   {
     "row": 1416,
     "workspace": "yangbaba",
     "project": "vehicle-6bsd7",
     "version": 1,
+    "name": "面向道路交通车辆自动识别的目标检测数据集，涵盖小汽车、货车、公交车与摩托车等主要",
     "url": "https://universe.roboflow.com/yangbaba/vehicle-6bsd7",
-    "title": "面向道路交通车辆自动识别的目标检测数据集，涵盖小汽车、货车、公交车与摩托车等主要"
+    "title": "道路车辆识别检测数据集"
   },
   {
     "row": 1420,
     "workspace": "roket",
     "project": "aircraft-h85hx",
     "version": 2,
+    "name": "本数据集面向军用有人作战飞机目标检测，涵盖Su57、Su34、F22、J20、F",
     "url": "https://universe.roboflow.com/roket/aircraft-h85hx",
-    "title": "本数据集面向军用有人作战飞机目标检测，涵盖Su57、Su34、F22、J20、F"
+    "title": "军用战斗机目标检测数据集"
   },
   {
     "row": 1421,
     "workspace": "ll-hui4x",
     "project": "rice-t3fe5",
     "version": 1,
+    "name": "本数据集面向水稻等作物叶片病害识别，包含叶枯病、细菌性叶枯病、叶瘟、褐斑病、窄褐",
     "url": "https://universe.roboflow.com/ll-hui4x/rice-t3fe5",
-    "title": "本数据集面向水稻等作物叶片病害识别，包含叶枯病、细菌性叶枯病、叶瘟、褐斑病、窄褐"
+    "title": "水稻叶片病害图像分类数据集"
   },
   {
     "row": 1422,
     "workspace": "muhammad-mudassir-wcyko",
     "project": "uav-y6eli",
     "version": 1,
+    "name": "本数据集面向低空目标检测场景，聚焦无人机与导弹两类关键目标，包含6900余张图像",
     "url": "https://universe.roboflow.com/muhammad-mudassir-wcyko/uav-y6eli",
-    "title": "本数据集面向低空目标检测场景，聚焦无人机与导弹两类关键目标，包含6900余张图像"
+    "title": "无人机与导弹目标检测数据集"
   },
   {
     "row": 1423,
     "workspace": "deep-learning-dohjx",
     "project": "flood-cka5z",
     "version": 1,
+    "name": "本数据集面向洪涝灾害场景下的目标检测，包含车辆、行人、房屋三类关键对象，共880",
     "url": "https://universe.roboflow.com/deep-learning-dohjx/flood-cka5z",
-    "title": "本数据集面向洪涝灾害场景下的目标检测，包含车辆、行人、房屋三类关键对象，共880"
+    "title": "洪涝灾害目标检测数据集"
   },
   {
     "row": 1424,
     "workspace": "licenceplate-jswci",
     "project": "character-aclsz",
     "version": 3,
+    "name": "本数据集面向光学字符识别（OCR）领域的字母与数字字符分类，涵盖0-9十个数字与",
     "url": "https://universe.roboflow.com/licenceplate-jswci/character-aclsz",
-    "title": "本数据集面向光学字符识别（OCR）领域的字母与数字字符分类，涵盖0-9十个数字与"
+    "title": "字母数字字符识别数据集"
   },
   {
     "row": 1426,
     "workspace": "cornelius-ottoleonard-aabf0",
     "project": "food-p2vom",
     "version": 1,
+    "name": "本数据集面向常见食材目标检测，涵盖香蕉、胡萝卜、鸡蛋、洋葱、黄瓜、橙子、苹果、土",
     "url": "https://universe.roboflow.com/cornelius-ottoleonard-aabf0/food-p2vom",
-    "title": "本数据集面向常见食材目标检测，涵盖香蕉、胡萝卜、鸡蛋、洋葱、黄瓜、橙子、苹果、土"
+    "title": "食材目标检测数据集"
   },
   {
     "row": 1427,
     "workspace": "new-workspace-7dikm",
     "project": "vehicle-b7rud",
     "version": 2,
+    "name": "本数据集面向城市道路交通场景下的多类车辆目标检测，涵盖小汽车、巴士、货车、厢式车",
     "url": "https://universe.roboflow.com/new-workspace-7dikm/vehicle-b7rud",
-    "title": "本数据集面向城市道路交通场景下的多类车辆目标检测，涵盖小汽车、巴士、货车、厢式车"
+    "title": "道路车辆目标检测数据集"
   },
   {
     "row": 1428,
     "workspace": "pamorn",
     "project": "intrusion-khy00",
     "version": 5,
+    "name": "本数据集面向安防入侵检测场景，聚焦无人机与车辆两类入侵目标，共23000余张图像",
     "url": "https://universe.roboflow.com/pamorn/intrusion-khy00",
-    "title": "本数据集面向安防入侵检测场景，聚焦无人机与车辆两类入侵目标，共23000余张图像"
+    "title": "无人机与车辆入侵检测数据集"
   },
   {
     "row": 1429,
     "workspace": "pim-iw1qi",
     "project": "poultry-rmypb",
     "version": 2,
+    "name": "本数据集面向养殖场及户外场景中的禽鸟类目标检测，涵盖鸡、鸭、鸽子、乌鸦、鹰等5类",
     "url": "https://universe.roboflow.com/pim-iw1qi/poultry-rmypb",
-    "title": "本数据集面向养殖场及户外场景中的禽鸟类目标检测，涵盖鸡、鸭、鸽子、乌鸦、鹰等5类"
+    "title": "家禽与鸟类目标检测数据集"
   },
   {
     "row": 1430,
     "workspace": "kdigital-training",
     "project": "mask-mask-mask-face",
     "version": 1,
+    "name": "本数据集面向人脸脸型识别目标检测，包含心形、椭圆、长椭圆、圆形、方形五类脸型，共",
     "url": "https://universe.roboflow.com/kdigital-training/mask-mask-mask-face",
-    "title": "本数据集面向人脸脸型识别目标检测，包含心形、椭圆、长椭圆、圆形、方形五类脸型，共"
+    "title": "人脸脸型目标检测数据集"
   },
   {
     "row": 1431,
     "workspace": "pitikorn",
     "project": "electrical-appliance-o2r7l",
     "version": 1,
+    "name": "本数据集面向日常电子电器产品目标检测，涵盖笔记本电脑、鼠标、键盘、耳机、摄像头5",
     "url": "https://universe.roboflow.com/pitikorn/electrical-appliance-o2r7l",
-    "title": "本数据集面向日常电子电器产品目标检测，涵盖笔记本电脑、鼠标、键盘、耳机、摄像头5"
+    "title": "电子电器目标检测数据集"
   },
   {
     "row": 1432,
     "workspace": "test-pyatx",
     "project": "aircraft-rj44i",
     "version": 2,
+    "name": "本数据集面向直升机目标检测，涵盖S76、H60、B429、VH92A等常见直升机",
     "url": "https://universe.roboflow.com/test-pyatx/aircraft-rj44i",
-    "title": "本数据集面向直升机目标检测，涵盖S76、H60、B429、VH92A等常见直升机"
+    "title": "直升机目标检测数据集"
   },
   {
     "row": 1433,
     "workspace": "workspace-u9klk",
     "project": "litter-0tdjc",
     "version": 2,
+    "name": "本数据集面向垃圾分类与检测任务，涵盖金属、塑料、纸张、纸板、生物质等5类常见废弃",
     "url": "https://universe.roboflow.com/workspace-u9klk/litter-0tdjc",
-    "title": "本数据集面向垃圾分类与检测任务，涵盖金属、塑料、纸张、纸板、生物质等5类常见废弃"
+    "title": "垃圾废弃物目标检测数据集"
   },
   {
     "row": 1434,
     "workspace": "taisei",
     "project": "person-eccaa",
     "version": 2,
+    "name": "本数据集面向行人目标检测任务，包含单一",
     "url": "https://universe.roboflow.com/taisei/person-eccaa",
-    "title": "本数据集面向行人目标检测任务，包含单一"
+    "title": "行人目标检测数据集"
   },
   {
     "row": 1435,
     "workspace": "mukeshs-workspace-mytt6",
     "project": "aerial-lahmj",
     "version": 3,
+    "name": "本数据集面向航拍视角下的行人目标检测，包含俯视及倾斜视角拍摄的行人样本共5300",
     "url": "https://universe.roboflow.com/mukeshs-workspace-mytt6/aerial-lahmj",
-    "title": "本数据集面向航拍视角下的行人目标检测，包含俯视及倾斜视角拍摄的行人样本共5300"
+    "title": "航拍行人目标检测数据集"
   },
   {
     "row": 1436,
     "workspace": "uav-qnoms",
     "project": "uav-wqshy",
     "version": 6,
+    "name": "本数据集面向无人机目标检测任务，包含单一",
     "url": "https://universe.roboflow.com/uav-qnoms/uav-wqshy",
-    "title": "本数据集面向无人机目标检测任务，包含单一"
+    "title": "无人机目标检测数据集"
   },
   {
     "row": 1437,
     "workspace": "handdetect-p7kf9",
     "project": "hand-detection-1d18n",
     "version": 4,
+    "name": "本数据集面向手部目标检测任务，包含单一",
     "url": "https://universe.roboflow.com/handdetect-p7kf9/hand-detection-1d18n",
-    "title": "本数据集面向手部目标检测任务，包含单一"
+    "title": "手部目标检测数据集"
   },
   {
     "row": 1438,
     "workspace": "vehicle-joffa",
     "project": "vehicle-oscy8",
     "version": 1,
+    "name": "本数据集面向道路交通场景中的车辆目标检测，包含货车等车型类别，共9900余张图像",
     "url": "https://universe.roboflow.com/vehicle-joffa/vehicle-oscy8",
-    "title": "本数据集面向道路交通场景中的车辆目标检测，包含货车等车型类别，共9900余张图像"
+    "title": "车辆目标检测数据集"
   }
 ]
