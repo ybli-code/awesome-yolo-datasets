@@ -4,44 +4,44 @@
     "workspace": "lpr-kfa0b",
     "project": "vegetable-classification",
     "version": 1,
-    "name": "面向农产品识别的蔬菜图像分类数据集，涵盖胡萝卜、木瓜、南瓜、葫芦、番茄、苦瓜、豆角、土豆、西兰花、花椰菜、萝卜、卷心菜、辣椒、黄瓜、茄子共15类常见蔬菜。共9992张图像，可用于智能零售结算、农产品分",
+    "name": "蔬菜图像分类数据集",
     "url": "https://universe.roboflow.com/lpr-kfa0b/vegetable-classification",
-    "title": "面向农产品识别的蔬菜图像分类数据集"
+    "title": "蔬菜图像分类数据集"
   },
   {
     "row": 1281,
     "workspace": "adithep",
     "project": "fruit-ihkv6",
     "version": 1,
-    "name": "覆盖 22 种常见水果的图像分类数据集，包括苹果、香蕉、橙子、草莓、葡萄、西瓜、木瓜、猕猴桃、番茄、蓝莓等类别。适用于农产品识别、智能零售结算与果蔬分拣等应用场景。共 2942 张图片，类别丰富多样，",
+    "name": "多类别水果图像分类数据集",
     "url": "https://universe.roboflow.com/adithep/fruit-ihkv6",
-    "title": "覆盖 22 种常见水果的图像分类数据集"
+    "title": "多类别水果图像分类数据集"
   },
   {
     "row": 1329,
     "workspace": "solar-panel-defects-ax0gw",
     "project": "solar-panel-defect-w1dfi",
     "version": 1,
-    "name": "本数据集用于光伏板图像的分类识别任务，帮助区分有效光伏面板样本与无关/低质量图像。类别标注包含光伏面板主体及实验批次标识，可用于光伏电站巡检图像的自动筛选与质量分类。共2490张图像，数据量较为充足，",
+    "name": "太阳能光伏板图像分类数据集",
     "url": "https://universe.roboflow.com/solar-panel-defects-ax0gw/solar-panel-defect-w1dfi",
-    "title": "本数据集"
+    "title": "太阳能光伏板图像分类数据集"
   },
   {
     "row": 1395,
     "workspace": "myname-duqpp",
     "project": "product-2xow4",
     "version": 1,
-    "name": "本数据集面向零售场景中的货架商品识别，涵盖上百种食品、饮料、日用洗护、零食、调味品等超市常见商品的类别。可用于智能零售、自助结账、货架商品管理与盘点等场景的目标检测模型训练。数据集包含5117张图像，",
+    "name": "零售商品识别检测数据集",
     "url": "https://universe.roboflow.com/myname-duqpp/product-2xow4",
-    "title": "本数据集"
+    "title": "零售商品识别检测数据集"
   },
   {
     "row": 1403,
     "workspace": "nigar15601",
     "project": "fish-etwtb",
     "version": 1,
-    "name": "面向海洋鱼类品种自动识别的图像分类数据集，涵盖鲈鱼、鳟鱼、鲭鱼、鲷鱼、鲻鱼、虾等14类常见海洋生物类别。数据集包含4234张图像，类别覆盖经济鱼类与水产主要品种，可服务于渔业资源调查、水产养殖管理、海",
+    "name": "海洋鱼类品种分类数据集",
     "url": "https://universe.roboflow.com/nigar15601/fish-etwtb",
-    "title": "面向海洋鱼类品种自动识别的图像分类数据集"
+    "title": "海洋鱼类品种分类数据集"
   }
 ]
