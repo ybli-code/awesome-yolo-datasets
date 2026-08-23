@@ -9,24 +9,6 @@
     "title": "面向农产品识别的蔬菜图像分类数据集"
   },
   {
-    "row": 1245,
-    "workspace": "hi-ck6bw",
-    "project": "traffic-sign-detection-zzsn8",
-    "version": 1,
-    "name": "面向智能驾驶辅助的交通标志分类数据集，覆盖限速（20/25/30/50/80）、禁止停车、禁止超车、停车、左转、右转、掉头、人行横道、靠左行驶等15类常见交通标志。共5246张图像，可用于自动驾驶与辅",
-    "url": "https://universe.roboflow.com/hi-ck6bw/traffic-sign-detection-zzsn8",
-    "title": "面向智能驾驶辅助的交通标志分类数据集"
-  },
-  {
-    "row": 1249,
-    "workspace": "dtu-4hha9",
-    "project": "wind-turbine-mpcbv",
-    "version": 1,
-    "name": "面向风力发电机叶片巡检的缺陷检测数据集，覆盖腐蚀、开裂、表面油污、隐藏裂纹、表面砂眼、表面损伤及雷击共7类缺陷。共8922张标注图像，适用于无人机巡检场景下风机叶片缺陷的自动检测与状态评估。",
-    "url": "https://universe.roboflow.com/dtu-4hha9/wind-turbine-mpcbv",
-    "title": "面向风力发电机叶片巡检的缺陷检测数据集"
-  },
-  {
     "row": 1281,
     "workspace": "adithep",
     "project": "fruit-ihkv6",
@@ -36,67 +18,13 @@
     "title": "覆盖 22 种常见水果的图像分类数据集"
   },
   {
-    "row": 1294,
-    "workspace": "prashant-qp3sw",
-    "project": "traffic-sign-yh4bz",
-    "version": 1,
-    "name": "面向智能驾驶与交通管理的交通标志目标检测数据集，用于识别道路上的各类交通标志。可应用于辅助驾驶、自动驾驶与交通设施巡检等场景。共 5818 张图片，为交通标志检测模型的训练提供数据支撑。",
-    "url": "https://universe.roboflow.com/prashant-qp3sw/traffic-sign-yh4bz",
-    "title": "面向智能驾驶与交通管理的交通标志目标检测数据集"
-  },
-  {
-    "row": 1317,
-    "workspace": "alexander-jaworowski-rshsa",
-    "project": "safety-vest-wiu40",
-    "version": 1,
-    "name": "面向作业人员安全防护的目标检测数据集，包含2053张图像，类别涵盖安全帽、安全背心、护目镜的佩戴与未佩戴状态。可对作业人员防护装备穿戴情况进行自动识别与合规检查，广泛应用于建筑、工厂等高风险作业场所。",
-    "url": "https://universe.roboflow.com/alexander-jaworowski-rshsa/safety-vest-wiu40",
-    "title": "面向作业人员安全防护的目标检测数据集"
-  },
-  {
     "row": 1329,
     "workspace": "solar-panel-defects-ax0gw",
     "project": "solar-panel-defect-w1dfi",
     "version": 1,
     "name": "本数据集用于光伏板图像的分类识别任务，帮助区分有效光伏面板样本与无关/低质量图像。类别标注包含光伏面板主体及实验批次标识，可用于光伏电站巡检图像的自动筛选与质量分类。共2490张图像，数据量较为充足，",
     "url": "https://universe.roboflow.com/solar-panel-defects-ax0gw/solar-panel-defect-w1dfi",
-    "title": "用于光伏板图像的分类识别任务"
-  },
-  {
-    "row": 1346,
-    "workspace": "detection-projet",
-    "project": "fire-smoke-detection-lk8z9",
-    "version": 1,
-    "name": "本数据集面向火灾与烟雾目标的检测，类别囊括火焰（Fire/fire）与烟雾（Smoke/smoke）两大核心目标，并包含野外火灾（Wildfire）等类别。可用于森林防火、城市消防与安全监控场景中的火",
-    "url": "https://universe.roboflow.com/detection-projet/fire-smoke-detection-lk8z9",
-    "title": "面向火灾与烟雾目标的检测"
-  },
-  {
-    "row": 1368,
-    "workspace": "beijing-university-mgsyf",
-    "project": "wind-turbine-iw8gk",
-    "version": 1,
-    "name": "面向风力发电设备的目标检测数据集，共2067张图像，主要用于风力发电机（Wind Turbine）本体的识别与定位。适用于风力发电场的风机巡检、数量统计与资产管理场景，可支撑风机目标检测模型的大规模训",
-    "url": "https://universe.roboflow.com/beijing-university-mgsyf/wind-turbine-iw8gk",
-    "title": "面向风力发电设备的目标检测数据集"
-  },
-  {
-    "row": 1380,
-    "workspace": "jacky-igcgz",
-    "project": "car-brand-cw3kx",
-    "version": 1,
-    "name": "本数据集针对道路及停车场景下的汽车品牌识别，覆盖奔驰、宝马、奥迪、丰田、大众、现代、起亚、日产、雪佛兰、雷诺、斯柯达等11个主流汽车品牌。可用于交通监控、车辆管理、二手车评估等场景的车型品牌自动识别。",
-    "url": "https://universe.roboflow.com/jacky-igcgz/car-brand-cw3kx",
-    "title": "针对道路及停车场景下的汽车品牌识别"
-  },
-  {
-    "row": 1389,
-    "workspace": "test-t1s3e",
-    "project": "invoice-5wfdh",
-    "version": 1,
-    "name": "本数据集面向办公场景下的文档类型自动分类，涵盖合同、简历、发票三类常见商务文档。适用于文档管理系统中对合同、简历、票据等文件的自动归类与流程分拣。数据集包含4020张图像，三类文档类别区分清晰，为文档",
-    "url": "https://universe.roboflow.com/test-t1s3e/invoice-5wfdh",
-    "title": "面向办公场景下的文档类型自动分类"
+    "title": "本数据集"
   },
   {
     "row": 1395,
@@ -105,25 +33,7 @@
     "version": 1,
     "name": "本数据集面向零售场景中的货架商品识别，涵盖上百种食品、饮料、日用洗护、零食、调味品等超市常见商品的类别。可用于智能零售、自助结账、货架商品管理与盘点等场景的目标检测模型训练。数据集包含5117张图像，",
     "url": "https://universe.roboflow.com/myname-duqpp/product-2xow4",
-    "title": "面向零售场景中的货架商品识别"
-  },
-  {
-    "row": 1396,
-    "workspace": "fyp-qtd0e",
-    "project": "insect-detection-j9mt7",
-    "version": 1,
-    "name": "本数据集面向昆虫物种的检测与分类，涵盖鞘翅目、双翅目、鳞翅目、半翅目、膜翅目等多个昆虫类群，包含步行虫、瓢虫、食蚜蝇、蚊蝇、尺蛾、螟蛾等上百个物种及科级类别。适用于农业害虫监测、生态研究、生物多样性调",
-    "url": "https://universe.roboflow.com/fyp-qtd0e/insect-detection-j9mt7",
-    "title": "面向昆虫物种的检测与分类"
-  },
-  {
-    "row": 1401,
-    "workspace": "projects-cb5nh",
-    "project": "plant-leaf-disease-qolw5",
-    "version": 1,
-    "name": "面向植物叶片病害诊断的图像分类数据集，涵盖细菌性斑点、早疫病、晚疫病、叶霉病、花叶病毒、卷叶病毒、斑枯病、靶斑病及蜘蛛螨等常见病害类别，并包含健康叶片对照。数据集包含9322张图像，类别覆盖蔬菜与作物",
-    "url": "https://universe.roboflow.com/projects-cb5nh/plant-leaf-disease-qolw5",
-    "title": "面向植物叶片病害诊断的图像分类数据集"
+    "title": "本数据集"
   },
   {
     "row": 1403,
@@ -133,176 +43,5 @@
     "name": "面向海洋鱼类品种自动识别的图像分类数据集，涵盖鲈鱼、鳟鱼、鲭鱼、鲷鱼、鲻鱼、虾等14类常见海洋生物类别。数据集包含4234张图像，类别覆盖经济鱼类与水产主要品种，可服务于渔业资源调查、水产养殖管理、海",
     "url": "https://universe.roboflow.com/nigar15601/fish-etwtb",
     "title": "面向海洋鱼类品种自动识别的图像分类数据集"
-  },
-  {
-    "row": 1406,
-    "workspace": "new-workspace-qkuiv",
-    "project": "retail-shelf-j9thn",
-    "version": 1,
-    "name": "面向零售货架商品自动识别的目标检测数据集，涵盖数十种不同品牌与规格的盒装、杯装与瓶装商品类别，数据规模达4506张图像。类别构成覆盖乳制品、饮品、调味品、甜品等常见零售商品及其多规格变体，可服务于新零",
-    "url": "https://universe.roboflow.com/new-workspace-qkuiv/retail-shelf-j9thn",
-    "title": "面向零售货架商品自动识别的目标检测数据集"
-  },
-  {
-    "row": 1417,
-    "workspace": "romaricovargas-v3iir",
-    "project": "flood-water",
-    "version": 1,
-    "name": "面向洪涝灾害监测的实例分割数据集，涵盖洪水淹没区域、河岸及水体等类别，精确刻画洪涝水体分布。数据集包含3619张图像，类别聚焦洪水与河岸场景要素，可服务于洪水灾害监测、受灾区域评估、应急救援规划与城市",
-    "url": "https://universe.roboflow.com/romaricovargas-v3iir/flood-water",
-    "title": "面向洪涝灾害监测的实例分割数据集"
-  },
-  {
-    "row": 1422,
-    "workspace": "muhammad-mudassir-wcyko",
-    "project": "uav-y6eli",
-    "version": 1,
-    "name": "本数据集面向低空目标检测场景，聚焦无人机与导弹两类关键目标，包含6900余张图像，覆盖不同飞行姿态、背景与光照条件下的目标样本。可用于反无人机安防监控、空域管控与威胁目标识别等应用。数据规模充足，助力",
-    "url": "https://universe.roboflow.com/muhammad-mudassir-wcyko/uav-y6eli",
-    "title": "面向低空目标检测场景"
-  },
-  {
-    "row": 1423,
-    "workspace": "deep-learning-dohjx",
-    "project": "flood-cka5z",
-    "version": 1,
-    "name": "本数据集面向洪涝灾害场景下的目标检测，包含车辆、行人、房屋三类关键对象，共8800余张图像。通过对灾后影像中的人口与车辆目标进行识别，可用于受灾情况评估、救援资源分配与应急响应。数据规模大，贴合真实灾",
-    "url": "https://universe.roboflow.com/deep-learning-dohjx/flood-cka5z",
-    "title": "面向洪涝灾害场景下的目标检测"
-  },
-  {
-    "row": 1424,
-    "workspace": "licenceplate-jswci",
-    "project": "character-aclsz",
-    "version": 1,
-    "name": "本数据集面向光学字符识别（OCR）领域的字母与数字字符分类，涵盖0-9十个数字与A-Z二十六个英文字母共36个字符类别。适用于车牌字符识别、验证码识别、文档文字提取、工业字符检测等场景的图像分类模型训",
-    "url": "https://universe.roboflow.com/licenceplate-jswci/character-aclsz",
-    "title": "面向光学字符识别（OCR）领域的字母与数字字符分类"
-  },
-  {
-    "row": 1425,
-    "workspace": "horyzn-qhfq4",
-    "project": "hand-gesture-gizg2",
-    "version": 1,
-    "name": "本数据集面向静态手势识别任务，包含A、B、C、D、E等多种手势类别图像，共8100余张，类别标注清晰。可应用于手语翻译、人机交互、无接触控制等场景。数据规模充足，类别构造简洁直观，适合训练高效轻量的手",
-    "url": "https://universe.roboflow.com/horyzn-qhfq4/hand-gesture-gizg2",
-    "title": "面向静态手势识别任务"
-  },
-  {
-    "row": 1426,
-    "workspace": "cornelius-ottoleonard-aabf0",
-    "project": "food-p2vom",
-    "version": 1,
-    "name": "本数据集面向常见食材目标检测，涵盖香蕉、胡萝卜、鸡蛋、洋葱、黄瓜、橙子、苹果、土豆、蘑菇、水稻等十余类食材，并包含受损苹果样本，共2800余张图像。可用于智能厨房、食材识别与质量分级、餐饮自动结算等应",
-    "url": "https://universe.roboflow.com/cornelius-ottoleonard-aabf0/food-p2vom",
-    "title": "面向常见食材目标检测"
-  },
-  {
-    "row": 1427,
-    "workspace": "new-workspace-7dikm",
-    "project": "vehicle-b7rud",
-    "version": 1,
-    "name": "本数据集面向城市道路交通场景下的多类车辆目标检测，涵盖小汽车、巴士、货车、厢式车、摩托车、自行车以及菲律宾特色的吉普尼和三轮车等9类车型，共6400余张图像。类别划分贴近东南亚实际交通构成，适合智能交",
-    "url": "https://universe.roboflow.com/new-workspace-7dikm/vehicle-b7rud",
-    "title": "面向城市道路交通场景下的多类车辆目标检测"
-  },
-  {
-    "row": 1428,
-    "workspace": "pamorn",
-    "project": "intrusion-khy00",
-    "version": 1,
-    "name": "本数据集面向安防入侵检测场景，聚焦无人机与车辆两类入侵目标，共23000余张图像，规模庞大。适用于周界防护、重点区域安防监控与非法入侵预警等应用。大样本量有助于提升检测模型对环境变化与多尺度目标的适应",
-    "url": "https://universe.roboflow.com/pamorn/intrusion-khy00",
-    "title": "面向安防入侵检测场景"
-  },
-  {
-    "row": 1429,
-    "workspace": "pim-iw1qi",
-    "project": "poultry-rmypb",
-    "version": 1,
-    "name": "本数据集面向养殖场及户外场景中的禽鸟类目标检测，涵盖鸡、鸭、鸽子、乌鸦、鹰等5类常见鸟类，共5200余张图像。可用于家禽养殖智能管理、禽类计数与野生动物监测等应用。类别既有家禽也有野生鸟类，场景多样，",
-    "url": "https://universe.roboflow.com/pim-iw1qi/poultry-rmypb",
-    "title": "面向养殖场及户外场景中的禽鸟类目标检测"
-  },
-  {
-    "row": 1430,
-    "workspace": "kdigital-training",
-    "project": "mask-mask-mask-face",
-    "version": 1,
-    "name": "本数据集面向人脸脸型识别目标检测，包含心形、椭圆、长椭圆、圆形、方形五类脸型，共4700余张图像。类别划分清晰，可用于智能美妆、脸型分析、眼镜与口罩尺码推荐等应用。通过检测人脸区域并判断脸型，为个性化",
-    "url": "https://universe.roboflow.com/kdigital-training/mask-mask-mask-face",
-    "title": "面向人脸脸型识别目标检测"
-  },
-  {
-    "row": 1431,
-    "workspace": "pitikorn",
-    "project": "electrical-appliance-o2r7l",
-    "version": 1,
-    "name": "本数据集面向日常电子电器产品目标检测，涵盖笔记本电脑、鼠标、键盘、耳机、摄像头5类常见办公及数码设备，共5900余张图像。可应用于智能家居、电子产品回收分拣、办公设备管理及库存盘点等场景。类别典型、目",
-    "url": "https://universe.roboflow.com/pitikorn/electrical-appliance-o2r7l",
-    "title": "面向日常电子电器产品目标检测"
-  },
-  {
-    "row": 1432,
-    "workspace": "test-pyatx",
-    "project": "aircraft-rj44i",
-    "version": 1,
-    "name": "本数据集面向直升机目标检测，涵盖S76、H60、B429、VH92A等常见直升机型号，共4200余张图像。可应用于低空飞行器监控、通航安全监管与机场调配管理等领域。类别对应具体机型，兼顾通用直升机检测",
-    "url": "https://universe.roboflow.com/test-pyatx/aircraft-rj44i",
-    "title": "面向直升机目标检测，涵盖S76、H60、B429、VH92A等常见直升机型号"
-  },
-  {
-    "row": 1433,
-    "workspace": "workspace-u9klk",
-    "project": "litter-0tdjc",
-    "version": 1,
-    "name": "本数据集面向垃圾分类与检测任务，涵盖金属、塑料、纸张、纸板、生物质等5类常见废弃物，共4000余张图像。可应用于智能垃圾分类、城市环境治理与回收分拣自动化等场景。类别覆盖常见可回收物类型，有助于训练环",
-    "url": "https://universe.roboflow.com/workspace-u9klk/litter-0tdjc",
-    "title": "面向垃圾分类与检测任务"
-  },
-  {
-    "row": 1434,
-    "workspace": "taisei",
-    "project": "person-eccaa",
-    "version": 1,
-    "name": "本数据集面向行人目标检测任务，包含单一",
-    "url": "https://universe.roboflow.com/taisei/person-eccaa",
-    "title": "面向行人目标检测任务，包含单一"
-  },
-  {
-    "row": 1435,
-    "workspace": "mukeshs-workspace-mytt6",
-    "project": "aerial-lahmj",
-    "version": 1,
-    "name": "本数据集面向航拍视角下的行人目标检测，包含俯视及倾斜视角拍摄的行人样本共5300余张图像。大范围航拍场景下目标尺度较小、背景复杂，适合训练针对无人机与遥感影像的行人检测模型。可应用于应急救援、安防巡逻",
-    "url": "https://universe.roboflow.com/mukeshs-workspace-mytt6/aerial-lahmj",
-    "title": "面向航拍视角下的行人目标检测"
-  },
-  {
-    "row": 1436,
-    "workspace": "uav-qnoms",
-    "project": "uav-wqshy",
-    "version": 1,
-    "name": "本数据集面向无人机目标检测任务，包含单一",
-    "url": "https://universe.roboflow.com/uav-qnoms/uav-wqshy",
-    "title": "面向无人机目标检测任务，包含单一"
-  },
-  {
-    "row": 1437,
-    "workspace": "handdetect-p7kf9",
-    "project": "hand-detection-1d18n",
-    "version": 1,
-    "name": "本数据集面向手部目标检测任务，包含单一",
-    "url": "https://universe.roboflow.com/handdetect-p7kf9/hand-detection-1d18n",
-    "title": "面向手部目标检测任务，包含单一"
-  },
-  {
-    "row": 1438,
-    "workspace": "vehicle-joffa",
-    "project": "vehicle-oscy8",
-    "version": 1,
-    "name": "本数据集面向道路交通场景中的车辆目标检测，包含货车等车型类别，共9900余张图像，规模充裕。样本覆盖多样道路环境、姿态与尺度条件下的车辆目标，可用于智能交通监控、车流统计与车辆类型识别等应用。数据量大",
-    "url": "https://universe.roboflow.com/vehicle-joffa/vehicle-oscy8",
-    "title": "面向道路交通场景中的车辆目标检测"
   }
 ]
