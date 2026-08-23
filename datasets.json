@@ -1,47 +1,42 @@
 [
   {
-    "row": 1244,
+    "name": "蔬菜图像分类数据集",
     "workspace": "lpr-kfa0b",
     "project": "vegetable-classification",
     "version": 1,
-    "name": "蔬菜图像分类数据集",
-    "url": "https://universe.roboflow.com/lpr-kfa0b/vegetable-classification",
-    "title": "蔬菜图像分类数据集"
+    "row": 1244,
+    "url": "https://universe.roboflow.com/lpr-kfa0b/vegetable-classification"
   },
   {
-    "row": 1281,
-    "workspace": "adithep",
-    "project": "fruit-ihkv6",
-    "version": 1,
     "name": "多类别水果图像分类数据集",
-    "url": "https://universe.roboflow.com/adithep/fruit-ihkv6",
-    "title": "多类别水果图像分类数据集"
+    "workspace": "endexspace",
+    "project": "supermarket-items-yolov7",
+    "version": 2,
+    "row": 1281,
+    "url": "https://universe.roboflow.com/endexspace/supermarket-items-yolov7"
   },
   {
-    "row": 1329,
+    "name": "太阳能光伏板图像分类数据集",
     "workspace": "solar-panel-defects-ax0gw",
     "project": "solar-panel-defect-w1dfi",
-    "version": 1,
-    "name": "太阳能光伏板图像分类数据集",
-    "url": "https://universe.roboflow.com/solar-panel-defects-ax0gw/solar-panel-defect-w1dfi",
-    "title": "太阳能光伏板图像分类数据集"
+    "version": 8,
+    "row": 1329,
+    "url": "https://universe.roboflow.com/solar-panel-defects-ax0gw/solar-panel-defect-w1dfi"
   },
   {
-    "row": 1395,
+    "name": "零售商品识别检测数据集",
     "workspace": "myname-duqpp",
     "project": "product-2xow4",
-    "version": 1,
-    "name": "零售商品识别检测数据集",
-    "url": "https://universe.roboflow.com/myname-duqpp/product-2xow4",
-    "title": "零售商品识别检测数据集"
+    "version": 3,
+    "row": 1395,
+    "url": "https://universe.roboflow.com/myname-duqpp/product-2xow4"
   },
   {
-    "row": 1403,
-    "workspace": "nigar15601",
-    "project": "fish-etwtb",
-    "version": 1,
     "name": "海洋鱼类品种分类数据集",
-    "url": "https://universe.roboflow.com/nigar15601/fish-etwtb",
-    "title": "海洋鱼类品种分类数据集"
+    "workspace": "brad-dwyer",
+    "project": "aquarium-combined",
+    "version": 6,
+    "row": 1403,
+    "url": "https://universe.roboflow.com/brad-dwyer/aquarium-combined"
   }
 ]
