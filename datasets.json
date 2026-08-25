@@ -1,28 +1,20 @@
 [
   {
-    "name": "蔬菜图像分类数据集",
-    "workspace": "foodie-6tcul",
-    "project": "food-ingredient-ylnqj",
+    "row": 1579,
+    "workspace": "person-detection",
+    "project": "person",
     "version": 1,
-    "row": 1244,
-    "url": "https://universe.roboflow.com/foodie-6tcul/food-ingredient-ylnqj"
+    "name": "人员检测",
+    "title": "人员检测目标检测数据集",
+    "url": "https://universe.roboflow.com/person-detection/person"
   },
   {
-    "row": 1443,
-    "workspace": "igor-dimitrovski-qowpq",
-    "project": "dumpsite-detection",
-    "version": 7,
-    "name": "dumpsite-detection",
-    "title": "垃圾场废弃物检测目标检测数据集",
-    "url": "https://universe.roboflow.com/igor-dimitrovski-qowpq/dumpsite-detection"
-  },
-  {
-    "row": 1444,
-    "workspace": "j1nzo1",
-    "project": "garbage-detection-project",
-    "version": 6,
-    "name": "garbage-detection-project",
-    "title": "垃圾分类检测目标检测数据集",
-    "url": "https://universe.roboflow.com/j1nzo1/garbage-detection-project"
+    "row": 1580,
+    "workspace": "roboflow-100",
+    "project": "real-world-objects",
+    "version": 1,
+    "name": "实物检测",
+    "title": "实物目标检测数据集",
+    "url": "https://universe.roboflow.com/roboflow-100/real-world-objects"
   }
 ]
