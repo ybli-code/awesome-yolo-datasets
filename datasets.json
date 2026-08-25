@@ -1,20 +1,47 @@
 [
   {
     "row": 1579,
-    "workspace": "person-detection",
-    "project": "person",
-    "version": 1,
-    "name": "人员检测",
-    "title": "人员检测目标检测数据集",
-    "url": "https://universe.roboflow.com/person-detection/person"
+    "workspace": "andrewyolo",
+    "project": "hard-hat-workers",
+    "version": 14,
+    "name": "安全帽工人检测数据集，包含7000+张施工现场工人图片，标注安全帽、人等类别",
+    "url": "https://universe.roboflow.com/andrewyolo/hard-hat-workers",
+    "title": "安全帽工人检测数据集"
   },
   {
     "row": 1580,
-    "workspace": "roboflow-100",
-    "project": "real-world-objects",
-    "version": 1,
-    "name": "实物检测",
-    "title": "实物目标检测数据集",
-    "url": "https://universe.roboflow.com/roboflow-100/real-world-objects"
+    "workspace": "supermarket-products",
+    "project": "supermarket-products",
+    "version": 4,
+    "name": "超市商品检测数据集，包含1300+张超市商品图片，标注各类零售商品",
+    "url": "https://universe.roboflow.com/supermarket-products/supermarket-products",
+    "title": "超市商品检测数据集"
+  },
+  {
+    "row": 1581,
+    "workspace": "aicook",
+    "project": "aicook-lcv4d",
+    "version": 4,
+    "name": "AI烹饪食物检测数据集，包含3000+张烹饪食物图片，标注各类菜品和食材",
+    "url": "https://universe.roboflow.com/aicook/aicook-lcv4d",
+    "title": "AI烹饪食物检测数据集"
+  },
+  {
+    "row": 1582,
+    "workspace": "malaysian-foods",
+    "project": "malaysian-foods-yolov8",
+    "version": 4,
+    "name": "马来西亚食物检测数据集，包含700+张马来西亚特色美食图片，标注各类当地菜品",
+    "url": "https://universe.roboflow.com/malaysian-foods/malaysian-foods-yolov8",
+    "title": "马来西亚食物检测数据集"
+  },
+  {
+    "row": 1583,
+    "workspace": "fast-food",
+    "project": "fast-food-detection",
+    "version": 2,
+    "name": "快餐食品检测数据集，包含400+张快餐食品图片，标注汉堡、薯条、炸鸡等类别",
+    "url": "https://universe.roboflow.com/fast-food/fast-food-detection",
+    "title": "快餐食品检测数据集"
   }
 ]
