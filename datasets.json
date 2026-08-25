@@ -6,5 +6,23 @@
     "version": 1,
     "row": 1244,
     "url": "https://universe.roboflow.com/foodie-6tcul/food-ingredient-ylnqj"
+  },
+  {
+    "row": 1443,
+    "workspace": "igor-dimitrovski-qowpq",
+    "project": "dumpsite-detection",
+    "version": 7,
+    "name": "dumpsite-detection",
+    "title": "垃圾场废弃物检测目标检测数据集",
+    "url": "https://universe.roboflow.com/igor-dimitrovski-qowpq/dumpsite-detection"
+  },
+  {
+    "row": 1444,
+    "workspace": "j1nzo1",
+    "project": "garbage-detection-project",
+    "version": 6,
+    "name": "garbage-detection-project",
+    "title": "垃圾分类检测目标检测数据集",
+    "url": "https://universe.roboflow.com/j1nzo1/garbage-detection-project"
   }
 ]
