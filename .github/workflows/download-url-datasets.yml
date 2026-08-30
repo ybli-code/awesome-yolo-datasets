@@ -1,0 +1,42 @@
+name: Download URL Datasets to Baidu Netdisk
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: '处理数量限制 (0=全部)'
+        required: false
+        default: '0'
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Download Script
+        env:
+          BAIDU_ACCESS_TOKEN: ${{ secrets.BAIDU_ACCESS_TOKEN }}
+          TENCENT_TOKEN: ${{ secrets.TENCENT_TOKEN }}
+          FILE_ID: ${{ secrets.FILE_ID }}
+          SHEET_ID: ${{ secrets.SHEET_ID }}
+        run: |
+          echo "开始下载通用URL数据集..."
+          python scripts/download_url.py
+          echo "下载完成"
+
+      - name: Upload Log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: download-url-log
+          path: |
+            /tmp/dataset_downloads/
+          retention-days: 7
