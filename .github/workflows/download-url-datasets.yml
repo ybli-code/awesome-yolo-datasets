@@ -24,11 +24,13 @@ jobs:
       - name: Run Download Script
         env:
           BAIDU_ACCESS_TOKEN: ${{ secrets.BAIDU_ACCESS_TOKEN }}
+          QUARK_COOKIE: ${{ secrets.QUARK_COOKIE }}
           TENCENT_TOKEN: ${{ secrets.TENCENT_TOKEN }}
           FILE_ID: ${{ secrets.FILE_ID }}
           SHEET_ID: ${{ secrets.SHEET_ID }}
         run: |
           echo "开始下载通用URL数据集..."
+          echo "网盘后端: ${{ secrets.QUARK_COOKIE != '' && '夸克网盘' || '百度网盘' }}"
           python scripts/download_url.py
           echo "下载完成"
 
