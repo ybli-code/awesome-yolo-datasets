@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """
-GitHub Actions: 通用URL数据集下载 → 上传百度网盘 → 写回腾讯文档
+GitHub Actions: 通用URL数据集下载 → 网盘上传（百度/夸克自动选择）→ 写回腾讯文档
 支持直接下载URL（如Harvard Dataverse、HuggingFace、OpenDataLab等）
 不解压，直接重命名上传。
+
+网盘选择（按环境变量自动判断）：
+  1. QUARK_COOKIE 非空 → 上传到夸克网盘 + 创建分享（提取码 yolo）
+  2. BAIDU_ACCESS_TOKEN 非空 → 上传到百度网盘 + 创建分享（提取码 yolo）
 """
 import os
 import sys
@@ -17,9 +21,21 @@ import concurrent.futures
 import logging
 import re
 
+# 尝试导入夸克网盘客户端（同目录下 quark_netdisk.py）
+try:
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import quark_netdisk
+    QUARK_AVAILABLE = True
+except ImportError:
+    QUARK_AVAILABLE = False
+
 # ===== 配置（从 GitHub Secrets 读取）=====
 BAIDU_ACCESS_TOKEN = os.environ.get("BAIDU_ACCESS_TOKEN", "")
+QUARK_COOKIE = os.environ.get("QUARK_COOKIE", "")
 TENCENT_TOKEN = os.environ.get("TENCENT_TOKEN", "")
+
+# 网盘后端选择：夸克优先，其次百度
+NETDISK = "quark" if (QUARK_COOKIE and QUARK_AVAILABLE) else ("baidu" if BAIDU_ACCESS_TOKEN else "")
 FILE_ID = os.environ.get("FILE_ID", "DUWVWRHN4bVhWb3Rp")
 SHEET_ID = os.environ.get("SHEET_ID", "BB08J2")
 MCP_URL = "https://docs.qq.com/openapi/mcp"
@@ -337,6 +353,18 @@ def baidu_create_share(file_path, pwd="yolo"):
         return None
 
 
+# ===== 夸克网盘上传 =====
+def quark_upload_and_share(zip_path, remote_path, pwd="yolo"):
+    """上传文件到夸克网盘并创建分享，返回分享文本"""
+    qk = quark_netdisk.QuarkNetdisk(cookie=QUARK_COOKIE)
+    fid = qk.upload_file(zip_path, remote_path)
+    if not fid:
+        logger.warning("  上传完成但未获取 fid，继续创建分享")
+    share_url = qk.create_share(remote_path, pwd=pwd)
+    file_name = os.path.basename(remote_path)
+    return qk.build_share_text(share_url, file_name, pwd)
+
+
 # ===== 工具函数 =====
 def sanitize(name):
     """清理文件名中的非法字符"""
@@ -355,6 +383,7 @@ def process_one(ds):
     logger.info(f"{'='*60}")
     logger.info(f"处理: {title}")
     logger.info(f"  URL: {url[:100]}...")
+    logger.info(f"  网盘后端: {NETDISK}")
     if row:
         logger.info(f"  表格行: {row}")
 
@@ -375,22 +404,37 @@ def process_one(ds):
 
     logger.info(f"  下载完成: {os.path.getsize(zip_path) / 1024 / 1024:.1f} MB")
 
-    # 上传百度网盘（不解压，直接上传）
-    remote_path = f"/apps/同享AI数据集/{safe_title}.zip"
-    logger.info("  上传百度网盘...")
-    uploaded_path = baidu_upload(zip_path, remote_path)
-    if not uploaded_path:
+    # 上传网盘（不解压，直接上传）
+    if NETDISK == "quark":
+        remote_path = f"/同享AI数据集/{safe_title}.zip"
+        logger.info("  上传夸克网盘...")
+        try:
+            share_text = quark_upload_and_share(zip_path, remote_path)
+        except Exception as e:
+            logger.error(f"  夸克上传/分享失败: {e}")
+            if os.path.exists(zip_path):
+                os.remove(zip_path)
+            return False
+    elif NETDISK == "baidu":
+        remote_path = f"/apps/同享AI数据集/{safe_title}.zip"
+        logger.info("  上传百度网盘...")
+        uploaded_path = baidu_upload(zip_path, remote_path)
+        if not uploaded_path:
+            if os.path.exists(zip_path):
+                os.remove(zip_path)
+            return False
+        # 创建分享
+        logger.info("  创建分享链接...")
+        share_link = baidu_create_share(uploaded_path)
+        if share_link:
+            share_text = f"通过网盘分享的文件：{safe_title}.zip\n链接: {share_link} 提取码: yolo"
+        else:
+            share_text = f"百度网盘路径: {uploaded_path}（分享暂不可用）"
+    else:
+        logger.error("  未配置任何网盘凭据（QUARK_COOKIE 或 BAIDU_ACCESS_TOKEN）")
         if os.path.exists(zip_path):
             os.remove(zip_path)
         return False
-
-    # 创建分享
-    logger.info("  创建分享链接...")
-    share_link = baidu_create_share(uploaded_path)
-    if share_link:
-        share_text = f"通过网盘分享的文件：{safe_title}.zip\n链接: {share_link} 提取码: yolo"
-    else:
-        share_text = f"百度网盘路径: {uploaded_path}（分享暂不可用）"
 
     # 写回腾讯文档（如果指定了行号）
     if row:
@@ -414,10 +458,16 @@ def process_one(ds):
 def main():
     # 检查凭据
     missing = []
-    if not BAIDU_ACCESS_TOKEN:
-        missing.append("BAIDU_ACCESS_TOKEN")
     if not TENCENT_TOKEN:
         missing.append("TENCENT_TOKEN")
+    if NETDISK == "quark":
+        if not QUARK_COOKIE:
+            missing.append("QUARK_COOKIE")
+    elif NETDISK == "baidu":
+        if not BAIDU_ACCESS_TOKEN:
+            missing.append("BAIDU_ACCESS_TOKEN")
+    else:
+        missing.append("QUARK_COOKIE 或 BAIDU_ACCESS_TOKEN")
     if missing:
         logger.error(f"缺少环境变量: {', '.join(missing)}")
         sys.exit(1)
