@@ -1,4 +1,4 @@
-name: Download URL Datasets to Baidu Netdisk
+name: Download URL Datasets to Netdisk
 
 on:
   workflow_dispatch:
@@ -20,6 +20,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install httpx
 
       - name: Run Download Script
         env:
