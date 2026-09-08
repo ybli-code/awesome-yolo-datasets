@@ -21,10 +21,10 @@ import concurrent.futures
 import logging
 import re
 
-# 尝试导入夸克网盘客户端（同目录下 quark_netdisk.py）
+# 尝试导入夸克网盘客户端（QuarkPan成熟库，同目录 quark_client/）
 try:
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-    import quark_netdisk
+    from quark_client import QuarkClient
     QUARK_AVAILABLE = True
 except ImportError:
     QUARK_AVAILABLE = False
@@ -353,16 +353,61 @@ def baidu_create_share(file_path, pwd="yolo"):
         return None
 
 
-# ===== 夸克网盘上传 =====
-def quark_upload_and_share(zip_path, remote_path, pwd="yolo"):
+# ===== 夸克网盘上传（QuarkPan成熟库）=====
+def quark_get_or_create_folder(client, folder_name="同享AI数据集"):
+    """查找或创建文件夹，返回fid"""
+    resp = client.list_files(folder_id="0", page=1, size=100)
+    for f in resp.get("data", {}).get("list", []):
+        if f.get("file_name") == folder_name:
+            return f.get("fid")
+    result = client.files.create_folder(folder_name, parent_id="0")
+    return result.get("data", {}).get("fid") or result.get("fid")
+
+
+def quark_find_file_fid(client, folder_fid, file_name):
+    """在文件夹中查找文件fid"""
+    resp = client.list_files(folder_id=folder_fid, page=1, size=100)
+    for f in resp.get("data", {}).get("list", []):
+        if f.get("file_name") == file_name:
+            return f.get("fid")
+    return None
+
+
+def quark_upload_and_share(zip_path, safe_title, pwd="yolo"):
     """上传文件到夸克网盘并创建分享，返回分享文本"""
-    qk = quark_netdisk.QuarkNetdisk(cookie=QUARK_COOKIE)
-    fid = qk.upload_file(zip_path, remote_path)
-    if not fid:
-        logger.warning("  上传完成但未获取 fid，继续创建分享")
-    share_url = qk.create_share(remote_path, pwd=pwd)
-    file_name = os.path.basename(remote_path)
-    return qk.build_share_text(share_url, file_name, pwd)
+    client = QuarkClient(cookies=QUARK_COOKIE, auto_login=False)
+    folder_fid = quark_get_or_create_folder(client)
+    if not folder_fid:
+        raise RuntimeError("无法获取/创建 同享AI数据集 文件夹")
+    logger.info(f"  目标文件夹fid: {folder_fid[:16]}...")
+
+    # 上传文件（QuarkPan自动处理分片/哈希/OSS授权）
+    file_name = os.path.basename(zip_path)
+    logger.info(f"  上传中: {file_name} ({os.path.getsize(zip_path)/1024/1024:.1f} MB)")
+    client.upload.upload_file(zip_path, parent_folder_id=folder_fid)
+
+    # 查找上传后的文件fid
+    file_fid = quark_find_file_fid(client, folder_fid, file_name)
+    if not file_fid:
+        logger.warning("  上传完成但未找到文件fid，重试列表...")
+        import time as _t; _t.sleep(2)
+        file_fid = quark_find_file_fid(client, folder_fid, file_name)
+    if not file_fid:
+        raise RuntimeError("上传后未找到文件fid")
+
+    # 创建分享（永久+提取码）
+    logger.info("  创建分享链接...")
+    share = client.shares.create_share(
+        file_ids=[file_fid],
+        title=f"{safe_title}_data2.cn",
+        expire_days=0,
+        password=pwd
+    )
+    share_url = share.get("share_url", "")
+    passcode = share.get("passcode", pwd)
+    if not share_url:
+        raise RuntimeError(f"分享创建失败: {share}")
+    return f"通过夸克网盘分享的文件：{safe_title}_data2.cn.zip\n链接: {share_url} 提取码: {passcode}"
 
 
 # ===== 工具函数 =====
@@ -406,10 +451,9 @@ def process_one(ds):
 
     # 上传网盘（不解压，直接上传）
     if NETDISK == "quark":
-        remote_path = f"/同享AI数据集/{safe_title}.zip"
         logger.info("  上传夸克网盘...")
         try:
-            share_text = quark_upload_and_share(zip_path, remote_path)
+            share_text = quark_upload_and_share(zip_path, safe_title)
         except Exception as e:
             logger.error(f"  夸克上传/分享失败: {e}")
             if os.path.exists(zip_path):
