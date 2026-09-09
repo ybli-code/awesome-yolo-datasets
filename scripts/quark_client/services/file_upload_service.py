@@ -324,17 +324,25 @@ class FileUploadService:
         callback_info: Dict[str, Any],
         mime_type: str,
         upload_base_url: str = "https://pds.quark.cn",
-        progress_callback: Optional[Callable] = None
+        progress_callback: Optional[Callable] = None,
+        max_workers: int = 8
     ) -> Dict[str, Any]:
-        """多分片上传（>= 5MB文件）"""
+        """多分片上传（>= 5MB文件）—— 并发优化版
+
+        优化点：
+        1. 一次流式扫描预计算所有分片的 SHA1 增量哈希状态（O(n)，原 O(n^2)）
+        2. 线程池并发上传分片（默认 8 线程，跨国带宽利用率显著提升）
+        3. 每个分片独立获取授权 + PUT 数据，互不阻塞
+        """
+        import concurrent.futures
+        import threading
+
         file_size = file_path.stat().st_size
         chunk_size = 4 * 1024 * 1024  # 4MB
 
-        # 计算分片
         parts = []
         remaining = file_size
         part_num = 1
-
         while remaining > 0:
             current_size = min(chunk_size, remaining)
             parts.append((part_num, current_size))
@@ -342,140 +350,151 @@ class FileUploadService:
             part_num += 1
 
         if progress_callback:
-            progress_callback(35, f"开始上传 {len(parts)} 个分片...")
+            progress_callback(35, f"预计算哈希 + 并发上传 {len(parts)} 个分片 (workers={max_workers})...")
 
-        # 上传所有分片
+        # 1. 预计算所有分片的增量哈希上下文（一次流式扫描，O(n)）
+        hash_ctxs = self._precompute_all_hash_ctx(file_path, parts)
+
+        # 2. 并发上传分片
         uploaded_parts = []
-        base_progress = 35
-        progress_per_part = 45 / len(parts)  # 35-80% 用于分片上传
+        lock = threading.Lock()
+        done_count = 0
+        total_parts = len(parts)
 
-        for i, (part_number, part_size) in enumerate(parts):
-            current_progress = base_progress + int(i * progress_per_part)
+        def upload_one(part_number, part_size):
+            nonlocal done_count
+            hash_ctx = hash_ctxs.get(part_number)
 
-            if progress_callback:
-                progress_callback(current_progress, f"上传分片 {part_number}/{len(parts)}...")
+            auth_result = self._get_upload_auth(
+                task_id=task_id, mime_type=mime_type, part_number=part_number,
+                auth_info=auth_info, upload_id=upload_id, obj_key=obj_key,
+                bucket=bucket, hash_ctx=hash_ctx, upload_base_url=upload_base_url
+            )
+            upload_url = auth_result.get('upload_url')
+            auth_headers = auth_result.get('headers', {})
+            if not upload_url:
+                raise APIError(f"获取分片 {part_number} 上传授权失败")
 
-            # 分片上传重试逻辑
             max_retries = 3
-            retry_count = 0
-
-            while retry_count <= max_retries:
+            for retry in range(max_retries + 1):
                 try:
-                    # 计算增量哈希（分片2+必须有）
-                    hash_ctx = None
-                    if part_number > 1:
-                        hash_ctx = self._calculate_incremental_hash_context(
-                            file_path, part_number, part_size
-                        )
-
-                    # 获取分片上传授权
-                    auth_result = self._get_upload_auth(
-                        task_id=task_id,
-                        mime_type=mime_type,
-                        part_number=part_number,
-                        auth_info=auth_info,
-                        upload_id=upload_id,
-                        obj_key=obj_key,
-                        bucket=bucket,
-                        hash_ctx=hash_ctx,  # type: ignore[attr-defined]
-                        upload_base_url=upload_base_url
-                    )
-                    upload_url = auth_result.get('upload_url')
-                    auth_headers = auth_result.get('headers', {})
-
-                    if not upload_url:
-                        raise APIError(f"获取分片 {part_number} 上传授权失败")
-
-                    # 上传分片
                     etag = self._upload_part_to_oss(
-                        file_path=file_path,
-                        upload_url=upload_url,
-                        headers=auth_headers,
-                        part_number=part_number,
-                        part_size=part_size,
-                        progress_callback=None  # 分片内部不显示进度
+                        file_path=file_path, upload_url=upload_url,
+                        headers=auth_headers, part_number=part_number,
+                        part_size=part_size, progress_callback=None
                     )
-
-                    uploaded_parts.append((part_number, etag))
-                    break  # 成功上传，跳出重试循环
-
+                    break
                 except Exception as e:
-                    retry_count += 1
-                    if retry_count > max_retries:
-                        raise APIError(f"分片 {part_number} 上传失败，已重试 {max_retries} 次: {str(e)}")
+                    if retry >= max_retries:
+                        raise APIError(f"分片 {part_number} 上传失败，已重试 {max_retries} 次: {e}")
+                    time.sleep(min(2 ** retry, 10))
 
-                    # 等待一段时间后重试
-                    import time
-                    time.sleep(min(2 ** retry_count, 10))  # 指数退避，最大10秒
+            with lock:
+                done_count += 1
+                if progress_callback:
+                    pct = 35 + int(45 * done_count / total_parts)
+                    progress_callback(pct, f"上传分片 {done_count}/{total_parts}...")
+            return (part_number, etag)
 
-        # 完成分片上传 - 需要POST完成合并
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = {executor.submit(upload_one, pn, ps): pn for pn, ps in parts}
+            for future in concurrent.futures.as_completed(futures):
+                uploaded_parts.append(future.result())
+
+        uploaded_parts.sort(key=lambda x: x[0])
+
+        # 3. POST完成合并
         if progress_callback:
             progress_callback(80, "POST完成合并...")
 
-        # 构建多分片的XML数据
         xml_parts = []
         for part_number, etag in uploaded_parts:
             xml_parts.append(f'<Part>\n<PartNumber>{part_number}</PartNumber>\n<ETag>"{etag}"</ETag>\n</Part>')
-
-        xml_data = f'<?xml version="1.0" encoding="UTF-8"?>\n<CompleteMultipartUpload>\n' + \
-            '\n'.join(xml_parts) + '\n</CompleteMultipartUpload>'
+        xml_data = '<?xml version="1.0" encoding="UTF-8"?>\n<CompleteMultipartUpload>\n' + '\n'.join(xml_parts) + '\n</CompleteMultipartUpload>'
 
         try:
-            # 获取POST完成合并授权
             post_auth_result = self._get_complete_upload_auth(
-                task_id=task_id,
-                mime_type=mime_type,
-                auth_info=auth_info,
-                upload_id=upload_id,
-                obj_key=obj_key,
-                bucket=bucket,
-                xml_data=xml_data,
-                callback_info=callback_info,
-                upload_base_url=upload_base_url
+                task_id=task_id, mime_type=mime_type, auth_info=auth_info,
+                upload_id=upload_id, obj_key=obj_key, bucket=bucket,
+                xml_data=xml_data, callback_info=callback_info, upload_base_url=upload_base_url
             )
-
             post_upload_url = post_auth_result.get('upload_url')
             post_auth_headers = post_auth_result.get('headers', {})
-
             if not post_upload_url:
                 raise APIError("获取POST完成合并授权失败")
 
-            # 发送POST完成合并请求
             import httpx
             with httpx.Client(timeout=300.0) as client:
-                response = client.post(
-                    post_upload_url,
-                    content=xml_data,
-                    headers=post_auth_headers
-                )
-
-                if response.status_code == 200:
-                    # POST完成合并成功，callback也成功
-                    pass
-                elif response.status_code == 203:
-                    # POST完成合并成功，但callback失败（文件已成功上传）
-                    pass
-                else:
+                response = client.post(post_upload_url, content=xml_data, headers=post_auth_headers)
+                if response.status_code not in (200, 203):
                     raise APIError(f"POST完成合并失败: {response.status_code}, {response.text}")
 
-            complete_result = {
-                'status': 'multipart_upload_completed',
-                'message': 'All parts uploaded and merged successfully'
-            }
-
+            complete_result = {'status': 'multipart_upload_completed', 'message': 'All parts uploaded and merged successfully'}
         except Exception as e:
-            # 如果POST完成合并失败，仍然尝试继续，让finish API处理
-            complete_result = {
-                'status': 'multipart_upload_completed',
-                'message': f'Parts uploaded, POST merge failed: {str(e)}'
-            }
+            complete_result = {'status': 'multipart_upload_completed', 'message': f'Parts uploaded, POST merge failed: {str(e)}'}
 
         return {
-            'strategy': 'multiple_parts',
+            'strategy': 'multiple_parts_concurrent',
             'parts': len(parts),
             'uploaded_parts': uploaded_parts,
             'complete_result': complete_result
         }
+
+    def _precompute_all_hash_ctx(self, file_path: Path, parts: list) -> Dict[int, Optional[str]]:
+        """一次流式扫描，预计算每个分片起始位置的 SHA1 增量哈希状态（O(n)）"""
+        import base64
+        import json
+        import struct
+
+        hash_ctxs: Dict[int, Optional[str]] = {}
+
+        class _SHA1Stream:
+            __slots__ = ('h0', 'h1', 'h2', 'h3', 'h4', 'total_bits', '_buf')
+            def __init__(self):
+                self.h0 = 0x67452301; self.h1 = 0xEFCDAB89
+                self.h2 = 0x98BADCFE; self.h3 = 0x10325476
+                self.h4 = 0xC3D2E1F0; self.total_bits = 0; self._buf = b''
+            def update(self, data: bytes):
+                self._buf += data
+                while len(self._buf) >= 64:
+                    self._process(self._buf[:64])
+                    self._buf = self._buf[64:]
+                self.total_bits += len(data) * 8
+            def _process(self, block: bytes):
+                w = list(struct.unpack('>16I', block))
+                for t in range(16, 80):
+                    w.append(((w[t-3] ^ w[t-8] ^ w[t-14] ^ w[t-16]) << 1 | (w[t-3] ^ w[t-8] ^ w[t-14] ^ w[t-16]) >> 31) & 0xFFFFFFFF)
+                a, b, c, d, e = self.h0, self.h1, self.h2, self.h3, self.h4
+                for t in range(80):
+                    if t < 20: f = (b & c) | ((~b) & d); k = 0x5A827999
+                    elif t < 40: f = b ^ c ^ d; k = 0x6ED9EBA1
+                    elif t < 60: f = (b & c) | (b & d) | (c & d); k = 0x8F1BBCDC
+                    else: f = b ^ c ^ d; k = 0xCA62C1D6
+                    tmp = (((a << 5) | (a >> 27)) + f + e + k + w[t]) & 0xFFFFFFFF
+                    e, d, c, b, a = d, c, ((b << 30) | (b >> 2)) & 0xFFFFFFFF, a, tmp
+                self.h0 = (self.h0 + a) & 0xFFFFFFFF
+                self.h1 = (self.h1 + b) & 0xFFFFFFFF
+                self.h2 = (self.h2 + c) & 0xFFFFFFFF
+                self.h3 = (self.h3 + d) & 0xFFFFFFFF
+                self.h4 = (self.h4 + e) & 0xFFFFFFFF
+            def state(self):
+                return self.h0, self.h1, self.h2, self.h3, self.h4, self.total_bits
+
+        sha = _SHA1Stream()
+        with open(file_path, 'rb') as f:
+            for part_number, part_size in parts:
+                if part_number > 1:
+                    h0, h1, h2, h3, h4, bits = sha.state()
+                    ctx = {"hash_type": "sha1", "h0": str(h0), "h1": str(h1),
+                           "h2": str(h2), "h3": str(h3), "h4": str(h4),
+                           "Nl": str(bits), "Nh": "0", "data": "", "num": "0"}
+                    hash_ctxs[part_number] = base64.b64encode(
+                        json.dumps(ctx, separators=(',', ':')).encode('utf-8')).decode('ascii')
+                else:
+                    hash_ctxs[part_number] = None
+                data = f.read(part_size)
+                sha.update(data)
+        return hash_ctxs
 
     def _get_upload_auth(
         self,
