@@ -164,7 +164,8 @@ def _download_range(url, start, end, output_path, idx):
 
 def concurrent_download(url, output_path, num_threads=DOWNLOAD_THREADS):
     """多线程并发下载，支持Range请求"""
-    # 获取文件大小
+    # 获取文件大小（探测后使用最终URL，避免后续分片每次走重定向）
+    final_url = url
     try:
         req = urllib.request.Request(url, headers={"Range": "bytes=0-0", "User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, timeout=30) as resp:
@@ -179,12 +180,20 @@ def concurrent_download(url, output_path, num_threads=DOWNLOAD_THREADS):
                     "下载链接返回HTML而非文件 (Content-Type=%s, size=%s)。请检查链接有效性。"
                     % (content_type, total_size)
                 )
+            final_url = resp.geturl() or url
+            if final_url != url:
+                logger.info("  已解析最终下载URL: %s...", final_url[:120])
     except Exception as e:
         logger.warning(f"  获取文件信息失败: {e}，单线程下载")
         return _single_download(url, output_path)
 
     if total_size == 0:
         return _single_download(url, output_path)
+
+    # S3/对象存储对并发 Range 严重限速（实测16线程全卡死，单线程秒回），
+    # 一律使用最终URL单线程流式下载
+    logger.info("  使用最终URL单线程流式下载（规避对象存储并发限速）")
+    return _single_download(final_url, output_path)
 
     logger.info(f"  文件大小: {total_size / 1024 / 1024:.1f} MB, {num_threads}线程并发")
 
@@ -199,7 +208,7 @@ def concurrent_download(url, output_path, num_threads=DOWNLOAD_THREADS):
     downloaded = 0
     errors = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_threads) as executor:
-        futures = {executor.submit(_download_range, url, s, e, output_path, i): (s, e, i) for s, e, i in ranges}
+        futures = {executor.submit(_download_range, final_url, s, e, output_path, i): (s, e, i) for s, e, i in ranges}
         for future in concurrent.futures.as_completed(futures):
             idx, bytes_done, err = future.result()
             if err:
@@ -216,7 +225,7 @@ def concurrent_download(url, output_path, num_threads=DOWNLOAD_THREADS):
         with concurrent.futures.ThreadPoolExecutor(max_workers=len(errors)) as executor:
             for idx, err in errors:
                 s, e, _ = ranges[idx]
-                executor.submit(_download_range, url, s, e, output_path, idx)
+                executor.submit(_download_range, final_url, s, e, output_path, idx)
 
     # 合并分片
     logger.info("  合并分片...")
@@ -498,8 +507,8 @@ def process_one(ds):
     if row:
         logger.info(f"  表格行: {row}")
 
-    # 下载
-    zip_path = os.path.join(TEMP_DIR, f"{safe_title}.zip")
+    # 下载（文件名规范: {列0标题}_data2.cn.zip）
+    zip_path = os.path.join(TEMP_DIR, f"{safe_title}_data2.cn.zip")
     logger.info("  开始下载...")
     try:
         real_url, is_google = resolve_google_drive(url)
