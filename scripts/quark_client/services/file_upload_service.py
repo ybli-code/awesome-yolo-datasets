@@ -117,6 +117,8 @@ class FileUploadService:
             if progress_callback:
                 progress_callback(30, "开始多分片上传...")
 
+            import os as _os
+            max_workers = int(_os.environ.get("QUARK_UPLOAD_WORKERS", "8"))
             upload_result = self._upload_multiple_parts(
                 file_path=file_path_obj,
                 task_id=task_id,
@@ -127,7 +129,8 @@ class FileUploadService:
                 callback_info=callback_info,
                 mime_type=mime_type,
                 upload_base_url=upload_base_url,
-                progress_callback=progress_callback
+                progress_callback=progress_callback,
+                max_workers=max_workers
             )
 
         # 步骤4: 完成上传
