@@ -85,45 +85,56 @@ def write_cell(row, col, value):
 
 
 # ===== Google Drive 下载链接解析（处理大文件 confirm token）=====
-def resolve_google_drive(url):
-    """解析 Google Drive 分享链接，返回可直接下载的URL。
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    """禁止自动重定向，手动处理 Location"""
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
 
-    Google Drive 大文件（>~100MB）需要 confirm token 才能下载：
-    1. 请求 drive.google.com/uc?export=download&id=FILEID
-    2. 若返回HTML含 confirm 参数，提取后请求 drive.usercontent.google.com
-    3. 小文件直接返回文件流
+
+def resolve_google_drive(url):
+    """解析 Google Drive 分享链接，返回 (最终下载URL, is_google)。
+
+    流程（手动控制重定向）：
+    1. GET drive.google.com/uc?export=download&id=FILEID（不跟随重定向）
+    2. 若 3xx 且带 Location -> 小文件直链，直接返回 Location
+    3. 若 200 HTML -> 提取 confirm token -> drive.usercontent.google.com 下载直链
+    4. 解析失败 -> raise ValueError（带响应片段便于诊断）
     """
     if "drive.google.com" not in url and "docs.google.com" not in url:
-        return url
+        return url, False
     m = re.search(r"[?&]id=([\w-]+)", url)
     if not m:
         m = re.search(r"/file/d/([\w-]+)", url)
     if not m:
-        logger.warning("  无法从Google Drive链接提取file id: %s", url[:80])
-        return url
+        raise ValueError("无法从Google Drive链接提取file id: " + url[:80])
     file_id = m.group(1)
-    probe_url = "https://drive.google.com/uc?export=download&id=" + file_id
-    try:
-        req = urllib.request.Request(probe_url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            content_type = resp.headers.get("Content-Type", "")
-            html = resp.read(2 * 1024 * 1024).decode(errors="ignore")
-        # 小文件：直接返回文件流
-        if "zip" in content_type or "octet-stream" in content_type:
-            logger.info("  Google Drive 小文件直链: %s", probe_url[:80])
-            return probe_url
-        # 大文件：提取 confirm token
-        m2 = re.search(r'name="confirm"\s+value="([\w-]+)"', html)
-        if m2:
-            confirm_url = ("https://drive.usercontent.google.com/download"
-                           "?id=" + file_id + "&export=download&confirm=" + m2.group(1))
-            logger.info("  Google Drive confirm已解析: %s", confirm_url[:80])
-            return confirm_url
-        logger.warning("  Google Drive 未找到confirm token，使用原链接")
-        return probe_url
-    except Exception as e:
-        logger.warning("  Google Drive 解析失败: %s，使用原链接", e)
-        return url
+
+    probe = "https://drive.google.com/uc?export=download&id=" + file_id
+    req = urllib.request.Request(probe, headers={"User-Agent": "Mozilla/5.0"})
+    opener = urllib.request.build_opener(_NoRedirect())
+    with opener.open(req, timeout=60) as resp:
+        status = resp.status
+        headers = dict(resp.headers)
+        body = resp.read(2 * 1024 * 1024).decode(errors="ignore")
+
+    loc = headers.get("Location", "")
+    if status in (301, 302, 303, 307, 308) and loc:
+        logger.info("  Google Drive 重定向: %s", loc[:120])
+        return loc, True
+
+    m2 = re.search(r'name="confirm"\s+value="([\w-]+)"', body)
+    if not m2:
+        m2 = re.search(r"confirm=([0-9A-Za-z\-_]+)", body)
+    if m2:
+        final = ("https://drive.usercontent.google.com/download?id=" + file_id
+                 + "&export=download&confirm=" + m2.group(1))
+        logger.info("  Google Drive confirm已解析: %s", final[:120])
+        return final, True
+
+    # 可能触发 virus scan / 需要登录 / 文件已删除
+    raise ValueError(
+        "Google Drive 解析失败: status=%s, body片段=%s" % (status, body[:200].replace("\n", " "))
+    )
 
 
 # ===== 多线程下载 =====
@@ -132,7 +143,7 @@ def _download_range(url, start, end, output_path, idx):
     tmp_path = f"{output_path}.part{idx}"
     try:
         req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req, timeout=180) as resp:
+        with urllib.request.urlopen(req, timeout=90) as resp:
             with open(tmp_path, 'wb') as f:
                 while True:
                     chunk = resp.read(512 * 1024)
@@ -150,11 +161,17 @@ def concurrent_download(url, output_path, num_threads=DOWNLOAD_THREADS):
     try:
         req = urllib.request.Request(url, headers={"Range": "bytes=0-0", "User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, timeout=30) as resp:
+            content_type = resp.headers.get("Content-Type", "")
             content_range = resp.headers.get("Content-Range", "")
             if "/" in content_range:
                 total_size = int(content_range.split("/")[-1])
             else:
                 total_size = int(resp.headers.get("Content-Length", 0))
+            if "text/html" in content_type and total_size < 2 * 1024 * 1024:
+                raise RuntimeError(
+                    "下载链接返回HTML而非文件 (Content-Type=%s, size=%s)。请检查链接有效性。"
+                    % (content_type, total_size)
+                )
     except Exception as e:
         logger.warning(f"  获取文件信息失败: {e}，单线程下载")
         return _single_download(url, output_path)
@@ -477,11 +494,10 @@ def process_one(ds):
     # 下载
     zip_path = os.path.join(TEMP_DIR, f"{safe_title}.zip")
     logger.info("  开始下载...")
-    # Google Drive 链接先解析 confirm token（大文件必需）
-    real_url = resolve_google_drive(url)
-    if real_url != url:
-        logger.info("  URL已解析: %s -> %s", url[:80], real_url[:80])
     try:
+        real_url, is_google = resolve_google_drive(url)
+        if is_google:
+            logger.info("  Google Drive 已解析: %s", real_url[:120])
         if not concurrent_download(real_url, zip_path):
             logger.error("  下载失败")
             return False
