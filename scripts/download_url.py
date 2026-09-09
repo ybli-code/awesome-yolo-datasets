@@ -53,6 +53,13 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 logger = logging.getLogger("gh_url_download")
+try:
+    os.makedirs(TEMP_DIR, exist_ok=True)
+    _fh = logging.FileHandler(os.path.join(TEMP_DIR, "run.log"), encoding="utf-8")
+    _fh.setFormatter(logging.Formatter("[%(asctime)s] %(levelname)s %(message)s", "%H:%M:%S"))
+    logger.addHandler(_fh)
+except Exception as _e:
+    print("FileHandler fail:", _e)
 
 
 # ===== 腾讯文档 MCP =====
