@@ -8,5 +8,29 @@
     "title": "裂缝分割数据集Crackseg9k_Vol2",
     "url": "https://dataverse.harvard.edu/api/access/datafile/10273100",
     "row": 1589
+  },
+  {
+    "title": "垃圾桶检测数据集GarbageCanDetection",
+    "url": "https://app.roboflow.com/ds/A6l0uQTD7b?key=2dL7J5PL71",
+    "row": 1592,
+    "source_url": "https://universe.roboflow.com/can-znvmz/garbage-can-detection-ziojr"
+  },
+  {
+    "title": "垃圾桶检测数据集TrashBinTca8h",
+    "url": "https://app.roboflow.com/ds/5djP6j6N11?key=eXRIt4Ud2N",
+    "row": 1593,
+    "source_url": "https://universe.roboflow.com/fesa-ib1u7/trash-bin-tca8h"
+  },
+  {
+    "title": "垃圾桶满溢检测数据集GarbageCanOverflow",
+    "url": "https://app.roboflow.com/ds/EENUAUdJg0?key=CqanrKibM2",
+    "row": 1594,
+    "source_url": "https://universe.roboflow.com/mariswary-deepak-4ajr0/garbage-can-overflow"
+  },
+  {
+    "title": "垃圾桶检测数据集TrashBinWi8vf",
+    "url": "https://app.roboflow.com/ds/yNp70EKLGd?key=G4dVkquKwW",
+    "row": 1595,
+    "source_url": "https://universe.roboflow.com/esera/trash-bin-wi8vf"
   }
 ]
