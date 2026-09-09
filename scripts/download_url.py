@@ -498,7 +498,13 @@ def process_one(ds):
         real_url, is_google = resolve_google_drive(url)
         if is_google:
             logger.info("  Google Drive 已解析: %s", real_url[:120])
-        if not concurrent_download(real_url, zip_path):
+        if is_google:
+            # Google Drive 大文件：单线程流式下载，避免并发 Range 被限速/节流
+            logger.info("  Google Drive 使用单线程流式下载")
+            ok = _single_download(real_url, zip_path)
+        else:
+            ok = concurrent_download(real_url, zip_path)
+        if not ok:
             logger.error("  下载失败")
             return False
     except Exception as e:
