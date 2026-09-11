@@ -1,7 +1,30 @@
 [
   {
-    "title": "面向工地安全防护的安全帽佩戴检测数据集，包含person、hat、dog三类目标，共11507张图像",
-    "url": "https://app.roboflow.com/ds/PQJhr5XCJH?key=WibB6YJ1pc",
-    "row": 1597
+    "title": "面向钢铁焊接质量检测的缺陷数据集，覆盖裂纹与气孔2类焊接缺陷共4879张图像",
+    "url": "https://app.roboflow.com/ds/PN2RHatiTD?key=zFZaesID5j",
+    "workspace": "other-welding-defects",
+    "project": "welding-defect-ebjwj",
+    "version": 1
+  },
+  {
+    "title": "面向钢铁行业表面缺陷检测的目标检测数据集，覆盖裂纹、龟裂、斑块、点蚀、划痕5类缺陷",
+    "url": "https://app.roboflow.com/ds/DbsAZtm0Zu?key=lh4LriuxrP",
+    "workspace": "thesis-9wpag",
+    "project": "steel-defect-detections",
+    "version": 2
+  },
+  {
+    "title": "面向钢铁板材质量检测的缺陷检测数据集，包含4类表面缺陷共12549张图像",
+    "url": "https://app.roboflow.com/ds/wtvFQZlYpY?key=TCHonbkjt3",
+    "workspace": "steel-defect-detection-hgzss",
+    "project": "steel-defect-detection-zopeb",
+    "version": 1
+  },
+  {
+    "title": "面向钢铁行业的表面缺陷检测数据集，涵盖龟裂、夹杂、斑块、划痕、点蚀、氧化皮6类典型缺陷",
+    "url": "https://app.roboflow.com/ds/0VYrYgiYQY?key=DPPTxlBbhH",
+    "workspace": "zhuyichen-ci",
+    "project": "steel-surface-defect-detection-ageg0",
+    "version": 1
   }
 ]
