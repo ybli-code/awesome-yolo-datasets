@@ -1,22 +1,7 @@
 [
   {
-    "title": "面向道路路面病害检测的目标检测数据集，覆盖坑洞、龟裂、横向裂缝、纵向裂缝、边缘裂缝、车辙、松散、标线8类缺陷",
-    "url": "https://app.roboflow.com/ds/kzQ4aGhbP7?key=vZ2Zgbfo2j",
-    "row": 1596
-  },
-  {
     "title": "面向工地安全防护的安全帽佩戴检测数据集，包含person、hat、dog三类目标，共11507张图像",
     "url": "https://app.roboflow.com/ds/PQJhr5XCJH?key=WibB6YJ1pc",
     "row": 1597
-  },
-  {
-    "title": "面向火灾预警的火焰与烟雾目标检测数据集，包含fire与smoke两类目标，共14297张图像",
-    "url": "https://app.roboflow.com/ds/ogRPdSHHsg?key=guSIQkBFRz",
-    "row": 1598
-  },
-  {
-    "title": "面向智能交通的车辆目标检测数据集，覆盖汽车、摩托车、公交车、自行车、卡车、船、火车、行人8类目标",
-    "url": "https://app.roboflow.com/ds/lmKM4RjT9r?key=QIDyRmrIPT",
-    "row": 1599
   }
 ]
