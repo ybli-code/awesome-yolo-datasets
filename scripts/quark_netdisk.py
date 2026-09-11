@@ -43,7 +43,7 @@ API_HOST = "https://drive-pc.quark.cn/1/clouddrive"
 LIST_HOST = "https://pan.quark.cn/1/clouddrive"
 OSS_REGION = "oss-cn-shenzhen.aliyuncs.com"
 DEFAULT_BUCKET = "ul-zb"
-CHUNK_SIZE = 4 * 1024 * 1024  # 4MB 分片
+CHUNK_SIZE = 16 * 1024 * 1024  # 16MB 分片（增大以减少请求次数，提升大文件成功率）
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
@@ -485,13 +485,13 @@ class QuarkNetdisk:
                 headers["X-Oss-Hash-Ctx"] = hash_ctx
             # 重试3次
             etag = None
-            for attempt in range(3):
+            for attempt in range(5):
                 try:
                     etag = self._oss_put(upload_url, chunk, headers)
                     break
                 except Exception as e:
-                    if attempt < 2:
-                        logger.warning("    分片 %d 失败，重试 %d/3: %s", i, attempt + 1, e)
+                    if attempt < 4:
+                        logger.warning("    分片 %d 失败，重试 %d/5: %s", i, attempt + 1, e)
                         time.sleep(2 ** attempt)
                     else:
                         raise
