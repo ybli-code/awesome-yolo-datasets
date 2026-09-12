@@ -22,5 +22,26 @@
     "project": "exam-ijeoq",
     "version": 1,
     "url": "https://app.roboflow.com/ds/2zevMijQ5D?key=yTytses6uf"
+  },
+  {
+    "row": 1591,
+    "title": "垃圾容器干净脏污检测数据集CDCM",
+    "url": "https://www.kaggle.com/api/v1/datasets/download/rodrigolaguna/clean-dirty-containers-in-montevideo"
+  },
+  {
+    "row": 1597,
+    "title": "面向工地安全防护的安全帽佩戴检测数据集，包含person、hat、dog三类目标，共11507张图像",
+    "workspace": "febro-herdyanto-cqhmk",
+    "project": "safety-hardhat-detection",
+    "version": 1,
+    "url": "https://app.roboflow.com/ds/PQJhr5XCJH?key=WibB6YJ1pc"
+  },
+  {
+    "row": 1605,
+    "title": "下水道管道堵塞数据集",
+    "workspace": "kino-hsgdn",
+    "project": "ogirin",
+    "version": 1,
+    "url": "https://app.roboflow.com/ds/gQyzqb9rvl?key=1jp24x9XdP"
   }
 ]
