@@ -43,7 +43,7 @@ API_HOST = "https://drive-pc.quark.cn/1/clouddrive"
 LIST_HOST = "https://pan.quark.cn/1/clouddrive"
 OSS_REGION = "oss-cn-shenzhen.aliyuncs.com"
 DEFAULT_BUCKET = "ul-zb"
-CHUNK_SIZE = 16 * 1024 * 1024  # 16MB 分片（增大以减少请求次数，提升大文件成功率）
+CHUNK_SIZE = 32 * 1024 * 1024  # 32MB 分片（减少分片数量，提升大文件合并成功率）
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
@@ -508,13 +508,20 @@ class QuarkNetdisk:
         )
         xml_data = ('<?xml version="1.0" encoding="UTF-8"?>\n<CompleteMultipartUpload>\n'
                     + xml_parts + '\n</CompleteMultipartUpload>')
-        try:
-            post_url, post_headers = self._get_complete_auth(
-                task_id, mime_type, auth_info, upload_id, obj_key, bucket, xml_data, callback_info)
-            self._oss_post(post_url, xml_data.encode(), post_headers)
-            logger.info("  多分片合并完成")
-        except Exception as e:
-            logger.warning("  POST 合并失败（文件可能已上传成功）: %s", e)
+        merge_ok = False
+        for merge_attempt in range(3):
+            try:
+                post_url, post_headers = self._get_complete_auth(
+                    task_id, mime_type, auth_info, upload_id, obj_key, bucket, xml_data, callback_info)
+                self._oss_post(post_url, xml_data.encode(), post_headers)
+                logger.info("  多分片合并完成")
+                merge_ok = True
+                break
+            except Exception as e:
+                logger.warning("  POST 合并失败 (尝试 %d/3): %s", merge_attempt+1, e)
+                time.sleep(5 * (merge_attempt + 1))
+        if not merge_ok:
+            raise QuarkError("多次合并失败")
 
     def _calc_sha1_state_from_file(self, file_path, upto_bytes):
         """从文件头计算 upto_bytes 字节的 SHA1 状态"""
