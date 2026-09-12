@@ -7,24 +7,10 @@
     "url": "https://app.roboflow.com/ds/PN2RHatiTD?key=zFZaesID5j"
   },
   {
-    "title": "面向钢铁行业表面缺陷检测的目标检测数据集，覆盖裂纹、龟裂、斑块、点蚀、划痕5类缺陷",
-    "workspace": "thesis-9wpag",
-    "project": "steel-defect-detections",
-    "version": "1",
-    "url": "https://app.roboflow.com/ds/v1FWCLzQkM?key=kc3FsgfPt5"
-  },
-  {
     "title": "面向钢铁板材质量检测的缺陷检测数据集，包含4类表面缺陷共12549张图像",
     "workspace": "steel-defect-detection-hgzss",
     "project": "steel-defect-detection-zopeb",
     "version": "1",
     "url": "https://app.roboflow.com/ds/wtvFQZlYpY?key=TCHonbkjt3"
-  },
-  {
-    "title": "面向钢铁行业的表面缺陷检测数据集，涵盖龟裂、夹杂、斑块、划痕、点蚀、氧化皮6类典型缺陷",
-    "workspace": "zhuyichen-ci",
-    "project": "steel-surface-defect-detection-ageg0",
-    "version": "1",
-    "url": "https://app.roboflow.com/ds/0VYrYgiYQY?key=DPPTxlBbhH"
   }
 ]
