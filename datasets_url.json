@@ -1,29 +1,5 @@
 [
   {
-    "row": 1600,
-    "title": "面向钢铁焊接质量检测的缺陷数据集，覆盖裂纹与气孔2类焊接缺陷共4879张图像",
-    "workspace": "other-welding-defects",
-    "project": "welding-defect-ebjwj",
-    "version": 1,
-    "url": "https://app.roboflow.com/ds/PN2RHatiTD?key=zFZaesID5j"
-  },
-  {
-    "row": 1602,
-    "title": "面向钢铁板材质量检测的缺陷检测数据集，包含4类表面缺陷共12549张图像",
-    "workspace": "steel-defect-detection-hgzss",
-    "project": "steel-defect-detection-zopeb",
-    "version": 1,
-    "url": "https://app.roboflow.com/ds/wtvFQZlYpY?key=TCHonbkjt3"
-  },
-  {
-    "row": 1604,
-    "title": "考试作弊行为检测数据集(Exam)",
-    "workspace": "dataset-c2kwa",
-    "project": "exam-ijeoq",
-    "version": 1,
-    "url": "https://app.roboflow.com/ds/2zevMijQ5D?key=yTytses6uf"
-  },
-  {
     "row": 1591,
     "title": "垃圾容器干净脏污检测数据集CDCM",
     "url": "https://www.kaggle.com/api/v1/datasets/download/rodrigolaguna/clean-dirty-containers-in-montevideo"
