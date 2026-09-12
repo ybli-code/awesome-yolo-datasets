@@ -12,6 +12,9 @@ from typing import Any, Callable, Dict, Optional, Tuple
 from ..core.api_client import QuarkAPIClient
 from ..exceptions import APIError
 
+# 32MB 分片（减少分片数量，避免大文件OSS合并XML过大导致 complete file failed 43001）
+CHUNK_SIZE = 32 * 1024 * 1024
+
 
 class FileUploadService:
     """文件上传服务"""
@@ -341,7 +344,7 @@ class FileUploadService:
         import threading
 
         file_size = file_path.stat().st_size
-        chunk_size = 4 * 1024 * 1024  # 4MB
+        chunk_size = CHUNK_SIZE
 
         parts = []
         remaining = file_size
@@ -427,11 +430,20 @@ class FileUploadService:
                 raise APIError("获取POST完成合并授权失败")
 
             import httpx
-            with httpx.Client(timeout=300.0) as client:
-                response = client.post(post_upload_url, content=xml_data, headers=post_auth_headers)
-                if response.status_code not in (200, 203):
-                    raise APIError(f"POST完成合并失败: {response.status_code}, {response.text}")
-
+            post_error = None
+            for merge_attempt in range(3):
+                try:
+                    with httpx.Client(timeout=300.0) as client:
+                        response = client.post(post_upload_url, content=xml_data, headers=post_auth_headers)
+                    if response.status_code in (200, 203):
+                        post_error = None
+                        break
+                    post_error = APIError(f"POST完成合并失败: {response.status_code}, {response.text}")
+                except Exception as e:
+                    post_error = e
+                time.sleep(3 * (merge_attempt + 1))
+            if post_error:
+                raise post_error
             complete_result = {'status': 'multipart_upload_completed', 'message': 'All parts uploaded and merged successfully'}
         except Exception as e:
             complete_result = {'status': 'multipart_upload_completed', 'message': f'Parts uploaded, POST merge failed: {str(e)}'}
@@ -691,7 +703,7 @@ x-oss-user-agent:aliyun-sdk-js/1.0.0 Chrome 139.0.0.0 on OS X 10.15.7 64-bit
         import json
 
         # 使用从random10MB.log观察到的实际值
-        chunk_size = 4 * 1024 * 1024  # 4MB
+        chunk_size = CHUNK_SIZE
         processed_bytes = (part_number - 1) * chunk_size
         processed_bits = processed_bytes * 8
 
@@ -866,7 +878,7 @@ x-oss-user-agent:aliyun-sdk-js/1.0.0 Chrome 139.0.0.0 on OS X 10.15.7 64-bit
                 data = f.read()
         else:
             # 多分片，读取指定大小的数据
-            chunk_size = 4 * 1024 * 1024  # 4MB
+            chunk_size = CHUNK_SIZE
             offset = (part_number - 1) * chunk_size
 
             with open(file_path, 'rb') as f:
@@ -902,7 +914,7 @@ x-oss-user-agent:aliyun-sdk-js/1.0.0 Chrome 139.0.0.0 on OS X 10.15.7 64-bit
             return etag
 
     def _finish_upload(self, task_id: str, obj_key: str = None) -> Dict[str, Any]:
-        """完成上传（通知夸克服务器）"""
+        """完成上传（通知夸克服务器），失败自动重试3次"""
         data = {
             "task_id": task_id
         }
@@ -911,12 +923,17 @@ x-oss-user-agent:aliyun-sdk-js/1.0.0 Chrome 139.0.0.0 on OS X 10.15.7 64-bit
         if obj_key:
             data["obj_key"] = obj_key
 
-        response = self.api_client.post(
-            "file/upload/finish",
-            json_data=data
-        )
-
-        if not response.get('status'):
-            raise APIError(f"完成上传失败: {response.get('message', '未知错误')}")
-
-        return response.get('data', {})
+        last_err = None
+        for attempt in range(3):
+            try:
+                response = self.api_client.post(
+                    "file/upload/finish",
+                    json_data=data
+                )
+                if response.get('status'):
+                    return response.get('data', {})
+                last_err = APIError(f"完成上传失败: {response.get('message', '未知错误')}")
+            except Exception as e:
+                last_err = e
+            time.sleep(5 * (attempt + 1))
+        raise last_err
