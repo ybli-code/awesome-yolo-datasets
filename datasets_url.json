@@ -1,27 +1,20 @@
 [
   {
-    "title": "安全帽佩戴检测数据集",
-    "url": "https://app.roboflow.com/ds/PQJhr5XCJH?key=WibB6YJ1pc",
-    "row": 1354
+    "row": 1348,
+    "workspace": "",
+    "project": "",
+    "version": 1,
+    "name": "垃圾容器干净脏污检测数据集CDCM",
+    "url": "https://www.kaggle.com/rodrigolaguna/clean-dirty-containers-in-montevideo",
+    "title": "垃圾容器干净脏污检测数据集CDCM"
   },
   {
-    "title": "钢铁焊接缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/PN2RHatiTD?key=zFZaesID5j",
-    "row": 1357
-  },
-  {
-    "title": "考试作弊行为检测数据集Exam",
-    "url": "https://app.roboflow.com/ds/fr79G1y1Ek?key=KuZMWe0n7z",
-    "row": 1360
-  },
-  {
-    "title": "下水道管道堵塞数据集",
-    "url": "https://app.roboflow.com/ds/gQyzqb9rvl?key=1jp24x9XdP",
-    "row": 1361
-  },
-  {
-    "title": "Visdrone无人机航拍数据集",
-    "url": "https://app.roboflow.com/ds/uXts6kp21E?key=85OFcuT2XX",
-    "row": 1362
+    "row": 1363,
+    "workspace": "1-sgg1g",
+    "project": "neu-det-obz9t",
+    "version": 1,
+    "name": "NEU-DET 钢材图像分类数据集",
+    "url": "https://universe.roboflow.com/1-sgg1g/neu-det-obz9t/dataset/1",
+    "title": "NEU-DET 钢材图像分类数据集"
   }
 ]
