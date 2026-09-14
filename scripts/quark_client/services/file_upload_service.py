@@ -356,11 +356,12 @@ class FileUploadService:
             part_num += 1
 
         if progress_callback:
-            progress_callback(35, f"并发上传 {len(parts)} 个分片 (workers={max_workers})...")
+            progress_callback(35, f"计算哈希 + 并发上传 {len(parts)} 个分片 (workers={max_workers})...")
 
-        # 1. 跳过增量哈希预计算（纯Python SHA1极慢，OSS不强制要求X-Oss-Hash-Ctx）
-        #    实测100MB文件无hash_ctx上传成功，大幅提升大文件上传速度
-        hash_ctxs = {pn: None for pn, _ in parts}
+        # 1. 预计算所有分片的 SHA1 增量哈希上下文（OpenSSL C 级实现，447MB/s）
+        #    OSS 强制要求 part>1 分片带 X-Oss-Hash-Ctx 头（否则 400 NoHashContext）
+        from quark_client.openssl_sha1 import compute_hash_ctxs
+        hash_ctxs = compute_hash_ctxs(file_path, parts, chunk_size)
 
         # 2. 并发上传分片
         uploaded_parts = []
