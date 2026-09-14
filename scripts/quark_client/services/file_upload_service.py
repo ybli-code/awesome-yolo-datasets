@@ -356,10 +356,11 @@ class FileUploadService:
             part_num += 1
 
         if progress_callback:
-            progress_callback(35, f"预计算哈希 + 并发上传 {len(parts)} 个分片 (workers={max_workers})...")
+            progress_callback(35, f"并发上传 {len(parts)} 个分片 (workers={max_workers})...")
 
-        # 1. 预计算所有分片的增量哈希上下文（一次流式扫描，O(n)）
-        hash_ctxs = self._precompute_all_hash_ctx(file_path, parts)
+        # 1. 跳过增量哈希预计算（纯Python SHA1极慢，OSS不强制要求X-Oss-Hash-Ctx）
+        #    实测100MB文件无hash_ctx上传成功，大幅提升大文件上传速度
+        hash_ctxs = {pn: None for pn, _ in parts}
 
         # 2. 并发上传分片
         uploaded_parts = []
@@ -885,15 +886,8 @@ x-oss-user-agent:aliyun-sdk-js/1.0.0 Chrome 139.0.0.0 on OS X 10.15.7 64-bit
                 f.seek(offset)
                 data = f.read(part_size)
 
-        # 重新启用增量哈希头
-        if part_size is not None and part_number > 1:
-            # 从授权结果中获取哈希上下文
-            if 'X-Oss-Hash-Ctx' not in headers:
-                # 如果授权结果中没有，则计算
-                hash_ctx = self._calculate_incremental_hash_context(
-                    file_path, part_number, part_size
-                )
-                headers['X-Oss-Hash-Ctx'] = hash_ctx
+        # 跳过增量哈希头（OSS不强制要求X-Oss-Hash-Ctx，实测无hash_ctx上传成功）
+        # 原逻辑的 _calculate_incremental_hash_context 是 O(n^2) 且依赖硬编码映射表，已废弃
 
         # 上传到OSS
         with httpx.Client(timeout=300.0) as client:
