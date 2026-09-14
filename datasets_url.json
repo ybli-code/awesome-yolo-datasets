@@ -5,8 +5,8 @@
     "project": "insulator-defect-o05pm",
     "version": 1,
     "name": "电力绝缘子缺陷检测数据集",
-    "title": "电力绝缘子缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/C6je5HwVjB?key=6vR4X6QKqU"
+    "url": "https://app.roboflow.com/ds/C6je5HwVjB?key=6vR4X6QKqU",
+    "title": "电力绝缘子缺陷检测数据集"
   },
   {
     "row": 1365,
@@ -14,8 +14,8 @@
     "project": "fabric-defect-fvlhp",
     "version": 2,
     "name": "布料表面缺陷检测数据集",
-    "title": "布料表面缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/STDT6x3tq2?key=jjyTPyJqbo"
+    "url": "https://app.roboflow.com/ds/STDT6x3tq2?key=jjyTPyJqbo",
+    "title": "布料表面缺陷检测数据集"
   },
   {
     "row": 1366,
@@ -23,8 +23,8 @@
     "project": "wood-defect-detection-9w3x4",
     "version": 6,
     "name": "木材表面缺陷检测数据集",
-    "title": "木材表面缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/4lndbLYCZI?key=0b7KXisPvz"
+    "url": "https://app.roboflow.com/ds/4lndbLYCZI?key=0b7KXisPvz",
+    "title": "木材表面缺陷检测数据集"
   },
   {
     "row": 1367,
@@ -32,8 +32,8 @@
     "project": "face-mask-y1vsd",
     "version": 1,
     "name": "口罩佩戴检测数据集",
-    "title": "口罩佩戴检测数据集",
-    "url": "https://app.roboflow.com/ds/CyFyyPu3YR?key=V6fzUTq0r9"
+    "url": "https://app.roboflow.com/ds/CyFyyPu3YR?key=V6fzUTq0r9",
+    "title": "口罩佩戴检测数据集"
   },
   {
     "row": 1368,
@@ -41,7 +41,7 @@
     "project": "license-plate-recognition-8fvub",
     "version": 2,
     "name": "车牌识别检测数据集",
-    "title": "车牌识别检测数据集",
-    "url": "https://app.roboflow.com/ds/iveWmfr05h?key=ll7mFA5kJ0"
+    "url": "https://app.roboflow.com/ds/iveWmfr05h?key=ll7mFA5kJ0",
+    "title": "车牌识别检测数据集"
   }
 ]
