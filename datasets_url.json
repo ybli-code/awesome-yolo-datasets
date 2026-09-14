@@ -1,20 +1,47 @@
 [
   {
-    "row": 1348,
-    "workspace": "",
-    "project": "",
+    "row": 1364,
+    "workspace": "anirudhan-kh8sc",
+    "project": "insulator-defect-o05pm",
     "version": 1,
-    "name": "垃圾容器干净脏污检测数据集CDCM",
-    "url": "https://www.kaggle.com/rodrigolaguna/clean-dirty-containers-in-montevideo",
-    "title": "垃圾容器干净脏污检测数据集CDCM"
+    "name": "电力绝缘子缺陷检测数据集",
+    "title": "电力绝缘子缺陷检测数据集",
+    "url": "https://universe.roboflow.com/anirudhan-kh8sc/insulator-defect-o05pm"
   },
   {
-    "row": 1363,
-    "workspace": "1-sgg1g",
-    "project": "neu-det-obz9t",
+    "row": 1365,
+    "workspace": "fabric-defect-zpkfr",
+    "project": "fabric-defect-fvlhp",
+    "version": 2,
+    "name": "布料表面缺陷检测数据集",
+    "title": "布料表面缺陷检测数据集",
+    "url": "https://universe.roboflow.com/fabric-defect-zpkfr/fabric-defect-fvlhp"
+  },
+  {
+    "row": 1366,
+    "workspace": "defect-detection-w4mv8",
+    "project": "wood-defect-detection-9w3x4",
+    "version": 6,
+    "name": "木材表面缺陷检测数据集",
+    "title": "木材表面缺陷检测数据集",
+    "url": "https://universe.roboflow.com/defect-detection-w4mv8/wood-defect-detection-9w3x4"
+  },
+  {
+    "row": 1367,
+    "workspace": "facemaskdetection-zvlot",
+    "project": "face-mask-y1vsd",
     "version": 1,
-    "name": "NEU-DET 钢材图像分类数据集",
-    "url": "https://universe.roboflow.com/1-sgg1g/neu-det-obz9t/dataset/1",
-    "title": "NEU-DET 钢材图像分类数据集"
+    "name": "口罩佩戴检测数据集",
+    "title": "口罩佩戴检测数据集",
+    "url": "https://universe.roboflow.com/facemaskdetection-zvlot/face-mask-y1vsd"
+  },
+  {
+    "row": 1368,
+    "workspace": "amykun-qoz6t",
+    "project": "license-plate-recognition-8fvub",
+    "version": 2,
+    "name": "车牌识别检测数据集",
+    "title": "车牌识别检测数据集",
+    "url": "https://universe.roboflow.com/amykun-qoz6t/license-plate-recognition-8fvub"
   }
 ]
