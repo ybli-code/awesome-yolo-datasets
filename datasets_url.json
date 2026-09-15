@@ -1,47 +1,20 @@
 [
   {
     "row": 1368,
-    "workspace": "detection-projet",
-    "project": "fire-smoke-detection-lk8z9",
-    "version": 1,
-    "name": "火灾烟雾检测数据集",
-    "url": "https://app.roboflow.com/ds/DQrrwCScok?key=zDx9vVXXlx",
-    "title": "火灾烟雾检测数据集"
-  },
-  {
-    "row": 1369,
-    "workspace": "aditya-nbyyq",
-    "project": "safety-helmet-jacket-detection",
-    "version": 2,
-    "name": "安全帽反光衣检测数据集",
-    "url": "https://app.roboflow.com/ds/Iov1GdL2GE?key=pUgsy7XHoD",
-    "title": "安全帽反光衣检测数据集"
-  },
-  {
-    "row": 1370,
-    "workspace": "pedestrian-detection-qqdeh",
-    "project": "pedestrian-detection-mdspp",
-    "version": 1,
-    "name": "行人检测数据集",
-    "url": "https://app.roboflow.com/ds/YT2wCL0EEL?key=wOAxeRsXkP",
-    "title": "行人检测数据集"
+    "workspace": "traffic-light-be5sc",
+    "project": "traffic-light-1wdof",
+    "version": 3,
+    "name": "交通信号灯检测数据集",
+    "url": "https://app.roboflow.com/ds/XMh2eN9DMA?key=GJv64sikVE",
+    "title": "交通信号灯检测数据集"
   },
   {
     "row": 1371,
-    "workspace": "projects-cb5nh",
-    "project": "plant-leaf-disease-qolw5",
-    "version": 1,
-    "name": "植物叶片病害检测数据集",
-    "url": "https://app.roboflow.com/ds/WQVScpL6Sx?key=aPpUuwmlig",
-    "title": "植物叶片病害检测数据集"
-  },
-  {
-    "row": 1372,
-    "workspace": "roboflow-ngkro",
-    "project": "shelf-product",
-    "version": 1,
-    "name": "货架商品检测数据集",
-    "url": "https://app.roboflow.com/ds/WbkIIfGDQu?key=y8aqPurbU4",
-    "title": "货架商品检测数据集"
+    "workspace": "deyan-markov",
+    "project": "cigarette-butt-detector-0jv4z",
+    "version": 3,
+    "name": "烟头检测数据集",
+    "url": "https://app.roboflow.com/ds/ZVp5EnOG9j?key=YY1cicSEDD",
+    "title": "烟头检测数据集"
   }
 ]
