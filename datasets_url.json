@@ -1,47 +1,47 @@
 [
   {
-    "row": 1364,
-    "workspace": "anirudhan-kh8sc",
-    "project": "insulator-defect-o05pm",
-    "version": 1,
-    "name": "电力绝缘子缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/C6je5HwVjB?key=6vR4X6QKqU",
-    "title": "电力绝缘子缺陷检测数据集"
-  },
-  {
-    "row": 1365,
-    "workspace": "fabric-defect-zpkfr",
-    "project": "fabric-defect-fvlhp",
-    "version": 2,
-    "name": "布料表面缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/STDT6x3tq2?key=jjyTPyJqbo",
-    "title": "布料表面缺陷检测数据集"
-  },
-  {
-    "row": 1366,
-    "workspace": "defect-detection-w4mv8",
-    "project": "wood-defect-detection-9w3x4",
-    "version": 6,
-    "name": "木材表面缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/4lndbLYCZI?key=0b7KXisPvz",
-    "title": "木材表面缺陷检测数据集"
-  },
-  {
-    "row": 1367,
-    "workspace": "facemaskdetection-zvlot",
-    "project": "face-mask-y1vsd",
-    "version": 1,
-    "name": "口罩佩戴检测数据集",
-    "url": "https://app.roboflow.com/ds/CyFyyPu3YR?key=V6fzUTq0r9",
-    "title": "口罩佩戴检测数据集"
-  },
-  {
     "row": 1368,
-    "workspace": "amykun-qoz6t",
-    "project": "license-plate-recognition-8fvub",
+    "workspace": "detection-projet",
+    "project": "fire-smoke-detection-lk8z9",
+    "version": 1,
+    "name": "火灾烟雾检测数据集",
+    "url": "https://app.roboflow.com/ds/DQrrwCScok?key=zDx9vVXXlx",
+    "title": "火灾烟雾检测数据集"
+  },
+  {
+    "row": 1369,
+    "workspace": "aditya-nbyyq",
+    "project": "safety-helmet-jacket-detection",
     "version": 2,
-    "name": "车牌识别检测数据集",
-    "url": "https://app.roboflow.com/ds/iveWmfr05h?key=ll7mFA5kJ0",
-    "title": "车牌识别检测数据集"
+    "name": "安全帽反光衣检测数据集",
+    "url": "https://app.roboflow.com/ds/Iov1GdL2GE?key=pUgsy7XHoD",
+    "title": "安全帽反光衣检测数据集"
+  },
+  {
+    "row": 1370,
+    "workspace": "pedestrian-detection-qqdeh",
+    "project": "pedestrian-detection-mdspp",
+    "version": 1,
+    "name": "行人检测数据集",
+    "url": "https://app.roboflow.com/ds/YT2wCL0EEL?key=wOAxeRsXkP",
+    "title": "行人检测数据集"
+  },
+  {
+    "row": 1371,
+    "workspace": "projects-cb5nh",
+    "project": "plant-leaf-disease-qolw5",
+    "version": 1,
+    "name": "植物叶片病害检测数据集",
+    "url": "https://app.roboflow.com/ds/WQVScpL6Sx?key=aPpUuwmlig",
+    "title": "植物叶片病害检测数据集"
+  },
+  {
+    "row": 1372,
+    "workspace": "roboflow-ngkro",
+    "project": "shelf-product",
+    "version": 1,
+    "name": "货架商品检测数据集",
+    "url": "https://app.roboflow.com/ds/WbkIIfGDQu?key=y8aqPurbU4",
+    "title": "货架商品检测数据集"
   }
 ]
