@@ -1,47 +1,27 @@
 [
   {
-    "row": 1373,
-    "workspace": "de",
-    "project": "shipping-container-fp50q",
-    "version": 2,
-    "name": "集装箱检测数据集",
-    "url": "https://app.roboflow.com/ds/mAIcxjJBtC?key=iOxRnRdK1y",
-    "title": "集装箱检测数据集"
+    "title": "停车位占用检测数据集",
+    "url": "https://app.roboflow.com/ds/IPfv1xtLdu?key=NyEIqrrB7Q",
+    "row": 1378
   },
   {
-    "row": 1374,
-    "workspace": "ykselcan-sevil",
-    "project": "forklift-detection-tbzgt",
-    "version": 1,
-    "name": "叉车检测数据集",
-    "url": "https://app.roboflow.com/ds/ewt1BxkYT6?key=qBXdCc9fqp",
-    "title": "叉车检测数据集"
+    "title": "消防设施检测数据集",
+    "url": "https://app.roboflow.com/ds/Zn0xPJe9b9?key=qYl8NrmzVj",
+    "row": 1379
   },
   {
-    "row": 1375,
-    "workspace": "trackingexcavator",
-    "project": "excavator-detection-yudpz",
-    "version": 5,
-    "name": "挖掘机检测数据集",
-    "url": "https://app.roboflow.com/ds/QOC5V6qRM0?key=zUWK2nvoBE",
-    "title": "挖掘机检测数据集"
+    "title": "PCB电路板缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/GpDkrrVSyx?key=kNmS9Ysoeg",
+    "row": 1380
   },
   {
-    "row": 1376,
-    "workspace": "solar-panel-defect-ufk3b",
-    "project": "solar-panel-defect-2-aeuek",
-    "version": 4,
-    "name": "太阳能板缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/crofPEofu2?key=yB90i25GHa",
-    "title": "太阳能板缺陷检测数据集"
+    "title": "自动扶梯安全检测数据集",
+    "url": "https://app.roboflow.com/ds/aZh71ektdy?key=jRXFQsubSE",
+    "row": 1381
   },
   {
-    "row": 1377,
-    "workspace": "drone-detection-fkk6v",
-    "project": "uav-drone-detection",
-    "version": 1,
-    "name": "无人机检测数据集",
-    "url": "https://app.roboflow.com/ds/zJJZNqwXrn?key=SZ8Mthk4UA",
-    "title": "无人机检测数据集"
+    "title": "玻璃表面缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/MMZUUkYV6j?key=szzMW7zlJP",
+    "row": 1382
   }
 ]
