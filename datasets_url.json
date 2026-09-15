@@ -1,27 +1,27 @@
 [
   {
-    "title": "停车位占用检测数据集",
-    "url": "https://app.roboflow.com/ds/IPfv1xtLdu?key=NyEIqrrB7Q",
+    "title": "工业缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/IhmiHaU8JY?key=P08TpEzFWi",
     "row": 1378
   },
   {
-    "title": "消防设施检测数据集",
-    "url": "https://app.roboflow.com/ds/Zn0xPJe9b9?key=qYl8NrmzVj",
+    "title": "作物病害检测数据集",
+    "url": "https://app.roboflow.com/ds/3uo3wbyGMx?key=rWaeBH7yoa",
     "row": 1379
   },
   {
-    "title": "PCB电路板缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/GpDkrrVSyx?key=kNmS9Ysoeg",
+    "title": "野生动物识别数据集",
+    "url": "https://app.roboflow.com/ds/wwY0qBIUD4?key=I7QO5kMtOu",
     "row": 1380
   },
   {
-    "title": "自动扶梯安全检测数据集",
-    "url": "https://app.roboflow.com/ds/aZh71ektdy?key=jRXFQsubSE",
+    "title": "PPE安全装备检测数据集",
+    "url": "https://app.roboflow.com/ds/nEGIz2LoF5?key=qPwseZqV1B",
     "row": 1381
   },
   {
-    "title": "玻璃表面缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/MMZUUkYV6j?key=szzMW7zlJP",
+    "title": "火灾烟雾检测数据集",
+    "url": "https://app.roboflow.com/ds/DQrrwCScok?key=zDx9vVXXlx",
     "row": 1382
   }
 ]
