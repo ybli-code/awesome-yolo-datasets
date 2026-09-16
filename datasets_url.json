@@ -1,17 +1,27 @@
 [
   {
-    "row": 1379,
-    "title": "消防设施检测数据集",
-    "url": "https://app.roboflow.com/ds/Zn0xPJe9b9?key=qYl8NrmzVj"
+    "row": 1388,
+    "title": "停车位占用检测数据集",
+    "url": "https://app.roboflow.com/ds/n7Ur9Nrzpu?key=FBXg5oeaK0"
   },
   {
-    "row": 1380,
-    "title": "PCB电路板缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/H1g1GhjiPb?key=VjOPjHZB7Z"
+    "row": 1389,
+    "title": "输电线路检测数据集",
+    "url": "https://app.roboflow.com/ds/KhMdcAWfvG?key=lq6xUZ2xE4"
   },
   {
-    "row": 1382,
-    "title": "玻璃表面缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/4C9UPWo1tp?key=CHjfGl21PW"
+    "row": 1390,
+    "title": "超市收银台检测数据集",
+    "url": "https://app.roboflow.com/ds/1oJ34AkU5J?key=CYdDgsoK4I"
+  },
+  {
+    "row": 1391,
+    "title": "人员站立坐姿行为检测数据集",
+    "url": "https://app.roboflow.com/ds/RHntvDBK4a?key=WPzzeEVf37"
+  },
+  {
+    "row": 1392,
+    "title": "家具沙发桌子检测数据集",
+    "url": "https://app.roboflow.com/ds/GzCEVHPnog?key=I74iTiJ8fg"
   }
 ]
