@@ -1,0 +1,29 @@
+[
+  {
+    "row": 1399,
+    "title": "输电线路检测数据集",
+    "workspace": "samuel-gca76",
+    "project": "transmission-line-lj1bo",
+    "version": 1,
+    "url": "https://app.roboflow.com/ds/6wRiF0y4Fe?key=7fKV9WtJ2w",
+    "size_mb": 156.8
+  },
+  {
+    "row": 1400,
+    "title": "超市结账收银检测数据集",
+    "workspace": "moe-odeh-l1ge1",
+    "project": "checkout-f0zol",
+    "version": 1,
+    "url": "https://app.roboflow.com/ds/70MYz2h4C2?key=IUAXXdM03h",
+    "size_mb": 207.8
+  },
+  {
+    "row": 1401,
+    "title": "沙发家具检测数据集",
+    "workspace": "reception-area",
+    "project": "sofa-wqufg",
+    "version": 2,
+    "url": "https://app.roboflow.com/ds/eSPjHL7a27?key=ThDC5vJaIL",
+    "size_mb": 133.1
+  }
+]
