@@ -533,6 +533,23 @@ def process_one(ds):
 
     logger.info(f"  下载完成: {os.path.getsize(zip_path) / 1024 / 1024:.1f} MB")
 
+    # 提取 4 张真实样本到 artifact 目录（供预览图用，不删除）
+    try:
+        import zipfile as _zf, random as _rnd
+        _sample_dir = os.path.join(TEMP_DIR, f"samples_{row or safe_title}")
+        os.makedirs(_sample_dir, exist_ok=True)
+        with _zf.ZipFile(zip_path, 'r') as _z:
+            _imgs = [n for n in _z.namelist() if n.lower().endswith(('.jpg','.jpeg','.png','.bmp','.webp')) and not n.startswith('__MACOSX')]
+            _rnd.seed(20260916)
+            _rnd.shuffle(_imgs)
+            for _i, _n in enumerate(_imgs[:4]):
+                with open(os.path.join(_sample_dir, f'sample_{_i}.jpg'), 'wb') as _f:
+                    _f.write(_z.read(_n))
+        logger.info(f"  已提取 4 张样本到 {_sample_dir}")
+    except Exception as _e:
+        logger.warning(f"  样本提取失败(不影响主流程): {_e}")
+
+
     # 上传网盘（不解压，直接上传）
     if NETDISK == "quark":
         logger.info("  上传夸克网盘...")
