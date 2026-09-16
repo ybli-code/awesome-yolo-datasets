@@ -1,27 +1,7 @@
 [
   {
-    "row": 1412,
-    "title": "脚手架检测数据集",
-    "url": "https://app.roboflow.com/ds/ZlQhNLLQx5?key=PCfFlS8jnk"
-  },
-  {
     "row": 1413,
     "title": "行人姿态行为检测数据集",
-    "url": ""
-  },
-  {
-    "row": 1414,
-    "title": "电动滑板车检测数据集",
-    "url": "https://app.roboflow.com/ds/pI9R2i3pTR?key=QEZRT25ruV"
-  },
-  {
-    "row": 1415,
-    "title": "施工围挡检测数据集",
-    "url": "https://app.roboflow.com/ds/4sKWdKwRJC?key=hyL2o4lM7W"
-  },
-  {
-    "row": 1416,
-    "title": "自动售货机检测数据集",
-    "url": "https://app.roboflow.com/ds/1GlMG0YfI5?key=gNqUCDRjuO"
+    "url": "https://app.roboflow.com/ds/odRpwbbxYF?key=9HcCL9Gs6Q"
   }
 ]
