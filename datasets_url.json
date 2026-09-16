@@ -1,27 +1,26 @@
 [
   {
-    "row": 1393,
-    "title": "塔吊部件检测数据集",
-    "url": "https://app.roboflow.com/ds/CjfdF9j01D?key=1cviZa0nxM"
+    "row": 1399,
+    "title": "输电线路检测数据集",
+    "url": "https://app.roboflow.com/ds/6wRiF0y4Fe?key=7fKV9Wt",
+    "workspace": "samuel-gca76",
+    "project": "transmission-line-lj1bo",
+    "version": 1
   },
   {
-    "row": 1394,
-    "title": "木材表面缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/4lndbLYCZI?key=0b7KXisPvz"
+    "row": 1400,
+    "title": "超市结账收银检测数据集",
+    "url": "https://app.roboflow.com/ds/70MYz2h4C2?key=IUAXXdM",
+    "workspace": "moe-odeh-l1ge1",
+    "project": "checkout-f0zol",
+    "version": 1
   },
   {
-    "row": 1395,
-    "title": "管道泄漏检测数据集",
-    "url": "https://app.roboflow.com/ds/7KRrcvUiDi?key=0s0HrqwNjP"
-  },
-  {
-    "row": 1396,
-    "title": "交通锥桶检测数据集",
-    "url": "https://app.roboflow.com/ds/IzyyYP8S6p?key=HjFH6LUGKW"
-  },
-  {
-    "row": 1397,
-    "title": "挖掘机工程车辆检测数据集",
-    "url": "https://app.roboflow.com/ds/6Zomew84ax?key=W6LA7Wl9nI"
+    "row": 1401,
+    "title": "沙发家具检测数据集",
+    "url": "https://app.roboflow.com/ds/eSPjHL7a27?key=ThDC5vJ",
+    "workspace": "reception-area",
+    "project": "sofa-wqufg",
+    "version": 2
   }
 ]
