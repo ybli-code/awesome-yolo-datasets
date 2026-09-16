@@ -1,15 +1,5 @@
 [
   {
-    "row": 1417,
-    "title": "停车计时器检测数据集",
-    "url": "https://app.roboflow.com/ds/JoSWj2LhGg?key=Gvp0vqA0I3"
-  },
-  {
-    "row": 1418,
-    "title": "工地安全防护检测数据集",
-    "url": "https://app.roboflow.com/ds/0h0Bz0u9wM?key=S9oUc3UhcR"
-  },
-  {
     "row": 1419,
     "title": "混凝土泵车检测数据集",
     "url": "https://app.roboflow.com/ds/vBHQ5AWz7u?key=eWmEjA3Rwh"
@@ -18,10 +8,5 @@
     "row": 1420,
     "title": "施工人员安全检测数据集",
     "url": "https://app.roboflow.com/ds/AKAJOBPjPq?key=HSCXFVphpu"
-  },
-  {
-    "row": 1421,
-    "title": "自卸车检测数据集",
-    "url": "https://app.roboflow.com/ds/OJuQ2YYPSw?key=Vp8dJuxkWx"
   }
 ]
