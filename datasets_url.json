@@ -1,20 +1,7 @@
 [
-  {
-    "row": 1378,
-    "title": "停车位占用检测数据集",
-    "url": "https://app.roboflow.com/ds/IPfv1xtLdu?key=NyEIqrrB7Q",
-    "size_mb": 693.2,
-    "workspace": "muhammad-syihab-bdynf",
-    "project": "parking-space-ipm1b",
-    "version": 4
-  },
-  {
-    "row": 1381,
-    "title": "自动扶梯安全检测数据集",
-    "url": "https://app.roboflow.com/ds/aZh71ektdy?key=jRXFQsubSE",
-    "size_mb": 384.1,
-    "workspace": "escalator-ceoz1",
-    "project": "escalator-ih3jv",
-    "version": 497
-  }
+  {"row": 1402, "title": "机场跑道异物检测数据集", "url": "https://app.roboflow.com/ds/5eN7KBDhn2?key=vip7beJ8oR"},
+  {"row": 1403, "title": "锂电池表面缺陷检测数据集", "url": "https://app.roboflow.com/ds/8DMzn2szFI?key=FBZT4fXPfF"},
+  {"row": 1404, "title": "电动汽车充电桩检测数据集", "url": "https://app.roboflow.com/ds/jFatvdvNW2?key=APKtEUACsj"},
+  {"row": 1405, "title": "机械臂检测数据集", "url": "https://app.roboflow.com/ds/cQm2JeRLyj?key=iFqQUQHkUS"},
+  {"row": 1406, "title": "配电柜开关柜检测数据集", "url": "https://app.roboflow.com/ds/WR9WdOweYj?key=x1vMjIczdM"}
 ]
