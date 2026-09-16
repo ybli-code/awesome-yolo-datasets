@@ -1,1 +1,17 @@
-[{"row": 1378, "workspace": "muhammad-syihab-bdynf", "project": "parking-space-ipm1b", "version": 1, "name": "停车位占用检测数据集", "url": "https://universe.roboflow.com/muhammad-syihab-bdynf/parking-space-ipm1b", "title": "停车位占用检测数据集"}, {"row": 1379, "workspace": "fire-extinguisher", "project": "fire-extinguisher-xwmpa", "version": 1, "name": "消防设施检测数据集", "url": "https://universe.roboflow.com/fire-extinguisher/fire-extinguisher-xwmpa", "title": "消防设施检测数据集"}, {"row": 1380, "workspace": "ta-4ixjm", "project": "pcb-defect-gad22", "version": 1, "name": "PCB电路板缺陷检测数据集", "url": "https://universe.roboflow.com/ta-4ixjm/pcb-defect-gad22", "title": "PCB电路板缺陷检测数据集"}, {"row": 1381, "workspace": "escalator-ceoz1", "project": "escalator-ih3jv", "version": 1, "name": "自动扶梯安全检测数据集", "url": "https://universe.roboflow.com/escalator-ceoz1/escalator-ih3jv", "title": "自动扶梯安全检测数据集"}, {"row": 1382, "workspace": "tongji-university-lhe7b", "project": "glass-defect-detection", "version": 1, "name": "玻璃表面缺陷检测数据集", "url": "https://universe.roboflow.com/tongji-university-lhe7b/glass-defect-detection", "title": "玻璃表面缺陷检测数据集"}]
+[
+  {
+    "row": 1379,
+    "title": "消防设施检测数据集",
+    "url": "https://app.roboflow.com/ds/Zn0xPJe9b9?key=qYl8NrmzVj"
+  },
+  {
+    "row": 1380,
+    "title": "PCB电路板缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/H1g1GhjiPb?key=VjOPjHZB7Z"
+  },
+  {
+    "row": 1382,
+    "title": "玻璃表面缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/4C9UPWo1tp?key=CHjfGl21PW"
+  }
+]
