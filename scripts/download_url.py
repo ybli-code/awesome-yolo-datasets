@@ -440,11 +440,22 @@ def quark_get_or_create_folder(client, folder_name="同享AI数据集"):
 
 
 def quark_find_file_fid(client, folder_fid, file_name, max_pages=30):
-    """在文件夹中分页查找文件fid。
+    """用 search_files 按文件名直接定位 fid（比翻 list 页高效）。
 
-    网盘文件夹已上千文件，新上传的文件不一定在第一页；且上传到对象存储后
-    列表/搜索接口有数秒到数十秒的一致性延迟，必须翻页+多次调用。
+    网盘文件夹已上千文件，翻 list 页既慢又浪费；search 接口一次请求即可。
+    仍保留 max_pages 兜底：若 search 不可用或返回为空，回退翻 list。
     """
+    # 优先用 search（全局搜，按文件名精确匹配）
+    try:
+        res = client.search_files(file_name)
+        items = res.get("data", {}).get("list", []) or res.get("list", [])
+        for it in items:
+            if it.get("file_name") == file_name:
+                return it.get("fid")
+    except Exception as e:
+        logger.warning(f"  search_files 异常，回退翻list: {e}")
+
+    # 兜底：翻 list 页
     for page in range(1, max_pages + 1):
         try:
             resp = client.list_files(folder_id=folder_fid, page=page, size=100)
@@ -458,7 +469,7 @@ def quark_find_file_fid(client, folder_fid, file_name, max_pages=30):
             if f.get("file_name") == file_name:
                 return f.get("fid")
         if len(files) < 100:
-            break  # 最后一页
+            break
     return None
 
 
