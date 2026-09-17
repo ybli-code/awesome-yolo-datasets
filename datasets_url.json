@@ -1,27 +1,17 @@
 [
   {
-    "row": 1464,
-    "title": "叉车仓储作业检测数据集",
-    "url": "https://app.roboflow.com/ds/dyPm2D2rxI?key=IaIgAhdQmJ"
+    "row": 1470,
+    "title": "中药饮片识别检测数据集",
+    "url": "https://app.roboflow.com/ds/A7OGIBLZwf?key=HNWwqV6ewr"
   },
   {
-    "row": 1465,
-    "title": "肉类新鲜度腐败检测数据集",
-    "url": "https://app.roboflow.com/ds/fGbknZaopK?key=1YoC3G24Bz"
+    "row": 1471,
+    "title": "中药材识别与炮制鉴别数据集",
+    "url": "https://app.roboflow.com/ds/epTb4a4ZdU?key=ug436B2aKn"
   },
   {
-    "row": 1466,
-    "title": "超市货架商品识别与缺货检测数据集",
-    "url": "https://app.roboflow.com/ds/0jph9Fpjg5?key=3Wo7CQ5jRO"
-  },
-  {
-    "row": 1467,
-    "title": "脚手架构件施工安全检测数据集",
-    "url": "https://app.roboflow.com/ds/2QYzFQvXZW?key=485eozzebY"
-  },
-  {
-    "row": 1468,
-    "title": "停车场空位检测数据集",
-    "url": "https://app.roboflow.com/ds/DRWutO60ym?key=lMa3WTrpwC"
+    "row": 1472,
+    "title": "中草药原植物识别数据集",
+    "url": "https://app.roboflow.com/ds/WqfowOTk4s?key=MBxj4ykUFG"
   }
 ]
