@@ -1,22 +1,27 @@
 [
   {
-    "row": 1455,
-    "title": "PCB焊点质量检测数据集",
-    "url": "https://app.roboflow.com/ds/qhCYH65ljB?key=SEfVFl8ILz"
+    "row": 1460,
+    "title": "叉车仓储作业检测数据集",
+    "url": "https://app.roboflow.com/ds/dyPm2D2rxI?key=IaIgAhdQmJ"
   },
   {
-    "row": 1456,
-    "title": "药品泡罩包装药片缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/CQALvlG2p7?key=3CpWBBg9QZ"
+    "row": 1461,
+    "title": "肉类新鲜度腐败检测数据集",
+    "url": "https://app.roboflow.com/ds/fGbknZaopK?key=1YoC3G24Bz"
   },
   {
-    "row": 1457,
-    "title": "饮料瓶盖检测数据集",
-    "url": "https://app.roboflow.com/ds/5qfw8fwzEx?key=DmeWOWnv5E"
+    "row": 1462,
+    "title": "超市货架商品识别与缺货检测数据集",
+    "url": "https://app.roboflow.com/ds/0jph9Fpjg5?key=3Wo7CQ5jRO"
   },
   {
-    "row": 1458,
-    "title": "手势识别交互检测数据集",
-    "url": "https://app.roboflow.com/ds/hoNXPUcu0h?key=gGeZNrxAiq"
+    "row": 1463,
+    "title": "脚手架构件施工安全检测数据集",
+    "url": "https://app.roboflow.com/ds/2QYzFQvXZW?key=485eozzebY"
+  },
+  {
+    "row": 1464,
+    "title": "停车场空位检测数据集",
+    "url": "https://app.roboflow.com/ds/DRWutO60ym?key=lMa3WTrpwC"
   }
 ]
