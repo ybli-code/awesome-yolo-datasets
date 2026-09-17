@@ -1,27 +1,27 @@
 [
   {
-    "row": 1448,
-    "title": "PCB电路板缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/VVSIrdi11T?key=xme3X2YnFc"
+    "row": 1454,
+    "title": "电动车进电梯检测数据集",
+    "url": "https://app.roboflow.com/ds/c8CZnUcqXl?key=G6Vz77a9T9"
   },
   {
-    "row": 1449,
-    "title": "驾驶员安全带佩戴检测数据集",
-    "url": "https://app.roboflow.com/ds/AkimplCMJ7?key=Hil8MdMI7L"
+    "row": 1455,
+    "title": "PCB焊点质量检测数据集",
+    "url": "https://app.roboflow.com/ds/KHyplC9TqM?key=Z4QfPcaLny"
   },
   {
-    "row": 1450,
-    "title": "手机屏幕坏点缺陷分割数据集",
-    "url": "https://app.roboflow.com/ds/oWzM1gx3PX?key=chlcz0nhaL"
+    "row": 1456,
+    "title": "药品泡罩包装药片缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/CQALvlG2p7?key=3CpWBBg9QZ"
   },
   {
-    "row": 1451,
-    "title": "焊缝裂纹气孔缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/PN2RHatiTD?key=zFZaesID5j"
+    "row": 1457,
+    "title": "饮料瓶盖检测数据集",
+    "url": "https://app.roboflow.com/ds/5qfw8fwzEx?key=DmeWOWnv5E"
   },
   {
-    "row": 1452,
-    "title": "金属表面缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/Vdrvs2Q7LZ?key=gC4vI2SRkP"
+    "row": 1458,
+    "title": "手势识别交互检测数据集",
+    "url": "https://app.roboflow.com/ds/hoNXPUcu0h?key=gGeZNrxAiq"
   }
 ]
