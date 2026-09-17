@@ -439,12 +439,26 @@ def quark_get_or_create_folder(client, folder_name="同享AI数据集"):
     return result.get("data", {}).get("fid") or result.get("fid")
 
 
-def quark_find_file_fid(client, folder_fid, file_name):
-    """在文件夹中查找文件fid"""
-    resp = client.list_files(folder_id=folder_fid, page=1, size=100)
-    for f in resp.get("data", {}).get("list", []):
-        if f.get("file_name") == file_name:
-            return f.get("fid")
+def quark_find_file_fid(client, folder_fid, file_name, max_pages=30):
+    """在文件夹中分页查找文件fid。
+
+    网盘文件夹已上千文件，新上传的文件不一定在第一页；且上传到对象存储后
+    列表/搜索接口有数秒到数十秒的一致性延迟，必须翻页+多次调用。
+    """
+    for page in range(1, max_pages + 1):
+        try:
+            resp = client.list_files(folder_id=folder_fid, page=page, size=100)
+        except Exception as e:
+            logger.warning(f"  list_files page={page} 异常: {e}")
+            break
+        files = resp.get("data", {}).get("list", [])
+        if not files:
+            break
+        for f in files:
+            if f.get("file_name") == file_name:
+                return f.get("fid")
+        if len(files) < 100:
+            break  # 最后一页
     return None
 
 
@@ -461,14 +475,18 @@ def quark_upload_and_share(zip_path, safe_title, pwd="yolo"):
     logger.info(f"  上传中: {file_name} ({os.path.getsize(zip_path)/1024/1024:.1f} MB)")
     client.upload.upload_file(zip_path, parent_folder_id=folder_fid)
 
-    # 查找上传后的文件fid
-    file_fid = quark_find_file_fid(client, folder_fid, file_name)
-    if not file_fid:
-        logger.warning("  上传完成但未找到文件fid，重试列表...")
-        import time as _t; _t.sleep(2)
+    # 查找上传后的文件fid（对象存储有一致性延迟，翻页+指数退避重试）
+    file_fid = None
+    for attempt, wait in enumerate([0, 5, 10, 20]):
+        if wait:
+            logger.info(f"  等待{wait}s后第{attempt+1}次查找fid...")
+            time.sleep(wait)
         file_fid = quark_find_file_fid(client, folder_fid, file_name)
+        if file_fid:
+            break
+        logger.warning(f"  第{attempt+1}次未找到文件fid")
     if not file_fid:
-        raise RuntimeError("上传后未找到文件fid")
+        raise RuntimeError("上传后未找到文件fid（已分页重试4次）")
 
     # 创建分享（永久+提取码）
     logger.info("  创建分享链接...")
