@@ -1,27 +1,27 @@
 [
   {
-    "row": 1501,
-    "title": "欧洲交通标志识别检测数据集",
-    "url": "https://app.roboflow.com/ds/fTJlsqhEMu?key=G4FlrXcXtD"
+    "row": 1507,
+    "title": "PCB电路板缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/VVSIrdi11T?key=xme3X2YnFc"
   },
   {
-    "row": 1502,
-    "title": "公共场所烟蒂烟头检测数据集",
-    "url": "https://app.roboflow.com/ds/XRuqvYolrb?key=Y2xdUtN8fs"
+    "row": 1508,
+    "title": "水果表面缺陷品质检测数据集",
+    "url": "https://app.roboflow.com/ds/RiIrHuf1b0?key=VPIYl3i1SJ"
   },
   {
-    "row": 1503,
-    "title": "水下鱼类种类识别监测数据集",
-    "url": "https://app.roboflow.com/ds/GdHoeHDXGb?key=HDTKYpqSN0"
+    "row": 1509,
+    "title": "牛畜牧个体检测数据集",
+    "url": "https://app.roboflow.com/ds/zhESiapxqD?key=yjyY1vYy6s"
   },
   {
-    "row": 1504,
-    "title": "电力线路电缆巡检检测数据集",
-    "url": "https://app.roboflow.com/ds/HpyhdvqwE5?key=CJ0kCiSKoa"
+    "row": 1510,
+    "title": "水面漂浮物垃圾检测数据集",
+    "url": "https://app.roboflow.com/ds/lQOtj3PDU9?key=4dfb3mlHW9"
   },
   {
-    "row": 1505,
-    "title": "快递面单跟踪标签检测数据集",
-    "url": "https://app.roboflow.com/ds/GvRhGCvwUP?key=jiIQgoFWda"
+    "row": 1511,
+    "title": "金属钢材表面缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/0VYrYgiYQY?key=DPPTxlBbhH"
   }
 ]
