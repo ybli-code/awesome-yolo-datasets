@@ -1,27 +1,22 @@
 [
   {
-    "row": 1515,
-    "title": "不良坐姿检测识别数据集",
-    "url": "https://app.roboflow.com/ds/0qD1d6ahwl?key=rjOFUSoHYF"
+    "row": 1521,
+    "title": "人脸八类表情识别数据集",
+    "url": "https://app.roboflow.com/ds/TNfKkYmOkD?key=iYEKUxNzc4"
   },
   {
-    "row": 1516,
-    "title": "人体动作行为识别检测数据集",
-    "url": "https://app.roboflow.com/ds/CY8s9geeoN?key=Ieq7GCsoFu"
+    "row": 1522,
+    "title": "人脸七类情绪表情检测数据集",
+    "url": "https://app.roboflow.com/ds/0TPASqlimM?key=tEWINg7Q4x"
   },
   {
-    "row": 1517,
-    "title": "头颈姿势低头检测数据集",
-    "url": "https://app.roboflow.com/ds/fYvKMhzNnC?key=2hOI3H6xFO"
+    "row": 1523,
+    "title": "人脸情绪八类分类检测数据集",
+    "url": "https://app.roboflow.com/ds/3ISQYcpzhf?key=MwXSl20Lij"
   },
   {
-    "row": 1518,
-    "title": "办公人体工程姿势效率检测数据集",
-    "url": "https://app.roboflow.com/ds/5dejsbGdww?key=e9QPFiNMNn"
-  },
-  {
-    "row": 1519,
-    "title": "青少年脊柱侧弯分级检测数据集",
-    "url": "https://app.roboflow.com/ds/XFc3RcN0gN?key=fw3jeirPpG"
+    "row": 1524,
+    "title": "面部七类情绪动作检测数据集",
+    "url": "https://app.roboflow.com/ds/0Gt6g6tlGm?key=hP4slAh7Rp"
   }
 ]
