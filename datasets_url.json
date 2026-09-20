@@ -1,27 +1,27 @@
 [
   {
-    "row": 1509,
-    "title": "PCB电路板缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/VVSIrdi11T?key=xme3X2YnFc"
+    "row": 1515,
+    "title": "不良坐姿检测识别数据集",
+    "url": "https://app.roboflow.com/ds/0qD1d6ahwl?key=rjOFUSoHYF"
   },
   {
-    "row": 1510,
-    "title": "水果表面缺陷品质检测数据集",
-    "url": "https://app.roboflow.com/ds/RiIrHuf1b0?key=VPIYl3i1SJ"
+    "row": 1516,
+    "title": "人体动作行为识别检测数据集",
+    "url": "https://app.roboflow.com/ds/CY8s9geeoN?key=Ieq7GCsoFu"
   },
   {
-    "row": 1511,
-    "title": "牛畜牧个体检测数据集",
-    "url": "https://app.roboflow.com/ds/zhESiapxqD?key=yjyY1vYy6s"
+    "row": 1517,
+    "title": "头颈姿势低头检测数据集",
+    "url": "https://app.roboflow.com/ds/fYvKMhzNnC?key=2hOI3H6xFO"
   },
   {
-    "row": 1512,
-    "title": "水面漂浮物垃圾检测数据集",
-    "url": "https://app.roboflow.com/ds/lQOtj3PDU9?key=4dfb3mlHW9"
+    "row": 1518,
+    "title": "办公人体工程姿势效率检测数据集",
+    "url": "https://app.roboflow.com/ds/5dejsbGdww?key=e9QPFiNMNn"
   },
   {
-    "row": 1513,
-    "title": "金属钢材表面缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/0VYrYgiYQY?key=DPPTxlBbhH"
+    "row": 1519,
+    "title": "青少年脊柱侧弯分级检测数据集",
+    "url": "https://app.roboflow.com/ds/XFc3RcN0gN?key=fw3jeirPpG"
   }
 ]
