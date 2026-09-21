@@ -1,22 +1,27 @@
 [
   {
-    "row": 1521,
-    "title": "人脸八类表情识别数据集",
-    "url": "https://app.roboflow.com/ds/TNfKkYmOkD?key=iYEKUxNzc4"
+    "title": "齿轮表面缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/X3o3pLrh4c?key=q1VWQcIjEr",
+    "row": 1525
   },
   {
-    "row": 1522,
-    "title": "人脸七类情绪表情检测数据集",
-    "url": "https://app.roboflow.com/ds/0TPASqlimM?key=tEWINg7Q4x"
+    "title": "桃果实病害检测数据集",
+    "url": "https://app.roboflow.com/ds/tN8eQCZSef?key=lIXY5EGtDp",
+    "row": 1526
   },
   {
-    "row": 1523,
-    "title": "人脸情绪八类分类检测数据集",
-    "url": "https://app.roboflow.com/ds/3ISQYcpzhf?key=MwXSl20Lij"
+    "title": "牛油果病害检测数据集",
+    "url": "https://app.roboflow.com/ds/sGh5tYH66x?key=01FH0wwjgX",
+    "row": 1527
   },
   {
-    "row": 1524,
-    "title": "面部七类情绪动作检测数据集",
-    "url": "https://app.roboflow.com/ds/0Gt6g6tlGm?key=hP4slAh7Rp"
+    "title": "可可豆成熟度检测数据集",
+    "url": "https://app.roboflow.com/ds/NjLwr0SkQ3?key=4Uvux1WLIk",
+    "row": 1528
+  },
+  {
+    "title": "橄榄品种识别检测数据集",
+    "url": "https://app.roboflow.com/ds/xWMrSCDmhO?key=txOn78etEu",
+    "row": 1529
   }
 ]
