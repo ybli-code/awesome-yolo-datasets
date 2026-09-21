@@ -1,6 +1,6 @@
 # 🚀 Awesome YOLO Datasets
 
-> 精选 YOLO 目标检测数据集合集，涵盖工业检测、医疗AI、农业识别、交通安全等领域。共 **1381+** 个数据集，访问 [data2.cn](https://www.data2.cn) 获取完整下载链接。
+> 精选 YOLO 目标检测数据集合集，持续更新优质数据集，未覆盖的数据集欢迎提交Issue，一天内更新到本仓库。
 
 ![Datasets](https://img.shields.io/badge/Datasets-1381%2B-blue) ![License](https://img.shields.io/badge/Type-YOLO-orange) ![Update](https://img.shields.io/badge/Updated-2026-green)
 
@@ -8,20 +8,19 @@
 
 ## 📖 项目简介
 
-本仓库精选了 **1381+** 个适用于 YOLO 目标检测的数据集，所有数据集均提供在线下载，访问 [data2.cn](https://www.data2.cn) 获取下载链接。
+本仓库精选了数千个适用于 YOLO 目标检测的数据集，所有数据集均提供在线下载地址。
 
 ### ✨ 特点
 
 - 🎯 **开箱即用**：所有数据集均带有 YOLO 标签格式，下载即可训练
-- 🔗 **在线下载**：访问 [data2.cn](https://www.data2.cn) 获取所有数据集下载链接
+- 🔗 **在线下载**：所有数据集均附带网盘下载链接
 - 🏷️ **分类清晰**：按应用领域分类，方便快速查找所需数据集
-- 📊 **持续更新**：定期补充新的高质量数据集
+- 📊 **持续更新**：定期补充新的高质量数据集，支持Issues提交需求
 
 ---
 
 ## 📊 全部数据集列表
 
-> 共 **1381** 个数据集，点击链接访问 data2.cn 获取下载。
 
 | 序号 | 数据集名称 | 链接 |
 | --- | --- | --- |
