@@ -4,7 +4,7 @@
     "workspace": "weld-detection",
     "project": "weld-defect-zjejp",
     "version": 1,
-    "name": "焊缝缺陷检测数据集",
+    "title": "焊缝缺陷检测数据集",
     "url": "https://app.roboflow.com/ds/tW9sNHdDLg?key=PoCluwNgn0"
   },
   {
@@ -12,7 +12,7 @@
     "workspace": "edi-xmltd",
     "project": "circuit-board-defect-detection",
     "version": 1,
-    "name": "PCB电路板缺陷检测数据集",
+    "title": "PCB电路板缺陷检测数据集",
     "url": "https://app.roboflow.com/ds/VVSIrdi11T?key=xme3X2YnFc"
   },
   {
@@ -20,7 +20,7 @@
     "workspace": "poramet-thongvichit",
     "project": "grape-leaf-disease-kf5ll",
     "version": 1,
-    "name": "葡萄叶片病害检测数据集",
+    "title": "葡萄叶片病害检测数据集",
     "url": "https://app.roboflow.com/ds/ChPK3vepIb?key=NEjaZYznAQ"
   },
   {
@@ -28,7 +28,7 @@
     "workspace": "adhimas-j9nv3",
     "project": "driver-fatigue-detection-igdrm",
     "version": 1,
-    "name": "驾驶员疲劳驾驶检测数据集",
+    "title": "驾驶员疲劳驾驶检测数据集",
     "url": "https://app.roboflow.com/ds/nAkLcfE7Tg?key=g8dVK1E982"
   },
   {
@@ -36,7 +36,7 @@
     "workspace": "skin-cancer-l4jgb",
     "project": "skin-cancer-iuf7w",
     "version": 1,
-    "name": "皮肤良恶性病变检测数据集",
+    "title": "皮肤良恶性病变检测数据集",
     "url": "https://app.roboflow.com/ds/JSHogbO4bv?key=0gNEoKX1jq"
   }
 ]
