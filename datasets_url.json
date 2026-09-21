@@ -1,7 +1,10 @@
 [
-  {"row": 1536, "workspace": "pfe-o6ixg", "project": "apple-disease-detection-fqwzp", "version": 2, "title": "苹果果实病害检测数据集", "url": "https://app.roboflow.com/ds/IwCUYSzzMX?key=MGFXXRUMiC"},
-  {"row": 1537, "workspace": "datasetv2-nckpu", "project": "tomato-leaf-disease-fbcyy", "version": 2, "title": "番茄叶片病害检测数据集", "url": "https://app.roboflow.com/ds/An5tIBggYN?key=QKIHaudefj"},
-  {"row": 1538, "workspace": "mr-khan-pgk1n", "project": "potato-leaf-disease-gy32e", "version": 6, "title": "土豆叶片病害检测数据集", "url": "https://app.roboflow.com/ds/j1kzQz4tJP?key=0v7zArKrX8"},
-  {"row": 1539, "workspace": "gamani", "project": "cucumber-fruit-detection", "version": 1, "title": "黄瓜果实成熟度检测数据集", "url": "https://app.roboflow.com/ds/WctTlphpxZ?key=h6IG45vd5h"},
-  {"row": 1540, "workspace": "banana-disease", "project": "banana-leaf-spot-disease-3ygea", "version": 5, "title": "香蕉叶斑病检测数据集", "url": "https://app.roboflow.com/ds/Mwo9OGeebC?key=OnnJzdq0i7"}
+  {
+    "title": "指针式仪表识别数据集",
+    "url": "https://app.roboflow.com/ds/LglFDUUYLo?key=1pYSsYLM0X",
+    "row": 1542,
+    "ws": "khang-nguyen-4jqxa",
+    "proj": "gauge-analog",
+    "version": 1
+  }
 ]
