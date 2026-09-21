@@ -1408,20 +1408,7 @@
 
 ---
 
-## 🚀 快速开始
-
-### 1. 下载数据集
-
-从上方列表中点击数据集名称，跳转到 [data2.cn](https://www.data2.cn) 对应页面，注册登录后即可免费获取网盘下载链接，提取码统一为 `yolo`。
-
-### 2. 使用 YOLO 训练
-
-```bash
-# 以 ultralytics YOLOv8 为例
-yolo detect train data=your_dataset.yaml model=yolov8n.pt epochs=100 imgsz=640
-```
-
-### 3. 在线标注工具推荐
+## 🚀 数据标注
 
 推荐使用 [Make Sense](https://makesense.top/) 在线标注平台，无需安装，浏览器即可完成 YOLO 标注工作。
 
