@@ -1,27 +1,7 @@
 [
   {
-    "row": 1550,
-    "title": "老鼠检测数据集",
-    "url": "https://app.roboflow.com/ds/clAuhSLdKw?key=ZiCuhIcRYu"
-  },
-  {
-    "row": 1551,
-    "title": "口罩佩戴检测数据集",
-    "url": "https://app.roboflow.com/ds/CyFyyPu3YR?key=V6fzUTq0r9"
-  },
-  {
-    "row": 1552,
-    "title": "吸烟行为检测数据集",
-    "url": "https://app.roboflow.com/ds/Tw7oOIOHhc?key=8DKOGHttDr"
-  },
-  {
-    "row": 1553,
-    "title": "打电话行为检测数据集",
-    "url": "https://app.roboflow.com/ds/UHTzMsftvM?key=rMoAp9eyIh"
-  },
-  {
-    "row": 1554,
-    "title": "电子元件检测数据集",
-    "url": "https://app.roboflow.com/ds/mvbZZCPrLs?key=Lq73jyoBgr"
+    "row": 1556,
+    "title": "人体关键点检测数据集",
+    "url": "https://app.roboflow.com/ds/HHo6of5FKf?key=iBwx4iOSzu"
   }
 ]
