@@ -1,7 +1,10 @@
 [
   {
-    "row": 1556,
-    "title": "人体关键点检测数据集",
-    "url": "https://app.roboflow.com/ds/HHo6of5FKf?key=iBwx4iOSzu"
+    "row": 1558,
+    "ws": "contil-rn9fi",
+    "proj": "life-jacket-kt521",
+    "version": "7",
+    "title": "救生衣穿戴检测数据集",
+    "url": "https://app.roboflow.com/ds/WWE4Bj5iV5?key=0Q4paTvIzQ"
   }
 ]
