@@ -1,10 +1,17 @@
 [
   {
-    "row": 1558,
-    "ws": "contil-rn9fi",
-    "proj": "life-jacket-kt521",
-    "version": "7",
-    "title": "救生衣穿戴检测数据集",
-    "url": "https://app.roboflow.com/ds/WWE4Bj5iV5?key=0Q4paTvIzQ"
+    "row": 1560,
+    "title": "钢材表面缺陷检测数据集 | 目标检测 | 工业制造",
+    "url": "https://app.roboflow.com/ds/0VYrYgiYQY?key=DPPTxlBbhH"
+  },
+  {
+    "row": 1561,
+    "title": "PCB电路板缺陷检测数据集 | 目标检测 | 电子制造",
+    "url": "https://app.roboflow.com/ds/GpDkrrVSyx?key=kNmS9Ysoeg"
+  },
+  {
+    "row": 1562,
+    "title": "交通信号灯检测数据集 | 目标检测 | 智能交通",
+    "url": "https://app.roboflow.com/ds/YY104kBIbF?key=0gEU77NqeP"
   }
 ]
