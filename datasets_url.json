@@ -1,10 +1,27 @@
 [
   {
-    "row": 1569,
-    "ws": "OpenDataLab",
-    "proj": "SQUID",
-    "version": 1,
-    "title": "SQUID水下立体图像数据集",
-    "url": "https://cdn-xlab-data.openxlab.org.cn/objects/fdcc5ffbd3647adc16d9af8e1acd560cb778ceac45c5b810f8b8d51567a77e16?Expires=1790906077&OSSAccessKeyId=LTAI5tSqABbitQcgeNNd8dAE&Signature=ryJVsliJ6F9CjiEbAyypSBVzMU0%3D&response-content-disposition=attachment%3B%20filename%3D%22SQUID.tar.gz%22&response-content-type=application%2Foctet-stream"
+    "title": "吸烟检测数据集",
+    "url": "https://app.roboflow.com/ds/Tw7oOIOHhc?key=8DKOGHttDr",
+    "row": 172
+  },
+  {
+    "title": "睡岗检测数据集",
+    "url": "https://app.roboflow.com/ds/Cd5fqfrHN2?key=7eHhhZZmTr",
+    "row": 179
+  },
+  {
+    "title": "羊脸耳口眼检测数据集",
+    "url": "https://app.roboflow.com/ds/Gm9HLEL8C1?key=HVlSGmCgrG",
+    "row": 223
+  },
+  {
+    "title": "航拍滑坡数据集",
+    "url": "https://app.roboflow.com/ds/3zO7qZToV9?key=hGwFxQrAO9",
+    "row": 212
+  },
+  {
+    "title": "马行为检测数据集",
+    "url": "https://app.roboflow.com/ds/tcHAnAdmxg?key=PP4JewqWBn",
+    "row": 219
   }
 ]
