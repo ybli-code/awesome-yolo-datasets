@@ -1,7 +1,17 @@
 [
   {
-    "title": "零售柜零食检测数据集",
-    "url": "https://app.roboflow.com/ds/298PyQXHq3?key=QuHMjlAI7i",
-    "row": 781
+    "title": "船数据集",
+    "url": "https://app.roboflow.com/ds/FDj6eNnkC6?key=92P2KiRBvZ",
+    "row": 1002
+  },
+  {
+    "title": "车辆牌照检测数据集",
+    "url": "https://app.roboflow.com/ds/7g4jCdYUBp?key=uvFLKd0Pzs",
+    "row": 1008
+  },
+  {
+    "title": "蓝莓病虫害检测数据集",
+    "url": "https://app.roboflow.com/ds/YhvpbLyVie?key=TeSVxqgNUR",
+    "row": 1075
   }
 ]
