@@ -1,7 +1,27 @@
 [
   {
-    "title": "陶瓷制品识别数据集13种制品",
-    "url": "https://app.roboflow.com/ds/Wf3dbH7f1D?key=XiCkNy3e5R",
-    "row": 593
+    "title": "地面油污检测数据集",
+    "url": "https://app.roboflow.com/ds/0xbGMsn3uI?key=zvGZ8RwQo5",
+    "row": 614
+  },
+  {
+    "title": "猪圈中猪数据集",
+    "url": "https://app.roboflow.com/ds/czSQVz18Vq?key=oPWIBVshjs",
+    "row": 644
+  },
+  {
+    "title": "狗狗粪便健康数据集4类",
+    "url": "https://app.roboflow.com/ds/xKV8BcAXd4?key=O9nLAXfzk7",
+    "row": 653
+  },
+  {
+    "title": "（航拍）配网缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/NJGHYcI9Ct?key=OeOl8XiddK",
+    "row": 657
+  },
+  {
+    "title": "行李箱缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/4oHcH5WWLE?key=hyxvlASe6F",
+    "row": 680
   }
 ]
