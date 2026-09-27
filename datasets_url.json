@@ -1,10 +1,10 @@
 [
   {
-    "row": 1566,
-    "ws": "test-auc7m",
-    "proj": "ship-detection-cojt4",
+    "row": 1567,
+    "ws": "OpenDataLab",
+    "proj": "DeepFish",
     "version": 1,
-    "title": "海面船舶检测数据集",
-    "url": "https://app.roboflow.com/ds/6dNdxyS4hb?key=B5mOS1bwDc"
+    "title": "DeepFish水下鱼类检测数据集",
+    "url": "https://cdn-xlab-data.openxlab.org.cn/objects/c3df43672c50dcfa350f9c1f5d8a8813ac80f89854a273ef8dd3fc49f2eb2bb1?Expires=1790555198&OSSAccessKeyId=LTAI5tSqABbitQcgeNNd8dAE&Signature=XtIjpI8PrQHeAt5aBkrtNTlY8eM%3D&response-content-disposition=attachment%3B%20filename%3D%22DeepFish.tar%22&response-content-type=application%2Foctet-stream"
   }
 ]
