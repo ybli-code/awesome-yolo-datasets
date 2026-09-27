@@ -1,22 +1,7 @@
 [
   {
-    "title": "小车违停检测数据集",
-    "url": "https://app.roboflow.com/ds/cC4rRg3Hd9?key=4yaUdkJLFl",
-    "row": 316
-  },
-  {
-    "title": "茶叶嫩芽检测数据集(原图)",
-    "url": "https://app.roboflow.com/ds/5y07dem3Go?key=Y6mNv8G5iO",
-    "row": 329
-  },
-  {
-    "title": "军用民用船舶分类检测数据集10类",
-    "url": "https://app.roboflow.com/ds/6dNdxyS4hb?key=B5mOS1bwDc",
-    "row": 346
-  },
-  {
-    "title": "安全帽佩戴数据集",
-    "url": "https://app.roboflow.com/ds/eDEDlXdL5g?key=uroiwK6ySM",
-    "row": 427
+    "title": "衣服缺陷数据集",
+    "url": "https://app.roboflow.com/ds/rUDZkauJi5?key=u4bIYaboJZ",
+    "row": 403
   }
 ]
