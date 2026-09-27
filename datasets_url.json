@@ -1,17 +1,10 @@
 [
   {
-    "row": 1560,
-    "title": "钢材表面缺陷检测数据集 | 目标检测 | 工业制造",
-    "url": "https://app.roboflow.com/ds/0VYrYgiYQY?key=DPPTxlBbhH"
-  },
-  {
-    "row": 1561,
-    "title": "PCB电路板缺陷检测数据集 | 目标检测 | 电子制造",
-    "url": "https://app.roboflow.com/ds/GpDkrrVSyx?key=kNmS9Ysoeg"
-  },
-  {
-    "row": 1562,
-    "title": "交通信号灯检测数据集 | 目标检测 | 智能交通",
-    "url": "https://app.roboflow.com/ds/YY104kBIbF?key=0gEU77NqeP"
+    "row": 1566,
+    "ws": "test-auc7m",
+    "proj": "ship-detection-cojt4",
+    "version": 1,
+    "title": "海面船舶检测数据集",
+    "url": "https://app.roboflow.com/ds/6dNdxyS4hb?key=B5mOS1bwDc"
   }
 ]
