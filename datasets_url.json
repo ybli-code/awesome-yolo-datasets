@@ -1,18 +1,58 @@
 [
   {
-    "row": 185,
-    "ws": "colonoscopy",
-    "proj": "colonoscopy",
-    "ver": 3,
-    "title": "结肠镜息肉检测数据集",
-    "url": "https://app.roboflow.com/ds/YwUIKQBDKC?key=HpwK8dTUTs"
+    "row": 332,
+    "ws": "fyp-qtd0e",
+    "proj": "insect-detection-j9mt7",
+    "ver": 2,
+    "title": "昆虫检测数据集",
+    "url": "https://app.roboflow.com/ds/QUj0v5UNo6?key=q5NCEXXdoV",
+    "classes": [
+      "Fall webworm moth",
+      "Papilio memnon",
+      "Cepora nerissa",
+      "Plagiodera versicolora",
+      "Brown marmorated stink bug",
+      "Clostera",
+      "Torpedo bug",
+      "Spirama",
+      "Oebalus pugnax",
+      "Passionvine hopper",
+      "Batocera rubus",
+      "Batocera rufomaculata",
+      "Yellow spotted stink bug",
+      "Aromia",
+      "Cerura Vinula",
+      "Parasa indetermina",
+      "Spilomelinae",
+      "White-spotted longicorn beetle",
+      "Parasa consocia",
+      "Caterpillar",
+      "Blaberus discoidalis",
+      "Neocurtilla hexadactyla",
+      "Protaetia",
+      "Empoasca",
+      "Eurydema ornata",
+      "Acalolepta",
+      "Red Costate Tiger Moth",
+      "Graphosoma lineatum",
+      "Forest Bug",
+      "Crowned slug moth",
+      "Spotted lanternfly",
+      "Puss moth",
+      "Tibicina haematodes"
+    ]
   },
   {
-    "row": 252,
-    "ws": "linhchi",
-    "proj": "police-detection-ud1js",
-    "ver": 22,
-    "title": "警察检测数据集",
-    "url": "https://app.roboflow.com/ds/NgchYNuZTq?key=1YUMCMNFBR"
+    "row": 333,
+    "ws": "college-wwola",
+    "proj": "pallet-detection-moxj7",
+    "ver": 3,
+    "title": "托盘检测数据集",
+    "url": "https://app.roboflow.com/ds/awyz2zDJLB?key=gz0S93Ej3J",
+    "classes": [
+      "lp",
+      "pallet",
+      "ep"
+    ]
   }
 ]
