@@ -1,14 +1,76 @@
 [
   {
-    "row": 732,
-    "ws": "study-tv89i",
-    "proj": "welding-defect-2y2ix",
-    "ver": 3,
-    "title": "焊接缺陷检测数据集",
-    "post_id": 4645,
-    "url": "https://app.roboflow.com/ds/hVR1QrbYmA?key=BplL6ybiC2",
+    "row": 733,
+    "ws": "customdataset-gwkhb",
+    "proj": "camel-detection-lfcvf",
+    "ver": 1,
+    "title": "骆驼检测数据集",
+    "post_id": 4646,
+    "url": "https://app.roboflow.com/ds/BmVw7bLylE?key=2aFlzsqkoS",
     "classes": [
-      "Defect"
+      "0"
+    ]
+  },
+  {
+    "row": 735,
+    "ws": "tian-jian-4ywmu",
+    "proj": "wildlife-detection-qgiwz",
+    "ver": 24,
+    "title": "野生动物检测数据集",
+    "post_id": 4648,
+    "url": "https://app.roboflow.com/ds/zU5MsbYWOd?key=RChhDJ8AMG",
+    "classes": [
+      "deer",
+      "dog",
+      "cat",
+      "chicken",
+      "elephant"
+    ]
+  },
+  {
+    "row": 743,
+    "ws": "xavier-byjfc",
+    "proj": "hippo-species",
+    "ver": 3,
+    "title": "河马检测数据集",
+    "post_id": 4656,
+    "url": "https://app.roboflow.com/ds/yGbbdkDxi8?key=Lu8ssZDtPf",
+    "classes": [
+      "Hippos",
+      "Common hippopotamus",
+      "Pgymy hippopotamous"
+    ]
+  },
+  {
+    "row": 754,
+    "ws": "james-workspace-gacjp",
+    "proj": "bird-species-3fgbs",
+    "ver": 2,
+    "title": "鸟类物种检测数据集",
+    "post_id": 4667,
+    "url": "https://app.roboflow.com/ds/gov8pGbG5H?key=6Xizsjcqmj",
+    "classes": [
+      "ringneck_parakeet",
+      "rainbow_lorikeet",
+      "brushtail_possum",
+      "common_myna",
+      "common_starling"
+    ]
+  },
+  {
+    "row": 770,
+    "ws": "irsyad-wwhek",
+    "proj": "chili-disease-zzzzm",
+    "ver": 1,
+    "title": "辣椒病害检测数据集",
+    "post_id": 4683,
+    "url": "https://app.roboflow.com/ds/H4KhmRwsoK?key=Zkckr7UVGb",
+    "classes": [
+      "Bercak Daun Serkospora",
+      "Buah Cabai Sehat",
+      "Busuk Buah Antraknosa",
+      "Daun Cabai Sehat",
+      "Virus Kuning"
     ]
   }
 ]
