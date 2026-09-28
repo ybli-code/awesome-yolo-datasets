@@ -1,63 +1,83 @@
 [
   {
-    "row": 612,
-    "ws": "windturbineproject",
-    "proj": "wind-turbine-z7ph2",
+    "row": 716,
+    "ws": "fire-detection-5id9d",
+    "proj": "fire-and-smoke-detection-0t7wg",
+    "ver": 1,
+    "title": "火焰烟雾检测数据集",
+    "post_id": 4629,
+    "url": "https://app.roboflow.com/ds/ogRPdSHHsg?key=guSIQkBFRz",
+    "classes": [
+      "smoke",
+      "fire"
+    ]
+  },
+  {
+    "row": 721,
+    "ws": "vanshika-fiktf",
+    "proj": "industrial-defect-detection-y5uul",
+    "ver": 1,
+    "title": "工业缺陷检测数据集",
+    "post_id": 4634,
+    "url": "https://app.roboflow.com/ds/IhmiHaU8JY?key=P08TpEzFWi",
+    "classes": [
+      "Defect",
+      "Leak",
+      "Rust",
+      "Crack"
+    ]
+  },
+  {
+    "row": 722,
+    "ws": "thousand",
+    "proj": "industrial-wrgmr",
+    "ver": 2,
+    "title": "工业场景检测数据集",
+    "post_id": 4635,
+    "url": "https://app.roboflow.com/ds/KT9vRhAG7g?key=uOuuh4JrjN",
+    "classes": [
+      "Industrial element_graffiti",
+      "Industrial building_tower",
+      "Industrial building_warehouse",
+      "Industrial components_ceiling",
+      "Industrial building_silo",
+      "Industrial components_conveyor belt",
+      "Industrial equipment_tank-barrel",
+      "Industrial components_truss",
+      "Industrial equipment_pipeline"
+    ]
+  },
+  {
+    "row": 723,
+    "ws": "thesis-9wpag",
+    "proj": "steel-defect-detections",
+    "ver": 2,
+    "title": "钢材表面缺陷检测数据集",
+    "post_id": 4636,
+    "url": "https://app.roboflow.com/ds/DbsAZtm0Zu?key=lh4LriuxrP",
+    "classes": [
+      "crazing defect",
+      "scratch defect",
+      "crack defect",
+      "patch defect",
+      "pitted surface defect"
+    ]
+  },
+  {
+    "row": 732,
+    "ws": "welding-2bplp",
+    "proj": "weld-quality-inspection-rei9l",
     "ver": 9,
-    "title": "风机叶片缺陷检测数据集",
-    "post_id": 4525,
-    "url": "https://app.roboflow.com/ds/DlKWUnQi8S?key=z7RWJLBvDZ",
+    "title": "焊接质量检测数据集",
+    "post_id": 4645,
+    "url": "https://app.roboflow.com/ds/wsLkkS58bI?key=OHtznaHPEk",
     "classes": [
-      "Lighting-Strike",
-      "PU TAPE DAMAGE",
-      "OIL LEAKAGE",
-      "Pressure Side-2",
-      "Pressure Side-1",
-      "LE LAMINATE DAMAGE",
-      "Pressure Side-3",
-      "suction side-3",
-      "suction side-2",
-      "suction side-1",
-      "PAINT DAMAGE",
-      "Leading side-2",
-      "Leading side-3",
-      "Leading side-1"
-    ]
-  },
-  {
-    "row": 616,
-    "ws": "kdigital",
-    "proj": "electric-scooter-cd7hw",
-    "ver": 1,
-    "title": "电动滑板车检测数据集",
-    "post_id": 4529,
-    "url": "https://app.roboflow.com/ds/5WZkXMmxCM?key=NpkfpDxwaS",
-    "classes": [
-      "electric scooter"
-    ]
-  },
-  {
-    "row": 663,
-    "ws": "college-s1wlh",
-    "proj": "gun-morwg",
-    "ver": 1,
-    "title": "枪支检测数据集",
-    "post_id": 4576,
-    "url": "https://app.roboflow.com/ds/qIvmG031JR?key=kbZEck7OBj",
-    "classes": [
-      "Gun"
-    ]
-  },
-  {
-    "row": 685,
-    "ws": "pipe-leak",
-    "proj": "pipe-leak-yshqq",
-    "ver": 6,
-    "title": "管道泄漏检测数据集",
-    "post_id": 4598,
-    "url": "https://app.roboflow.com/ds/F7mkAzuX4c?key=bj0q7XTKs2",
-    "classes": [
-      "leak"
+      "Bad Welding",
+      "Excess Reinforcement",
+      "Good Welding",
+      "Spatters",
+      "Porosity",
+      "Crack"
     ]
   }
 ]
