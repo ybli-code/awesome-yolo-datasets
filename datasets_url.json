@@ -1,87 +1,83 @@
 [
   {
-    "row": 861,
-    "ws": "lynkeus",
-    "proj": "vehicle-detection-mgjdd",
-    "ver": 3,
-    "title": "车辆类型检测数据集",
-    "post_id": 4774,
-    "url": "https://app.roboflow.com/ds/0R3VzlPcun?key=Y8U9Wy0D7O",
+    "row": 937,
+    "ws": "orange-yield-detection-erftd",
+    "proj": "orange-yield-detection",
+    "ver": 5,
+    "title": "橘子成熟度检测数据集",
+    "post_id": 4850,
+    "url": "https://app.roboflow.com/ds/QH3WfoK01z?key=lbYcO1A4ks",
     "classes": [
-      "bus",
-      "motorbike",
-      "microbus",
-      "car",
-      "truck",
-      "pickup-van"
+      "ripe",
+      "unripe"
     ]
   },
   {
-    "row": 871,
-    "ws": "haeun-kim-ri91b",
-    "proj": "license-plate-detection-wienp",
+    "row": 951,
+    "ws": "nguyen-van-long",
+    "proj": "pet-detection-fjpyx",
     "ver": 2,
-    "title": "车牌检测数据集",
-    "post_id": 4784,
-    "url": "https://app.roboflow.com/ds/9SW4v8dn6f?key=5SLdsD7Svj",
+    "title": "猫狗检测数据集",
+    "post_id": 4865,
+    "url": "https://app.roboflow.com/ds/U7tjXnUkNG?key=riXalrA9rG",
     "classes": [
-      "LicensePlate"
+      "cat",
+      "dog"
     ]
   },
   {
-    "row": 875,
-    "ws": "prashant-qp3sw",
-    "proj": "traffic-sign-yh4bz",
-    "ver": 3,
-    "title": "交通标志检测数据集",
-    "post_id": 4788,
-    "url": "https://app.roboflow.com/ds/JkoZfFoaXT?key=gBqfIFOCJB",
-    "classes": [
-      "green_traffic_light",
-      "Stop",
-      "Speed Limit -80-",
-      "Speed Limit -60-",
-      "L",
-      "do_not_turn_r",
-      "R",
-      "Speed Limit 30",
-      "do_not_turn_l",
-      "Speed Limit -100-",
-      "red_traffic_light",
-      "Round-About",
-      "Speed Limit -70-",
-      "Speed Bump Ahead",
-      "yellow_traffic_light",
-      "Hazard",
-      "yield sign",
-      "No Entry"
-    ]
-  },
-  {
-    "row": 908,
-    "ws": "pedestrian-detection-qqdeh",
-    "proj": "pedestrian-detection-mdspp",
+    "row": 960,
+    "ws": "bolt-0hkrj",
+    "proj": "tool-hand-auvmg",
     "ver": 1,
-    "title": "行人检测数据集",
-    "post_id": 4821,
-    "url": "https://app.roboflow.com/ds/YT2wCL0EEL?key=wOAxeRsXkP",
+    "title": "手持工具检测数据集",
+    "post_id": 4874,
+    "url": "https://app.roboflow.com/ds/E5w4PflMNS?key=IZfEsluQcK",
     "classes": [
-      "person"
+      "tool",
+      "hand"
     ]
   },
   {
-    "row": 936,
-    "ws": "computer-vision-dibh7",
-    "proj": "bicycle-2",
-    "ver": 2,
-    "title": "自行车检测数据集",
-    "post_id": 4849,
-    "url": "https://app.roboflow.com/ds/nt1CZLJG5l?key=PpItu0ayMP",
+    "row": 980,
+    "ws": "classytamil",
+    "proj": "pcb-component-detection2",
+    "ver": 3,
+    "title": "PCB电子元件检测数据集",
+    "post_id": 4899,
+    "url": "https://app.roboflow.com/ds/l79z5LHcQo?key=dy3QtyWeYc",
     "classes": [
-      "bicycle",
-      "person",
-      "object",
-      "vehicle"
+      "221-resistor",
+      "1201-resistor",
+      "1002-resistor",
+      "transistor",
+      "ams1117 IC",
+      "Diode",
+      "195-resistor",
+      "LED",
+      "capacitor",
+      "jumper female",
+      "connector",
+      "transistor-regulator",
+      "push button",
+      "IC",
+      "esp 32",
+      "six pin push button",
+      "capacitor 470",
+      "jumper",
+      "jumper male"
+    ]
+  },
+  {
+    "row": 982,
+    "ws": "fatmaltaief",
+    "proj": "bird-nest-fxcpy",
+    "ver": 1,
+    "title": "鸟巢检测数据集",
+    "post_id": 4901,
+    "url": "https://app.roboflow.com/ds/JSLfxScFI5?key=YUPuYvhmig",
+    "classes": [
+      "Nest"
     ]
   }
 ]
