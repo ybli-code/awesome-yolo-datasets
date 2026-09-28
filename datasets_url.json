@@ -1,53 +1,18 @@
 [
   {
     "row": 773,
-    "ws": "cha-uqf6a",
-    "proj": "hand-pose-6uyni",
-    "ver": 1,
-    "title": "手部姿态检测数据集",
+    "ws": "direction",
+    "proj": "hand-tracking-direction",
+    "ver": 3,
+    "title": "手势方向检测数据集",
     "post_id": 4686,
-    "url": "https://app.roboflow.com/ds/IeGVddU313?key=UPcnVKtYge",
+    "url": "https://app.roboflow.com/ds/Ihkgctr1pG?key=i7jnztMHCQ",
     "classes": [
-      "Right Hand"
-    ]
-  },
-  {
-    "row": 785,
-    "ws": "robocup-test",
-    "proj": "weed-crop-j7jyw",
-    "ver": 1,
-    "title": "农田杂草检测数据集",
-    "post_id": 4698,
-    "url": "https://app.roboflow.com/ds/nbj3AvRtmi?key=OiZpStyTgm",
-    "classes": [
-      "mal - v3 2022-06-03 9:35am"
-    ]
-  },
-  {
-    "row": 824,
-    "ws": "school-akm8n",
-    "proj": "pistol-detection-5it8y",
-    "ver": 1,
-    "title": "手枪检测数据集",
-    "post_id": 4737,
-    "url": "https://app.roboflow.com/ds/AdherwoE9q?key=KycAZBeSe5",
-    "classes": [
-      "pistol"
-    ]
-  },
-  {
-    "row": 826,
-    "ws": "hi-wzisi",
-    "proj": "phone-du6hl",
-    "ver": 8,
-    "title": "手机检测数据集",
-    "post_id": 4739,
-    "url": "https://app.roboflow.com/ds/UHTzMsftvM?key=rMoAp9eyIh",
-    "classes": [
-      "phone",
-      "person",
-      "people",
-      "phone1"
+      "r",
+      "u",
+      "l",
+      "s",
+      "d"
     ]
   }
 ]
