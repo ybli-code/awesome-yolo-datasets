@@ -1,18 +1,70 @@
 [
   {
-    "row": 773,
-    "ws": "direction",
-    "proj": "hand-tracking-direction",
-    "ver": 3,
-    "title": "手势方向检测数据集",
-    "post_id": 4686,
-    "url": "https://app.roboflow.com/ds/Ihkgctr1pG?key=i7jnztMHCQ",
+    "row": 828,
+    "ws": "kiwi-nan-spmuj",
+    "proj": "traffic-light-7auyu",
+    "ver": 1,
+    "title": "交通信号灯检测数据集",
+    "post_id": 4741,
+    "url": "https://app.roboflow.com/ds/NCJ4YN2chq?key=aMfTRyL1ho",
     "classes": [
-      "r",
-      "u",
-      "l",
-      "s",
-      "d"
+      "red",
+      "green",
+      "red-light",
+      "yellow"
+    ]
+  },
+  {
+    "row": 833,
+    "ws": "facemaskdetection-zvlot",
+    "proj": "face-mask-y1vsd",
+    "ver": 1,
+    "title": "口罩佩戴检测数据集",
+    "post_id": 4746,
+    "url": "https://app.roboflow.com/ds/CyFyyPu3YR?key=V6fzUTq0r9",
+    "classes": [
+      "without_mask",
+      "with_mask",
+      "mask_weared_incorrect"
+    ]
+  },
+  {
+    "row": 837,
+    "ws": "gencs-workspace-djl03",
+    "proj": "smoking-jhufv",
+    "ver": 1,
+    "title": "吸烟行为检测数据集",
+    "post_id": 4750,
+    "url": "https://app.roboflow.com/ds/XlXaQsfEO7?key=EywGEmB703",
+    "classes": [
+      "Vape",
+      "Cigarette"
+    ]
+  },
+  {
+    "row": 840,
+    "ws": "santhoshkumar-v",
+    "proj": "human-fall-e2evv",
+    "ver": 2,
+    "title": "人体跌倒检测数据集",
+    "post_id": 4753,
+    "url": "https://app.roboflow.com/ds/DVLZWkgbbh?key=sNKKfxAT24",
+    "classes": [
+      "Fallen",
+      "Falling"
+    ]
+  },
+  {
+    "row": 844,
+    "ws": "construction-safety-ajvc0",
+    "proj": "construction-safety-qchsx",
+    "ver": 1,
+    "title": "施工安全检测数据集",
+    "post_id": 4757,
+    "url": "https://app.roboflow.com/ds/0TH9Xzkoj0?key=1l3wx5rX3j",
+    "classes": [
+      "Safety-Helmet",
+      "Reflective-Jacket"
     ]
   }
 ]
