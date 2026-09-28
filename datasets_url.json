@@ -1,58 +1,67 @@
 [
   {
-    "row": 332,
-    "ws": "fyp-qtd0e",
-    "proj": "insect-detection-j9mt7",
-    "ver": 2,
-    "title": "昆虫检测数据集",
-    "url": "https://app.roboflow.com/ds/QUj0v5UNo6?key=q5NCEXXdoV",
+    "row": 337,
+    "ws": "aicup-5yzqf",
+    "proj": "uav-ajf13",
+    "ver": 1,
+    "title": "无人机目标检测数据集",
+    "url": "https://app.roboflow.com/ds/rIyE5CteO4?key=ET304OnOyz",
     "classes": [
-      "Fall webworm moth",
-      "Papilio memnon",
-      "Cepora nerissa",
-      "Plagiodera versicolora",
-      "Brown marmorated stink bug",
-      "Clostera",
-      "Torpedo bug",
-      "Spirama",
-      "Oebalus pugnax",
-      "Passionvine hopper",
-      "Batocera rubus",
-      "Batocera rufomaculata",
-      "Yellow spotted stink bug",
-      "Aromia",
-      "Cerura Vinula",
-      "Parasa indetermina",
-      "Spilomelinae",
-      "White-spotted longicorn beetle",
-      "Parasa consocia",
-      "Caterpillar",
-      "Blaberus discoidalis",
-      "Neocurtilla hexadactyla",
-      "Protaetia",
-      "Empoasca",
-      "Eurydema ornata",
-      "Acalolepta",
-      "Red Costate Tiger Moth",
-      "Graphosoma lineatum",
-      "Forest Bug",
-      "Crowned slug moth",
-      "Spotted lanternfly",
-      "Puss moth",
-      "Tibicina haematodes"
+      "drone"
     ]
   },
   {
-    "row": 333,
-    "ws": "college-wwola",
-    "proj": "pallet-detection-moxj7",
-    "ver": 3,
-    "title": "托盘检测数据集",
-    "url": "https://app.roboflow.com/ds/awyz2zDJLB?key=gz0S93Ej3J",
+    "row": 355,
+    "ws": "zoom-awet2",
+    "proj": "dice-1nsjm",
+    "ver": 10,
+    "title": "骰子点数检测数据集",
+    "url": "https://app.roboflow.com/ds/PAPjKPzL9I?key=odCy6Vv0Zl",
     "classes": [
-      "lp",
-      "pallet",
-      "ep"
+      "six",
+      "four",
+      "one",
+      "two",
+      "five",
+      "three"
+    ]
+  },
+  {
+    "row": 370,
+    "ws": "railway-project",
+    "proj": "railway-track-uqhmu",
+    "ver": 11,
+    "title": "铁路轨道缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/9SatxywKja?key=zVjicY4szx",
+    "classes": [
+      "objects",
+      "clip_missing",
+      "normal_track",
+      "crack",
+      "bolt_missing"
+    ]
+  },
+  {
+    "row": 371,
+    "ws": "raykie",
+    "proj": "transformer-aal0z",
+    "ver": 2,
+    "title": "变压器检测数据集",
+    "url": "https://app.roboflow.com/ds/GrTQ6wCL4f?key=wxRi3rtoDb",
+    "classes": [
+      "transformer"
+    ]
+  },
+  {
+    "row": 373,
+    "ws": "s1-s0vr8",
+    "proj": "african-elephant-vs-asian-elephant",
+    "ver": 2,
+    "title": "大象种类检测数据集",
+    "url": "https://app.roboflow.com/ds/37n9l4UGV8?key=LnU9BuuzYS",
+    "classes": [
+      "Asian Elephant",
+      "African Elephant"
     ]
   }
 ]
