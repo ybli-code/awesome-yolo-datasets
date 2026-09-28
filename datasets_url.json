@@ -1,44 +1,100 @@
 [
   {
-    "row": 462,
-    "ws": "ashu-s9lfx",
-    "proj": "fish-j2vym",
-    "ver": 2,
-    "title": "鱼类检测数据集",
-    "post_id": 3071,
-    "url": "https://app.roboflow.com/ds/1MXxKYBP3L?key=bfFaEXUaKc",
+    "row": 511,
+    "ws": "krishibot-mwqke",
+    "proj": "tomato-detection-dp74n",
+    "ver": 1,
+    "title": "番茄成熟度检测数据集",
+    "post_id": 4424,
+    "url": "https://app.roboflow.com/ds/5wTjZ9lrAE?key=xwv4fYRLYR",
     "classes": [
-      "fish"
+      "at risk",
+      "fresh",
+      "rotten",
+      "RipeTomato",
+      "UnripeTomato"
     ]
   },
   {
-    "row": 464,
-    "ws": "invoice-detector",
-    "proj": "adult-child-vrt1p",
+    "row": 523,
+    "ws": "marina-wgvsb",
+    "proj": "safety-helmet-detection-apiwd",
     "ver": 2,
-    "title": "成年人儿童检测数据集",
-    "post_id": 3073,
-    "url": "https://app.roboflow.com/ds/HfETVBXaxr?key=My3OYeJias",
+    "title": "安全帽佩戴检测数据集",
+    "post_id": 4436,
+    "url": "https://app.roboflow.com/ds/3fVa6Qd0J6?key=bpd3ZMlUPx",
     "classes": [
-      "Child",
-      "Adult"
+      "head",
+      "person",
+      "helmet"
     ]
   },
   {
-    "row": 485,
-    "ws": "uet-taxila-x6wdk",
-    "proj": "pest-detection-v9gfo",
-    "ver": 7,
-    "title": "农业害虫检测数据集",
-    "post_id": 3094,
-    "url": "https://app.roboflow.com/ds/4KSJPQI8sd?key=XabiQjXLXr",
+    "row": 532,
+    "ws": "yolov4tiny-wzb2k",
+    "proj": "hand-bo3ot",
+    "ver": 2,
+    "title": "手部检测数据集",
+    "post_id": 4445,
+    "url": "https://app.roboflow.com/ds/uhKqVkMZJk?key=BNbOfFNuRO",
     "classes": [
-      "sawfly",
-      "beetle",
-      "Green-Leafhopper",
-      "grasshopper",
-      "armyworm",
-      "aphid"
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ]
+  },
+  {
+    "row": 560,
+    "ws": "projects-pwwbs",
+    "proj": "tools-digital-display",
+    "ver": 1,
+    "title": "数字显示屏检测数据集",
+    "post_id": 4473,
+    "url": "https://app.roboflow.com/ds/8Crylc1x0I?key=0R51mM4WzZ",
+    "classes": [
+      "lcd",
+      "digital-text",
+      "digital-screen"
+    ]
+  },
+  {
+    "row": 606,
+    "ws": "weld-detection",
+    "proj": "weld-defect-zjejp",
+    "ver": 1,
+    "title": "焊接缺陷检测数据集",
+    "post_id": 4519,
+    "url": "https://app.roboflow.com/ds/tW9sNHdDLg?key=PoCluwNgn0",
+    "classes": [
+      "Bad Welding",
+      "Excess Reinforcement",
+      "Good Welding",
+      "Porosity",
+      "Crack",
+      "Spatters"
     ]
   }
 ]
