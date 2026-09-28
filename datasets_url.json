@@ -1,83 +1,14 @@
 [
   {
-    "row": 716,
-    "ws": "fire-detection-5id9d",
-    "proj": "fire-and-smoke-detection-0t7wg",
-    "ver": 1,
-    "title": "火焰烟雾检测数据集",
-    "post_id": 4629,
-    "url": "https://app.roboflow.com/ds/ogRPdSHHsg?key=guSIQkBFRz",
-    "classes": [
-      "smoke",
-      "fire"
-    ]
-  },
-  {
-    "row": 721,
-    "ws": "vanshika-fiktf",
-    "proj": "industrial-defect-detection-y5uul",
-    "ver": 1,
-    "title": "工业缺陷检测数据集",
-    "post_id": 4634,
-    "url": "https://app.roboflow.com/ds/IhmiHaU8JY?key=P08TpEzFWi",
-    "classes": [
-      "Defect",
-      "Leak",
-      "Rust",
-      "Crack"
-    ]
-  },
-  {
-    "row": 722,
-    "ws": "thousand",
-    "proj": "industrial-wrgmr",
-    "ver": 2,
-    "title": "工业场景检测数据集",
-    "post_id": 4635,
-    "url": "https://app.roboflow.com/ds/KT9vRhAG7g?key=uOuuh4JrjN",
-    "classes": [
-      "Industrial element_graffiti",
-      "Industrial building_tower",
-      "Industrial building_warehouse",
-      "Industrial components_ceiling",
-      "Industrial building_silo",
-      "Industrial components_conveyor belt",
-      "Industrial equipment_tank-barrel",
-      "Industrial components_truss",
-      "Industrial equipment_pipeline"
-    ]
-  },
-  {
-    "row": 723,
-    "ws": "thesis-9wpag",
-    "proj": "steel-defect-detections",
-    "ver": 2,
-    "title": "钢材表面缺陷检测数据集",
-    "post_id": 4636,
-    "url": "https://app.roboflow.com/ds/DbsAZtm0Zu?key=lh4LriuxrP",
-    "classes": [
-      "crazing defect",
-      "scratch defect",
-      "crack defect",
-      "patch defect",
-      "pitted surface defect"
-    ]
-  },
-  {
     "row": 732,
-    "ws": "welding-2bplp",
-    "proj": "weld-quality-inspection-rei9l",
-    "ver": 9,
-    "title": "焊接质量检测数据集",
+    "ws": "study-tv89i",
+    "proj": "welding-defect-2y2ix",
+    "ver": 3,
+    "title": "焊接缺陷检测数据集",
     "post_id": 4645,
-    "url": "https://app.roboflow.com/ds/wsLkkS58bI?key=OHtznaHPEk",
+    "url": "https://app.roboflow.com/ds/hVR1QrbYmA?key=BplL6ybiC2",
     "classes": [
-      "Bad Welding",
-      "Excess Reinforcement",
-      "Good Welding",
-      "Spatters",
-      "Porosity",
-      "Crack"
+      "Defect"
     ]
   }
 ]
