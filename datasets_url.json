@@ -1,100 +1,63 @@
 [
   {
-    "row": 511,
-    "ws": "krishibot-mwqke",
-    "proj": "tomato-detection-dp74n",
+    "row": 612,
+    "ws": "windturbineproject",
+    "proj": "wind-turbine-z7ph2",
+    "ver": 9,
+    "title": "风机叶片缺陷检测数据集",
+    "post_id": 4525,
+    "url": "https://app.roboflow.com/ds/DlKWUnQi8S?key=z7RWJLBvDZ",
+    "classes": [
+      "Lighting-Strike",
+      "PU TAPE DAMAGE",
+      "OIL LEAKAGE",
+      "Pressure Side-2",
+      "Pressure Side-1",
+      "LE LAMINATE DAMAGE",
+      "Pressure Side-3",
+      "suction side-3",
+      "suction side-2",
+      "suction side-1",
+      "PAINT DAMAGE",
+      "Leading side-2",
+      "Leading side-3",
+      "Leading side-1"
+    ]
+  },
+  {
+    "row": 616,
+    "ws": "kdigital",
+    "proj": "electric-scooter-cd7hw",
     "ver": 1,
-    "title": "番茄成熟度检测数据集",
-    "post_id": 4424,
-    "url": "https://app.roboflow.com/ds/5wTjZ9lrAE?key=xwv4fYRLYR",
+    "title": "电动滑板车检测数据集",
+    "post_id": 4529,
+    "url": "https://app.roboflow.com/ds/5WZkXMmxCM?key=NpkfpDxwaS",
     "classes": [
-      "at risk",
-      "fresh",
-      "rotten",
-      "RipeTomato",
-      "UnripeTomato"
+      "electric scooter"
     ]
   },
   {
-    "row": 523,
-    "ws": "marina-wgvsb",
-    "proj": "safety-helmet-detection-apiwd",
-    "ver": 2,
-    "title": "安全帽佩戴检测数据集",
-    "post_id": 4436,
-    "url": "https://app.roboflow.com/ds/3fVa6Qd0J6?key=bpd3ZMlUPx",
-    "classes": [
-      "head",
-      "person",
-      "helmet"
-    ]
-  },
-  {
-    "row": 532,
-    "ws": "yolov4tiny-wzb2k",
-    "proj": "hand-bo3ot",
-    "ver": 2,
-    "title": "手部检测数据集",
-    "post_id": 4445,
-    "url": "https://app.roboflow.com/ds/uhKqVkMZJk?key=BNbOfFNuRO",
-    "classes": [
-      "A",
-      "B",
-      "C",
-      "D",
-      "E",
-      "F",
-      "G",
-      "H",
-      "I",
-      "J",
-      "K",
-      "L",
-      "M",
-      "N",
-      "O",
-      "P",
-      "Q",
-      "R",
-      "S",
-      "T",
-      "U",
-      "V",
-      "W",
-      "X",
-      "Y",
-      "Z"
-    ]
-  },
-  {
-    "row": 560,
-    "ws": "projects-pwwbs",
-    "proj": "tools-digital-display",
+    "row": 663,
+    "ws": "college-s1wlh",
+    "proj": "gun-morwg",
     "ver": 1,
-    "title": "数字显示屏检测数据集",
-    "post_id": 4473,
-    "url": "https://app.roboflow.com/ds/8Crylc1x0I?key=0R51mM4WzZ",
+    "title": "枪支检测数据集",
+    "post_id": 4576,
+    "url": "https://app.roboflow.com/ds/qIvmG031JR?key=kbZEck7OBj",
     "classes": [
-      "lcd",
-      "digital-text",
-      "digital-screen"
+      "Gun"
     ]
   },
   {
-    "row": 606,
-    "ws": "weld-detection",
-    "proj": "weld-defect-zjejp",
-    "ver": 1,
-    "title": "焊接缺陷检测数据集",
-    "post_id": 4519,
-    "url": "https://app.roboflow.com/ds/tW9sNHdDLg?key=PoCluwNgn0",
+    "row": 685,
+    "ws": "pipe-leak",
+    "proj": "pipe-leak-yshqq",
+    "ver": 6,
+    "title": "管道泄漏检测数据集",
+    "post_id": 4598,
+    "url": "https://app.roboflow.com/ds/F7mkAzuX4c?key=bj0q7XTKs2",
     "classes": [
-      "Bad Welding",
-      "Excess Reinforcement",
-      "Good Welding",
-      "Porosity",
-      "Crack",
-      "Spatters"
+      "leak"
     ]
   }
 ]
