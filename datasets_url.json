@@ -1,76 +1,53 @@
 [
   {
-    "row": 733,
-    "ws": "customdataset-gwkhb",
-    "proj": "camel-detection-lfcvf",
+    "row": 773,
+    "ws": "cha-uqf6a",
+    "proj": "hand-pose-6uyni",
     "ver": 1,
-    "title": "骆驼检测数据集",
-    "post_id": 4646,
-    "url": "https://app.roboflow.com/ds/BmVw7bLylE?key=2aFlzsqkoS",
+    "title": "手部姿态检测数据集",
+    "post_id": 4686,
+    "url": "https://app.roboflow.com/ds/IeGVddU313?key=UPcnVKtYge",
     "classes": [
-      "0"
+      "Right Hand"
     ]
   },
   {
-    "row": 735,
-    "ws": "tian-jian-4ywmu",
-    "proj": "wildlife-detection-qgiwz",
-    "ver": 24,
-    "title": "野生动物检测数据集",
-    "post_id": 4648,
-    "url": "https://app.roboflow.com/ds/zU5MsbYWOd?key=RChhDJ8AMG",
-    "classes": [
-      "deer",
-      "dog",
-      "cat",
-      "chicken",
-      "elephant"
-    ]
-  },
-  {
-    "row": 743,
-    "ws": "xavier-byjfc",
-    "proj": "hippo-species",
-    "ver": 3,
-    "title": "河马检测数据集",
-    "post_id": 4656,
-    "url": "https://app.roboflow.com/ds/yGbbdkDxi8?key=Lu8ssZDtPf",
-    "classes": [
-      "Hippos",
-      "Common hippopotamus",
-      "Pgymy hippopotamous"
-    ]
-  },
-  {
-    "row": 754,
-    "ws": "james-workspace-gacjp",
-    "proj": "bird-species-3fgbs",
-    "ver": 2,
-    "title": "鸟类物种检测数据集",
-    "post_id": 4667,
-    "url": "https://app.roboflow.com/ds/gov8pGbG5H?key=6Xizsjcqmj",
-    "classes": [
-      "ringneck_parakeet",
-      "rainbow_lorikeet",
-      "brushtail_possum",
-      "common_myna",
-      "common_starling"
-    ]
-  },
-  {
-    "row": 770,
-    "ws": "irsyad-wwhek",
-    "proj": "chili-disease-zzzzm",
+    "row": 785,
+    "ws": "robocup-test",
+    "proj": "weed-crop-j7jyw",
     "ver": 1,
-    "title": "辣椒病害检测数据集",
-    "post_id": 4683,
-    "url": "https://app.roboflow.com/ds/H4KhmRwsoK?key=Zkckr7UVGb",
+    "title": "农田杂草检测数据集",
+    "post_id": 4698,
+    "url": "https://app.roboflow.com/ds/nbj3AvRtmi?key=OiZpStyTgm",
     "classes": [
-      "Bercak Daun Serkospora",
-      "Buah Cabai Sehat",
-      "Busuk Buah Antraknosa",
-      "Daun Cabai Sehat",
-      "Virus Kuning"
+      "mal - v3 2022-06-03 9:35am"
+    ]
+  },
+  {
+    "row": 824,
+    "ws": "school-akm8n",
+    "proj": "pistol-detection-5it8y",
+    "ver": 1,
+    "title": "手枪检测数据集",
+    "post_id": 4737,
+    "url": "https://app.roboflow.com/ds/AdherwoE9q?key=KycAZBeSe5",
+    "classes": [
+      "pistol"
+    ]
+  },
+  {
+    "row": 826,
+    "ws": "hi-wzisi",
+    "proj": "phone-du6hl",
+    "ver": 8,
+    "title": "手机检测数据集",
+    "post_id": 4739,
+    "url": "https://app.roboflow.com/ds/UHTzMsftvM?key=rMoAp9eyIh",
+    "classes": [
+      "phone",
+      "person",
+      "people",
+      "phone1"
     ]
   }
 ]
