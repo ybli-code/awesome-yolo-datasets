@@ -1,67 +1,58 @@
 [
   {
-    "row": 337,
-    "ws": "aicup-5yzqf",
-    "proj": "uav-ajf13",
-    "ver": 1,
-    "title": "无人机目标检测数据集",
-    "url": "https://app.roboflow.com/ds/rIyE5CteO4?key=ET304OnOyz",
-    "classes": [
-      "drone"
-    ]
-  },
-  {
-    "row": 355,
-    "ws": "zoom-awet2",
-    "proj": "dice-1nsjm",
-    "ver": 10,
-    "title": "骰子点数检测数据集",
-    "url": "https://app.roboflow.com/ds/PAPjKPzL9I?key=odCy6Vv0Zl",
-    "classes": [
-      "six",
-      "four",
-      "one",
-      "two",
-      "five",
-      "three"
-    ]
-  },
-  {
-    "row": 370,
-    "ws": "railway-project",
-    "proj": "railway-track-uqhmu",
+    "row": 420,
+    "ws": "fingernail-ztwys",
+    "proj": "fingernail-segmentation-yy1l7",
     "ver": 11,
-    "title": "铁路轨道缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/9SatxywKja?key=zVjicY4szx",
+    "title": "指甲检测数据集",
+    "url": "https://app.roboflow.com/ds/FXqNEx1Loh?key=oPEaZcaRR8",
     "classes": [
-      "objects",
-      "clip_missing",
-      "normal_track",
-      "crack",
-      "bolt_missing"
+      "Fingernail"
     ]
   },
   {
-    "row": 371,
-    "ws": "raykie",
-    "proj": "transformer-aal0z",
+    "row": 432,
+    "ws": "nbmachinevision",
+    "proj": "pcb-defect-vagef",
     "ver": 2,
-    "title": "变压器检测数据集",
-    "url": "https://app.roboflow.com/ds/GrTQ6wCL4f?key=wxRi3rtoDb",
+    "title": "PCB缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/kaaI1QDu8z?key=KKi3z2c6WA",
     "classes": [
-      "transformer"
+      "spillover",
+      "lack_of_part",
+      "miss_welding",
+      "Short_circuit",
+      "damged",
+      "slug",
+      "redundant"
     ]
   },
   {
-    "row": 373,
-    "ws": "s1-s0vr8",
-    "proj": "african-elephant-vs-asian-elephant",
+    "row": 449,
+    "ws": "pitcropweed",
+    "proj": "weed-crop-kk1cu",
     "ver": 2,
-    "title": "大象种类检测数据集",
-    "url": "https://app.roboflow.com/ds/37n9l4UGV8?key=LnU9BuuzYS",
+    "title": "农作物杂草检测数据集",
+    "url": "https://app.roboflow.com/ds/qn0YKN33uu?key=KEu0K9VWaW",
     "classes": [
-      "Asian Elephant",
-      "African Elephant"
+      "ECHCG_Ve",
+      "SOLNI_V1",
+      "ECHCG",
+      "SOLNI_Vc",
+      "CYPRO_max",
+      "ECHCG_V2",
+      "ECHCG_V1",
+      "CYPRO",
+      "ZEAMX_V1",
+      "ZEAMX_V3",
+      "NC",
+      "ZEAMX_V4",
+      "ZEAMX",
+      "OE",
+      "SOLNI_V2",
+      "POROL",
+      "CYPRO_min",
+      "SOLNI"
     ]
   }
 ]
