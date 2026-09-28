@@ -1,58 +1,44 @@
 [
   {
-    "row": 420,
-    "ws": "fingernail-ztwys",
-    "proj": "fingernail-segmentation-yy1l7",
-    "ver": 11,
-    "title": "指甲检测数据集",
-    "url": "https://app.roboflow.com/ds/FXqNEx1Loh?key=oPEaZcaRR8",
+    "row": 462,
+    "ws": "ashu-s9lfx",
+    "proj": "fish-j2vym",
+    "ver": 2,
+    "title": "鱼类检测数据集",
+    "post_id": 3071,
+    "url": "https://app.roboflow.com/ds/1MXxKYBP3L?key=bfFaEXUaKc",
     "classes": [
-      "Fingernail"
+      "fish"
     ]
   },
   {
-    "row": 432,
-    "ws": "nbmachinevision",
-    "proj": "pcb-defect-vagef",
+    "row": 464,
+    "ws": "invoice-detector",
+    "proj": "adult-child-vrt1p",
     "ver": 2,
-    "title": "PCB缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/kaaI1QDu8z?key=KKi3z2c6WA",
+    "title": "成年人儿童检测数据集",
+    "post_id": 3073,
+    "url": "https://app.roboflow.com/ds/HfETVBXaxr?key=My3OYeJias",
     "classes": [
-      "spillover",
-      "lack_of_part",
-      "miss_welding",
-      "Short_circuit",
-      "damged",
-      "slug",
-      "redundant"
+      "Child",
+      "Adult"
     ]
   },
   {
-    "row": 449,
-    "ws": "pitcropweed",
-    "proj": "weed-crop-kk1cu",
-    "ver": 2,
-    "title": "农作物杂草检测数据集",
-    "url": "https://app.roboflow.com/ds/qn0YKN33uu?key=KEu0K9VWaW",
+    "row": 485,
+    "ws": "uet-taxila-x6wdk",
+    "proj": "pest-detection-v9gfo",
+    "ver": 7,
+    "title": "农业害虫检测数据集",
+    "post_id": 3094,
+    "url": "https://app.roboflow.com/ds/4KSJPQI8sd?key=XabiQjXLXr",
     "classes": [
-      "ECHCG_Ve",
-      "SOLNI_V1",
-      "ECHCG",
-      "SOLNI_Vc",
-      "CYPRO_max",
-      "ECHCG_V2",
-      "ECHCG_V1",
-      "CYPRO",
-      "ZEAMX_V1",
-      "ZEAMX_V3",
-      "NC",
-      "ZEAMX_V4",
-      "ZEAMX",
-      "OE",
-      "SOLNI_V2",
-      "POROL",
-      "CYPRO_min",
-      "SOLNI"
+      "sawfly",
+      "beetle",
+      "Green-Leafhopper",
+      "grasshopper",
+      "armyworm",
+      "aphid"
     ]
   }
 ]
