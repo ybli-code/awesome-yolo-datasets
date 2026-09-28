@@ -1,37 +1,28 @@
 [
   {
-    "row": 174,
-    "ws": "ai-project-i3wje",
-    "proj": "waste-detection-vqkjo",
-    "ver": 10,
-    "title": "垃圾检测数据集",
-    "post_id": 2782,
-    "url": "https://app.roboflow.com/ds/SWTNvY9zHm?key=xCOVDIufVU",
+    "row": 199,
+    "ws": "opium-poppy",
+    "proj": "poppy-qgghf",
+    "ver": 2,
+    "title": "罂粟检测数据集",
+    "post_id": 2808,
+    "url": "https://app.roboflow.com/ds/NoxIjTvfSV?key=hriea6wYgn",
     "classes": [
-      "plastic_bottle",
-      "cardboard_bowl",
-      "plastic_cup",
-      "scrap_paper",
-      "chemical_plastic_gallon",
-      "plastic_spoon",
-      "cardboard_box",
-      "chemical_spray_can",
-      "battery",
-      "snack_bag",
-      "straw",
-      "can",
-      "paint_bucket",
-      "plastic_box",
-      "plastic_cultery",
-      "plastic_bottle_cap",
-      "reuseable_paper",
-      "plastic_bag",
-      "plastic_cup_lid",
-      "stick",
-      "chemical_plastic_bottle",
-      "light_bulb",
-      "coltello",
-      "scrap_plastic"
+      "poppy-opium"
+    ]
+  },
+  {
+    "row": 215,
+    "ws": "new-workspace-udjcf",
+    "proj": "grape-disease",
+    "ver": 1,
+    "title": "葡萄病害检测数据集",
+    "post_id": 2824,
+    "url": "https://app.roboflow.com/ds/0YB5SPmkVS?key=7NkieQg5A3",
+    "classes": [
+      "Esca",
+      "Black_rot",
+      "Healthy"
     ]
   }
 ]
