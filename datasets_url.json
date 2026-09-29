@@ -1,31 +1,14 @@
 [
   {
-    "row": 235,
-    "ws": "turbines",
-    "proj": "turbine-ffnd9",
-    "ver": 5,
-    "title": "风机叶片缺陷检测数据集",
-    "post_id": 2844,
-    "url": "https://app.roboflow.com/ds/LiFhEWj8eX?key=e3Di8bK7cv",
+    "row": 1006,
+    "ws": "segmentation-iugrk",
+    "proj": "tree-crown-detection-tfpkr",
+    "ver": 10,
+    "title": "航拍树冠检测数据集",
+    "post_id": 4928,
+    "url": "https://app.roboflow.com/ds/gN9eTzCoTd?key=dFW7afo4PD",
     "classes": [
-      "damage",
-      "dirt"
-    ]
-  },
-  {
-    "row": 244,
-    "ws": "my-workspace-ebwf4",
-    "proj": "flowers-pciqg",
-    "ver": 1,
-    "title": "花卉检测数据集",
-    "post_id": 2853,
-    "url": "https://app.roboflow.com/ds/z9rjGIZmuV?key=O6QseBd2SK",
-    "classes": [
-      "Flowers 4",
-      "Flower 2",
-      "Flowers 5a",
-      "Flowers 3",
-      "Flowers"
+      "Tree"
     ]
   }
 ]
