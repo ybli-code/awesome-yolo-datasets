@@ -1,83 +1,44 @@
 [
   {
-    "row": 309,
-    "ws": "facemaskdetection-zvlot",
-    "proj": "face-mask-y1vsd",
-    "ver": 1,
-    "title": "口罩佩戴检测数据集",
-    "post_id": 2918,
-    "url": "https://app.roboflow.com/ds/CyFyyPu3YR?key=V6fzUTq0r9",
+    "row": 335,
+    "ws": "raja-8xfja",
+    "proj": "medical-waste-yggno",
+    "ver": 2,
+    "title": "医疗废物分类检测数据集",
+    "post_id": 2944,
+    "url": "https://app.roboflow.com/ds/KUDznSerBa?key=jrggnHd6a6",
     "classes": [
-      "without_mask",
-      "with_mask",
-      "mask_weared_incorrect"
+      "Pathological",
+      "General",
+      "Sharps",
+      "Infectious"
     ]
   },
   {
-    "row": 310,
-    "ws": "fire-detection-5id9d",
-    "proj": "fire-and-smoke-detection-0t7wg",
-    "ver": 1,
-    "title": "火灾烟雾检测数据集",
-    "post_id": 2919,
-    "url": "https://app.roboflow.com/ds/ogRPdSHHsg?key=guSIQkBFRz",
+    "row": 361,
+    "ws": "project10",
+    "proj": "glasses-zjp2z",
+    "ver": 2,
+    "title": "眼镜检测数据集",
+    "post_id": 2970,
+    "url": "https://app.roboflow.com/ds/nGD2rcJrvb?key=LsisutwF3E",
     "classes": [
-      "smoke",
-      "fire"
+      "glasses"
     ]
   },
   {
-    "row": 311,
-    "ws": "pedestrian-detection-qqdeh",
-    "proj": "pedestrian-detection-mdspp",
-    "ver": 1,
-    "title": "行人检测数据集",
-    "post_id": 2920,
-    "url": "https://app.roboflow.com/ds/YT2wCL0EEL?key=wOAxeRsXkP",
+    "row": 384,
+    "ws": "cowpea",
+    "proj": "cowpea",
+    "ver": 23,
+    "title": "豇豆病害检测数据集",
+    "post_id": 2993,
+    "url": "https://app.roboflow.com/ds/QD9RFoFTrd?key=XgY8fSIwR7",
     "classes": [
-      "person"
-    ]
-  },
-  {
-    "row": 312,
-    "ws": "prashant-qp3sw",
-    "proj": "traffic-sign-yh4bz",
-    "ver": 3,
-    "title": "交通标志检测数据集",
-    "post_id": 2921,
-    "url": "https://app.roboflow.com/ds/JkoZfFoaXT?key=gBqfIFOCJB",
-    "classes": [
-      "green_traffic_light",
-      "Stop",
-      "Speed Limit -80-",
-      "Speed Limit -60-",
-      "L",
-      "do_not_turn_r",
-      "R",
-      "Speed Limit 30",
-      "do_not_turn_l",
-      "Speed Limit -100-",
-      "red_traffic_light",
-      "Round-About",
-      "Speed Limit -70-",
-      "Speed Bump Ahead",
-      "yellow_traffic_light",
-      "Hazard",
-      "yield sign",
-      "No Entry"
-    ]
-  },
-  {
-    "row": 314,
-    "ws": "xprize-puvm8",
-    "proj": "smoke-detection-5tkur",
-    "ver": 3,
-    "title": "烟雾检测数据集",
-    "post_id": 2923,
-    "url": "https://app.roboflow.com/ds/IMC6kVm8OF?key=vQnp4orv0W",
-    "classes": [
-      "fire",
-      "smoke"
+      "Mosaic virus",
+      "Septoria leaf spot",
+      "Healthy",
+      "Bacterial wilt"
     ]
   }
 ]
