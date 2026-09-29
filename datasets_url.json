@@ -1,15 +1,38 @@
 [
   {
-    "row": 660,
-    "ws": "roboflow-100",
-    "proj": "cable-damage",
-    "ver": 2,
-    "title": "电缆损伤检测数据集",
-    "post_id": 4573,
-    "url": "https://app.roboflow.com/ds/ryTT2hOAI8?key=hmoS7w93Mo",
+    "row": 715,
+    "ws": "roboflow-universe-projects",
+    "proj": "license-plate-recognition-rxg4e",
+    "ver": 13,
+    "title": "车牌识别检测数据集",
+    "post_id": 4628,
+    "url": "https://app.roboflow.com/ds/degByZPumv?key=KFJLOawxTQ",
     "classes": [
-      "break",
-      "thunderbolt"
+      "License_Plate"
+    ]
+  },
+  {
+    "row": 719,
+    "ws": "smoking-rmj9c",
+    "proj": "flower-9b8tr",
+    "ver": 1,
+    "title": "花卉检测数据集",
+    "post_id": 4632,
+    "url": "https://app.roboflow.com/ds/UAHRqsmdLD?key=DtuyuOMbft",
+    "classes": [
+      "flower"
+    ]
+  },
+  {
+    "row": 724,
+    "ws": "mushroom10",
+    "proj": "poisonous-mushroom-bxbbd",
+    "ver": 1,
+    "title": "有毒蘑菇检测数据集",
+    "post_id": 4637,
+    "url": "https://app.roboflow.com/ds/UIxUK4Fp26?key=mSZkHZUYTy",
+    "classes": [
+      "Poisonous Mushroom"
     ]
   }
 ]
