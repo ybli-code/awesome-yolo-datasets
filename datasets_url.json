@@ -1,14 +1,22 @@
 [
   {
-    "row": 1006,
-    "ws": "segmentation-iugrk",
-    "proj": "tree-crown-detection-tfpkr",
-    "ver": 10,
-    "title": "航拍树冠检测数据集",
-    "post_id": 4928,
-    "url": "https://app.roboflow.com/ds/gN9eTzCoTd?key=dFW7afo4PD",
+    "row": 235,
+    "ws": "beijing-university-mgsyf",
+    "proj": "wind-turbine-iw8gk",
+    "ver": 2,
+    "title": "风机叶片缺陷检测数据集",
+    "post_id": 2844,
+    "url": "https://app.roboflow.com/ds/AjwKX81Xdj?key=teC2utzJcU",
     "classes": [
-      "Tree"
+      "表面腐蚀",
+      "雷击烧痕",
+      "叶尖开放性损坏",
+      "表面附着物",
+      "表面灰尘油污",
+      "非开放性开裂",
+      "前缘腐蚀",
+      "表面涂料脱落",
+      "表面砂眼不平"
     ]
   }
 ]
