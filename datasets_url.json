@@ -1,21 +1,83 @@
 [
   {
-    "row": 307,
-    "ws": "birdx-zrczv",
-    "proj": "bird-species-cz5yl",
-    "ver": 6,
-    "title": "鸟类物种检测数据集",
-    "post_id": 2916,
-    "url": "https://app.roboflow.com/ds/Ui6mzDZHQo?key=2Ep7LCbAZD",
+    "row": 309,
+    "ws": "facemaskdetection-zvlot",
+    "proj": "face-mask-y1vsd",
+    "ver": 1,
+    "title": "口罩佩戴检测数据集",
+    "post_id": 2918,
+    "url": "https://app.roboflow.com/ds/CyFyyPu3YR?key=V6fzUTq0r9",
     "classes": [
-      "cernicalo",
-      "vencejo",
-      "gorrion",
-      "verdecillo",
-      "Estornino",
-      "golondrina",
-      "canario",
-      "curruca"
+      "without_mask",
+      "with_mask",
+      "mask_weared_incorrect"
+    ]
+  },
+  {
+    "row": 310,
+    "ws": "fire-detection-5id9d",
+    "proj": "fire-and-smoke-detection-0t7wg",
+    "ver": 1,
+    "title": "火灾烟雾检测数据集",
+    "post_id": 2919,
+    "url": "https://app.roboflow.com/ds/ogRPdSHHsg?key=guSIQkBFRz",
+    "classes": [
+      "smoke",
+      "fire"
+    ]
+  },
+  {
+    "row": 311,
+    "ws": "pedestrian-detection-qqdeh",
+    "proj": "pedestrian-detection-mdspp",
+    "ver": 1,
+    "title": "行人检测数据集",
+    "post_id": 2920,
+    "url": "https://app.roboflow.com/ds/YT2wCL0EEL?key=wOAxeRsXkP",
+    "classes": [
+      "person"
+    ]
+  },
+  {
+    "row": 312,
+    "ws": "prashant-qp3sw",
+    "proj": "traffic-sign-yh4bz",
+    "ver": 3,
+    "title": "交通标志检测数据集",
+    "post_id": 2921,
+    "url": "https://app.roboflow.com/ds/JkoZfFoaXT?key=gBqfIFOCJB",
+    "classes": [
+      "green_traffic_light",
+      "Stop",
+      "Speed Limit -80-",
+      "Speed Limit -60-",
+      "L",
+      "do_not_turn_r",
+      "R",
+      "Speed Limit 30",
+      "do_not_turn_l",
+      "Speed Limit -100-",
+      "red_traffic_light",
+      "Round-About",
+      "Speed Limit -70-",
+      "Speed Bump Ahead",
+      "yellow_traffic_light",
+      "Hazard",
+      "yield sign",
+      "No Entry"
+    ]
+  },
+  {
+    "row": 314,
+    "ws": "xprize-puvm8",
+    "proj": "smoke-detection-5tkur",
+    "ver": 3,
+    "title": "烟雾检测数据集",
+    "post_id": 2923,
+    "url": "https://app.roboflow.com/ds/IMC6kVm8OF?key=vQnp4orv0W",
+    "classes": [
+      "fire",
+      "smoke"
     ]
   }
 ]
