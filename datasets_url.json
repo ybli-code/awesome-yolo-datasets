@@ -1,26 +1,14 @@
 [
   {
-    "row": 964,
-    "ws": "datario-c8sgs",
-    "proj": "golf-ball-detection-r3lqj",
-    "ver": 4,
-    "title": "高尔夫球检测数据集",
-    "post_id": 4879,
-    "url": "https://app.roboflow.com/ds/R6yFg3BmPW?key=VPhLJ224N5",
-    "classes": [
-      "Golf-ball"
-    ]
-  },
-  {
     "row": 965,
-    "ws": "datario-c8sgs",
-    "proj": "golf-ball-detection-r3lqj",
-    "ver": 4,
+    "ws": "sashin-guy",
+    "proj": "golf-s4mfl",
+    "ver": 1,
     "title": "高尔夫球定位检测数据集",
     "post_id": 4880,
-    "url": "https://app.roboflow.com/ds/R6yFg3BmPW?key=VPhLJ224N5",
+    "url": "https://app.roboflow.com/ds/1sZFsidtlD?key=WB0Wj3qgpf",
     "classes": [
-      "Golf-ball"
+      "golfball"
     ]
   }
 ]
