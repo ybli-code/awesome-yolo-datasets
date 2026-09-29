@@ -1,28 +1,31 @@
 [
   {
-    "row": 199,
-    "ws": "opium-poppy",
-    "proj": "poppy-qgghf",
-    "ver": 2,
-    "title": "罂粟检测数据集",
-    "post_id": 2808,
-    "url": "https://app.roboflow.com/ds/NoxIjTvfSV?key=hriea6wYgn",
+    "row": 235,
+    "ws": "turbines",
+    "proj": "turbine-ffnd9",
+    "ver": 5,
+    "title": "风机叶片缺陷检测数据集",
+    "post_id": 2844,
+    "url": "https://app.roboflow.com/ds/LiFhEWj8eX?key=e3Di8bK7cv",
     "classes": [
-      "poppy-opium"
+      "damage",
+      "dirt"
     ]
   },
   {
-    "row": 215,
-    "ws": "new-workspace-udjcf",
-    "proj": "grape-disease",
+    "row": 244,
+    "ws": "my-workspace-ebwf4",
+    "proj": "flowers-pciqg",
     "ver": 1,
-    "title": "葡萄病害检测数据集",
-    "post_id": 2824,
-    "url": "https://app.roboflow.com/ds/0YB5SPmkVS?key=7NkieQg5A3",
+    "title": "花卉检测数据集",
+    "post_id": 2853,
+    "url": "https://app.roboflow.com/ds/z9rjGIZmuV?key=O6QseBd2SK",
     "classes": [
-      "Esca",
-      "Black_rot",
-      "Healthy"
+      "Flowers 4",
+      "Flower 2",
+      "Flowers 5a",
+      "Flowers 3",
+      "Flowers"
     ]
   }
 ]
