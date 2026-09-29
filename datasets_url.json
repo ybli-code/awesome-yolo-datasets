@@ -1,48 +1,26 @@
 [
   {
-    "row": 923,
-    "ws": "savan-x6w9q",
-    "proj": "receipt-rlnml",
-    "ver": 3,
-    "title": "发票票据检测数据集",
-    "post_id": 4836,
-    "url": "https://app.roboflow.com/ds/K5TjV2BM5I?key=6RF8sa35XR",
+    "row": 964,
+    "ws": "datario-c8sgs",
+    "proj": "golf-ball-detection-r3lqj",
+    "ver": 4,
+    "title": "高尔夫球检测数据集",
+    "post_id": 4879,
+    "url": "https://app.roboflow.com/ds/R6yFg3BmPW?key=VPhLJ224N5",
     "classes": [
-      "Item",
-      "Address",
-      "TotalPrice",
-      "Subtotal",
-      "Title",
-      "Tax",
-      "OrderId",
-      "Date"
+      "Golf-ball"
     ]
   },
   {
-    "row": 929,
-    "ws": "annproject-zu8n9",
-    "proj": "rat-detection-6ezx2",
-    "ver": 3,
-    "title": "老鼠检测数据集",
-    "post_id": 4842,
-    "url": "https://app.roboflow.com/ds/clAuhSLdKw?key=ZiCuhIcRYu",
+    "row": 965,
+    "ws": "datario-c8sgs",
+    "proj": "golf-ball-detection-r3lqj",
+    "ver": 4,
+    "title": "高尔夫球定位检测数据集",
+    "post_id": 4880,
+    "url": "https://app.roboflow.com/ds/R6yFg3BmPW?key=VPhLJ224N5",
     "classes": [
-      "rat detection - v10 2023-04-10 5:08pm",
-      "rat detection - v2 2024-08-03 2:50pm",
-      "rat detection - v10 2023-04-10 5-08pm"
-    ]
-  },
-  {
-    "row": 934,
-    "ws": "fajars-workspace-odgao",
-    "proj": "truck-dan-pickup",
-    "ver": 3,
-    "title": "皮卡卡车检测数据集",
-    "post_id": 4847,
-    "url": "https://app.roboflow.com/ds/f35WMwJu9c?key=aoO5zroeJf",
-    "classes": [
-      "Pick-up",
-      "Truck"
+      "Golf-ball"
     ]
   }
 ]
