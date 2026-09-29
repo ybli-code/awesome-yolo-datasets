@@ -1,44 +1,40 @@
 [
   {
-    "row": 335,
-    "ws": "raja-8xfja",
-    "proj": "medical-waste-yggno",
-    "ver": 2,
-    "title": "医疗废物分类检测数据集",
-    "post_id": 2944,
-    "url": "https://app.roboflow.com/ds/KUDznSerBa?key=jrggnHd6a6",
+    "row": 408,
+    "ws": "bb-1gavx",
+    "proj": "food-detection-spaqs",
+    "ver": 1,
+    "title": "食品新鲜度检测数据集",
+    "post_id": 3017,
+    "url": "https://app.roboflow.com/ds/pe4loiHlvi?key=bDjXKx2DBv",
     "classes": [
-      "Pathological",
-      "General",
-      "Sharps",
-      "Infectious"
+      "banana",
+      "fresh-20%",
+      "sweet-potato",
+      "fresh-90%",
+      "un-usable",
+      "cucumber",
+      "Rotten",
+      "fresh-70%",
+      "tomato",
+      "apple",
+      "potato",
+      "fresh-20-",
+      "fresh-90-",
+      "fresh-70-",
+      "okra"
     ]
   },
   {
-    "row": 361,
-    "ws": "project10",
-    "proj": "glasses-zjp2z",
-    "ver": 2,
-    "title": "眼镜检测数据集",
-    "post_id": 2970,
-    "url": "https://app.roboflow.com/ds/nGD2rcJrvb?key=LsisutwF3E",
+    "row": 430,
+    "ws": "nust-5tnkk",
+    "proj": "knife-detection-v5urd",
+    "ver": 1,
+    "title": "刀具检测数据集",
+    "post_id": 3039,
+    "url": "https://app.roboflow.com/ds/CdAHfutD4G?key=SL3HILD41D",
     "classes": [
-      "glasses"
-    ]
-  },
-  {
-    "row": 384,
-    "ws": "cowpea",
-    "proj": "cowpea",
-    "ver": 23,
-    "title": "豇豆病害检测数据集",
-    "post_id": 2993,
-    "url": "https://app.roboflow.com/ds/QD9RFoFTrd?key=XgY8fSIwR7",
-    "classes": [
-      "Mosaic virus",
-      "Septoria leaf spot",
-      "Healthy",
-      "Bacterial wilt"
+      "knife"
     ]
   }
 ]
