@@ -1,87 +1,21 @@
 [
   {
-    "row": 301,
-    "ws": "commanderye",
-    "proj": "ship-detection-szqnm",
-    "ver": 2,
-    "title": "海上船只检测数据集",
-    "post_id": 2910,
-    "url": "https://app.roboflow.com/ds/uuyseXJn5x?key=ZjCV0kLyvC",
-    "classes": [
-      "sailboat",
-      "warship",
-      "container ship",
-      "canoe",
-      "speedboat",
-      "passenger ship",
-      "fishing boat",
-      "tanker",
-      "engineering ship",
-      "kayak",
-      "cargo ship"
-    ]
-  },
-  {
-    "row": 302,
-    "ws": "lynkeus",
-    "proj": "vehicle-detection-mgjdd",
-    "ver": 3,
-    "title": "车辆检测数据集",
-    "post_id": 2911,
-    "url": "https://app.roboflow.com/ds/0R3VzlPcun?key=Y8U9Wy0D7O",
-    "classes": [
-      "bus",
-      "motorbike",
-      "microbus",
-      "car",
-      "truck",
-      "pickup-van"
-    ]
-  },
-  {
-    "row": 303,
-    "ws": "neural-networks-research",
-    "proj": "hard-hat-detection-62dxm",
-    "ver": 10,
-    "title": "安全帽检测数据集",
-    "post_id": 2912,
-    "url": "https://app.roboflow.com/ds/oXgIYn9etG?key=WS65y9FHMk",
-    "classes": [
-      "head",
-      "person",
-      "helmet"
-    ]
-  },
-  {
-    "row": 305,
-    "ws": "fruiiiiit",
-    "proj": "fruits-hriyf",
-    "ver": 2,
-    "title": "水果检测数据集",
-    "post_id": 2914,
-    "url": "https://app.roboflow.com/ds/fOe159KQTx?key=mhUEWxLxTz",
-    "classes": [
-      "banana",
-      "lemon",
-      "peach",
-      "grapes",
-      "strawberry",
-      "watermelon",
-      "pear",
-      "orange",
-      "apple"
-    ]
-  },
-  {
     "row": 307,
-    "ws": "uav-detection-fmpp2",
-    "proj": "birds-6cufw",
-    "ver": 1,
-    "title": "鸟类检测数据集",
+    "ws": "birdx-zrczv",
+    "proj": "bird-species-cz5yl",
+    "ver": 6,
+    "title": "鸟类物种检测数据集",
     "post_id": 2916,
-    "url": "https://app.roboflow.com/ds/FOZfxQ7b70?key=uznt1pGaoo",
+    "url": "https://app.roboflow.com/ds/Ui6mzDZHQo?key=2Ep7LCbAZD",
     "classes": [
-      "Bird_pretrain - v5 2024-07-07 3:13pm"
+      "cernicalo",
+      "vencejo",
+      "gorrion",
+      "verdecillo",
+      "Estornino",
+      "golondrina",
+      "canario",
+      "curruca"
     ]
   }
 ]
