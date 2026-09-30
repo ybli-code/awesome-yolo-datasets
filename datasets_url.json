@@ -1,14 +1,58 @@
 [
   {
-    "row": 965,
-    "ws": "sashin-guy",
-    "proj": "golf-s4mfl",
+    "row": 1571,
+    "ws": "demo-gmvrh",
+    "proj": "infrared-nxjpb",
     "ver": 1,
-    "title": "高尔夫球定位检测数据集",
-    "post_id": 4880,
-    "url": "https://app.roboflow.com/ds/1sZFsidtlD?key=WB0Wj3qgpf",
+    "title": "红外行人车辆检测数据集",
+    "url": "https://app.roboflow.com/ds/6AFiiQApcl?key=n3lg3LRnjO",
     "classes": [
-      "golfball"
+      "cyclist",
+      "car",
+      "person"
+    ]
+  },
+  {
+    "row": 1572,
+    "ws": "gdgg",
+    "proj": "ir-g7zul",
+    "ver": 1,
+    "title": "红外船舶检测数据集",
+    "url": "https://app.roboflow.com/ds/lmfpebxI1i?key=LLGbKP0nCF",
+    "classes": [
+      "sailboat",
+      "warship",
+      "container ship",
+      "canoe",
+      "bulk carrier",
+      "fishing boat"
+    ]
+  },
+  {
+    "row": 1573,
+    "ws": "dmu-f77kl",
+    "proj": "small-target-d6jen",
+    "ver": 3,
+    "title": "红外船舶小目标检测数据集",
+    "url": "https://app.roboflow.com/ds/aX90WgUlvp?key=LjguJpiFmM",
+    "classes": [
+      "Packet",
+      "Cargo ship",
+      "Ship lock",
+      "Unidentified ship",
+      "Ship bow"
+    ]
+  },
+  {
+    "row": 1574,
+    "ws": "detect-52",
+    "proj": "dim-f4zhf",
+    "ver": 8,
+    "title": "红外弱小目标检测数据集",
+    "url": "https://app.roboflow.com/ds/oxK4vWuvgN?key=35qeNbQj6I",
+    "classes": [
+      "DIM",
+      "FIRE"
     ]
   }
 ]
