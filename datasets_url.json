@@ -1,65 +1,76 @@
 [
   {
-    "row": 1575,
-    "ws": "hwkwak-fngrb",
-    "proj": "bridge-crack-ee7ns",
-    "ver": 1,
-    "title": "桥梁裂缝检测数据集",
-    "url": "https://app.roboflow.com/ds/Nx60svFCap?key=53p60Vmt30",
-    "classes": [
-      "crack"
-    ]
-  },
-  {
-    "row": 1576,
-    "ws": "kai-bsnlf",
-    "proj": "water-leakage-bnrzx",
+    "row": 1580,
+    "ws": "orange-yield-detection-erftd",
+    "proj": "orange-yield-detection",
     "ver": 5,
-    "title": "隧道渗漏水检测数据集",
-    "url": "https://app.roboflow.com/ds/9LFwPgdybf?key=cgceeSu4ni",
+    "title": "柑橘成熟度检测数据集",
+    "url": "https://app.roboflow.com/ds/QH3WfoK01z?key=lbYcO1A4ks",
     "classes": [
-      "smoke",
-      "spark",
-      "oil_puddle",
-      "crack",
-      "liquid_jet_leakage",
-      "liquid_drip_leakage"
+      "ripe",
+      "unripe"
     ]
   },
   {
-    "row": 1577,
-    "ws": "ambitious-jda7x",
-    "proj": "puddle-zlrsu",
-    "ver": 2,
-    "title": "道路积水检测数据集",
-    "url": "https://app.roboflow.com/ds/LiTKj2nLrC?key=6XIyxuuOH2",
+    "row": 1581,
+    "ws": "university-of-technology-and-science",
+    "proj": "orange-detection-ursph",
+    "ver": 7,
+    "title": "柑橘好坏检测数据集",
+    "url": "https://app.roboflow.com/ds/mhntTU8bOy?key=YFyNyYYeMM",
     "classes": [
-      "puddle"
+      "rotten orange",
+      "fresh orange"
     ]
   },
   {
-    "row": 1578,
-    "ws": "shaman-bseny",
-    "proj": "electrical-equipment-detection-64h2o",
-    "ver": 6,
-    "title": "电气设备检测数据集",
-    "url": "https://app.roboflow.com/ds/mp9UlMQRba?key=ye2HDPSQUQ",
+    "row": 1582,
+    "ws": "krishibot-mwqke",
+    "proj": "tomato-detection-dp74n",
+    "ver": 1,
+    "title": "番茄成熟度检测数据集",
+    "url": "https://app.roboflow.com/ds/5wTjZ9lrAE?key=xwv4fYRLYR",
     "classes": [
-      "breaker",
-      "cable",
-      "socket",
-      "switch"
+      "at risk",
+      "fresh",
+      "rotten",
+      "RipeTomato",
+      "UnripeTomato"
     ]
   },
   {
-    "row": 1579,
-    "ws": "raykie",
-    "proj": "transformer-aal0z",
-    "ver": 2,
-    "title": "变压器检测数据集",
-    "url": "https://app.roboflow.com/ds/GrTQ6wCL4f?key=wxRi3rtoDb",
+    "row": 1583,
+    "ws": "fruit-dsna0",
+    "proj": "tomato-5yhlt",
+    "ver": 7,
+    "title": "番茄检测数据集",
+    "url": "https://app.roboflow.com/ds/Aqqht3sckd?key=IUBJLtKc1m",
     "classes": [
-      "transformer"
+      "tomato"
+    ]
+  },
+  {
+    "row": 1584,
+    "ws": "grape-detection-fy75e",
+    "proj": "grape-detection-oquct",
+    "ver": 17,
+    "title": "葡萄检测数据集",
+    "url": "https://app.roboflow.com/ds/baecE4BafQ?key=dahrlaUEop",
+    "classes": [
+      "grape"
+    ]
+  },
+  {
+    "row": 1585,
+    "ws": "alvin-arya",
+    "proj": "strawberry-detection-bsxfm",
+    "ver": 1,
+    "title": "草莓成熟度检测数据集",
+    "url": "https://app.roboflow.com/ds/I20Td3Rqfl?key=LYFDEsETJZ",
+    "classes": [
+      "mentah",
+      "matang",
+      "busuk"
     ]
   }
 ]
