@@ -1,58 +1,65 @@
 [
   {
-    "row": 1571,
-    "ws": "demo-gmvrh",
-    "proj": "infrared-nxjpb",
+    "row": 1575,
+    "ws": "hwkwak-fngrb",
+    "proj": "bridge-crack-ee7ns",
     "ver": 1,
-    "title": "红外行人车辆检测数据集",
-    "url": "https://app.roboflow.com/ds/6AFiiQApcl?key=n3lg3LRnjO",
+    "title": "桥梁裂缝检测数据集",
+    "url": "https://app.roboflow.com/ds/Nx60svFCap?key=53p60Vmt30",
     "classes": [
-      "cyclist",
-      "car",
-      "person"
+      "crack"
     ]
   },
   {
-    "row": 1572,
-    "ws": "gdgg",
-    "proj": "ir-g7zul",
-    "ver": 1,
-    "title": "红外船舶检测数据集",
-    "url": "https://app.roboflow.com/ds/lmfpebxI1i?key=LLGbKP0nCF",
+    "row": 1576,
+    "ws": "kai-bsnlf",
+    "proj": "water-leakage-bnrzx",
+    "ver": 5,
+    "title": "隧道渗漏水检测数据集",
+    "url": "https://app.roboflow.com/ds/9LFwPgdybf?key=cgceeSu4ni",
     "classes": [
-      "sailboat",
-      "warship",
-      "container ship",
-      "canoe",
-      "bulk carrier",
-      "fishing boat"
+      "smoke",
+      "spark",
+      "oil_puddle",
+      "crack",
+      "liquid_jet_leakage",
+      "liquid_drip_leakage"
     ]
   },
   {
-    "row": 1573,
-    "ws": "dmu-f77kl",
-    "proj": "small-target-d6jen",
-    "ver": 3,
-    "title": "红外船舶小目标检测数据集",
-    "url": "https://app.roboflow.com/ds/aX90WgUlvp?key=LjguJpiFmM",
+    "row": 1577,
+    "ws": "ambitious-jda7x",
+    "proj": "puddle-zlrsu",
+    "ver": 2,
+    "title": "道路积水检测数据集",
+    "url": "https://app.roboflow.com/ds/LiTKj2nLrC?key=6XIyxuuOH2",
     "classes": [
-      "Packet",
-      "Cargo ship",
-      "Ship lock",
-      "Unidentified ship",
-      "Ship bow"
+      "puddle"
     ]
   },
   {
-    "row": 1574,
-    "ws": "detect-52",
-    "proj": "dim-f4zhf",
-    "ver": 8,
-    "title": "红外弱小目标检测数据集",
-    "url": "https://app.roboflow.com/ds/oxK4vWuvgN?key=35qeNbQj6I",
+    "row": 1578,
+    "ws": "shaman-bseny",
+    "proj": "electrical-equipment-detection-64h2o",
+    "ver": 6,
+    "title": "电气设备检测数据集",
+    "url": "https://app.roboflow.com/ds/mp9UlMQRba?key=ye2HDPSQUQ",
     "classes": [
-      "DIM",
-      "FIRE"
+      "breaker",
+      "cable",
+      "socket",
+      "switch"
+    ]
+  },
+  {
+    "row": 1579,
+    "ws": "raykie",
+    "proj": "transformer-aal0z",
+    "ver": 2,
+    "title": "变压器检测数据集",
+    "url": "https://app.roboflow.com/ds/GrTQ6wCL4f?key=wxRi3rtoDb",
+    "classes": [
+      "transformer"
     ]
   }
 ]
