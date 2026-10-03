@@ -1,57 +1,76 @@
 [
   {
-    "row": 1586,
-    "ws": "capstone-design-project",
-    "proj": "electric-scooter-dpwkl",
+    "row": 1595,
+    "ws": "objectdection-jru9q",
+    "proj": "chinese-herbal-medicine-11-vgoyu",
+    "ver": 10,
+    "title": "中药材识别数据集",
+    "url": "https://app.roboflow.com/ds/WqfowOTk4s?key=MBxj4ykUFG",
+    "classes": [
+      "Asarum splendens",
+      "Euryops pectinatus",
+      "Berberis julianae Schneid",
+      "Mahonia cardiophylla",
+      "Ardisia crenata Sims",
+      "Rose"
+    ]
+  },
+  {
+    "row": 1596,
+    "ws": "vanshika-fiktf",
+    "proj": "industrial-defect-detection-y5uul",
     "ver": 1,
-    "title": "电动车检测数据集",
-    "url": "https://app.roboflow.com/ds/huqyqLOq2K?key=wgbIKkIGYH",
+    "title": "工业零件缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/IhmiHaU8JY?key=P08TpEzFWi",
     "classes": [
-      "electric-scooter"
+      "Defect",
+      "Leak",
+      "Rust",
+      "Crack"
     ]
   },
   {
-    "row": 1587,
-    "ws": "manhole-mlr2j",
-    "proj": "manhole-detection-hyr17",
-    "ver": 4,
-    "title": "井盖检测数据集",
-    "url": "https://app.roboflow.com/ds/4tDAbbn3ny?key=YGKBzS2UPp",
+    "row": 1597,
+    "ws": "aryan-rajvanshi-xvuyg",
+    "proj": "crop-disease-axhjj",
+    "ver": 1,
+    "title": "农作物病害检测数据集",
+    "url": "https://app.roboflow.com/ds/Sp6PFv2xHg?key=pKZxcJzMNl",
     "classes": [
-      "uncovered",
-      "circle",
-      "broke",
-      "good",
-      "lose"
+      "Tomato Early blight leaf",
+      "Tomato two spotted spider mites leaf",
+      "Tomato leaf bacterial spot",
+      "Tomato mold leaf",
+      "Tomato leaf yellow virus",
+      "Tomato leaf"
     ]
   },
   {
-    "row": 1588,
-    "ws": "ssemwogereres-workspace-vcj1q",
-    "proj": "road-pothole-detection-dlec0",
-    "ver": 2,
-    "title": "路面坑洼检测数据集",
-    "url": "https://app.roboflow.com/ds/gMYK9LQbNw?key=sdYbeQ2n9I",
-    "classes": [
-      "severe pothole",
-      "mild pothole",
-      "shallow pothole"
-    ]
-  },
-  {
-    "row": 1589,
-    "ws": "autory",
-    "proj": "traffic-cone-osnih",
+    "row": 1598,
+    "ws": "solar-panel-defect-detection",
+    "proj": "solar-panel-defect-detection-hpser",
     "ver": 3,
-    "title": "交通锥检测数据集",
-    "url": "https://app.roboflow.com/ds/rmxUcML20U?key=aw9YNgOZar",
+    "title": "光伏板故障检测数据集",
+    "url": "https://app.roboflow.com/ds/TwiXKAXjSt?key=fpkx8sOXkA",
     "classes": [
-      "traffic cone",
-      "van",
-      "Cone",
-      "Tube",
-      "bicycle",
-      "trafficcone"
+      "Dusty",
+      "Snow",
+      "Defective",
+      "Bird Drop",
+      "Electrical Damage",
+      "Physical Damage"
+    ]
+  },
+  {
+    "row": 1599,
+    "ws": "sekyutech-1",
+    "proj": "pig-detection-gjy1y",
+    "ver": 2,
+    "title": "猪只检测数据集",
+    "url": "https://app.roboflow.com/ds/uBKHo8fd0c?key=CP5IAby7he",
+    "classes": [
+      "Pig Lying",
+      "Pig"
     ]
   }
 ]
