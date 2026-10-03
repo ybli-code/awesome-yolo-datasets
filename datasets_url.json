@@ -1,76 +1,57 @@
 [
   {
-    "row": 1580,
-    "ws": "orange-yield-detection-erftd",
-    "proj": "orange-yield-detection",
-    "ver": 5,
-    "title": "柑橘成熟度检测数据集",
-    "url": "https://app.roboflow.com/ds/QH3WfoK01z?key=lbYcO1A4ks",
-    "classes": [
-      "ripe",
-      "unripe"
-    ]
-  },
-  {
-    "row": 1581,
-    "ws": "university-of-technology-and-science",
-    "proj": "orange-detection-ursph",
-    "ver": 7,
-    "title": "柑橘好坏检测数据集",
-    "url": "https://app.roboflow.com/ds/mhntTU8bOy?key=YFyNyYYeMM",
-    "classes": [
-      "rotten orange",
-      "fresh orange"
-    ]
-  },
-  {
-    "row": 1582,
-    "ws": "krishibot-mwqke",
-    "proj": "tomato-detection-dp74n",
+    "row": 1586,
+    "ws": "capstone-design-project",
+    "proj": "electric-scooter-dpwkl",
     "ver": 1,
-    "title": "番茄成熟度检测数据集",
-    "url": "https://app.roboflow.com/ds/5wTjZ9lrAE?key=xwv4fYRLYR",
+    "title": "电动车检测数据集",
+    "url": "https://app.roboflow.com/ds/huqyqLOq2K?key=wgbIKkIGYH",
     "classes": [
-      "at risk",
-      "fresh",
-      "rotten",
-      "RipeTomato",
-      "UnripeTomato"
+      "electric-scooter"
     ]
   },
   {
-    "row": 1583,
-    "ws": "fruit-dsna0",
-    "proj": "tomato-5yhlt",
-    "ver": 7,
-    "title": "番茄检测数据集",
-    "url": "https://app.roboflow.com/ds/Aqqht3sckd?key=IUBJLtKc1m",
+    "row": 1587,
+    "ws": "manhole-mlr2j",
+    "proj": "manhole-detection-hyr17",
+    "ver": 4,
+    "title": "井盖检测数据集",
+    "url": "https://app.roboflow.com/ds/4tDAbbn3ny?key=YGKBzS2UPp",
     "classes": [
-      "tomato"
+      "uncovered",
+      "circle",
+      "broke",
+      "good",
+      "lose"
     ]
   },
   {
-    "row": 1584,
-    "ws": "grape-detection-fy75e",
-    "proj": "grape-detection-oquct",
-    "ver": 17,
-    "title": "葡萄检测数据集",
-    "url": "https://app.roboflow.com/ds/baecE4BafQ?key=dahrlaUEop",
+    "row": 1588,
+    "ws": "ssemwogereres-workspace-vcj1q",
+    "proj": "road-pothole-detection-dlec0",
+    "ver": 2,
+    "title": "路面坑洼检测数据集",
+    "url": "https://app.roboflow.com/ds/gMYK9LQbNw?key=sdYbeQ2n9I",
     "classes": [
-      "grape"
+      "severe pothole",
+      "mild pothole",
+      "shallow pothole"
     ]
   },
   {
-    "row": 1585,
-    "ws": "alvin-arya",
-    "proj": "strawberry-detection-bsxfm",
-    "ver": 1,
-    "title": "草莓成熟度检测数据集",
-    "url": "https://app.roboflow.com/ds/I20Td3Rqfl?key=LYFDEsETJZ",
+    "row": 1589,
+    "ws": "autory",
+    "proj": "traffic-cone-osnih",
+    "ver": 3,
+    "title": "交通锥检测数据集",
+    "url": "https://app.roboflow.com/ds/rmxUcML20U?key=aw9YNgOZar",
     "classes": [
-      "mentah",
-      "matang",
-      "busuk"
+      "traffic cone",
+      "van",
+      "Cone",
+      "Tube",
+      "bicycle",
+      "trafficcone"
     ]
   }
 ]
