@@ -1,76 +1,42 @@
 [
   {
-    "row": 1595,
-    "ws": "objectdection-jru9q",
-    "proj": "chinese-herbal-medicine-11-vgoyu",
-    "ver": 10,
-    "title": "中药材识别数据集",
-    "url": "https://app.roboflow.com/ds/WqfowOTk4s?key=MBxj4ykUFG",
-    "classes": [
-      "Asarum splendens",
-      "Euryops pectinatus",
-      "Berberis julianae Schneid",
-      "Mahonia cardiophylla",
-      "Ardisia crenata Sims",
-      "Rose"
-    ]
-  },
-  {
-    "row": 1596,
-    "ws": "vanshika-fiktf",
-    "proj": "industrial-defect-detection-y5uul",
+    "row": 1602,
+    "ws": "drone-gpmet",
+    "proj": "drone-xyhff",
     "ver": 1,
-    "title": "工业零件缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/IhmiHaU8JY?key=P08TpEzFWi",
+    "title": "无人机目标检测数据集",
+    "url": "https://app.roboflow.com/ds/Yq7irmoPJ2?key=SLBh4s2Ezd",
     "classes": [
-      "Defect",
-      "Leak",
-      "Rust",
-      "Crack"
+      "drone"
     ]
   },
   {
-    "row": 1597,
-    "ws": "aryan-rajvanshi-xvuyg",
-    "proj": "crop-disease-axhjj",
-    "ver": 1,
-    "title": "农作物病害检测数据集",
-    "url": "https://app.roboflow.com/ds/Sp6PFv2xHg?key=pKZxcJzMNl",
+    "row": 1603,
+    "ws": "birdx-zrczv",
+    "proj": "bird-species-cz5yl",
+    "ver": 6,
+    "title": "鸟类物种检测数据集",
+    "url": "https://app.roboflow.com/ds/Ui6mzDZHQo?key=2Ep7LCbAZD",
     "classes": [
-      "Tomato Early blight leaf",
-      "Tomato two spotted spider mites leaf",
-      "Tomato leaf bacterial spot",
-      "Tomato mold leaf",
-      "Tomato leaf yellow virus",
-      "Tomato leaf"
+      "cernicalo",
+      "vencejo",
+      "gorrion",
+      "verdecillo",
+      "Estornino",
+      "golondrina"
     ]
   },
   {
-    "row": 1598,
-    "ws": "solar-panel-defect-detection",
-    "proj": "solar-panel-defect-detection-hpser",
+    "row": 1604,
+    "ws": "hi-ck6bw",
+    "proj": "traffic-sign-detection-zzsn8",
     "ver": 3,
-    "title": "光伏板故障检测数据集",
-    "url": "https://app.roboflow.com/ds/TwiXKAXjSt?key=fpkx8sOXkA",
+    "title": "道路交通标志检测数据集",
+    "url": "https://app.roboflow.com/ds/N0sPpx3R1p?key=ntuRK5Qkwo",
     "classes": [
-      "Dusty",
-      "Snow",
-      "Defective",
-      "Bird Drop",
-      "Electrical Damage",
-      "Physical Damage"
-    ]
-  },
-  {
-    "row": 1599,
-    "ws": "sekyutech-1",
-    "proj": "pig-detection-gjy1y",
-    "ver": 2,
-    "title": "猪只检测数据集",
-    "url": "https://app.roboflow.com/ds/uBKHo8fd0c?key=CP5IAby7he",
-    "classes": [
-      "Pig Lying",
-      "Pig"
+      "straight",
+      "right",
+      "do_not_enter"
     ]
   }
 ]
