@@ -1,42 +1,27 @@
 [
   {
-    "row": 1602,
-    "ws": "drone-gpmet",
-    "proj": "drone-xyhff",
-    "ver": 1,
-    "title": "无人机目标检测数据集",
-    "url": "https://app.roboflow.com/ds/Yq7irmoPJ2?key=SLBh4s2Ezd",
-    "classes": [
-      "drone"
-    ]
+    "row": 1606,
+    "title": "车道线检测数据集",
+    "url": "https://app.roboflow.com/ds/xXQyIOoRHa?key=D7th8JcG3B"
   },
   {
-    "row": 1603,
-    "ws": "birdx-zrczv",
-    "proj": "bird-species-cz5yl",
-    "ver": 6,
-    "title": "鸟类物种检测数据集",
-    "url": "https://app.roboflow.com/ds/Ui6mzDZHQo?key=2Ep7LCbAZD",
-    "classes": [
-      "cernicalo",
-      "vencejo",
-      "gorrion",
-      "verdecillo",
-      "Estornino",
-      "golondrina"
-    ]
+    "row": 1607,
+    "title": "深度伪造人脸检测数据集",
+    "url": "https://app.roboflow.com/ds/SIXzA85mJF?key=GQrij3Rmtv"
   },
   {
-    "row": 1604,
-    "ws": "hi-ck6bw",
-    "proj": "traffic-sign-detection-zzsn8",
-    "ver": 3,
-    "title": "道路交通标志检测数据集",
-    "url": "https://app.roboflow.com/ds/N0sPpx3R1p?key=ntuRK5Qkwo",
-    "classes": [
-      "straight",
-      "right",
-      "do_not_enter"
-    ]
+    "row": 1608,
+    "title": "道路护栏检测数据集",
+    "url": "https://app.roboflow.com/ds/llnHy8SmDk?key=Vu6ktIDiOx"
+  },
+  {
+    "row": 1609,
+    "title": "人行横道斑马线检测数据集",
+    "url": "https://app.roboflow.com/ds/bXz51vTvxp?key=3q9iPtZwBy"
+  },
+  {
+    "row": 1610,
+    "title": "液化气瓶检测数据集",
+    "url": "https://app.roboflow.com/ds/eWZnXW0M0L?key=M77PxCrHX7"
   }
 ]
