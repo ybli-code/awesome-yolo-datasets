@@ -1,32 +1,12 @@
 [
   {
-    "row": 1064,
-    "title": "物流包裹分拣检测数据集",
-    "url": "https://app.roboflow.com/ds/niPvcMRqI2?key=z8EsfNFJjG",
-    "pid": 6183
+    "row": 1062,
+    "title": "道路车辆与车牌检测数据集",
+    "url": "https://app.roboflow.com/ds/O6IQumgb8R?key=ZJgcsBV8Ep"
   },
   {
-    "row": 1063,
-    "title": "安防刀具检测数据集",
-    "url": "https://app.roboflow.com/ds/t8qckHSqFz?key=h20iloclr8",
-    "pid": 6182
-  },
-  {
-    "row": 1057,
-    "title": "二维码定位检测数据集",
-    "url": "https://app.roboflow.com/ds/LcmlPSDlV4?key=2gJtnQeA0N",
-    "pid": 6176
-  },
-  {
-    "row": 1034,
-    "title": "道路多目标检测数据集",
-    "url": "https://app.roboflow.com/ds/rmxUcML20U?key=aw9YNgOZar",
-    "pid": 6096
-  },
-  {
-    "row": 1031,
-    "title": "火灾烟雾检测数据集",
-    "url": "https://app.roboflow.com/ds/ogRPdSHHsg?key=guSIQkBFRz",
-    "pid": 6092
+    "row": 1038,
+    "title": "生猪养殖检测数据集",
+    "url": "https://app.roboflow.com/ds/uBKHo8fd0c?key=CP5IAby7he"
   }
 ]
