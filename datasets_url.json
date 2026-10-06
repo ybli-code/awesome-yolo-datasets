@@ -1,7 +1,17 @@
 [
   {
-    "row": 1063,
-    "title": "安防武器检测数据集",
-    "url": "https://app.roboflow.com/ds/TpbpbsQtPP?key=aDDjy9f3Av"
+    "row": 4777,
+    "title": "飞鸟检测数据集",
+    "url": "https://app.roboflow.com/ds/IcaoeqshXW?key=RPx892N71t"
+  },
+  {
+    "row": 4497,
+    "title": "火灾烟雾检测数据集",
+    "url": "https://app.roboflow.com/ds/ogRPdSHHsg?key=guSIQkBFRz"
+  },
+  {
+    "row": 4498,
+    "title": "滑坡落石检测数据集",
+    "url": "https://app.roboflow.com/ds/9bOmM9s2Wx?key=7GiSKbiJXt"
   }
 ]
