@@ -1,7 +1,32 @@
 [
   {
-    "row": 1612,
-    "title": "斑马动物检测数据集_data2.cn.zip",
-    "url": "https://app.roboflow.com/ds/qwdaeWM2oD?key=dBPaiMzjbn"
+    "row": 4718,
+    "title": "杯子检测数据集",
+    "url": "https://app.roboflow.com/ds/ZYXYtjlnm1?key=CMoNavs5wq"
+  },
+  {
+    "row": 4719,
+    "title": "餐桌检测数据集",
+    "url": "https://app.roboflow.com/ds/mpYG9msIu6?key=rgD4Ob0nXr"
+  },
+  {
+    "row": 4721,
+    "title": "斑马线人行横道检测",
+    "url": "https://app.roboflow.com/ds/QiXAGb7cEZ?key=Sjz1vSNISB"
+  },
+  {
+    "row": 4731,
+    "title": "工程机械车辆检测",
+    "url": "https://app.roboflow.com/ds/1bDMxRpCp5?key=EICOay6YC7"
+  },
+  {
+    "row": 4771,
+    "title": "烟火检测数据集",
+    "url": "https://app.roboflow.com/ds/ogRPdSHHsg?key=guSIQkBFRz"
+  },
+  {
+    "row": 4514,
+    "title": "植物病害叶片检测",
+    "url": "https://app.roboflow.com/ds/PDnev27lgT?key=m0HTYChfHU"
   }
 ]
