@@ -1,17 +1,12 @@
 [
   {
-    "row": 4777,
-    "title": "飞鸟检测数据集",
-    "url": "https://app.roboflow.com/ds/IcaoeqshXW?key=RPx892N71t"
-  },
-  {
-    "row": 4497,
-    "title": "火灾烟雾检测数据集",
-    "url": "https://app.roboflow.com/ds/ogRPdSHHsg?key=guSIQkBFRz"
-  },
-  {
     "row": 4498,
-    "title": "滑坡落石检测数据集",
-    "url": "https://app.roboflow.com/ds/9bOmM9s2Wx?key=7GiSKbiJXt"
+    "title": "泥石流检测数据集",
+    "url": "https://app.roboflow.com/ds/7XebC5cZSH?key=Yk8q0iyWEL"
+  },
+  {
+    "row": 4777,
+    "title": "鸟类物种识别检测数据集",
+    "url": "https://app.roboflow.com/ds/0f0mOhvXGO?key=yrIa1Ikdw8"
   }
 ]
