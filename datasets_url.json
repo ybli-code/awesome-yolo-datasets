@@ -1,12 +1,10 @@
 [
   {
-    "row": 2146,
-    "title": "桥梁锈蚀检测数据集",
-    "url": "https://app.roboflow.com/ds/Pwe7lJAEEM?key=GEH4pJYtta"
-  },
-  {
-    "row": 2464,
-    "title": "腹部图像检测数据集",
-    "url": "https://app.roboflow.com/ds/8zEkrV4yPg?key=TmDZqXojNf"
+    "row": 1770,
+    "workspace": "pest-jyqit",
+    "project": "ip102-subset",
+    "version": 3,
+    "title": "IP102农业害虫识别数据集",
+    "url": "https://app.roboflow.com/ds/WCsojaH84Y?key=CSw2Y95eji"
   }
 ]
