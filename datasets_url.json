@@ -1,7 +1,12 @@
 [
   {
-    "row": 169,
-    "title": "道路标志识别数据集",
-    "url": "https://app.roboflow.com/ds/JkoZfFoaXT?key=gBqfIFOCJB"
+    "row": 172,
+    "title": "各类塑料瓶检测数据集",
+    "url": "https://app.roboflow.com/ds/J77SEzUGxu?key=os89rJCPJV"
+  },
+  {
+    "row": 175,
+    "title": "足球人物分析数据集",
+    "url": "https://app.roboflow.com/ds/2QgBJvqrKX?key=zxSIDCJ5Ez"
   }
 ]
