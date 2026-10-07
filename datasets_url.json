@@ -8,20 +8,5 @@
     "row": 2464,
     "title": "腹部图像检测数据集",
     "url": "https://app.roboflow.com/ds/8zEkrV4yPg?key=TmDZqXojNf"
-  },
-  {
-    "row": 2467,
-    "title": "植物叶片病害检测数据集",
-    "url": "https://app.roboflow.com/ds/GN7V2pJE1s?key=ePleZwa9JV"
-  },
-  {
-    "row": 2475,
-    "title": "航拍房顶缺陷数据集",
-    "url": "https://app.roboflow.com/ds/njdVuiYJws?key=LV14S0nDXa"
-  },
-  {
-    "row": 2476,
-    "title": "道路安全锥交通锥检测数据集",
-    "url": "https://app.roboflow.com/ds/lM0GtwMt5j?key=ioFCMoIbOj"
   }
 ]
