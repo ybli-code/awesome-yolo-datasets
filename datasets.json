@@ -1,10 +1,16 @@
 [
   {
-    "row": 2479,
-    "workspace": "project-ganpo",
-    "project": "road-obstacle-detection",
-    "version": 2,
-    "title": "道路障碍物检测数据集",
-    "url": "https://app.roboflow.com/ds/vdom16waf2?key=zcjCC3VsmJ"
+    "workspace": "etc-gtem2",
+    "project": "drain_good",
+    "version": 4,
+    "row": 1586,
+    "title": "下水篦子与井盖数据集"
+  },
+  {
+    "workspace": "waste-x4bwi",
+    "project": "waste-bd0et",
+    "version": 28,
+    "row": 1587,
+    "title": "废旧物品识别数据集"
   }
 ]
