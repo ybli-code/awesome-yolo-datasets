@@ -1,10 +1,42 @@
 [
   {
-    "row": 1770,
-    "workspace": "pest-jyqit",
-    "project": "ip102-subset",
+    "row": 1773,
+    "workspace": "fyp-npqts",
+    "project": "ultrasound-u40t9",
+    "version": 1,
+    "title": "肾脏超声结石检测数据集",
+    "url": "https://app.roboflow.com/ds/Qq2Cm30ztG?key=7dXXaU4vuZ"
+  },
+  {
+    "row": 1774,
+    "workspace": "mangcutv3",
+    "project": "mangosteen-rbcan",
+    "version": 1,
+    "title": "山竹成熟度检测数据集",
+    "url": "https://app.roboflow.com/ds/dWog9GhGco?key=y60BXHsenQ"
+  },
+  {
+    "row": 1775,
+    "workspace": "green-fruit-detection-data",
+    "project": "chestnut-classification",
+    "version": 2,
+    "title": "板栗表面缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/lfgi46XNU5?key=QJxS7jJiBZ"
+  },
+  {
+    "row": 1776,
+    "workspace": "agris-workspace",
+    "project": "orange-ripe",
+    "version": 2,
+    "title": "橙子成熟度检测数据集",
+    "url": "https://app.roboflow.com/ds/cS74KBB5HV?key=YP3pEBXUQW"
+  },
+  {
+    "row": 1777,
+    "workspace": "b101",
+    "project": "guitar-g65u6",
     "version": 3,
-    "title": "IP102农业害虫识别数据集",
-    "url": "https://app.roboflow.com/ds/WCsojaH84Y?key=CSw2Y95eji"
+    "title": "吉他部件检测数据集",
+    "url": "https://app.roboflow.com/ds/XAA0mDt0xy?key=08ztXPMprc"
   }
 ]
