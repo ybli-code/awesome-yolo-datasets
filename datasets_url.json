@@ -1,38 +1,6 @@
 [
   {
-    "title": "工程车辆检测数据集",
-    "url": "https://app.roboflow.com/ds/2tMHvc9GzN?key=mlBggm9qfO"
-  },
-  {
-    "title": "死鸡检测数据集",
-    "url": "https://app.roboflow.com/ds/WCu1GLz6n9?key=31GNlThNgu"
-  },
-  {
-    "title": "风机叶片检测数据集",
-    "url": "https://app.roboflow.com/ds/AjwKX81Xdj?key=teC2utzJcU"
-  },
-  {
-    "title": "墙面裂缝检测数据集",
-    "url": "https://app.roboflow.com/ds/LV3hFdGWjU?key=Gf9KwCKGM4"
-  },
-  {
-    "title": "草原监测数据集",
-    "url": "https://app.roboflow.com/ds/lHNyY8eHKs?key=8JnOGcqL3m"
-  },
-  {
-    "title": "海洋污染检测数据集",
-    "url": "https://app.roboflow.com/ds/0Yc0dpzIUX?key=m2tZxMZlEg"
-  },
-  {
-    "title": "船舶检测数据集",
-    "url": "https://app.roboflow.com/ds/p9BRHFdkOS?key=Uvq6kOGpWJ"
-  },
-  {
-    "title": "紧固件检测数据集",
-    "url": "https://app.roboflow.com/ds/I50RImHVgb?key=wvEI8slwGN"
-  },
-  {
-    "title": "矿井下目标检测数据集",
-    "url": "https://app.roboflow.com/ds/s2Jvc1tvDH?key=qvy8qgG91x"
+    "title": "土壤类型检测数据集",
+    "url": "https://app.roboflow.com/ds/0tioVSIxSO?key=RyXnkzalci"
   }
 ]
