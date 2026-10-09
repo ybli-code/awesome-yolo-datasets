@@ -1,6 +1,30 @@
 [
   {
-    "title": "纸箱破洞湿水检测数据集",
-    "url": "https://app.roboflow.com/ds/v5pU00MGQ9?key=v6kh55NAqs"
+    "title": "传送带托辊识别数据集",
+    "url": "https://app.roboflow.com/ds/DKXRSqdNOw?key=6GU90TYFnW"
+  },
+  {
+    "title": "厨房常见的水果蔬菜调味料数据集",
+    "url": "https://app.roboflow.com/ds/y97biIYgrq?key=9EHtc0wOxh"
+  },
+  {
+    "title": "道路缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/5FjaqMJBMg?key=Rvp9H7onzN"
+  },
+  {
+    "title": "药品药丸检测数据集",
+    "url": "https://app.roboflow.com/ds/BkFH1DN41R?key=aKd8osma6N"
+  },
+  {
+    "title": "蜜蜂蜂巢检测数据集",
+    "url": "https://app.roboflow.com/ds/IRANrBSFXG?key=kDkjF2c27F"
+  },
+  {
+    "title": "建筑工人检测数据集",
+    "url": "https://app.roboflow.com/ds/1fjnuMUgE6?key=hDJFxCQzll"
+  },
+  {
+    "title": "太阳能板缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/TwiXKAXjSt?key=fpkx8sOXkA"
   }
 ]
