@@ -1,34 +1,6 @@
 [
   {
-    "title": "道路隔离护栏检测数据集",
-    "url": "https://app.roboflow.com/ds/0bwSeC3LFo?key=wI8HboSeXn"
-  },
-  {
-    "title": "工程车辆检测数据集",
-    "url": "https://app.roboflow.com/ds/6Zomew84ax?key=W6LA7Wl9nI"
-  },
-  {
-    "title": "扑克牌检测数据集",
-    "url": "https://app.roboflow.com/ds/oWRsgjtTMS?key=bUoEB6hDUQ"
-  },
-  {
-    "title": "冰箱物品检测数据集",
-    "url": "https://app.roboflow.com/ds/smGdqtVoCO?key=mrhNZSJ0lX"
-  },
-  {
-    "title": "棕榈油检测数据集",
-    "url": "https://app.roboflow.com/ds/XPrvlDIxQ3?key=3BB9Uiy29f"
-  },
-  {
-    "title": "输电线植物入侵检测数据集",
-    "url": "https://app.roboflow.com/ds/bZRyRpgkVH?key=5Ns2sdGYhE"
-  },
-  {
-    "title": "坦克检测数据集",
-    "url": "https://app.roboflow.com/ds/j5soFcgRkL?key=NphaVfelCJ"
-  },
-  {
-    "title": "煤气罐检测数据集",
-    "url": "https://app.roboflow.com/ds/TIDUSg5Zui?key=s0LfALeude"
+    "title": "纸箱破洞湿水检测数据集",
+    "url": "https://app.roboflow.com/ds/v5pU00MGQ9?key=v6kh55NAqs"
   }
 ]
