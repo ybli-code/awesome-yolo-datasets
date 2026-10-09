@@ -1,30 +1,6 @@
 [
   {
-    "title": "恶劣天气道路目标检测数据集",
-    "url": "https://app.roboflow.com/ds/4NY5hPLmU4?key=vjvd4XcN6W"
-  },
-  {
-    "title": "挖掘机检测数据集",
-    "url": "https://app.roboflow.com/ds/1bDMxRpCp5?key=EICOay6YC7"
-  },
-  {
-    "title": "地铁站台检测数据集",
-    "url": "https://app.roboflow.com/ds/WEUWAAxBL0?key=ecVZDViJYM"
-  },
-  {
-    "title": "电塔鸟窝检测数据集",
-    "url": "https://app.roboflow.com/ds/JSLfxScFI5?key=YUPuYvhmig"
-  },
-  {
-    "title": "工业安全个人防护检测数据集",
-    "url": "https://app.roboflow.com/ds/x8ppsqI3QY?key=OJ4GwyI2rf"
-  },
-  {
-    "title": "电力设备巡检检测数据集",
-    "url": "https://app.roboflow.com/ds/rgWLuOn981?key=V4l8XQS7jf"
-  },
-  {
-    "title": "河道水污染检测数据集",
-    "url": "https://app.roboflow.com/ds/4GG1Ef9U0R?key=3lISouIHjb"
+    "title": "道路视觉污染检测数据集",
+    "url": "https://app.roboflow.com/ds/1uExggmPxs?key=XuEk9NOV3V"
   }
 ]
