@@ -1,58 +1,30 @@
 [
   {
-    "row": 2702,
-    "workspace": "urinating",
-    "project": "public-urination-detection",
-    "version": 7,
-    "title": "随地小便检测数据集",
-    "url": "https://app.roboflow.com/ds/YeodjYFV87?key=P5ibtkSknk"
+    "title": "恶劣天气道路目标检测数据集",
+    "url": "https://app.roboflow.com/ds/4NY5hPLmU4?key=vjvd4XcN6W"
   },
   {
-    "row": 2703,
-    "workspace": "vegetation-detection-for-power-lines",
-    "project": "power-line-idqfy",
-    "version": 5,
-    "title": "输电线缆检测数据集",
-    "url": "https://app.roboflow.com/ds/HpyhdvqwE5?key=CJ0kCiSKoa"
+    "title": "挖掘机检测数据集",
+    "url": "https://app.roboflow.com/ds/1bDMxRpCp5?key=EICOay6YC7"
   },
   {
-    "row": 2706,
-    "workspace": "rakshithas-workspace-lvihw",
-    "project": "hair-and-scalp-disease-detection",
-    "version": 12,
-    "title": "头皮疾病检测数据集",
-    "url": "https://app.roboflow.com/ds/1WazKU1RZn?key=idtUQlSQeL"
+    "title": "地铁站台检测数据集",
+    "url": "https://app.roboflow.com/ds/k6rHMsh8vH?key=a3OL20FAhF"
   },
   {
-    "row": 2710,
-    "workspace": "traffic-violation-project-crtdk",
-    "project": "traffic-violation-ay557",
-    "version": 2,
-    "title": "交通违规检测数据集",
-    "url": "https://app.roboflow.com/ds/N036CBzPkF?key=j94EbOIOfh"
+    "title": "电塔鸟窝检测数据集",
+    "url": "https://app.roboflow.com/ds/JSLfxScFI5?key=YUPuYvhmig"
   },
   {
-    "row": 2712,
-    "workspace": "vgtu-n8zmy",
-    "project": "military-vehicle",
-    "version": 6,
-    "title": "军事车辆检测数据集",
-    "url": "https://app.roboflow.com/ds/KoS5ZrgVc8?key=VRn9A1LNWX"
+    "title": "工业安全个人防护检测数据集",
+    "url": "https://app.roboflow.com/ds/x8ppsqI3QY?key=OJ4GwyI2rf"
   },
   {
-    "row": 2716,
-    "workspace": "nhi-tz2cg",
-    "project": "nail-bheyh",
-    "version": 1,
-    "title": "指甲检测数据集",
-    "url": "https://app.roboflow.com/ds/jTly0BFPBZ?key=ihptr1YQMl"
+    "title": "电力设备巡检检测数据集",
+    "url": "https://app.roboflow.com/ds/rgWLuOn981?key=V4l8XQS7jf"
   },
   {
-    "row": 2719,
-    "workspace": "vietnamese-school-uniform",
-    "project": "hair-detection-yise1",
-    "version": 3,
-    "title": "头发合规检测数据集",
-    "url": "https://app.roboflow.com/ds/Hk2lh3TryF?key=HYDaBP94Vz"
+    "title": "河道水污染检测数据集",
+    "url": "https://app.roboflow.com/ds/4GG1Ef9U0R?key=3lISouIHjb"
   }
 ]
