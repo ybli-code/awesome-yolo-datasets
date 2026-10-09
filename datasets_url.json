@@ -1,58 +1,58 @@
 [
   {
-    "row": 2683,
-    "workspace": "groupdss",
-    "project": "electric-bike-detection",
-    "version": 1,
-    "title": "电瓶车检测数据集",
-    "url": "https://app.roboflow.com/ds/ZHbMpSJldN?key=NRXs7oi8gP"
-  },
-  {
-    "row": 2686,
-    "workspace": "test-vqriv",
-    "project": "height-ahnan",
+    "row": 2702,
+    "workspace": "urinating",
+    "project": "public-urination-detection",
     "version": 7,
-    "title": "蓄电池外观检测数据集",
-    "url": "https://app.roboflow.com/ds/p2Z3PS9RX5?key=jcbL6C2eGG"
+    "title": "随地小便检测数据集",
+    "url": "https://app.roboflow.com/ds/YeodjYFV87?key=P5ibtkSknk"
   },
   {
-    "row": 2687,
-    "workspace": "newideas",
-    "project": "soybean-quality",
+    "row": 2703,
+    "workspace": "vegetation-detection-for-power-lines",
+    "project": "power-line-idqfy",
+    "version": 5,
+    "title": "输电线缆检测数据集",
+    "url": "https://app.roboflow.com/ds/HpyhdvqwE5?key=CJ0kCiSKoa"
+  },
+  {
+    "row": 2706,
+    "workspace": "rakshithas-workspace-lvihw",
+    "project": "hair-and-scalp-disease-detection",
+    "version": 12,
+    "title": "头皮疾病检测数据集",
+    "url": "https://app.roboflow.com/ds/1WazKU1RZn?key=idtUQlSQeL"
+  },
+  {
+    "row": 2710,
+    "workspace": "traffic-violation-project-crtdk",
+    "project": "traffic-violation-ay557",
+    "version": 2,
+    "title": "交通违规检测数据集",
+    "url": "https://app.roboflow.com/ds/N036CBzPkF?key=j94EbOIOfh"
+  },
+  {
+    "row": 2712,
+    "workspace": "vgtu-n8zmy",
+    "project": "military-vehicle",
+    "version": 6,
+    "title": "军事车辆检测数据集",
+    "url": "https://app.roboflow.com/ds/KoS5ZrgVc8?key=VRn9A1LNWX"
+  },
+  {
+    "row": 2716,
+    "workspace": "nhi-tz2cg",
+    "project": "nail-bheyh",
     "version": 1,
-    "title": "大豆种子质量检测数据集",
-    "url": "https://app.roboflow.com/ds/8opRKpzPUJ?key=Wjx4VxKBVX"
+    "title": "指甲检测数据集",
+    "url": "https://app.roboflow.com/ds/jTly0BFPBZ?key=ihptr1YQMl"
   },
   {
-    "row": 2688,
-    "workspace": "narmatha-n-k",
-    "project": "insect-detection-ydowu",
-    "version": 2,
-    "title": "居家害虫检测数据集",
-    "url": "https://app.roboflow.com/ds/J7DqlX7fpH?key=y2r3lS9Ult"
-  },
-  {
-    "row": 2691,
-    "workspace": "flywork-0jxsm",
-    "project": "fly-detection-skxsi",
-    "version": 4,
-    "title": "苍蝇检测数据集",
-    "url": "https://app.roboflow.com/ds/xGBVbRkg5h?key=68WCWLrC6F"
-  },
-  {
-    "row": 2693,
-    "workspace": "fyp-qtd0e",
-    "project": "insect-detection-j9mt7",
-    "version": 2,
-    "title": "农林昆虫检测数据集",
-    "url": "https://app.roboflow.com/ds/QUj0v5UNo6?key=q5NCEXXdoV"
-  },
-  {
-    "row": 2694,
-    "workspace": "umkc-490-spring-2022",
-    "project": "weapon-detection-nicpz",
-    "version": 2,
-    "title": "武器检测数据集",
-    "url": "https://app.roboflow.com/ds/6Fnk4kKsTf?key=5YbL50hNdz"
+    "row": 2719,
+    "workspace": "vietnamese-school-uniform",
+    "project": "hair-detection-yise1",
+    "version": 3,
+    "title": "头发合规检测数据集",
+    "url": "https://app.roboflow.com/ds/Hk2lh3TryF?key=HYDaBP94Vz"
   }
 ]
