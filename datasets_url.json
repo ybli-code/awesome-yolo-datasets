@@ -63,5 +63,10 @@
     "row": 2892,
     "title": "帐篷检测数据集",
     "url": "https://app.roboflow.com/ds/cmZPxsKe7z?key=7UT2YALz64"
+  },
+  {
+    "row": 2874,
+    "title": "拖拉机检测数据集",
+    "url": "https://app.roboflow.com/ds/cDtCYqXfM8?key=1JyxDL8Tac"
   }
 ]
