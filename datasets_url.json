@@ -43,5 +43,10 @@
     "row": 2852,
     "title": "二维码检测数据集",
     "url": "https://app.roboflow.com/ds/1mJnhZOlJ4?key=QtdjPIWkZD"
+  },
+  {
+    "row": 2869,
+    "title": "户外垃圾检测数据集",
+    "url": "https://app.roboflow.com/ds/jlxPzxDaK9?key=PnmQWrAUjC"
   }
 ]
