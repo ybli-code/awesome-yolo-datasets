@@ -148,5 +148,30 @@
     "row": 2970,
     "title": "墨镜检测数据集",
     "url": "https://app.roboflow.com/ds/32ZVsyMtds?key=sTo0ACaFV5"
+  },
+  {
+    "row": 2977,
+    "title": "鸡蛋数据集",
+    "url": "https://app.roboflow.com/ds/XtPm98dAyY?key=OusXpGHa3S"
+  },
+  {
+    "row": 2981,
+    "title": "城市占道经营目标数据集",
+    "url": "https://app.roboflow.com/ds/aBlsCqgycZ?key=zG0mZLzB6S"
+  },
+  {
+    "row": 2983,
+    "title": "夜间道路监控视角拍摄车辆分类识别数据集",
+    "url": "https://app.roboflow.com/ds/iZ49q8TBKj?key=XyqatRdeho"
+  },
+  {
+    "row": 2990,
+    "title": "交通锥桶检测数据集",
+    "url": "https://app.roboflow.com/ds/Mk8vvceGxZ?key=54tlQqdkMX"
+  },
+  {
+    "row": 2995,
+    "title": "运动球类及装备检测数据集",
+    "url": "https://app.roboflow.com/ds/mSfY16ngyS?key=2wxm8PX84j"
   }
 ]
