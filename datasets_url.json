@@ -28,5 +28,10 @@
     "row": 2848,
     "title": "荔枝检测数据集",
     "url": "https://app.roboflow.com/ds/q8Id8XOlxM?key=1xCGFlMNPC"
+  },
+  {
+    "row": 2859,
+    "title": "交警检测数据集",
+    "url": "https://app.roboflow.com/ds/NgchYNuZTq?key=1YUMCMNFBR"
   }
 ]
