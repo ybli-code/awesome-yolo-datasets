@@ -1,6 +1,22 @@
 [
   {
-    "title": "土壤类型检测数据集",
-    "url": "https://app.roboflow.com/ds/0tioVSIxSO?key=RyXnkzalci"
+    "row": 2786,
+    "url": "https://app.roboflow.com/ds/aZh71ektdy?key=jRXFQsubSE",
+    "title": "自动扶梯乘客检测数据集"
+  },
+  {
+    "row": 2789,
+    "url": "https://app.roboflow.com/ds/atUn0xjuJ8?key=qv2y0zaK4G",
+    "title": "脊柱病变检测数据集"
+  },
+  {
+    "row": 2791,
+    "url": "https://app.roboflow.com/ds/fkHxIuOs5a?key=GAK3SFtRXU",
+    "title": "瓷砖缺陷检测数据集"
+  },
+  {
+    "row": 2794,
+    "url": "https://app.roboflow.com/ds/OO6EkcEVu4?key=EeI4Qou7VU",
+    "title": "肺炎检测数据集"
   }
 ]
