@@ -23,5 +23,10 @@
     "row": 2828,
     "title": "马检测数据集",
     "url": "https://app.roboflow.com/ds/C03ZUIm3gq?key=dgmPGcp2UU"
+  },
+  {
+    "row": 2848,
+    "title": "荔枝检测数据集",
+    "url": "https://app.roboflow.com/ds/q8Id8XOlxM?key=1xCGFlMNPC"
   }
 ]
