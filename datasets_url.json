@@ -38,5 +38,10 @@
     "row": 2868,
     "title": "空中飞行物检测数据集",
     "url": "https://app.roboflow.com/ds/qYczkEP4cW?key=923RAoq6Uo"
+  },
+  {
+    "row": 2852,
+    "title": "二维码检测数据集",
+    "url": "https://app.roboflow.com/ds/1mJnhZOlJ4?key=QtdjPIWkZD"
   }
 ]
