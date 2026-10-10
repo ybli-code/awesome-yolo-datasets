@@ -33,5 +33,10 @@
     "row": 2859,
     "title": "交警检测数据集",
     "url": "https://app.roboflow.com/ds/NgchYNuZTq?key=1YUMCMNFBR"
+  },
+  {
+    "row": 2868,
+    "title": "空中飞行物检测数据集",
+    "url": "https://app.roboflow.com/ds/qYczkEP4cW?key=923RAoq6Uo"
   }
 ]
