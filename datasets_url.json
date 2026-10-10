@@ -53,5 +53,10 @@
     "row": 2876,
     "title": "车辆行人检测数据集",
     "url": "https://app.roboflow.com/ds/783NIF7uYR?key=Zz9usENk9u"
+  },
+  {
+    "row": 2877,
+    "title": "工程机械检测数据集",
+    "url": "https://app.roboflow.com/ds/0Tv4y6tIsy?key=y3xgLWFZXh"
   }
 ]
