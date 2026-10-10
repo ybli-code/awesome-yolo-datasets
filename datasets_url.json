@@ -128,5 +128,25 @@
     "row": 2942,
     "title": "托盘检测数据集",
     "url": "https://app.roboflow.com/ds/3pJXu729dx?key=YvWQeD8kf4"
+  },
+  {
+    "row": 2947,
+    "title": "无人机航拍军事目标检测数据集",
+    "url": "https://app.roboflow.com/ds/xFY218uUWf?key=4MiJ5c3i5J"
+  },
+  {
+    "row": 2953,
+    "title": "无人机检测数据集",
+    "url": "https://app.roboflow.com/ds/uV5oaf0IX8?key=mYxDp9MZor"
+  },
+  {
+    "row": 2955,
+    "title": "军用民用船舶检测数据集",
+    "url": "https://app.roboflow.com/ds/Pd7RbEGppn?key=C02GNk2ZqG"
+  },
+  {
+    "row": 2970,
+    "title": "墨镜检测数据集",
+    "url": "https://app.roboflow.com/ds/32ZVsyMtds?key=sTo0ACaFV5"
   }
 ]
