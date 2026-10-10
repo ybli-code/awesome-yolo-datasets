@@ -68,5 +68,55 @@
     "row": 2874,
     "title": "拖拉机检测数据集",
     "url": "https://app.roboflow.com/ds/cDtCYqXfM8?key=1JyxDL8Tac"
+  },
+  {
+    "row": 2902,
+    "title": "狮子目标检测数据集",
+    "url": "https://app.roboflow.com/ds/ckkdsIyKWg?key=n4y5HYwpOj"
+  },
+  {
+    "row": 2907,
+    "title": "房屋坍塌检测数据集",
+    "url": "https://app.roboflow.com/ds/yl92fcQksv?key=PJJQ64fMQd"
+  },
+  {
+    "row": 2919,
+    "title": "火灾烟雾检测数据集",
+    "url": "https://app.roboflow.com/ds/ogRPdSHHsg?key=guSIQkBFRz"
+  },
+  {
+    "row": 2908,
+    "title": "车辆损伤检测数据集",
+    "url": "https://app.roboflow.com/ds/7qgnbMuRt8?key=mZgpahSFDL"
+  },
+  {
+    "row": 2909,
+    "title": "室内物品检测数据集",
+    "url": "https://app.roboflow.com/ds/omd3nmFYVY?key=DCmCxFtqOU"
+  },
+  {
+    "row": 2913,
+    "title": "野生动物检测数据集",
+    "url": "https://app.roboflow.com/ds/U1UpQoeHyf?key=Oah1IUQljp"
+  },
+  {
+    "row": 2900,
+    "title": "人群密度检测数据集",
+    "url": "https://app.roboflow.com/ds/QJVhaFEgNE?key=GXKxTdCy6n"
+  },
+  {
+    "row": 2903,
+    "title": "洋葱检测数据集",
+    "url": "https://app.roboflow.com/ds/kpUl6rbwy9?key=2P11GyS3Rd"
+  },
+  {
+    "row": 2912,
+    "title": "安全帽佩戴检测数据集",
+    "url": "https://app.roboflow.com/ds/zJspkpLZzc?key=VYHYUAXS5w"
+  },
+  {
+    "row": 2918,
+    "title": "口罩佩戴检测数据集",
+    "url": "https://app.roboflow.com/ds/FEeOJ0o4rX?key=IRqLLqZV1S"
   }
 ]
