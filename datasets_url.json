@@ -123,5 +123,10 @@
     "row": 2923,
     "title": "烟雾检测数据集",
     "url": "https://app.roboflow.com/ds/IMC6kVm8OF?key=vQnp4orv0W"
+  },
+  {
+    "row": 2942,
+    "title": "托盘检测数据集",
+    "url": "https://app.roboflow.com/ds/3pJXu729dx?key=YvWQeD8kf4"
   }
 ]
