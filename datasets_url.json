@@ -118,5 +118,10 @@
     "row": 2918,
     "title": "口罩佩戴检测数据集",
     "url": "https://app.roboflow.com/ds/FEeOJ0o4rX?key=IRqLLqZV1S"
+  },
+  {
+    "row": 2923,
+    "title": "烟雾检测数据集",
+    "url": "https://app.roboflow.com/ds/IMC6kVm8OF?key=vQnp4orv0W"
   }
 ]
