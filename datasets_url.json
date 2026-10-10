@@ -48,5 +48,10 @@
     "row": 2869,
     "title": "户外垃圾检测数据集",
     "url": "https://app.roboflow.com/ds/jlxPzxDaK9?key=PnmQWrAUjC"
+  },
+  {
+    "row": 2876,
+    "title": "车辆行人检测数据集",
+    "url": "https://app.roboflow.com/ds/783NIF7uYR?key=Zz9usENk9u"
   }
 ]
