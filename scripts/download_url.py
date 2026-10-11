@@ -1207,6 +1207,30 @@ def process_one(ds):
 
         logger.info(f"  写回腾讯文档行{row}...")
 
+        # 坑#70复发修复: 行号超过表格容量时 set_cell_value 静默失效 → 写回前先扩容
+
+        try:
+
+            _info = call_mcp("sheet.get_sheet_info", {"file_id": FILE_ID, "sheet_id": SHEET_ID}, req_id=row)
+
+            _sheets = _info.get("result", {}).get("structuredContent", {}).get("sheets", [])
+
+            _rc = next((s.get("row_count", 0) for s in _sheets if s.get("sheet_id") == SHEET_ID), 0)
+
+            if _rc and _rc < row + 10:
+
+                _need = row + 500 - _rc
+
+                call_mcp("sheet.insert_dimension", {"file_id": FILE_ID, "sheet_id": SHEET_ID,
+
+                         "dimension_type": "row", "index": _rc, "count": _need, "direction": "before"}, req_id=row)
+
+                logger.info(f"  已扩容: {_rc} -> {_rc + _need} 行")
+
+        except Exception as _e:
+
+            logger.warning(f"  扩容检查失败(继续写回): {_e}")
+
         result = write_cell(row, 1, share_text)
 
         sc = result.get("result", {}).get("structuredContent", {})
