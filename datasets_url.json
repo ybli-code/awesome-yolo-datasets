@@ -838,5 +838,30 @@
     "row": 1652,
     "title": "白蚁检测数据集（2类） | 目标检测 | 病虫害防治",
     "url": "https://app.roboflow.com/ds/hnunMzimyh?key=tLm0BWrwnh"
+  },
+  {
+    "row": 1663,
+    "title": "排球检测数据集",
+    "url": "https://app.roboflow.com/ds/t9FNd4MTnT?key=8S4nWfrKk0"
+  },
+  {
+    "row": 1664,
+    "title": "水下垃圾检测数据集",
+    "url": "https://app.roboflow.com/ds/dbOIb9bKXp?key=oW0FNepmM5"
+  },
+  {
+    "row": 1665,
+    "title": "橄榄球检测数据集",
+    "url": "https://app.roboflow.com/ds/w6skfuSOrZ?key=8AWMr9hyyV"
+  },
+  {
+    "row": 1666,
+    "title": "獾检测数据集",
+    "url": "https://app.roboflow.com/ds/Pw63DMRI3o?key=2LKOl7Jvhx"
+  },
+  {
+    "row": 1667,
+    "title": "雪豹检测数据集",
+    "url": "https://app.roboflow.com/ds/txtFvClTtc?key=mhPHGQ5FUX"
   }
 ]
