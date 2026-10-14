@@ -813,5 +813,30 @@
     "row": 7934,
     "title": "道路病害检测数据集（4类）",
     "url": "https://app.roboflow.com/ds/13v67jHE1o?key=EElD5NZpKS"
+  },
+  {
+    "row": 1648,
+    "title": "拳击动作检测数据集（5类） | 目标检测 | 体育运动",
+    "url": "https://app.roboflow.com/ds/ezCE6YIfZ6?key=R5mRYfoF2F"
+  },
+  {
+    "row": 1649,
+    "title": "板球运动检测数据集（4类） | 目标检测 | 体育运动",
+    "url": "https://app.roboflow.com/ds/5em83eRqGp?key=27N9svmOyq"
+  },
+  {
+    "row": 1650,
+    "title": "招牌检测数据集（1类） | 目标检测 | 智慧城市",
+    "url": "https://app.roboflow.com/ds/x3vOybohWI?key=o1wJVT07yx"
+  },
+  {
+    "row": 1651,
+    "title": "椰子树检测数据集（1类） | 目标检测 | 农林遥感",
+    "url": "https://app.roboflow.com/ds/4tdZmKxQAf?key=dtJxp8Y8DV"
+  },
+  {
+    "row": 1652,
+    "title": "白蚁检测数据集（2类） | 目标检测 | 病虫害防治",
+    "url": "https://app.roboflow.com/ds/hnunMzimyh?key=tLm0BWrwnh"
   }
 ]
