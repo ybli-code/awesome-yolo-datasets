@@ -838,5 +838,30 @@
     "row": 1652,
     "title": "白蚁检测数据集（2类） | 目标检测 | 病虫害防治",
     "url": "https://app.roboflow.com/ds/hnunMzimyh?key=tLm0BWrwnh"
+  },
+  {
+    "row": 1658,
+    "title": "花豹检测数据集",
+    "url": "https://app.roboflow.com/ds/YVUvvdc1qz?key=6uaZw0KhBP"
+  },
+  {
+    "row": 1659,
+    "title": "猩猩检测数据集",
+    "url": "https://app.roboflow.com/ds/3kdsGjHSgb?key=5POERAnMNd"
+  },
+  {
+    "row": 1660,
+    "title": "骑行检测数据集",
+    "url": "https://app.roboflow.com/ds/3qE3pRPxL7?key=8jtBiEE5RG"
+  },
+  {
+    "row": 1661,
+    "title": "喷泉检测数据集",
+    "url": "https://app.roboflow.com/ds/DY8zot1KBh?key=cFxZvwQDXg"
+  },
+  {
+    "row": 1662,
+    "title": "孔雀检测数据集",
+    "url": "https://app.roboflow.com/ds/4YuZEQmyRc?key=9THG90GRWa"
   }
 ]
