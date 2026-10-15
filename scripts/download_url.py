@@ -143,6 +143,8 @@ def relay_finalize():
 
     import hashlib  # noqa
 
+    import subprocess
+
     tag = f"relay-{os.environ.get('GITHUB_RUN_ID') or int(time.time())}"
 
     body = json.dumps(RELAY_MANIFEST, ensure_ascii=False)
