@@ -1,0 +1,18 @@
+{
+ "tag": "relay-test",
+ "results": [
+  {
+   "zip": "relay_test.zip",
+   "row": 0,
+   "safe_title": "链路测试",
+   "md5": "0024644f7ff4263e6572982bb594403f",
+   "bytes": 6293986,
+   "fid": "bd577b1617d147e8929531f90f8ffbd0",
+   "share_url": "https://pan.quark.cn/s/c326169756a3",
+   "passcode": "yolo",
+   "up_seconds": 1.7
+  }
+ ],
+ "errors": [],
+ "finished_at": "2026-10-15 09:37:37"
+}
