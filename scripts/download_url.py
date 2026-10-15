@@ -102,7 +102,8 @@ RELAY_MANIFEST = {"expected": 0, "items": []}
 
 def relay_stage(zip_path, safe_title, row):
 
-    """RELAY 模式: 计算 md5 登记 manifest, zip 保留待 finalize 统一上传"""
+    """RELAY 模式: 计算 md5 登记 manifest, zip 改 ASCII 名保留待 finalize 统一上传
+    （坑: GitHub asset 中文名触发 already_exists, 必须 job{row}.zip ASCII 命名）"""
 
     import hashlib
 
@@ -114,9 +115,17 @@ def relay_stage(zip_path, safe_title, row):
 
             h.update(chunk)
 
+    ascii_name = f"job{row}.zip"
+
+    new_path = os.path.join(TEMP_DIR, ascii_name)
+
+    if os.path.abspath(new_path) != os.path.abspath(zip_path):
+
+        os.rename(zip_path, new_path)
+
     RELAY_MANIFEST["items"].append({
 
-        "zip": os.path.basename(zip_path),
+        "zip": ascii_name,
 
         "safe_title": safe_title,
 
@@ -124,7 +133,7 @@ def relay_stage(zip_path, safe_title, row):
 
         "md5": h.hexdigest(),
 
-        "size": os.path.getsize(zip_path),
+        "size": os.path.getsize(new_path),
 
     })
 
