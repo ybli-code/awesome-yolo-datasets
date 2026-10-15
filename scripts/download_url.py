@@ -88,6 +88,126 @@ os.makedirs(TEMP_DIR, exist_ok=True)
 
 
 
+# ===== RELAY 快链路（坑#117复核版: runner→GitHub Release→T4传夸克）=====
+
+RELAY_MODE = os.environ.get("RELAY_MODE", "0") == "1"
+
+GH_RELAY_TOKEN = os.environ.get("GH_RELAY_TOKEN", "")
+
+RELAY_REPO = os.environ.get("GITHUB_REPOSITORY", "ybli-code/awesome-yolo-datasets")
+
+RELAY_MANIFEST = {"expected": 0, "items": []}
+
+
+
+def relay_stage(zip_path, safe_title, row):
+
+    """RELAY 模式: 计算 md5 登记 manifest, zip 保留待 finalize 统一上传"""
+
+    import hashlib
+
+    h = hashlib.md5()
+
+    with open(zip_path, "rb") as f:
+
+        for chunk in iter(lambda: f.read(1 << 22), b""):
+
+            h.update(chunk)
+
+    RELAY_MANIFEST["items"].append({
+
+        "zip": os.path.basename(zip_path),
+
+        "safe_title": safe_title,
+
+        "row": row,
+
+        "md5": h.hexdigest(),
+
+        "size": os.path.getsize(zip_path),
+
+    })
+
+    logger.info(f"RELAY: 已登记 {os.path.basename(zip_path)} "
+                f"({os.path.getsize(zip_path)/1048576:.0f}MB, md5={h.hexdigest()[:8]}...)")
+
+
+
+def relay_finalize():
+
+    """RELAY 收尾: 创建 Release(tag=relay-<run_id>) 逐个上传 zip, body=manifest"""
+
+    if not RELAY_MODE or not RELAY_MANIFEST["items"]:
+
+        return
+
+    import hashlib  # noqa
+
+    tag = f"relay-{os.environ.get('GITHUB_RUN_ID') or int(time.time())}"
+
+    body = json.dumps(RELAY_MANIFEST, ensure_ascii=False)
+
+    logger.info(f"RELAY: 创建 Release {tag} ({len(RELAY_MANIFEST['items'])} 资产)...")
+
+    req = urllib.request.Request(
+        f"https://api.github.com/repos/{RELAY_REPO}/releases",
+        data=json.dumps({"tag_name": tag, "target_commitish": "main",
+                         "name": tag, "body": body, "draft": False}).encode(),
+        method="POST",
+        headers={"Authorization": f"token {GH_RELAY_TOKEN}",
+                 "Accept": "application/vnd.github+json",
+                 "Content-Type": "application/json"})
+
+    with urllib.request.urlopen(req, timeout=60) as r:
+
+        rel = json.loads(r.read().decode())
+
+    upload_url = rel["upload_url"].split("{")[0]
+
+    for it in RELAY_MANIFEST["items"]:
+
+        p = os.path.join(TEMP_DIR, it["zip"])
+
+        logger.info(f"RELAY: 上传 {it['zip']} ({it['size']/1048576:.0f}MB)...")
+
+        ok = False
+
+        for attempt in range(3):
+
+            res = subprocess.run(
+                ["curl", "-sS", "--max-time", "3600",
+                 "-H", f"Authorization: token {GH_RELAY_TOKEN}",
+                 "-H", "Content-Type: application/zip",
+                 "--data-binary", f"@{p}",
+                 f"{upload_url}?name={urllib.parse.quote(it['zip'])}"],
+                capture_output=True, text=True, timeout=3660)
+
+            try:
+
+                asset = json.loads(res.stdout)
+
+                if asset.get("state") == "uploaded" and asset.get("size") == it["size"]:
+
+                    ok = True
+
+                    break
+
+                logger.warning(f"RELAY: 第{attempt+1}次上传异常: {str(res.stdout)[:200]}")
+
+            except Exception as e:
+
+                logger.warning(f"RELAY: 第{attempt+1}次解析失败: {e} {res.stderr[:100]}")
+
+            time.sleep(5)
+
+        if not ok:
+
+            raise RuntimeError(f"RELAY asset 上传失败: {it['zip']}")
+
+    logger.info("RELAY: 全部资产上传完成, T4 将在 2 分钟内开始处理")
+
+
+
 DOWNLOAD_THREADS = 16
 
 CHUNK_SIZE = 4 * 1024 * 1024
@@ -1139,6 +1259,16 @@ def process_one(ds):
 
 
 
+    # RELAY 快链路（坑#117复核版）: 登记 manifest, 由 T4 从 Release 拉取并传夸克,
+    # 分享链接经 t4_tasks/done_*.json 回传, 本机轮询后写表
+    if RELAY_MODE and GH_RELAY_TOKEN:
+
+        relay_stage(zip_path, safe_title, row)
+
+        return True
+
+
+
     # 上传网盘（不解压，直接上传）
 
     if NETDISK == "quark":
@@ -1321,6 +1451,10 @@ def main():
 
     logger.info(f"共 {len(datasets)} 个数据集待处理")
 
+    RELAY_MANIFEST["expected"] = len(datasets)
+
+
+
 
 
     success = 0
@@ -1364,6 +1498,26 @@ def main():
     logger.info(f"{'='*60}")
 
 
+
+    # RELAY 收尾: 上传 Release（失败 exit 1 让 Action 标红）
+
+    try:
+
+        relay_finalize()
+
+        if RELAY_MODE:
+
+            shutil.rmtree(TEMP_DIR, ignore_errors=True)
+
+    except Exception as e:
+
+        logger.error(f"RELAY finalize 失败: {e}")
+
+        import traceback
+
+        traceback.print_exc()
+
+        sys.exit(1)
 
     if failed > 0:
 
