@@ -137,8 +137,8 @@ def relay_stage(zip_path, safe_title, row):
 
     })
 
-    logger.info(f"RELAY: 已登记 {os.path.basename(zip_path)} "
-                f"({os.path.getsize(zip_path)/1048576:.0f}MB, md5={h.hexdigest()[:8]}...)")
+    logger.info(f"RELAY: 已登记 {ascii_name} "
+                f"({os.path.getsize(new_path)/1048576:.0f}MB, md5={h.hexdigest()[:8]}...)")
 
 
 
