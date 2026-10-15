@@ -1,0 +1,67 @@
+{
+ "tag": "relay-38712264109",
+ "results": [
+  {
+   "zip": "job1673.zip",
+   "row": 1673,
+   "safe_title": "玉米病害检测数据集",
+   "md5": "3f10e107431289e5eb949ab1fd74e304",
+   "bytes": 275810601,
+   "fid": "571be050c9354d4691f5bfecba3d1884",
+   "share_url": "https://pan.quark.cn/s/4804d49411bb",
+   "passcode": "yolo",
+   "up_seconds": 23.3,
+   "mode": "manual-assist"
+  },
+  {
+   "zip": "job1674.zip",
+   "row": 1674,
+   "safe_title": "雏菊蒲公英检测数据集",
+   "md5": "1d88bedbf414783c9f27502bb9206e7c",
+   "bytes": 246898219,
+   "fid": "9248870b02f84e148f2d48d6f1e7182a",
+   "share_url": "https://pan.quark.cn/s/068306d225ac",
+   "passcode": "yolo",
+   "up_seconds": 21.2,
+   "mode": "manual-assist"
+  },
+  {
+   "zip": "job1675.zip",
+   "row": 1675,
+   "safe_title": "咖啡豆检测数据集",
+   "md5": "939107932b3976fa1250f3661db9a101",
+   "bytes": 193055379,
+   "fid": "612bf34490c1478b85db3372fead4373",
+   "share_url": "https://pan.quark.cn/s/711c7c1de17d",
+   "passcode": "yolo",
+   "up_seconds": 16.9,
+   "mode": "manual-assist"
+  },
+  {
+   "zip": "job1676.zip",
+   "row": 1676,
+   "safe_title": "海豚检测数据集",
+   "md5": "d34b49a4e6f2302a79d569a718f338e6",
+   "bytes": 152630280,
+   "fid": "c120abc8cc7744fe8b9c1bc077c0461d",
+   "share_url": "https://pan.quark.cn/s/83db56dacddd",
+   "passcode": "yolo",
+   "up_seconds": 13.4,
+   "mode": "manual-assist"
+  },
+  {
+   "zip": "job1677.zip",
+   "row": 1677,
+   "safe_title": "蜻蜓检测数据集",
+   "md5": "88f542b46610c77b946e6c1c84b5b4fa",
+   "bytes": 145937010,
+   "fid": "cc59dac7cbbb4469a79a290774ee201a",
+   "share_url": "https://pan.quark.cn/s/4a38173dd498",
+   "passcode": "yolo",
+   "up_seconds": 13.3,
+   "mode": "manual-assist"
+  }
+ ],
+ "errors": [],
+ "finished_at": "2026-10-15 17:50:57"
+}
