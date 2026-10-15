@@ -1,0 +1,49 @@
+{
+ "tag": "relay-38670211521",
+ "results": [
+  {
+   "zip": "job1668.zip",
+   "row": 1668,
+   "safe_title": "啄木鸟检测数据集",
+   "md5": "ebdd4dffe180f21937d4fa37d6db21c9",
+   "share_url": "https://pan.quark.cn/s/266928d0e26f",
+   "passcode": "yolo",
+   "bytes": 479345234
+  },
+  {
+   "zip": "job1669.zip",
+   "row": 1669,
+   "safe_title": "羊驼检测数据集",
+   "md5": "0c15c412191c84af6baa5f3ec05b945a",
+   "share_url": "https://pan.quark.cn/s/14c1e21e4081",
+   "passcode": "yolo"
+  },
+  {
+   "zip": "job1670.zip",
+   "row": 1670,
+   "safe_title": "向日葵检测数据集",
+   "md5": "3caa7eefc3a12e98eda2e872af40dd92",
+   "share_url": "https://pan.quark.cn/s/fc5f4f338e2f",
+   "passcode": "yolo"
+  },
+  {
+   "zip": "job1671.zip",
+   "row": 1671,
+   "safe_title": "寿司检测数据集",
+   "md5": "31d4ebc77620fa4ef6547b7a5c272ccb",
+   "share_url": "https://pan.quark.cn/s/bc6008ef7cd6",
+   "passcode": "yolo"
+  },
+  {
+   "zip": "job1672.zip",
+   "row": 1672,
+   "safe_title": "安全背心检测数据集",
+   "md5": "07f1d06426cf406901e8626dabc4eb27",
+   "share_url": "https://pan.quark.cn/s/8022f63d0a1e",
+   "passcode": "yolo"
+  }
+ ],
+ "errors": [],
+ "finished_at": "2026-10-15 12:15:00",
+ "note": "manual-assist fallback (T4->GitHub CDN congestion)"
+}
