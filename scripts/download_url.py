@@ -188,8 +188,7 @@ def relay_finalize():
             res = subprocess.run(
                 ["curl", "-sS", "--max-time", "3600",
                  "-H", f"Authorization: token {GH_RELAY_TOKEN}",
-                 "-H", "Content-Type: application/zip",
-                 "--data-binary", f"@{p}",
+                 "-F", f"file=@{p};type=application/zip",
                  f"{upload_url}?name={urllib.parse.quote(it['zip'])}"],
                 capture_output=True, text=True, timeout=3660)
 
