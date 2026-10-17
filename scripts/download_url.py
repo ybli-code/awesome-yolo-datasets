@@ -1406,6 +1406,34 @@ def process_one(ds):
 
 
 
+    # 结果落盘 + 显式打印分享链（artifact 回传本机，供 action_publish.py 结构化读取）
+
+    _m = re.search(r"https://pan\.quark\.cn/s/[A-Za-z0-9]+", share_text or "")
+
+    _res = {"title": safe_title,
+            "share_text": share_text,
+            "share_url": _m.group(0) if _m else "",
+            "netdisk": NETDISK,
+            "zip_mb": round(os.path.getsize(zip_path) / 1048576, 1) if os.path.exists(zip_path) else None}
+
+    try:
+
+        _rd = os.path.join(TEMP_DIR, "results")
+
+        os.makedirs(_rd, exist_ok=True)
+
+        with open(os.path.join(_rd, f"{safe_title}.json"), "w", encoding="utf-8") as f:
+
+            json.dump(_res, f, ensure_ascii=False, indent=1)
+
+    except Exception as _e:
+
+        logger.warning(f"  结果落盘失败: {_e}")
+
+    if _res["share_url"]:
+
+        logger.info(f"SHARE_URL={_res['share_url']}")
+
     # 写回腾讯文档（如果指定了行号）
 
     if row:
