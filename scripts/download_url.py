@@ -1518,9 +1518,20 @@ def main():
 
 
 
-    with open(json_path, "r", encoding="utf-8") as f:
+    _url = os.environ.get("DS_URL", "").strip()
 
-        datasets = json.load(f)
+    if _url:
+
+        # 单条任务：由调用方（本机 action_publish.py）直接传导出链接，不必改仓库列表
+        datasets = [{"title": os.environ.get("DS_TITLE", "").strip() or "dataset", "url": _url}]
+
+        logger.info(f"单条任务: {datasets[0]['title']}")
+
+    else:
+
+        with open(json_path, "r", encoding="utf-8") as f:
+
+            datasets = json.load(f)
 
 
 
