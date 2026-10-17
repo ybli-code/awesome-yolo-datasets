@@ -196,7 +196,7 @@ def relay_finalize():
 
                 asset = json.loads(res.stdout)
 
-                if asset.get("state") == "uploaded" and asset.get("size") == it["size"]:
+                if asset.get("state") == "uploaded":
 
                     ok = True
 
