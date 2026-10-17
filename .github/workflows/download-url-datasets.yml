@@ -8,9 +8,9 @@ on:
         required: false
         default: '0'
       relay:
-        description: '快链路模式: 1=传GitHub Release由T4处理 0=老链路直传夸克'
+        description: '发布链路: 0=Runner直传夸克(默认,推荐,不经T4) 1=传GitHub Release由T4中转(T4已停摆,勿用)'
         required: false
-        default: '1'
+        default: '0'
 
 permissions:
   contents: write
@@ -38,12 +38,12 @@ jobs:
           TENCENT_TOKEN: ${{ secrets.TENCENT_TOKEN }}
           FILE_ID: ${{ secrets.FILE_ID }}
           SHEET_ID: ${{ secrets.SHEET_ID }}
-          RELAY_MODE: ${{ github.event.inputs.relay || '1' }}
+          RELAY_MODE: ${{ github.event.inputs.relay || '0' }}
           GH_RELAY_TOKEN: ${{ github.token }}
         run: |
           echo "开始下载通用URL数据集..."
           echo "网盘后端: ${{ secrets.QUARK_COOKIE != '' && '夸克网盘' || '百度网盘' }}"
-          echo "快链路: ${{ github.event.inputs.relay || '1' }}"
+          echo "发布链路: ${{ github.event.inputs.relay || '0' }}"
           python scripts/download_url.py
           echo "下载完成"
 
