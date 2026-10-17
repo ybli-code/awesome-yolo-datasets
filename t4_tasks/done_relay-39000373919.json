@@ -1,0 +1,12 @@
+{
+ "tag": "relay-39000373919",
+ "results": [],
+ "errors": [
+  {
+   "zip": "job1718.zip",
+   "row": 1718,
+   "error": "RuntimeError: size mismatch: 431 != 1140342298"
+  }
+ ],
+ "finished_at": "2026-10-17 12:54:09"
+}
