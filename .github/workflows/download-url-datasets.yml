@@ -58,6 +58,7 @@ jobs:
           name: download-url-log
           path: |
             /tmp/dataset_downloads/samples
+            /tmp/dataset_downloads/results
             /tmp/dataset_downloads/run.log
           if-no-files-found: warn
           retention-days: 7
