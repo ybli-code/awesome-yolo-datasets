@@ -30,6 +30,8 @@ import hashlib
 
 import shutil
 
+import zipfile
+
 import urllib.request
 
 import urllib.parse
@@ -1189,6 +1191,67 @@ def sanitize(name):
 
 
 
+def export_samples(zip_path, safe_title, want=8):
+
+    """从已下载的 zip 里抽少量样张，供本机做四宫格预览与视觉核查。
+
+    artifact 回传（体积小），避免本机再下一次整包。
+    """
+
+    out = os.path.join(TEMP_DIR, "samples", safe_title)
+
+    try:
+
+        os.makedirs(out, exist_ok=True)
+
+        with zipfile.ZipFile(zip_path) as z:
+
+            names = [n for n in z.namelist()
+                     if n.lower().endswith((".jpg", ".jpeg", ".png", ".bmp", ".webp"))]
+
+            names = [n for n in names
+                     if "/labels/" not in n and not n.startswith("__MACOSX")]
+
+            if not names:
+
+                logger.warning("  zip 内未找到图片，跳过样张导出")
+
+                return 0
+
+            names.sort()
+
+            step = max(1, len(names) // want)
+
+            picked = names[::step][:want]
+
+            for i, n in enumerate(picked):
+
+                ext = os.path.splitext(n)[1].lower() or ".jpg"
+
+                with z.open(n) as src, open(os.path.join(out, f"{i:02d}{ext}"), "wb") as dst:
+
+                    dst.write(src.read())
+
+        meta = {"title": safe_title,
+                "zip_mb": round(os.path.getsize(zip_path) / 1048576, 1),
+                "images_in_zip": len(names),
+                "samples": len(picked)}
+
+        with open(os.path.join(out, "meta.json"), "w", encoding="utf-8") as f:
+
+            json.dump(meta, f, ensure_ascii=False, indent=1)
+
+        logger.info(f"  已导出样张 {len(picked)} 张 -> samples/{safe_title}")
+
+        return len(picked)
+
+    except Exception as e:
+
+        logger.warning(f"  样张导出失败（不影响上传）: {e}")
+
+        return 0
+
+
 def process_one(ds):
 
     """处理一个数据集"""
@@ -1266,6 +1329,8 @@ def process_one(ds):
 
 
     logger.info(f"  下载完成: {os.path.getsize(zip_path) / 1024 / 1024:.1f} MB")
+
+    export_samples(zip_path, safe_title)
 
 
 
