@@ -1,7 +1,27 @@
 [
   {
-    "row": 1728,
-    "title": "在轨卫星目标检测数据集",
-    "url": "https://app.roboflow.com/ds/DknZXLz8mp?key=Xy6FDF1QYN"
+    "row": 1734,
+    "title": "船舶类型检测数据集",
+    "url": "https://app.roboflow.com/ds/GkTXrGvWrh?key=0bHMdk90W8"
+  },
+  {
+    "row": 1735,
+    "title": "鸭场鸭群检测数据集",
+    "url": "https://app.roboflow.com/ds/8o0maizEQq?key=gxoVJo4Uer"
+  },
+  {
+    "row": 1736,
+    "title": "野外鹿类检测数据集",
+    "url": "https://app.roboflow.com/ds/Ggu7KMK60N?key=1hC7i1oyq6"
+  },
+  {
+    "row": 1737,
+    "title": "民宅烟囱检测数据集",
+    "url": "https://app.roboflow.com/ds/lGRzy4qgdh?key=hTkVdlt3dR"
+  },
+  {
+    "row": 1738,
+    "title": "熊类目标检测数据集",
+    "url": "https://app.roboflow.com/ds/bL3HAL1GMi?key=hJ0wDspUoZ"
   }
 ]
