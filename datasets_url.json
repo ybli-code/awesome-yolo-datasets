@@ -1,27 +1,27 @@
 [
   {
-    "row": 1752,
-    "title": "台球桌目标检测数据集",
-    "url": "https://app.roboflow.com/ds/0emElzbnE8?key=jO1cV8A9g1"
+    "row": 1758,
+    "title": "人车多类目标检测数据集",
+    "url": "https://app.roboflow.com/ds/Mekp87gzgu?key=bXuSayGNCW"
   },
   {
-    "row": 1753,
-    "title": "民间神像分类检测数据集",
-    "url": "https://app.roboflow.com/ds/gIb4IOEnNK?key=kerqZj9xJ2"
+    "row": 1759,
+    "title": "门岗保安出入监控识别数据集",
+    "url": "https://app.roboflow.com/ds/6valP6aDEx?key=FaYSc5OVxX"
   },
   {
-    "row": 1754,
-    "title": "室内装饰画检测数据集",
-    "url": "https://app.roboflow.com/ds/L2Qmw0EGj2?key=3KsH20E7Yx"
+    "row": 1760,
+    "title": "工地施工机械检测数据集",
+    "url": "https://app.roboflow.com/ds/kC16IWMrsu?key=y5q654Xn2V"
   },
   {
-    "row": 1755,
-    "title": "航拍羊群检测数据集",
-    "url": "https://app.roboflow.com/ds/OCNaNzcXuA?key=ucjYUFiuRy"
+    "row": 1761,
+    "title": "工地安全隐患综合检测数据集",
+    "url": "https://app.roboflow.com/ds/pe0bybnTRn?key=aXqclNNLxX"
   },
   {
-    "row": 1756,
-    "title": "尼泊尔古迹地标检测数据集",
-    "url": "https://app.roboflow.com/ds/PUsGdktB2l?key=ZnHG0oqIcv"
+    "row": 1762,
+    "title": "挖掘机与卡车目标检测数据集",
+    "url": "https://app.roboflow.com/ds/8AhtvLSPNY?key=9AvX6fsArh"
   }
 ]
