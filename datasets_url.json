@@ -1,27 +1,27 @@
 [
   {
-    "row": 1763,
-    "title": "乡村土地利用地物检测数据集",
-    "url": "https://app.roboflow.com/ds/wrlsB4ZLLy?key=eiC5gNuAoY"
+    "row": 1768,
+    "title": "零部件表面编号字符检测数据集",
+    "url": "https://app.roboflow.com/ds/4uNRYeCoCz?key=Ailpmg1Pj6"
   },
   {
-    "row": 1764,
-    "title": "废弃房屋特征检测数据集",
-    "url": "https://app.roboflow.com/ds/Iuwuk16Xaj?key=iDsFUiOHIO"
+    "row": 1769,
+    "title": "列车转向架型号检测数据集",
+    "url": "https://app.roboflow.com/ds/00cInE4sw5?key=Jt0t2VSANP"
   },
   {
-    "row": 1765,
-    "title": "航拍建筑物占地检测数据集",
-    "url": "https://app.roboflow.com/ds/VIfaMeKCU2?key=VZXDYfnrZX"
+    "row": 1770,
+    "title": "铁路货车车厢编号检测数据集",
+    "url": "https://app.roboflow.com/ds/EHQnLOQBuy?key=hE5pUCSKKM"
   },
   {
-    "row": 1766,
-    "title": "建筑废墟搜救目标检测数据集",
-    "url": "https://app.roboflow.com/ds/8QrHQr1p3N?key=Ckk9IJk17H"
+    "row": 1771,
+    "title": "车辆VIN识别码标牌检测数据集",
+    "url": "https://app.roboflow.com/ds/MEqzRuP7KZ?key=vZ6k4Lrk20"
   },
   {
-    "row": 1767,
-    "title": "温室大棚航拍检测数据集",
-    "url": "https://app.roboflow.com/ds/BbKP5aVffH?key=Ucwxzh0M5T"
+    "row": 1772,
+    "title": "轮胎侧壁序列号检测数据集",
+    "url": "https://app.roboflow.com/ds/YGBKise0SF?key=DMQM5RsP24"
   }
 ]
