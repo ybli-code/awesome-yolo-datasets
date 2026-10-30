@@ -1,27 +1,27 @@
 [
   {
-    "row": 1758,
-    "title": "人车多类目标检测数据集",
-    "url": "https://app.roboflow.com/ds/Mekp87gzgu?key=bXuSayGNCW"
+    "row": 1763,
+    "title": "乡村土地利用地物检测数据集",
+    "url": "https://app.roboflow.com/ds/wrlsB4ZLLy?key=eiC5gNuAoY"
   },
   {
-    "row": 1759,
-    "title": "门岗保安出入监控识别数据集",
-    "url": "https://app.roboflow.com/ds/6valP6aDEx?key=FaYSc5OVxX"
+    "row": 1764,
+    "title": "废弃房屋特征检测数据集",
+    "url": "https://app.roboflow.com/ds/Iuwuk16Xaj?key=iDsFUiOHIO"
   },
   {
-    "row": 1760,
-    "title": "工地施工机械检测数据集",
-    "url": "https://app.roboflow.com/ds/kC16IWMrsu?key=y5q654Xn2V"
+    "row": 1765,
+    "title": "航拍建筑物占地检测数据集",
+    "url": "https://app.roboflow.com/ds/VIfaMeKCU2?key=VZXDYfnrZX"
   },
   {
-    "row": 1761,
-    "title": "工地安全隐患综合检测数据集",
-    "url": "https://app.roboflow.com/ds/pe0bybnTRn?key=aXqclNNLxX"
+    "row": 1766,
+    "title": "建筑废墟搜救目标检测数据集",
+    "url": "https://app.roboflow.com/ds/8QrHQr1p3N?key=Ckk9IJk17H"
   },
   {
-    "row": 1762,
-    "title": "挖掘机与卡车目标检测数据集",
-    "url": "https://app.roboflow.com/ds/8AhtvLSPNY?key=9AvX6fsArh"
+    "row": 1767,
+    "title": "温室大棚航拍检测数据集",
+    "url": "https://app.roboflow.com/ds/BbKP5aVffH?key=Ucwxzh0M5T"
   }
 ]
