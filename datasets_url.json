@@ -1,27 +1,27 @@
 [
   {
-    "row": 1778,
-    "title": "乐器种类识别检测数据集",
-    "url": "https://app.roboflow.com/ds/x4vHSKhcbs?key=4odbAPClZ5"
+    "row": 1783,
+    "title": "野雪滑雪者检测数据集",
+    "url": "https://app.roboflow.com/ds/1loOXTgo4t?key=oDV1G2xte3"
   },
   {
-    "row": 1779,
-    "title": "吉他和弦指法检测数据集",
-    "url": "https://app.roboflow.com/ds/UFO62XUBjA?key=5Pj6kKBRV1"
+    "row": 1784,
+    "title": "滑雪者摔倒检测数据集",
+    "url": "https://app.roboflow.com/ds/LkP2JrLB57?key=ZmQqFQUvbj"
   },
   {
-    "row": 1780,
-    "title": "乐谱反复记号检测数据集",
-    "url": "https://app.roboflow.com/ds/VogBs0FOyO?key=zwSs4ySKED"
+    "row": 1785,
+    "title": "高山滑雪赛事人员检测数据集",
+    "url": "https://app.roboflow.com/ds/Qt6JuuKlx8?key=7B8WZYo9tC"
   },
   {
-    "row": 1781,
-    "title": "吉他琴型分类检测数据集",
-    "url": "https://app.roboflow.com/ds/P6RAY6nEP7?key=97NRbncJ86"
+    "row": 1786,
+    "title": "冰球比赛人员检测数据集",
+    "url": "https://app.roboflow.com/ds/CEclyv24W5?key=JGyVeKLwx1"
   },
   {
-    "row": 1782,
-    "title": "葡萄牙民族乐器检测数据集",
-    "url": "https://app.roboflow.com/ds/znXWI3puQs?key=G0wgirmrKb"
+    "row": 1787,
+    "title": "冰川湖卫星遥感检测数据集",
+    "url": "https://app.roboflow.com/ds/UwBUfvO72v?key=fkhCqYRYMQ"
   }
 ]
