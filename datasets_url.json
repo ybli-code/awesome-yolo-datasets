@@ -1,27 +1,27 @@
 [
   {
-    "row": 1773,
-    "title": "食品包装喷印日期检测数据集",
-    "url": "https://app.roboflow.com/ds/ncOE7aZnko?key=N8mlbYN4Pj"
+    "row": 1778,
+    "title": "乐器种类识别检测数据集",
+    "url": "https://app.roboflow.com/ds/x4vHSKhcbs?key=4odbAPClZ5"
   },
   {
-    "row": 1774,
-    "title": "商品标签序列号检测数据集",
-    "url": "https://app.roboflow.com/ds/Mo0eVDnY47?key=sWpCGiNFgg"
+    "row": 1779,
+    "title": "吉他和弦指法检测数据集",
+    "url": "https://app.roboflow.com/ds/UFO62XUBjA?key=5Pj6kKBRV1"
   },
   {
-    "row": 1775,
-    "title": "芯片表面丝印文字检测数据集",
-    "url": "https://app.roboflow.com/ds/LUvbHGRseB?key=evvGOAQJEi"
+    "row": 1780,
+    "title": "乐谱反复记号检测数据集",
+    "url": "https://app.roboflow.com/ds/VogBs0FOyO?key=zwSs4ySKED"
   },
   {
-    "row": 1776,
-    "title": "金属件打刻序列号检测数据集",
-    "url": "https://app.roboflow.com/ds/16w2H9hn39?key=WsX73zEaLc"
+    "row": 1781,
+    "title": "吉他琴型分类检测数据集",
+    "url": "https://app.roboflow.com/ds/P6RAY6nEP7?key=97NRbncJ86"
   },
   {
-    "row": 1777,
-    "title": "酒标文字要素检测数据集",
-    "url": "https://app.roboflow.com/ds/aSnKqA3aby?key=aYNnf4Donn"
+    "row": 1782,
+    "title": "葡萄牙民族乐器检测数据集",
+    "url": "https://app.roboflow.com/ds/znXWI3puQs?key=G0wgirmrKb"
   }
 ]
