@@ -1,27 +1,27 @@
 [
   {
-    "row": 1788,
-    "title": "泰国古典舞姿检测数据集",
-    "url": "https://app.roboflow.com/ds/oMaq0Eqy6c?key=ojjxuwnt1x"
+    "row": 1793,
+    "title": "叶轮铸件表面缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/fiFPF8WJOS?key=G8xmyWfDOO"
   },
   {
-    "row": 1789,
-    "title": "卡塔克舞姿手势检测数据集",
-    "url": "https://app.roboflow.com/ds/UcHOob3a8Q?key=ZytxxqyMi2"
+    "row": 1794,
+    "title": "钢材表面缺陷检测数据集（14类）",
+    "url": "https://app.roboflow.com/ds/5T5iK9lzET?key=zDexaakldU"
   },
   {
-    "row": 1790,
-    "title": "婆罗多舞手印检测数据集",
-    "url": "https://app.roboflow.com/ds/lmAT50XbYS?key=LnJBOq4L4d"
+    "row": 1795,
+    "title": "铸造坯料缺陷检测数据集",
+    "url": "https://app.roboflow.com/ds/TRVoaDeeSl?key=o0CYulbWs0"
   },
   {
-    "row": 1791,
-    "title": "体操运动员检测数据集",
-    "url": "https://app.roboflow.com/ds/rsmIP90YSf?key=V7oFc5scEl"
+    "row": 1796,
+    "title": "铝铸件裂纹检测数据集",
+    "url": "https://app.roboflow.com/ds/3QDINeLpuW?key=WGdSOuayF1"
   },
   {
-    "row": 1792,
-    "title": "瑜伽姿势检测数据集",
-    "url": "https://app.roboflow.com/ds/9GOKHa1Be8?key=sODZf3p3He"
+    "row": 1797,
+    "title": "铸造试块夹杂缩孔检测数据集",
+    "url": "https://app.roboflow.com/ds/pxYUPOTXZY?key=PjyimtzqNR"
   }
 ]
