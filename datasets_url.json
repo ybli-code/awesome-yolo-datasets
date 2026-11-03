@@ -1,27 +1,27 @@
 [
   {
-    "row": 1793,
-    "title": "叶轮铸件表面缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/fiFPF8WJOS?key=G8xmyWfDOO"
+    "row": 1798,
+    "title": "台球花色实色球检测数据集（7类）",
+    "url": "https://app.roboflow.com/ds/AToSdRaW1t?key=FN938Dz3qS"
   },
   {
-    "row": 1794,
-    "title": "钢材表面缺陷检测数据集（14类）",
-    "url": "https://app.roboflow.com/ds/5T5iK9lzET?key=zDexaakldU"
+    "row": 1799,
+    "title": "乒乓球检测数据集",
+    "url": "https://app.roboflow.com/ds/x1XEOIyBCn?key=B50PNH8sfH"
   },
   {
-    "row": 1795,
-    "title": "铸造坯料缺陷检测数据集",
-    "url": "https://app.roboflow.com/ds/TRVoaDeeSl?key=o0CYulbWs0"
+    "row": 1800,
+    "title": "保龄球瓶检测数据集",
+    "url": "https://app.roboflow.com/ds/0FQybEAshu?key=lHAfNHtVI0"
   },
   {
-    "row": 1796,
-    "title": "铝铸件裂纹检测数据集",
-    "url": "https://app.roboflow.com/ds/3QDINeLpuW?key=WGdSOuayF1"
+    "row": 1801,
+    "title": "板球比赛人员检测数据集",
+    "url": "https://app.roboflow.com/ds/DatQgq2HKS?key=lDi8VLnsxY"
   },
   {
-    "row": 1797,
-    "title": "铸造试块夹杂缩孔检测数据集",
-    "url": "https://app.roboflow.com/ds/pxYUPOTXZY?key=PjyimtzqNR"
+    "row": 1802,
+    "title": "草地曲棍球人员检测数据集",
+    "url": "https://app.roboflow.com/ds/rDe9HBDcFk?key=ZVOmJ5ennx"
   }
 ]
