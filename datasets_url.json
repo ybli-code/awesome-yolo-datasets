@@ -1,25 +1,5 @@
 [
   {
-    "row": 1808,
-    "title": "甲状腺结节超声良恶性检测数据集（2类）",
-    "url": "https://app.roboflow.com/ds/vAOIx2v9oG?key=0YwThqiHlq"
-  },
-  {
-    "row": 1809,
-    "title": "心脏超声心动图结构检测数据集（2类）",
-    "url": "https://app.roboflow.com/ds/C4MUprfFHK?key=nYE5WkZFZn"
-  },
-  {
-    "row": 1810,
-    "title": "软组织肿物超声良恶性检测数据集（2类）",
-    "url": "https://app.roboflow.com/ds/ySITh4JEXp?key=fsmD8yp4Jz"
-  },
-  {
-    "row": 1811,
-    "title": "胸部CT疾病分类检测数据集（5类）",
-    "url": "https://app.roboflow.com/ds/mh4tEa8BoR?key=0qgGo0sy8d"
-  },
-  {
     "row": 1812,
     "title": "胎儿脑超声切面检测数据集（2类）",
     "url": "https://app.roboflow.com/ds/XYu5Nj0ybT?key=4AfCE57lUr"
