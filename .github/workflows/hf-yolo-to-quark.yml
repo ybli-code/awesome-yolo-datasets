@@ -1,0 +1,61 @@
+name: HF YOLO Dataset to Quark
+
+# HuggingFace parquet 数据集 -> YOLO 目录 -> zip -> 夸克网盘分享
+# 下载/转换/上传全部在 runner 完成，规避本机上行带宽瓶颈。
+
+on:
+  workflow_dispatch:
+    inputs:
+      hf_repo:
+        description: 'HuggingFace 数据集 id（如 Project-AgML/wheat_disease_detection）'
+        required: true
+        default: ''
+      ds_title:
+        description: '中文数据集名（决定 zip 名与目录名）'
+        required: true
+        default: ''
+      hf_classes:
+        description: '类别名 JSON 数组（可选，缺省 0..15）'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests pillow pyarrow
+
+      - name: Convert and upload
+        env:
+          QUARK_COOKIE: ${{ secrets.QUARK_COOKIE }}
+          HF_REPO: ${{ github.event.inputs.hf_repo }}
+          DS_TITLE: ${{ github.event.inputs.ds_title }}
+          HF_CLASSES: ${{ github.event.inputs.hf_classes }}
+        run: |
+          echo "HF 数据集: $HF_REPO -> $DS_TITLE"
+          python scripts/hf_yolo_to_quark.py
+
+      - name: Upload Log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: download-url-log
+          path: |
+            /tmp/dataset_downloads/samples
+            /tmp/dataset_downloads/results
+            /tmp/dataset_downloads/run.log
+          if-no-files-found: warn
+          retention-days: 7
