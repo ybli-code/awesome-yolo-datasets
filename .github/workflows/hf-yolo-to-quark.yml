@@ -41,6 +41,7 @@ jobs:
       - name: Convert and upload
         env:
           QUARK_COOKIE: ${{ secrets.QUARK_COOKIE }}
+          QUARK_NO_HASH_CTX: '1'
           HF_REPO: ${{ github.event.inputs.hf_repo }}
           DS_TITLE: ${{ github.event.inputs.ds_title }}
           HF_CLASSES: ${{ github.event.inputs.hf_classes }}
