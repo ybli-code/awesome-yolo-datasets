@@ -44,6 +44,8 @@ import logging
 
 import re
 
+import subprocess
+
 
 
 # 尝试导入夸克网盘客户端（QuarkPan成熟库，同目录 quark_client/）
