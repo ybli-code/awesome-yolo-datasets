@@ -1572,6 +1572,7 @@ def main():
 
 
     success = 0
+    ok_urls = set()
 
     failed = 0
 
@@ -1584,6 +1585,8 @@ def main():
             if process_one(ds):
 
                 success += 1
+
+                ok_urls.add(ds.get("url"))
 
             else:
 
@@ -1612,6 +1615,24 @@ def main():
     logger.info(f"{'='*60}")
 
 
+
+    # 自消费队列：成功条目从 datasets_url.json 移除，仅保留失败项供下次重试
+    # （修复历史缺陷：队列只进不出，每次 dispatch 全量重传重分享）
+    try:
+        kept = [ds for ds in datasets if ds.get("url") not in ok_urls]
+        if len(kept) != len(datasets):
+            with open(json_path, "w", encoding="utf-8") as f:
+                json.dump(kept, f, ensure_ascii=False, indent=2)
+            rel = os.path.relpath(json_path, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            for cmd in (["git", "config", "user.name", "runner-bot"],
+                        ["git", "config", "user.email", "runner-bot@users.noreply.github.com"],
+                        ["git", "add", rel],
+                        ["git", "commit", "-m", "chore: consume processed queue entries"],
+                        ["git", "push"]):
+                subprocess.run(cmd, check=False, capture_output=True)
+            logger.info(f"队列自清理: 已移除 {len(datasets) - len(kept)} 个成功条目, 保留 {len(kept)} 个待重试")
+    except Exception as e:
+        logger.warning(f"队列自清理失败(不影响本批结果): {e}")
 
     # RELAY 收尾: 上传 Release（失败 exit 1 让 Action 标红）
 
